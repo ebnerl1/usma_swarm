@@ -8,15 +8,15 @@ Repo for the Service Academy Swarm Challenge
 2. Ubuntu 16.04 LTS
 3. ROS Kinetic
 
-### Clone Repo
+### Clone Repository
 1. Create a sasc folder:
-- `$ mkdir sasc`
-- `$ cd sasc`
-- `$ git clone https://gitlab.nps.edu/acs/acs_setup.git`
-
-
-
-
+ - `$ mkdir sasc`
+ - `$ cd sasc`
+ - `$ git clone https://gitlab.nps.edu/acs/acs_setup.git`
+2. Run installation script
+ - `$setup.py`
+3. Build
+4. Make
 
 
 
