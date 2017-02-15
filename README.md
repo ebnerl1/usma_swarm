@@ -1,6 +1,45 @@
 # usma_swarm
 Repo for the Service Academy Swarm Challenge
 
+## Swarm Simulation using SITL Environment
+
+Baseline requirements for single machine running Swarm Simulation SITL
+
+1. Modern CPU [Predator 17 | https://us-store.acer.com/predator-17-gaming-laptop-g9-791-79y3]
+2. Ubuntu 16.04 LTS
+3. ROS Jade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Setting up the laptop to communicate with the Zephyr or DJI450
 
 1. The Army Zephyrs are set up with the following IP schema: 
