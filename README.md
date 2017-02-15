@@ -3,8 +3,8 @@ Repo for the Service Academy Swarm Challenge
 
 ## Setting up the laptop to communicate with the Zephyr or DJI450
 
-1. The Army Zephyrs are set up with the following IP schema:
-- `192.168.11.X` where X is the “tail” number of the UAS.
+1. The Army Zephyrs are set up with the following IP schema: 
+`192.168.11.X` where X is the “tail” number of the UAS.
 
 2. With the Alfa USB Wi-Fi adapter connected, check for correct installation:
 `user1@ros01:~$ lsusb`
