@@ -5,7 +5,8 @@ Repo for the Service Academy Swarm Challenge
 
 Baseline requirements for single machine running Swarm Simulation SITL
 
-1. Modern CPU (recommended: [Predator 17](https://us-store.acer.com/predator-17-gaming-laptop-g9-791-79y3)
+1. Modern CPU (currnet machine: [Predator 17](https://us-store.acer.com/predator-17-gaming-laptop-g9-791-79y3){:target="_blank"})
+
 2. Ubuntu 16.04 LTS
 3. ROS Jade
 
