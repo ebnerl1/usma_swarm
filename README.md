@@ -4,15 +4,15 @@ Repo for the Service Academy Swarm Challenge
 ## Setting up the laptop to communicate with the Zephyr or DJI450
 
 1. The Army Zephyrs are set up with the following IP schema:
-192.168.11.X where X is the “tail” number of the UAS.
+- `192.168.11.X` where X is the “tail” number of the UAS.
 
-2. With the Alfa USB Wi-Fi adapter connected, check for correct installation
+2. With the Alfa USB Wi-Fi adapter connected, check for correct installation:
 `user1@ros01:~$ lsusb`
-Look for an entry in the list that has “RealTek” in the entry.
+- Look for an entry in the list that has “RealTek” in the entry.
 
 3. Check the network name associated with the adapter.
 `user1@ros01:~$ ifconfig`
-Look for wlan2 or a new entry
+-Look for wlan2 or a new entry
 
 4. Set up the Wi-Fi adapter for the Army network.
 `user1@ros01:~$ wifi_config.sh -T 11 wlan2 201`
@@ -48,61 +48,3 @@ To do:
 1.  Determine where the python behavior files need to be placed so that the tactic interface can find them, along with the behaviors.xml file, if needed
 2.  Copy customized fence, wp.template, and rally files into ~/blessed/
 3.  Verify that the plane configures properly with fti.py tool with correct fence and mission based on stack number
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1. Install [Ubuntu 14.04 LTS] (https://wiki.ubuntu.com/ARM/RaspberryPi) on a microSD card (32GB is typically large enough).
- - These [instructions] (https://www.raspberrypi.org/documentation/installation/installing-images/linux.md) are helpful as well.
-2. Connect your RPi2 using wired Ethernet.
- - If a wired connection is unavailable, use a USB-tether on a phone or hotspot.  Check with the CSG.
- - Set up your RPi2 interfaces to allow a USB tether:
- - `$ sudo nano /etc/network/interfaces`
-  ```
-  allow-hotplug usb0
-  iface usb0 inet dhcp
-  ```
-3. Install linux-firmware drivers to enable wifi and ssh.
- - `sudo apt-get install linux-firmware`
- - `sudo apt-get install wicd`
- - `sudo apt-get install openssh-server`
-4. Setup [wifi] (https://help.ubuntu.com/community/NetworkConfigurationCommandLine/Automatic) on your device.
- - Aother [reference] (https://learn.adafruit.com/adafruits-raspberry-pi-lesson-3-network-setup/setting-up-wifi-with-occidentalis).
- - `sudo nano /etc/network/interfaces`
-  ```
-  auto wlan0
-  allow-hotplug wlan0
-  iface wlan0 inet dhcp
-    wpa-ssid "EECSDS3"
-    wpa-psk "accessgranted"
-  ```
-5. Make sure the wifi dongle is assigned wlan0. If not, you can change it under the udev rules:
- - `sudo nano /etc/udev/rules.d/70-persistent-net.rules`
-6. Once connected to wifi, ensure you have performed the other [installs] (https://wiki.ubuntu.com/ARM/RaspberryPi):
- - Resize partition
- - Install swapfile
- - The serial console will be configed later.
- - GNOME is optional as well.
-7. Install build essential:
- - `sudo apt-get install build-essential -y`
-8. If you would like to set up ROS:
- - [Install ROS] (http://wiki.ros.org/indigo/Installation/UbuntuARM)
- - [Setup ROS Workspace] (http://wiki.ros.org/catkin/Tutorials/create_a_workspace)
