@@ -3,18 +3,18 @@ Repo for the Service Academy Swarm Challenge
 
 ## Setting up the laptop to communicate with the Zephyr or DJI450
 
-1. The Army Zephyrs are set up with the following IP schema: 
+The Army Zephyrs are set up with the following IP schema: 
 `192.168.11.X` where X is the “tail” number of the UAS.
 
-2. With the Alfa USB Wi-Fi adapter connected, check for correct installation:
+With the Alfa USB Wi-Fi adapter connected, check for correct installation:
 `user1@ros01:~$ lsusb`
-- Look for an entry in the list that has “RealTek” in the entry.
+Look for an entry in the list that has “RealTek” in the entry.
 
-3. Check the network name associated with the adapter.
+Check the network name associated with the adapter.
 `user1@ros01:~$ ifconfig`
--Look for wlan2 or a new entry
+Look for wlan2 or a new entry
 
-4. Set up the Wi-Fi adapter for the Army network.
+Set up the Wi-Fi adapter for the Army network.
 `user1@ros01:~$ wifi_config.sh -T 11 wlan2 201`
 - where the wlan2 is the name of the network and 201 is the last octet of the IP address.
 - this will setup wlan2 with IP address of 192.168.11.201/24.
