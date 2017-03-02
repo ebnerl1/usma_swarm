@@ -10,3 +10,5 @@
 8.	Update the Pixhawk.  At the application menu, enter `U`.  If the application asks for an aircraft ID, enter the “tail” number identified in line 1 (e.g. 10).
 9.	Follow all the instructions for connecting and disconnecting the Pixhawk when prompted.
 10.	If an ‘Update Successful!” is displayed, enter Q to quit the application.  In the terminal window, look for the “hash” code after the version string (e.g. `ArduPlane V3.8.0beta1 (cf848147)`.  Make a note of the hash and record it.
+Power down the plane and disconnect the DC power supply
+Gently seat the Pixhawk back in the carriage.  Make sure no cables are pinched.
