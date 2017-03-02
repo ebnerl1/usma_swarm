@@ -18,7 +18,7 @@
   - When prompted for a password, enter `odroid`.
 11.	At the UAS command prompt (e.g. odroid@192.168.11.10 :~$), enter `./odroid-installer-14.04.sh`
   - When prompted for a unique numeric ID, enter the tail number from line 1. (e.g. 10)
-  - When prompted for the team, enter 11 (11=Army).
+  - When prompted for the team, enter `11` (11=Army).
   - When prompted for the name, enter plane(A), where (A) is the “tail” number you entered in line 1.  (e.g. plane10)
   - At prompt asking if the Internet gateway is installed, hit the Enter key.
   - Download and Install will begin
