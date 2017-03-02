@@ -5,8 +5,8 @@
 4.	On the Linux computer, open a terminal (Ctrl-Alt-T).
 5.	Attach an Alfa Wi-Fi adapter to the computer
 6.	In the terminal, type `ifconfig` and hit enter.
-  a.	Look for an adapter name such as `eth0` or `eth1` for the Ethernet connection (on the Predators, the Ethernet adapter has a much more complex name).  Note that adapter name as ________(B)________.
-  b.	Look for an adapter similar to wlan2, where the last number could be anything larger than 2 (on the Predators, the adapter has a much more complex name).  Note that `wlan0` or `wlan1` is usually the built-in adapter for the laptop.  Note that adapter name as _______(C)_________.  
+ - Look for an adapter name such as `eth0` or `eth1` for the Ethernet connection (on the Predators, the Ethernet adapter has a much more complex name).  Note that adapter name as ________(B)________.
+ - Look for an adapter similar to wlan2, where the last number could be anything larger than 2 (on the Predators, the adapter has a much more complex name).  Note that `wlan0` or `wlan1` is usually the built-in adapter for the laptop.  Note that adapter name as _______(C)_________.  
 7.	Set up the computer as a router between the Ethernet and the Wi-Fi.
   - `wifi_config.sh –T 11 –R (B) (C) 1`, where (B) and (C) are the names identified in lines 6a and 6b above.
 8.	In the terminal, re-enter `ifconfig` and check the IP address for the Wi-Fi adapter you entered for (C). It should have an address of 192.168.11.1
