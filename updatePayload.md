@@ -23,3 +23,4 @@
   - At prompt asking if the Internet gateway is installed, hit the Enter key.
   - Download and Install will begin
 12.	Note the time of installation start. The installation can take up to an hour. 
+13. Upon successful completion, power down the UAS and disconnect the DC power supply.
