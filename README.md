@@ -9,10 +9,10 @@
 1. Get imaged Linux/ROS computer from EECS department
 2. Login
 3. Check hosts file is consistent with host name:
- - `echo $HOSTNAME` 
- - Copy the output (ex: ros305)
- - `sudo gedit /etc/hosts.` 
- - Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
+    `echo $HOSTNAME` 
+    Copy the output (ex: ros305)
+    `sudo gedit /etc/hosts.` 
+    Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
 4. Connect to the internet (EECS DS3 Network).  Preferably select a high speed wired line.  EECSNet instructions forthcoming.
 5. Install Git:
  - `sudo apt-get install git`
