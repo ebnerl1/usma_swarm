@@ -6,20 +6,25 @@
 3. ROS Kinetic
 
 ### Installing SASC (Service Academy Swarm Challenge) Software
-1. Get imaged Linux/ROS computer from EECS department
-2. Login
+1. Get imaged Linux/ROS computer from EECS department.
+2. Login.
 3. Check hosts file is consistent with host name:
-    `echo $HOSTNAME` 
-    Copy the output (ex: ros305)
-    `sudo gedit /etc/hosts.` 
-    Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
+    * `echo $HOSTNAME` 
+    * Copy the output (ex: ros305)
+    * `sudo gedit /etc/hosts.` 
+    * Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
 4. Connect to the internet (EECS DS3 Network).  Preferably select a high speed wired line.  EECSNet instructions forthcoming.
 5. Install Git:
- - `sudo apt-get install git`
- - (NOTE: may have to restart computer if error)
-Create SSH key.  Type ssh-keygen -t rsa -C "your.email@example.com" -b 4096.  Hit enter through all questions to keep defaults path, and no password
-Install xclip: sudo apt-get install xclip
-Copy ssh key: xclip -sel clip < ~/.ssh/id_rsa.pub
+    * `sudo apt-get install git`
+    * NOTE: may have to restart computer if error.
+6. Create SSH key:
+    * `ssh-keygen -t rsa -C "your.email@example.com" -b 4096`  
+    * Hit enter through all questions to keep defaults path, and no password.
+7. Install xclip:
+    * `sudo apt-get install xclip`
+8. Copy SSH key: 
+    * `xclip -sel clip < ~/.ssh/id_rsa.pub`
+
 Log into: https://gitlab.nps.edu
 Go to Profile Settings > SSH Keys tab.  Paste in ssh key (starts with ssh-rsa, end with email). Set title to computer name.
 Clone repo:
