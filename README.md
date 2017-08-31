@@ -1,12 +1,32 @@
 # usma_swarm
-Repo for the Service Academy Swarm Challenge
+Repo for the Swarm Research at USMA
 
-## Swarm Simulation using SITL Environment
-
-### Baseline requirements for single machine running Swarm Simulation SITL
+### Baseline requirements for single machine
 1. Modern CPU (current machine: [Predator 17](https://us-store.acer.com/predator-17-gaming-laptop-g9-791-79y3))
 2. Ubuntu 16.04 LTS
 3. ROS Kinetic
+
+### Installing SASC (Service Academy Swarm Challenge) Software
+1. Get imaged Linux/ROS computer from EECS department
+2. Login
+3. Check hosts file is consistent with host name:
+ - `$ echo $HOSTNAME` Copy the output (ex: ros305)
+ - `$ sudo gedit /etc/hosts.` Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
+
+### Continue cleanup below....
+
+Connect to internet (EECS DS3 Network).  Preferably select a high speed wired line
+Type: sudo apt-get install git    (NOTE: may have to restart computer if error)
+Create SSH key.  Type ssh-keygen -t rsa -C "your.email@example.com" -b 4096.  Hit enter through all questions to keep defaults path, and no password
+Install xclip: sudo apt-get install xclip
+Copy ssh key: xclip -sel clip < ~/.ssh/id_rsa.pub
+Log into: https://gitlab.nps.edu
+Go to Profile Settings > SSH Keys tab.  Paste in ssh key (starts with ssh-rsa, end with email). Set title to computer name.
+Clone repo:
+cd $HOME
+
+
+
 
 ### Clone Repository
 1. Create a sasc folder:
@@ -18,8 +38,47 @@ Repo for the Service Academy Swarm Challenge
 3. Build
 4. Make
 
+git clone git@gitlab.nps.edu:sasc/sasc-help.git
+Install SASC by typing following commands (will have to enter password along the way): 
+sudo apt-get update
+sudo apt-get upgrade
+cd $HOME/sasc-help
+./sasc_installer.py -I –s
+Initialize 10 planes: init_n_sitls.bash 10
+Start sim: begin_sim.py 6   (At this point a bunch of terminals will come up, and after about 60 sec a map will initialize with 3 blue and 3 red planes flying).
 
+Now need to update to the livefly branch in various repositories (this is what was flown in April 2017 demo and what is installed on vehicles
+acs_dashboards
+cd ~/ACS/acs_dashboards   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+python3 setup.py build install --user   (Note: this recompiles)
+acs-env
+cd ~/ACS/ acs-env   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+./install.sh   (Note: this recompiles)
+acs_lib
+cd ~/ACS/acs_lib   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+python3 setup.py build install --user   (Note: this recompiles)
+arbiter
+cd ~/ACS/arbiter   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+python3 setup.py build install --user   (Note: this recompiles)
+swarmcommander
+cd ~/ACS/swarmcommander   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+python3 setup.py build install --user   (Note: this recompiles)
+ROS repos
+cd ~/ACS/acs_ros_ws/src/autonomy_itar   (Note: should see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+cd ~/ACS/acs_ros_ws/src/autonomy-payload  (Note: see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+cd ~/ACS/acs_ros_ws/src/autopilot_bridge   (Note: see green “(master)”)
+git checkout livefly   (Note: now should see green “(livefly)”)
+cd ~/ACS/acs_ros_ws/
+catkin_make    (Note: this recompiles the ROS workspace)
 
+## Swarm Simulation using SITL Environment
 
 
 
