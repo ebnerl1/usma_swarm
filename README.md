@@ -24,91 +24,66 @@
     * `sudo apt-get install xclip`
 8. Copy SSH key: 
     * `xclip -sel clip < ~/.ssh/id_rsa.pub`
+9. Log into: https://gitlab.nps.edu
+    * Go to Profile Settings > SSH Keys tab.  Paste in ssh key (starts with ssh-rsa, end with email). Set title to computer name.
+10. Clone repo:
+    * `cd $HOME`
+11. Install SASC by typing following commands (will have to enter password along the way): 
+    * `sudo apt-get update`
+    * `sudo apt-get upgrade`
+    * `cd $HOME/sasc-help`
+    * `./sasc_installer.py -I –s`
+12. Initialize 10 planes after installation complete    
+    * `init_n_sitls.bash 10`
 
-Log into: https://gitlab.nps.edu
-Go to Profile Settings > SSH Keys tab.  Paste in ssh key (starts with ssh-rsa, end with email). Set title to computer name.
-Clone repo:
-cd $HOME
+### Updating SASC Code to different Git Branch
+1. Configure Git properly    
+    * `git config --global user.email "your_email@example.edu"`    
+    * `git config --global user.name "your_name"`
+2. Now update code to the "livefly" branch in various repositories (this is what was flown in April 2017 demo and is what is installed on the vehicles)    
+  - acs_dashboards    
+    * `cd ~/ACS/acs_dashboards`   (Note: should see green “(master)”)  
+    * `git checkout livefly`   (Note: now should see green “(livefly)”) 
+    * `python3 setup.py build install --user`    (Note: this recompiles)
+  - acs-env
+    * `cd ~/ACS/ acs-env`   (Note: should see green “(master)”)
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)    
+    * `./install.sh`   (Note: this recompiles)    
+  - acs_lib    
+    * `cd ~/ACS/acs_lib`   (Note: should see green “(master)”)
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)
+    * `python3 setup.py build install --user`   (Note: this recompiles)
+  - arbiter    
+    * `cd ~/ACS/arbiter`   (Note: should see green “(master)”)
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)    
+    * `python3 setup.py build install --user`   (Note: this recompiles)
+  - swarmcommander
+    * `cd ~/ACS/swarmcommander`   (Note: should see green “(master)”)    
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)
+    * `python3 setup.py build install --user`   (Note: this recompiles)
+  - ROS repos    
+    * `cd ~/ACS/acs_ros_ws/src/autonomy_itar`   (Note: should see green “(master)”)    
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)    
+    * `cd ~/ACS/acs_ros_ws/src/autonomy-payload`  (Note: see green “(master)”)    
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)    
+    * `cd ~/ACS/acs_ros_ws/src/autopilot_bridge`   (Note: see green “(master)”)    
+    * `git checkout livefly`   (Note: now should see green “(livefly)”)    
+    * `cd ~/ACS/acs_ros_ws/catkin_make`    (Note: this recompiles the ROS workspace)
 
-
-
-
-### Clone Repository
-1. Create a sasc folder:
- - `$ mkdir sasc`
- - `$ cd sasc`
- - `$ git clone https://gitlab.nps.edu/acs/acs_setup.git`
-2. Run installation script
- - `$setup.py`
-3. Build
-4. Make
-
-git clone git@gitlab.nps.edu:sasc/sasc-help.git
-Install SASC by typing following commands (will have to enter password along the way): 
-sudo apt-get update
-sudo apt-get upgrade
-cd $HOME/sasc-help
-./sasc_installer.py -I –s
-Initialize 10 planes: init_n_sitls.bash 10
-Start sim: begin_sim.py 6   (At this point a bunch of terminals will come up, and after about 60 sec a map will initialize with 3 blue and 3 red planes flying).
-
-Now need to update to the livefly branch in various repositories (this is what was flown in April 2017 demo and what is installed on vehicles
-acs_dashboards
-cd ~/ACS/acs_dashboards   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-python3 setup.py build install --user   (Note: this recompiles)
-acs-env
-cd ~/ACS/ acs-env   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-./install.sh   (Note: this recompiles)
-acs_lib
-cd ~/ACS/acs_lib   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-python3 setup.py build install --user   (Note: this recompiles)
-arbiter
-cd ~/ACS/arbiter   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-python3 setup.py build install --user   (Note: this recompiles)
-swarmcommander
-cd ~/ACS/swarmcommander   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-python3 setup.py build install --user   (Note: this recompiles)
-ROS repos
-cd ~/ACS/acs_ros_ws/src/autonomy_itar   (Note: should see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-cd ~/ACS/acs_ros_ws/src/autonomy-payload  (Note: see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-cd ~/ACS/acs_ros_ws/src/autopilot_bridge   (Note: see green “(master)”)
-git checkout livefly   (Note: now should see green “(livefly)”)
-cd ~/ACS/acs_ros_ws/
-catkin_make    (Note: this recompiles the ROS workspace)
-
+### Bringing in USMA Additions to Code
+1. Get thumb drive with USMA folder
+2. Copy into ~/home/user1/scrimmage
+3. Update .bashrc file to point to that folder  
+    * `cd ~/`  
+    * `gedit .bashrc`  
+    * Scroll to bottom, and add the following line:  `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
+    * Save and close bashrc file  
+    * `source .bashrc` (To source the updated .bashrc file)
+    
 ## Swarm Simulation using SITL Environment
-
-TEST TEST
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+1. Start basic simulation, should verify the install was successful  
+    * `begin_sim.py 6`
+2. See SASC documentation for more information on how to control
 
 
 ## Setting up the laptop to communicate with the Zephyr or DJI450
