@@ -76,7 +76,8 @@
 3. Update .bashrc file to point to that folder  
     * `cd ~/`  
     * `gedit .bashrc`  
-    * Scroll to bottom, and add the following line:  `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
+    * Scroll to bottom, and add the following line:  
+      `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
     * Save and close bashrc file  
     * `source .bashrc` (To source the updated .bashrc file)
     
