@@ -2,8 +2,11 @@
 #include <Servo.h>
 
 /*-----( Declare Constants and Pin Numbers )-----*/
-#define rMotorPin  10  // Can be changed 3,5,6,9,10,11 (NOW can be any pin including A0..A5)
-#define lMotorPin  11
+#define rMotorPin 10  // Can be changed 3,5,6,9,10,11 (NOW can be any pin including A0..A5)
+#define lMotorPin 11
+const int rightPing = 6;
+const int frontPing = 7;
+const int leftPing = 8;
 
 /*-----( Declare objects )-----*/
 Servo lMotor;
@@ -14,13 +17,13 @@ int forward = 1650;
 int halt = 1500;
 int backward = 1350;
 int turnTime = 940;
-int forwardLimit = 0;
-int turnLimit = 0;
-int haltLimit = 0;
+int fourFeet = 110;
+int wallDist;
+int relDir = 1;
 
 /* Declare constants */
 long Linches, Rinches, Finches;
-int wallsFound = 0;
+int wallsFound = 0; // true false statements
 int doorFound = 0;
 int leftWall = 0;
 int rightWall = 0;
@@ -35,7 +38,6 @@ long lastRightDebounce = 0;
 long debounceDelay = 50;
 int wallFind = -1; //0 if find the left wall, 1 if find the right wall.
 
-
 void setup()   /****** SETUP: RUNS ONCE ******/
 {
   rMotor.attach(rMotorPin);
@@ -44,7 +46,7 @@ void setup()   /****** SETUP: RUNS ONCE ******/
   pinMode(3,INPUT); //turn left and find a wall
   Serial.begin(9600);
 
-  //finds which wall to navigate to:
+//  finds which wall to navigate to:
   int wallFind = selectWall();
   Serial.println(wallFind);
   steerToWall(wallFind);
@@ -52,9 +54,39 @@ void setup()   /****** SETUP: RUNS ONCE ******/
 
 void loop()   /****** LOOP: RUNS CONSTANTLY ******/
 {
-  //forward4();
-  //lap4();
+//  forward4(); // goes forward 4 free //TODO recalibrate dist
+//  lap4(); // goes in a counterclockwise square
+//  hugWall(); // hugs wall
+    fTraverse(); // forward, around obstacles
+//    goAround();
+}
+
+//////////////////// LOOP OPTIONS ////////////////////
+
+void fTraverse() {
   LRFevaluate();
+  while (wallsFound == 0) {
+    LRFevaluate();
+    driveForward();
+    if (Finches < 7) {wallsFound = 1;}
+  }
+  
+  if (wallsFound == 1) {
+    // turn left or right based on obstacle, drive until past obstacle
+    goAround();
+    wallsFound = 0;
+  }
+}
+
+void lap4() {
+  forward4();
+  wait(500);
+  left90();
+  wait(500);
+}
+
+void hugWall() {
+    LRFevaluate();
   if(wallsFound == 0){
     wallsFound = 1;
     leftWall = Linches;
@@ -71,22 +103,14 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
     if(leftWall + 30 < Linches && doorFound != 1){
       lMotor.writeMicroseconds(backward);
       rMotor.writeMicroseconds(forward);
-
-      long time1 = millis();
-      while(millis()-time1 < 1150){
-      }
-      
+      wait(1150);
       doorFound = 1;
     }
     if(rightWall + 30 < Rinches && doorFound != 1){
       lMotor.writeMicroseconds(forward);
       rMotor.writeMicroseconds(backward);
       Serial.println("TURNING");
-
-      long time1 = millis();
-      while(millis()-time1 < 1150){
-      }
-      
+      wait(1150);
       doorFound = 1;
     }
     driveForward();
@@ -96,25 +120,17 @@ void loop()   /****** LOOP: RUNS CONSTANTLY ******/
   }
 }
 
+//////////////////// MANEUVERS ////////////////////
+
 void steerToWall(int wallFind){
-  if(wallFind == 0){
-    lMotor.writeMicroseconds(backward);
-    rMotor.writeMicroseconds(forward);
-    long time1 = millis();
-    while(millis()-time1 < 1150){
-      
-    }
+  if(wallFind == 0){ // if steer to left wall
+  left90();
   }
   else{
-    lMotor.writeMicroseconds(forward);
-    rMotor.writeMicroseconds(backward);
-    long time1 = millis();
-    while(millis()-time1 < 1150){
-      
-    }
+    right90();
   }
   Finches = 40;
-  while(Finches > 7){
+  while(Finches > 5){ // Ping wall until closer than 7
     const int frontPing = 7;
     pinMode(frontPing, OUTPUT);
     digitalWrite(frontPing,LOW);
@@ -125,27 +141,15 @@ void steerToWall(int wallFind){
     pinMode(frontPing,INPUT);
     Finches = microsecondsToInches(pulseIn(frontPing,HIGH));
     Serial.println(Finches);
-    lMotor.writeMicroseconds(forward);
-    rMotor.writeMicroseconds(forward);
+    driveForward();
   }
     
-  lMotor.writeMicroseconds(halt);
-  rMotor.writeMicroseconds(halt);
-  if(wallFind == 1){
-    lMotor.writeMicroseconds(backward);
-    rMotor.writeMicroseconds(forward);
-    long time1 = millis();
-    while(millis()-time1 < 1150){
-      
-    }
+  stopBot(); // stop once wall found
+  if(wallFind == 0){
+    right90();
   }
   else{
-    lMotor.writeMicroseconds(forward);
-    rMotor.writeMicroseconds(backward);
-    long time1 = millis();
-    while(millis()-time1 < 1150){
-      
-    }
+    left90();
   }
 }
 
@@ -181,29 +185,80 @@ int selectWall(){
   return wallFind;
 }
 
-void driveForward(){
-  lMotor.writeMicroseconds(forward);
-  rMotor.writeMicroseconds(forward);
+void goAround() {
+  stopBot();
+  wallDist = Finches;
+  if (Linches > Rinches) { // go left
+    left90(); // turn left
+    int sideStart = millis(); // begin timing width of obstacle
+    while (Rinches < wallDist + 20) { // go until clear of obstacle
+      driveForward();
+      LRFevaluate();
+    }
+    wait(250); // go a little bit extra to clear the object
+    int sideEnd = millis() - sideStart; // necessary traverse
+    
+    right90(); // forward traverse obstacle
+    wait(200);
+    driveForward();
+    wait(500);
+    LRFevaluate();
+    while (Rinches < wallDist + 20) {
+      driveForward();
+      LRFevaluate();
+    }
+    driveForward(); // go a little bit extra to clear the object
+    wait(250);
+    
+    right90();
+    driveForward();
+    wait(sideEnd);
+    left90();
+  }
+
+  if (Linches <= Rinches) { // go right
+    right90(); // turn right
+    int sideStart = millis(); // begin timing width of obstacle
+    while (Linches < wallDist + 20) { // go until clear of obstacle
+      driveForward();
+      LRFevaluate();
+    }
+    wait(250); // go a little bit extra to clear the object
+    int sideEnd = millis() - sideStart; // necessary traverse
+    
+    left90(); // forward traverse obstacle
+    wait(200);
+    driveForward();
+    wait(500);
+    LRFevaluate();
+    while (Linches < wallDist + 20) {
+      driveForward();
+      LRFevaluate();
+    }
+    driveForward(); // go a little bit extra to clear the object
+    wait(250);
+    
+    left90();
+    driveForward();
+    wait(sideEnd);
+    right90();
+  }
 }
 
 void avoidObstacle(){
   lMotor.writeMicroseconds(halt);
   rMotor.writeMicroseconds(halt);
+
   
   lMotor.writeMicroseconds(forward);
   rMotor.writeMicroseconds(backward);
 
-  long time1 = millis();
-  while(millis()-time1 < 1150){
-    
-  }
+  wait(1150);
 }
 
-long LRFevaluate(){
-  const int rightPing = 6;
-  const int frontPing = 7;
-  const int leftPing = 8;
-  
+//////////////////// SENSORS ////////////////////
+
+long LRFevaluate(){ // pulses LRF in order to read inches
   pinMode(rightPing, OUTPUT);
   digitalWrite(rightPing,LOW);
   delayMicroseconds(2);
@@ -236,74 +291,47 @@ long microsecondsToInches(long microseconds){
   return microseconds / 74 / 2;
 }
 
-void lap4() {
-  if (forwardLimit < 110) {
-  forward4();
+//////////////////// Basic Movement Functions ////////////////////
+
+void wait(int t) {
+  long t2 = millis();
+  while(millis() - t2 < t){
+    // do nothing    
   }
-  if (forwardLimit == 110) {
-    halt1();
-    forwardLimit++;
-  }
-  if (forwardLimit > 110) {
-    right90();
-  }
-  if (turnLimit >= 35) {
-    halt1();
-    turnLimit = 0;
-    haltLimit = 0;
-    forwardLimit = 0;
-  }
+}
+
+void driveForward(){
+  lMotor.writeMicroseconds(forward);
+  rMotor.writeMicroseconds(forward);
 }
 
 void forward4() {
-  if (forwardLimit < 110) {
     lMotor.writeMicroseconds(forward);
     rMotor.writeMicroseconds(forward);
-    forwardLimit++;
-    delay(10);
-  }
-  else {
-    lMotor.writeMicroseconds(halt);
-    rMotor.writeMicroseconds(halt);
-  }
+    wait(2000);
+    stopBot();
 }
 
 void left90() {
-  if (turnLimit < 35) {
-    backward = 1000;
-    forward = 2000;
+    if (relDir == 1) {relDir = 4;}
+    else {relDir--;}
     lMotor.writeMicroseconds(backward);
     rMotor.writeMicroseconds(forward);
-    turnLimit++;
-    delay(10);
-  }
-  else {
-    lMotor.writeMicroseconds(halt);
-    rMotor.writeMicroseconds(halt);
-  }
+    wait(1065);
+    stopBot();
 }
 
 void right90() {
-  if (turnLimit < 35) {
-    backward = 1000;
-    forward = 2000;
+    if (relDir == 4) {relDir = 1;}
+    else {relDir++;}
     lMotor.writeMicroseconds(forward);
     rMotor.writeMicroseconds(backward);
-    turnLimit++;
-    delay(10);
-  }
-  else {
-    lMotor.writeMicroseconds(halt);
-    rMotor.writeMicroseconds(halt);
-  }
+    wait(1065);
+    stopBot();
 }
 
-void halt1() {
-  if (haltLimit < 15) {
+void stopBot() {
     lMotor.writeMicroseconds(halt);
     rMotor.writeMicroseconds(halt);
-    haltLimit++;
-    delay(10);
-  }
 }
 

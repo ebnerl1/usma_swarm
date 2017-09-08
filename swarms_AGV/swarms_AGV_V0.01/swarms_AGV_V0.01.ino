@@ -27,8 +27,8 @@ void setup()   /****** SETUP: RUNS ONCE ******/
 
 void loop()   /****** LOOP: RUNS CONSTANTLY ******/
 {
-  //forward4();
-  lap4();
+  forward4();
+  //lap4();
 }
 
 void lap4() {
@@ -51,16 +51,16 @@ void lap4() {
 }
 
 void forward4() {
-  if (forwardLimit < 110) {
+//  if (forwardLimit < 110) {
     lMotor.writeMicroseconds(forward);
     rMotor.writeMicroseconds(forward);
-    forwardLimit++;
-    delay(10);
-  }
-  else {
-    lMotor.writeMicroseconds(halt);
-    rMotor.writeMicroseconds(halt);
-  }
+  //  forwardLimit++;
+ //   delay(10);
+//  }
+//  else {
+//    lMotor.writeMicroseconds(halt);
+//    rMotor.writeMicroseconds(halt);
+//  }
 }
 
 void left90() {
