@@ -2,31 +2,32 @@
 #include <Servo.h>
 
 /*-----( Declare Constants and Pin Numbers )-----*/
-
-// MOTORS
 #define rMotorPin 10  // Can be changed 3,5,6,9,10,11 (NOW can be any pin including A0..A5)
 #define lMotorPin 11
 
-// PING SENSOR
 const int rightPing = 6;
 const int frontPing = 7;
 const int leftPing = 8;
-
-// IR SENSOR 
-int sensorPin = A5; 
-int sensorValue = 0;  // variable to store the value coming from the sensor
-int initialValue = 0;
-int maxChange = 20;
 
 /*-----( Declare objects )-----*/
 Servo lMotor;
 Servo rMotor; 
 
+/*Declare Pins*/
+int sensorPin0 = A0;//left    select the input pin for the potentiometer 
+int sensorPin1 = A1;//front
+int sensorPin2 = A2;
+double sensorValue0 = 0;  // variable to store the value coming from the sensor
+double sensorValue1 = 0;
+double sensorValue2 = 0;
+int orientation = 0;
+
 /*-----( Declare Variables )-----*/
 int forward = 1650;
 int halt = 1500;
 int backward = 1350;
-int turnTime = 940;
+int leftTurnTime = 1050;
+int rightTurnTime = 990;
 int fourFeet = 110;
 int wallDist;
 int relDir = 1;
@@ -55,37 +56,51 @@ void setup()   /****** SETUP: RUNS ONCE ******/
   pinMode(2,INPUT); //turn right and find a wall
   pinMode(3,INPUT); //turn left and find a wall
   Serial.begin(9600);
+  pinMode(sensorPin0, INPUT);
+  pinMode(sensorPin1, INPUT);
+  pinMode(sensorPin2, INPUT);
   
-  // NAVIGATE TO WALL
+//  finds which wall to navigate to:
   int wallFind = selectWall();
   Serial.println(wallFind);
   steerToWall(wallFind);
 
-  // INIT IR SENSOR
-  pinMode(A5,INPUT)
-  initialValue = analogRead(sensorPin);
-  
+  doorEvaluate(wallFind);
+  if(wallFind == 0){
+    leftWall = Linches;
+  }
+  else{
+    rightWall = Rinches;
+  }
 }
 
 void loop()   /****** LOOP: RUNS CONSTANTLY ******/
 {
 //  forward4(); // goes forward 4 free //TODO recalibrate dist
 //  lap4(); // goes in a counterclockwise square
-//  hugWall(); // hugs wall
-    fTraverse(); // forward, around obstacles
-//    goAround();
+    if (doorFound == 0) {hugWall();} // hugs wall
+    else if (doorFound == 1) {
+      findLight();
+      //fTraverse(); //forward around obstacles
+    } 
 }
 
 //////////////////// LOOP OPTIONS ////////////////////
 
 void fTraverse() {
+  lightScan();
   LRFevaluate();
+  
   while (wallsFound == 0) {
     LRFevaluate();
-    irScan();
-    driveForward();
+    lightScan();
+    
+    if (doorFound == 0) {hugWall();}
     if (Finches < 7) {wallsFound = 1;}
-    if((sensorValue > initialValue + maxChange)) {wallsFound = 1; 
+    else if (doorFound == 1) {
+      driveForward();
+      findLight();
+    }
   }
   
   if (wallsFound == 1) {
@@ -102,34 +117,64 @@ void lap4() {
   wait(500);
 }
 
-void hugWall() {
-    LRFevaluate();
-  if(wallsFound == 0){
-    wallsFound = 1;
-    leftWall = Linches;
-    rightWall = Rinches;
+/*evaluates the ping sensors to determine if there is an obstacle in the way 
+ * or if the door has been found. Only pings left or right depending on which
+ * wall it is hugging. wallFind = 0: left wall. wallFind = 1: right wall.
+ */
+long doorEvaluate(int wallFind){
+
+  if(wallFind == 1){
+    pinMode(rightPing, OUTPUT);
+    digitalWrite(rightPing,LOW);
+    delayMicroseconds(2);
+    digitalWrite(rightPing,HIGH);
+    delayMicroseconds(5);
+    digitalWrite(rightPing,LOW);
+    pinMode(rightPing,INPUT);
+    Rinches = microsecondsToInches(pulseIn(rightPing,HIGH));
   }
-  else if(Finches >= 20){
+
+  if(wallFind == 0){
+    pinMode(leftPing, OUTPUT);
+    digitalWrite(leftPing,LOW);
+    delayMicroseconds(2);
+    digitalWrite(leftPing,HIGH);
+    delayMicroseconds(5);
+    digitalWrite(leftPing,LOW);
+    pinMode(leftPing,INPUT);
+    Linches = microsecondsToInches(pulseIn(leftPing,HIGH));
+  }
+  
+  pinMode(frontPing, OUTPUT);
+  digitalWrite(frontPing,LOW);
+  delayMicroseconds(2);
+  digitalWrite(frontPing,HIGH);
+  delayMicroseconds(5);
+  digitalWrite(frontPing,LOW);
+  pinMode(frontPing,INPUT);
+  Finches = microsecondsToInches(pulseIn(frontPing,HIGH));
+}
+
+
+void hugWall() {
+  doorEvaluate(wallFind);
+
+  /* if no obstacles are in the car's path*/
+  if(Finches >= 20){
     Serial.print(leftWall);
-    Serial.print(" ");
-    Serial.print(rightWall);
-    Serial.print("    ");
-    Serial.print(Linches);
-    Serial.print(" ");
-    Serial.println(Rinches);
-    if(leftWall + 30 < Linches && doorFound != 1){
-      lMotor.writeMicroseconds(backward);
-      rMotor.writeMicroseconds(forward);
-      wait(1150);
+    Serial.print(' ');
+    Serial.println(Linches);
+    if(leftWall + 30 < Linches && doorFound == 0 && wallFind == 0){
+      left90();
       doorFound = 1;
+      driveForward2(4000);
     }
-    if(rightWall + 30 < Rinches && doorFound != 1){
-      lMotor.writeMicroseconds(forward);
-      rMotor.writeMicroseconds(backward);
-      Serial.println("TURNING");
-      wait(1150);
+    if(rightWall + 30 < Rinches && doorFound == 0 && wallFind == 1){
+      right90();
       doorFound = 1;
+      driveForward2(4000);
     }
+    
     driveForward();
   }
   else{
@@ -138,6 +183,33 @@ void hugWall() {
 }
 
 //////////////////// MANEUVERS ////////////////////
+
+void lightScan() {
+  sensorValue0 = analogRead(sensorPin0);
+  sensorValue1 = analogRead(sensorPin1);
+  sensorValue2 = analogRead(sensorPin2);
+}
+  
+
+void findLight(){
+  lightScan();
+  driveForward();
+  Serial.println(sensorValue1);
+  if (sensorValue0 > sensorValue1 && sensorValue0 > sensorValue2) { // if more light left
+    Serial.println("Turn Left");
+    left45();
+    orientation = orientation - 45;
+  }
+  else if (sensorValue2 > sensorValue0 && sensorValue2 > sensorValue1) { // if more light right
+    Serial.println("Go Right");
+    right45();
+    orientation = orientation + 45;
+  }
+  else {
+    Serial.println("Go Straight");
+    driveForward();
+  }
+}
 
 void steerToWall(int wallFind){
   if(wallFind == 0){ // if steer to left wall
@@ -208,7 +280,7 @@ void goAround() {
   if (Linches > Rinches) { // go left
     left90(); // turn left
     int sideStart = millis(); // begin timing width of obstacle
-    while (Rinches < wallDist + 20) { // go until clear of obstacle
+    while (Rinches < wallDist + 30) { // go until clear of obstacle
       driveForward();
       LRFevaluate();
     }
@@ -220,7 +292,7 @@ void goAround() {
     driveForward();
     wait(500);
     LRFevaluate();
-    while (Rinches < wallDist + 20) {
+    while (Rinches < wallDist + 30) {
       driveForward();
       LRFevaluate();
     }
@@ -236,7 +308,7 @@ void goAround() {
   if (Linches <= Rinches) { // go right
     right90(); // turn right
     int sideStart = millis(); // begin timing width of obstacle
-    while (Linches < wallDist + 20) { // go until clear of obstacle
+    while (Linches < wallDist + 30) { // go until clear of obstacle
       driveForward();
       LRFevaluate();
     }
@@ -274,66 +346,6 @@ void avoidObstacle(){
 }
 
 //////////////////// SENSORS ////////////////////
-
-void irScan() {
-  sensorValue = analogRead(sensorPin);
-}
-
-void irGoAround() {
-  // read the value from the sensor:
-  int passed = 0; 
-  irScan();
-  stopBot();
-  
-  if (Linches > Rinches) { // go left
-    left90(); // turn left
-    driveForward();
-    wait(2000);
-    stopBot();
-    wait(250);
-    right90();
-    driveBackward();
-    wait(500);
-  } 
-  
-  if (Linches <= Rinches) { // go right
-    right90(); // turn left
-    driveForward();
-    wait(2000);
-    stopBot();
-    wait(250);
-    left90();
-    driveBackward();
-    wait(500);
-  }    
-}
-  
-  // turn the ledPin o
-  // stop the program for <sensorValue> milliseconds
-  // turn the ledPin off:
-  Serial.println(sensorValue);
-  if((sensorValue < initialValue + maxChange)){
-      Serial.println(sensorValue);
-      lMotor.writeMicroseconds(forward);
-      rMotor.writeMicroseconds(forward);
-      Serial.println("Driving Forward");
-  }
-  else{
-    lMotor.writeMicroseconds(halt);
-    rMotor.writeMicroseconds(halt);
-    long time1 = millis();
-    while(millis()-time1 < 2000){
-      
-    }
-    passed = 1;
-    lMotor.writeMicroseconds(backward);
-    rMotor.writeMicroseconds(backward);
-    time1 = millis();
-    while(millis()-time1 < 1000){
-      
-    }
-  }
-}
 
 long LRFevaluate(){ // pulses LRF in order to read inches
   pinMode(rightPing, OUTPUT);
@@ -382,9 +394,13 @@ void driveForward(){
   rMotor.writeMicroseconds(forward);
 }
 
-void driveBackward() {
-  lMotor.writeMicroseconds(backward);
-  rMotor.writeMicroseconds(backward);
+void driveForward2(int t){
+  lMotor.writeMicroseconds(forward);
+  rMotor.writeMicroseconds(forward);
+  long t1 = millis();
+  while(millis()-t1 < t){
+    
+  }
 }
 
 void forward4() {
@@ -399,7 +415,7 @@ void left90() {
     else {relDir--;}
     lMotor.writeMicroseconds(backward);
     rMotor.writeMicroseconds(forward);
-    wait(1065);
+    wait(leftTurnTime);
     stopBot();
 }
 
@@ -408,7 +424,25 @@ void right90() {
     else {relDir++;}
     lMotor.writeMicroseconds(forward);
     rMotor.writeMicroseconds(backward);
-    wait(1065);
+    wait(rightTurnTime);
+    stopBot();
+}
+
+void left45() {
+    if (relDir == 1) {relDir = 4;}
+    else {relDir--;}
+    lMotor.writeMicroseconds(backward);
+    rMotor.writeMicroseconds(forward);
+    wait(leftTurnTime/2);
+    stopBot();
+}
+
+void right45() {
+    if (relDir == 4) {relDir = 1;}
+    else {relDir++;}
+    lMotor.writeMicroseconds(forward);
+    rMotor.writeMicroseconds(backward);
+    wait(rightTurnTime/2);
     stopBot();
 }
 
