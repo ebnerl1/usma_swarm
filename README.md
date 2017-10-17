@@ -74,7 +74,7 @@
 1. Point to the scrimmage folder
     * `cd ~/scrimmage`
 2. Clone USMA files from the Gitlab repository and build
-    * `git clone git@gitlab.nps.edu:todd.brick_usma.edu/scrimmage-templates.git usma`
+    * `git clone git@gitlab.nps.edu:todd.brick_usma.edu/scrimmage-templates.git usma`
     * `cd ~/scrimmage/usma`
     * `mkdir build && cd build`
     * `cmake .. && make`
