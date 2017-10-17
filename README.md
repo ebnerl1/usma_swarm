@@ -71,8 +71,13 @@
     * `cd ~/ACS/acs_ros_ws/catkin_make`    (Note: this recompiles the ROS workspace)
 
 ### Bringing in USMA Additions to Code
-1. Get thumb drive with USMA folder
-2. Copy into ~/home/user1/scrimmage
+1. Point to the scrimmage folder
+    * `cd ~/scrimmage`
+2. Clone USMA files from the Gitlab repository and build
+    * `git clone git@gitlab.nps.edu:todd.brick_usma.edu/scrimmage-templates.git usma`
+    * `cd ~/scrimmage/usma`
+    * `mkdir build && cd build`
+    * `cmake .. && make`
 3. Update .bashrc file to point to that folder  
     * `cd ~/`  
     * `gedit .bashrc`  
