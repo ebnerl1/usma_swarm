@@ -68,7 +68,8 @@
     * `git checkout livefly`   (Note: now should see green “(livefly)”)    
     * `cd ~/ACS/acs_ros_ws/src/autopilot_bridge`   (Note: see green “(master)”)    
     * `git checkout livefly`   (Note: now should see green “(livefly)”)    
-    * `cd ~/ACS/acs_ros_ws/catkin_make`    (Note: this recompiles the ROS workspace)
+    * `cd ~/ACS/acs_ros_ws/`
+    * `catkin_make`    (Note: this recompiles the ROS workspace)
 
 ### Bringing in USMA Additions to Code
 1. Point to the scrimmage folder
