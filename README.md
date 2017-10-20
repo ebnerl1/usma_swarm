@@ -46,7 +46,7 @@
     * `git checkout livefly`   (Note: now should see green “(livefly)”) 
     * `python3 setup.py build install --user`    (Note: this recompiles)
   - acs-env
-    * `cd ~/ACS/ acs-env`   (Note: should see green “(master)”)
+    * `cd ~/ACS/acs-env`   (Note: should see green “(master)”)
     * `git checkout livefly`   (Note: now should see green “(livefly)”)    
     * `./install.sh`   (Note: this recompiles)    
   - acs_lib    
