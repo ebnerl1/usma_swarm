@@ -1,0 +1,5 @@
+<map id="ap_path_planning.patrol_box.PatrolBox.callbackSetup" name="ap_path_planning.patrol_box.PatrolBox.callbackSetup">
+<area shape="rect" id="node2" href="$classap__lib_1_1nodeable_1_1_nodeable.html#ad3b9800462db5427d03ef69c3dcdea68" title="ap_lib.nodeable.Nodeable.create\lSubscriber" alt="" coords="252,5,463,46"/>
+<area shape="rect" id="node4" href="$classap__path__planning_1_1patrol__box_1_1_patrol_box.html#aed0aba4bfb1560e514523dccbb487b51" title="ap_path_planning.patrol\l_box.PatrolBox._recv_own_pose" alt="" coords="251,70,464,111"/>
+<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#a55ff40ae39b4185081c7fba973934e48" title="ap_lib.nodeable.Nodeable.log_dbug" alt="" coords="512,12,739,39"/>
+</map>

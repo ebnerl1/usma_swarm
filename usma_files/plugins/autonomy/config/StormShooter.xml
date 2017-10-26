@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SASCAutonomy_plugin</library>
+  <module>storm</module> 
+  <class>StormShooter</class>
+  <percent_greedy>0.50</percent_greedy>
+  <dist_xy>500.0</dist_xy>
+  <enable_VO>false</enable_VO>
+  <dive_altitude>500</dive_altitude>
+</params>

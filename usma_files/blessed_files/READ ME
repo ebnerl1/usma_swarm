@@ -1,0 +1,22 @@
+READ ME: 
+Andrew Kopeikin - 18 Oct 2017
+
+UPDATE_USMA_TEMPLATES.PY
+
+To update ~/blessed files for operations at other locations:
+
+Copy the good blue zephyr waypoint file to ~/home/user1/usma_files/blessed_files/zeph_blue.wp
+
+Copy the good red zephyr waypoint file to ~/home/user1/usma_files/blessed_files/zeph_red.wp
+
+Copy the good blue quad waypoint file to ~/home/user1/usma_files/blessed_files/quad_blue.wp
+
+Copy the good red zephyr waypoint file to ~/home/user1/usma_files/blessed_files/quad_red.wp
+
+Put the rally entries for blue/red in ~/home/user1/usma_files/blessed_files/rally_all.txt
+
+Copy the fence file to ~/usma/USMA_files/fence.fen
+
+Run ~/home/user1/usma_files/blessed_files/update_templates_usma.py
+
+Check the ~/blessed directory for proper operation

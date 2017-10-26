@@ -1,0 +1,14 @@
+READ ME: AP_ENUMERATIONS.PY
+Andrew Kopeikin - 18 Oct 17
+
+The ap_enumerations.py needs to be updated based on the location.  
+Open the file and update parameter SITL_LOCATION to 0,1,..., based on the enumerated locations.
+Then copy this file over in /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib
+
+If running the SITL, this is all that is required.
+If conducting a flight mission, the acs_ros_ws directory will be loaded into the vehicles per setup procedures.
+
+The original downloaded (vetted) ap_enumerations.py is in the "original" folder.
+It only includes the California location. 
+
+Past used ap_enumerations.py are in the "archive" folder

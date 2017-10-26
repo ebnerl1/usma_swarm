@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SASCAutonomy_plugin</library>
+  <module>goto_mult</module>
+  <class>GotoMult</class>
+  <wp_dist>50.0</wp_dist>
+  <loc1>5</loc1>
+  <loc2>8</loc2>
+  <loc3>13</loc3>
+  <loc4>99</loc4>
+</params>

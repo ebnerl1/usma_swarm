@@ -1,0 +1,7 @@
+<map id="task_runner.Task" name="task_runner.Task">
+<area shape="rect" id="node3" href="$classtask__runner_1_1_fetch_config_task.html" title="task_runner.FetchConfigTask" alt="" coords="283,5,477,32"/>
+<area shape="rect" id="node4" href="$classtask__runner_1_1_rosbag_task.html" title="task_runner.RosbagTask" alt="" coords="296,56,464,83"/>
+<area shape="rect" id="node5" href="$classtask__runner_1_1_set_i_d_task.html" title="task_runner.SetIDTask" alt="" coords="301,107,459,133"/>
+<area shape="rect" id="node6" href="$classtask__runner_1_1_tx_power_task.html" title="task_runner.TxPowerTask" alt="" coords="293,157,467,184"/>
+<area shape="rect" id="node7" href="$classtask__runner_1_1_verify_config_task.html" title="task_runner.VerifyConfigTask" alt="" coords="283,208,477,235"/>
+</map>
