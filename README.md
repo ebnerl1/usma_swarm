@@ -28,6 +28,7 @@
     * Go to Profile Settings > SSH Keys tab.  Paste in ssh key (starts with ssh-rsa, end with email). Set title to computer name.
 10. Clone repo:
     * `cd $HOME`
+    * `git clone git@gitlab.nps.edu:sasc/sasc-help.git`
 11. Install SASC by typing following commands (will have to enter password along the way): 
     * `sudo apt-get update`
     * `sudo apt-get upgrade`
