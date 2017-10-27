@@ -71,7 +71,7 @@
     * `cd ~/ACS/acs_ros_ws/`
     * `catkin_make`    (Note: this recompiles the ROS workspace)
 
-### Bringing in USMA Additions to Code
+### Bring in USMA Additions to Code
 1. Point to the scrimmage folder
     * `cd ~/scrimmage`
 2. Clone USMA files from the Gitlab repository and build
@@ -86,6 +86,9 @@
       `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
     * Save and close bashrc file  
     * `source .bashrc` (To source the updated .bashrc file)
+4. Install USMA SWARM files from westpoint-robotics Github
+    * `cd ~/`  
+    * `git clone https://github.com/westpoint-robotics/usma_swarm.git` 
     
 ## Swarm Simulation using SITL Environment
 1. Start basic simulation, should verify the install was successful  
