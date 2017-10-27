@@ -63,8 +63,8 @@ mission_dir = os.environ['HOME']
 #    sys.exit(-1)
 
 #mission_dir = mission_dir + "/acs-env/data"
-params_dir = mission_dir + "/usma_files/usma_files/blessed_files/"
-mission_dir = mission_dir + "/usma_files/usma_files/blessed_files/"
+params_dir = mission_dir + "/usma_swarm/usma_files/blessed_files/"
+mission_dir = mission_dir + "/usma_swarm/usma_files/blessed_files/"
 
 
 #params dir has same prefix as mission_dir ONLY AT THIS POINT IN THE SCRIPT
