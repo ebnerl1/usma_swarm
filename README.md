@@ -5,7 +5,7 @@
 2. Ubuntu 16.04 LTS
 3. ROS Kinetic
 
-### Installing SASC (Service Academy Swarm Challenge) Software
+### Install SASC (Service Academy Swarm Challenge) Software
 1. Get imaged Linux/ROS computer from EECS department.
 2. Login.
 3. Check hosts file is consistent with host name:
@@ -36,7 +36,7 @@
 12. Initialize 10 planes after installation complete    
     * `init_n_sitls.bash 10`
 
-### Updating SASC Code to different Git Branch
+### Update SASC Code to 'livefly' Git Branch
 1. Configure Git properly    
     * `git config --global user.email "your_email@example.edu"`    
     * `git config --global user.name "your_name"`
