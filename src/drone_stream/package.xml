@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2" >
+  <name>drone_stream</name>
+  <version>0.0.0</version>
+  <description>The drone_stream package</description>
+  <maintainer email="zpeng96@gmail.com">ziwei</maintainer>
+  <license>TODO</license>
+  <depend>catkin</depend>
+  <depend>roscpp</depend>
+  <depend>rospy</depend>
+  <depend>std_msgs</depend>
+  
+  <export>
+  </export>
+</package>
