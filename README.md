@@ -36,6 +36,7 @@
     * `./sasc_installer.py -I –s`
 12. Initialize 10 planes after installation complete    
     * `init_n_sitls.bash 10`
+    * If an error occurs, check the last lines of the bashrc file (`sudo gedit .bashrc`) against a working machine. 
 
 ### Update SASC Code to 'livefly' Git Branch
 1. Configure Git properly    
