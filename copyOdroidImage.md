@@ -4,9 +4,10 @@
 2. Carefully remove EMMC card from ODROID
 3. Connect EMMC card to laptop
   * Insert EMMC card into EMMC to mirco-SD card adapter  
-  * Insert that micro-SD card adapter into a micro-SD to USB adapter (NOTE: Do not use a micro-SD to SD card adapter, this must go through USB)  
+  * Insert that micro-SD card adapter into a micro-SD to USB adapter
   * Insert the USB adapter into a USB port on the computer
-4. Verify Designation of the USB Disk on the Laptop  
+  * NOTE: Do not use a micro-SD to SD card adapter, this must go through USB
+4. Verify Designation of the USB Disk on the Laptop  
   * `dh -h`   
   * Copy which drive has the "BOOT" and "trusty" drive partitions (ex: /dev/sdb1 BOOT, /dev/sdb2 trusty; means the USB disk is /dev/sdb)  
   * Confirm this by removing the USB, rerunning `dh -h`, and confirming that disk has disappeared
