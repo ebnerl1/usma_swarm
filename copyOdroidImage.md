@@ -1,6 +1,4 @@
-# Vehicle Configuration (ODROID / PIXHAWK)
-
-### Create ODROID Image Copy from Existing SASC Vehicle
+# Create ODROID Image Copy from Existing SASC Vehicle
 1. Acquire known working SASC configured vehicle
   * Can check functionality in SASC Flight Tech Interface (see SASC documentation)
 2. Carefully remove EMMC card from ODROID
