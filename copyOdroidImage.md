@@ -28,8 +28,4 @@
 7. Check functionality of new EMMC card by plugging it into ODROID of copied vehicle  
   * Functionality should be identical in SASC Flight Tech Interface with original card  
   
-### Configure ODROID aircraft ID and team
-1. TODO: add this
 
-### Configure new Pixhawk
-1. TODO: add this
