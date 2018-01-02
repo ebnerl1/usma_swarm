@@ -15,7 +15,7 @@
   * NOTE: these disks typically have 4 partitions: (0) Unallocated Space (~1.6MB), (1) BOOT (~135MB), (2) trusty (~5.8GB), (3) Unallocated (rest of drive space). We only care about parts 0-2.  
   * `sudo fdisk -l /dev/sdb` (replace "sdb" with the USB drive designation)  
   * Copy "End" number for /dev/sdb2 (ex: 10915839)  
-  * Multiply that number by *(512/(4*1024*1024)) and round up (ex: 10915839*(512/(4*1024*1024)) = 1333)  
+  * Multiply that number by `*(512/(4*1024*1024))` and round up (ex: `10915839*(512/(4*1024*1024)) = 1333`)  
   * CAUTION: by very careful using the next command `dd`, particularly with the input `if` and output `of` file arguments. Misuse can corrupt your computer's system.  
   * `sudo dd if=/dev/sdb of=/home/user1/odroid_images/backup.img status=progress`(may need to create odroid_images directory)  
   * More information available at: \sasc_docs\html\deploy under "Creating an image for cloning"
