@@ -24,7 +24,7 @@
   * Remove the copied EMMC card from the laptop  
   * Insert the new EMMC card into the laptop using the same steps as above  
   * Verify designation of the USB Disk using `df -h` and the same procedure as above (ex /dev/sdb)  
-  * `sudo dd if=/home/user1/odroid_images/backup.img of=/dev/sdb status=progress` (CAUTION: see above caution using `dd` command)
+  * `sudo dd if=/home/user1/odroid_images/backup.img of=/dev/sdb status=progress` (CAUTION: see above caution using `dd` command, make sure `if` and `of` arguments are correct)
 7. Check functionality of new EMMC card by plugging it into ODROID of copied vehicle  
   * Functionality should be identical in SASC Flight Tech Interface with original card  
   
