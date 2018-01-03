@@ -1,4 +1,4 @@
-# Create New Imaged ODROID for SASC Vehicle from Image Copy
+# Re-image and configure SASC Vehicle ODROID
 This page explains how to copy over the image from an existing SASC ODROID, install it on a new eMMC card for use on another ODROID, and then configure the vehicle ID numbers. 
 
 ### Create ODROID Image Copy from Existing SASC Vehicle
