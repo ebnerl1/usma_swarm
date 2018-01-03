@@ -47,6 +47,7 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
 5. Connect to the UAS via secure shell (SSH)
   * `ssh odroid@192.168.11.X` (X = tail number, ex: `ssh odroid@192.168.11.112`)
   * When prompted for password enter `odroid`
+  
 6. Run ID reconfiguration script in SSH terminal
   * `./odroid-installer.sh -c`
   * At "Please enter a unique ID for this aircraft: " enter the new tail number desired (planes are 2 digits, quads 3 digits)
