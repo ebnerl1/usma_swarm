@@ -42,10 +42,10 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
   * `wifi_config.sh -T 11 wlx00c0ca904414 201` - Note: 11 is the Team # (11 = Army), 201 is the selected network address for the computer (201-209 are recommended, make sure no other SASC computers are set to that). 
     - "11" is the team # (11 = Army)
     - "201" is the # w/i the team (201-209 recommended for dongles, must be unique from other active SASC computers)
-    - This will set this computers the Alfa Wifi IP address to 192.168.11.201
+    - This will set this computers the Alfa Wifi IP address to 192.168.11.201
 4. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
 5. Connect to the UAS via secure shell (SSH)
-  * `ssh odroid@192.168.11.X` (X = tail number, ex: `ssh odroid@192.168.11.112`)
+  * `ssh odroid@192.168.11.X` (X = tail number, ex: `ssh odroid@192.168.11.112`)
   * When prompted for password enter `odroid`
 6. Run ID reconfiguration script in SSH
   * `./odroid-installer.sh -c`
