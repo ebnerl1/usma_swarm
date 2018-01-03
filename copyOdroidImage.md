@@ -9,8 +9,8 @@
   * NOTE: Do not use a micro-SD to SD card adapter, this must go through USB
 4. Verify Designation of the USB Disk on the Laptop  
   * `df -h`   
-  * Copy which drive has the "BOOT" and "trusty" drive partitions (ex: /dev/sdb1 BOOT, /dev/sdb2 trusty; means the USB disk is /dev/sdb)  
-  * Confirm this by removing the USB, rerunning `df -h`, and confirming that disk has disappeared
+  * Copy which drive has the "BOOT" and "trusty" drive partitions (ex: /dev/sdb1 BOOT, /dev/sdb2 trusty; means the USB disk is /dev/sdb)
+  * Confirm this by removing the USB, rerunning `df -h`, and confirming that disk has disappeared
 5. Copy only the part of the image we care about onto computer (instead of whole EMMC card)  
   * NOTE: these disks typically have 4 partitions: (0) Unallocated Space (~1.6MB), (1) BOOT (~135MB), (2) trusty (~5.8GB), (3) Unallocated (rest of drive space). We only care about parts 0-2.  
   * `sudo fdisk -l /dev/sdb` (replace "sdb" with the USB drive designation)  
