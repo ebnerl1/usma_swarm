@@ -34,6 +34,7 @@
     * `sudo apt-get upgrade`
     * `cd $HOME/sasc-help`
     * `./sasc_installer.py -I –s`
+    * Once the installation is complete, restart the computer
 12. Initialize 10 planes after installation complete    
     * `init_n_sitls.bash 10`
     * If an error occurs, check the last lines of the bashrc file (`sudo gedit .bashrc`) against a working machine. 
