@@ -36,9 +36,10 @@ This page explains how to pull and push information from Github to keep common s
   * Select proper SITL_LOCATION in line 7 for mission locatiom
   * Save and close the file
   * Copy the ap_enumerations.py file, and paste/replace in /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib
- 2. Update the locations.txt file (usually updated when going to new location)
-  * Navigate to /home/user1/usma_swarm/usma_files/locations_file 
+2. Update the locations.txt file (usually updated when going to new location
+  * Navigate to /home/user1/usma_swarm/usma_files/locations_file 
   * Open locations.txt    
   * Add new location using same convention as others
   * Save and close the file  
   * Copy the locations.txt file, and paste/replace in /home/user1/ACS/ardupilot/Tools/autotest
+  
