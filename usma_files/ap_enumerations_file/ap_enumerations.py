@@ -84,8 +84,8 @@ MAX_YAW_RATE = 1.0     # Maximum commandable yaw rate
 MAX_PITCH_RATE = 1.0   # Maximum commandable pitch rate
 MIN_FWD_SPEED = 15.0   # Minimum commandable forward speed
 MAX_FWD_SPEED = 23.0   # Maximum commandable forward speed
-BASE_REL_ALT = 100.0   # Base rel_alt for "stacked" behaviors
-ALT_BLOCK_SIZE = 10.0  # Altitude block size for altitude-separated behaviors
+BASE_REL_ALT = 10.0   # Base rel_alt for "stacked" behaviors (original 100)
+ALT_BLOCK_SIZE = 1.0  # Altitude block size for altitude-separated behaviors (original 10)
 
 # Enumeration for available swarm behaviors
 SWARM_STANDBY = 0          # No swarm behavior (set no payload control)

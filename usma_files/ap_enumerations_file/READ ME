@@ -12,3 +12,8 @@ The original downloaded (vetted) ap_enumerations.py is in the "original" folder.
 It only includes the California location. 
 
 Past used ap_enumerations.py are in the "archive" folder
+
+CHANGES MADE:
+1. Added options for different locations: McMillan, Range11, RiverCourts
+2. Changed BASE_REL_ALT to allow lower flying behaviors
+3. Changed ALT_BLOCK_SIZE to allow smaller altitude changes between UAS
