@@ -33,7 +33,8 @@ This page explains how to pull and push information from Github to keep common s
 1. Update ap_enumerations.py file (usually updated prior to a given mission)
   * Navigate to /home/user1/usma_swarm/usma_files/ap_enumerations_file
   * Open ap_enumerations.py
-  * Select proper SITL_LOCATION in line 7 for mission locatiom
+  * Select proper SITL_LOCATION in line 7 for mission location
+  * Update other parameters as needed (be cautious in this step)
   * Save and close the file
   * Copy the ap_enumerations.py file, and paste/replace in /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib
 2. Update the locations.txt file (usually updated when going to new location
