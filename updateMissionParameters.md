@@ -43,4 +43,19 @@ This page explains how to pull and push information from Github to keep common s
   * Add new location using same convention as others
   * Save and close the file  
   * Copy the locations.txt file, and paste/replace in /home/user1/ACS/ardupilot/Tools/autotest
-  
+
+### Update Mission Parameters onto the Vehicles
+1. Configure Alfa Wi-Fi dongle on SASC Linux Laptop  
+  * Attach an Alfa USB Wi-Fi adapter to the computer  
+  * `ifconfig` - Identify the Alfa Wi-Fi adapter (usually the last one) (ex: wlx00c0ca904414, or wlan2)  
+  * `wifi_config.sh -T 11 wlx00c0ca904414 201` 
+    - Note: 11 is the Team # (11 = Army), 201 is the selected network address for the computer (201-209 are recommended, make sure no other SASC computers are set to that).     
+    - "11" is the team # (11 = Army)    
+    - "201" is the # w/i the team (201-209 recommended for dongles, must be unique from other active SASC computers)    
+    - This will set this computers the Alfa Wifi IP address to 192.168.11.201
+2. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
+3. Copy BLESSED folder to ODROID ROOT
+  * `scp –r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
+4. Copy PYTHON DIRECTORIES (TODO - ADD THESE DIRECTIONS)
+5. Copy AP_ENUMERATIONS to proper ODROID directory
+  * `scp /home/user1/usma_swarm/usma_files/ap_enumerations_file/ap_enumerations.py odroid@192.168.11.XX odroid@192.168.11.XX:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
