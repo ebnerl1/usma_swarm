@@ -1,8 +1,12 @@
 # usma_swarm Video Stream Setup
+
 1. Connect HDMI, keyboard, Ethernet cable to ODROID and power on.
+
 2. Ensure SASC is installed
+
 3. Configure an Ethernet interface in the /etc/network/interfaces file
-  * If an ethernet cable is used, ensure that the /etc/network/interfaces file’s referent to the wired adapter, usually eth0, is set to DHCP:
+
+* If an ethernet cable is used, ensure that the /etc/network/interfaces file’s referent to the wired adapter, usually eth0, is set to DHCP:
 
     `auto eth0`
     `iface eth0 inet`
@@ -11,37 +15,36 @@
 
   `sudo iwconfig wlan0 essid basestation`
 
-
 4. Download packages. All packages start with:
 
     `sudo apt-get install ros-<version>-`
 
   Followed by the package name, with all underscores replaced by hyphens. The packages needed are:
 
-	* To be able to stream video through image_view:
+  * To be able to stream video through image_view:
 
   * usb_stream
 	* compressed_image_transport
 	* image_view
 
-	* For the GUI:
+  * For the GUI:
 
   * rosbridge_suite
-	* web_video_server
+  * web_video_server
 
-5.	Additionally, GUI install requires:
+5. Additionally, GUI install requires:
 
-    `$ rosdep update
-	  $ rosdep install rosbridge_server
-	  $ rosdep install web_video_server
-	  $ roslaunch rosbridge_server rosbridge_websocket.launch
-	  $ rosrun web_video_server web_video_server`
+    `$ rosdep update'
+    `$ rosdep install rosbridge_server`
+    `$ rosdep install web_video_server`
+    `$ roslaunch rosbridge_server rosbridge_websocket.launch`
+    `$ rosrun web_video_server web_video_server`
 
 6. Edit ~/.bashrc to include:
 
-    `source devel/setup.bash
-    export ROS_IP=192.168.11.X (or whatever the machine’s own IP is, can be found with hostname –I or just ifconfig
-    export ROS_MASTER_URI=http://192.168.11.201:11311`
+    `source devel/setup.bash`
+    `export ROS_IP=192.168.11.X (or whatever the machine’s own IP is, can be found with hostname –I or just ifconfig`
+    `export ROS_MASTER_URI=http://192.168.11.201:11311`
 
   * In some cases when a new package isn’t recognized by ros, you may also need:
 
@@ -52,6 +55,7 @@
     `source ~/.bashrc`
 
 7. Change the /etc/hosts file on the drone to include the drone’s name in the 127.0.0.1 localhost address, the Master’s name and IP
+
   * Do the same with the master, just the opposite
 
 8. Add our little piece from drone_stream to the master.launch file in acs_ros_ws in the ap_master package
@@ -76,13 +80,13 @@
 
   * You should see the new video topic. To view, run:
 
-    `Rosrun image_view image_view image:=<topic> compressed`
+    `rosrun image_view image_view image:=<topic> compressed`
 
   * To view the republished compressed video, just change the desired image topic
   * To use the GUI launch:
 
-    `$ roslaunch rosbridge_server rosbridge_websocket.launch
-    $ rosrun web_video_server web_video_server`
+    `$ roslaunch rosbridge_server rosbridge_websocket.launch`
+    `$ rosrun web_video_server web_video_server`
 
 ###Troubleshooting:
 
@@ -94,7 +98,7 @@ Cannot contact MASTER:
 * Inspect the .bashrc, source the .bashrc
 * Make sure roscore is running
 
-Cannot find AF_INET:
+ Cannot find AF_INET:
 * Export the ROS_IP
 
 usb_cam process has died:
