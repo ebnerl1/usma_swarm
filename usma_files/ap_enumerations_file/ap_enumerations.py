@@ -74,7 +74,7 @@ LAND_B_WP = 28       # First WP in the west-to-east (RW10) landing sequence
 ATTACK_WP = 36       # First WP in the ground attack landing sequence
 
 # Default Values. These get updated on startup and again on flight ready
-MIN_REL_ALT = 70.0     # Minimum relative altitude that a controller can order
+MIN_REL_ALT = 5.0     # Minimum relative altitude that a controller can order
 MAX_REL_ALT = 1500.0   # Maximum relative altitude that a controller can order
 MAX_ABS_LAT = 60.0     # Maximum absolute value that is commandable to lat
 MAX_ABS_LON = 180.0    # Maximum absolute value that is commandable to lon
