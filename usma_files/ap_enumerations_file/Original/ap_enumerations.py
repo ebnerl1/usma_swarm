@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 3   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = McMillanMod
+SITL_LOCATION = 0   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts
 
 # Enumeration for autopilot modes
 RTL = 0
@@ -84,7 +84,7 @@ MAX_YAW_RATE = 1.0     # Maximum commandable yaw rate
 MAX_PITCH_RATE = 1.0   # Maximum commandable pitch rate
 MIN_FWD_SPEED = 15.0   # Minimum commandable forward speed
 MAX_FWD_SPEED = 23.0   # Maximum commandable forward speed
-BASE_REL_ALT = 5.0   # Base rel_alt for "stacked" behaviors (original 100)
+BASE_REL_ALT = 10.0   # Base rel_alt for "stacked" behaviors (original 100)
 ALT_BLOCK_SIZE = 1.0  # Altitude block size for altitude-separated behaviors (original 10)
 
 # Enumeration for available swarm behaviors
@@ -254,14 +254,6 @@ elif SITL_LOCATION == 1:
     BATTLE_CUBE_ORIENT = -93.0   # Battle cube orientation (clockwise degrees)
     BATTLE_CUBE_MIN_ALT = 275         # Battle cube floor (meters MSL)
     BATTLE_CUBE_MAX_ALT = 500         # Battle cube ceiling (meters MSL)
-elif SITL_LOCATION == 3:
-    BATTLE_CUBE_SW_LAT = 35.7197238    # Latitude of the battle cube SW corner
-    BATTLE_CUBE_SW_LON = -120.7746358  # Longitude of the battle cube SW corner
-    BATTLE_CUBE_LENGTH = 900          # N/S dimension (meters) of the battle cube
-    BATTLE_CUBE_WIDTH = 900           # E/W dimension (meters) of the battle cube
-    BATTLE_CUBE_ORIENT = 25.183537917993224   # Battle cube orientation (clockwise degrees)
-    BATTLE_CUBE_MIN_ALT = 354         # Battle cube floor (meters MSL)
-    BATTLE_CUBE_MAX_ALT = 854         # Battle cube ceiling (meters MSL)
 else:
     BATTLE_CUBE_SW_LAT = 35.720680    # Latitude of the battle cube SW corner
     BATTLE_CUBE_SW_LON = -120.771775  # Longitude of the battle cube SW corner
@@ -288,12 +280,6 @@ elif SITL_LOCATION == 1:
     RED_STAGE_SW_LAT = 41.356595
     RED_STAGE_SW_LON = -74.030420
     STAGE_CUBE_WIDTH = 100
-elif SITL_LOCATION == 3:
-    BLUE_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
-    BLUE_STAGE_SW_LON = BATTLE_CUBE_SW_LON
-    RED_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
-    RED_STAGE_SW_LON = BATTLE_CUBE_SW_LON
-    STAGE_CUBE_WIDTH = BATTLE_CUBE_WIDTH
 else:
     BLUE_STAGE_SW_LAT = 35.7214444888298
     BLUE_STAGE_SW_LON = -120.77377763463352
@@ -311,13 +297,10 @@ def get_battleboxes():
                       BATTLE_CUBE_LENGTH, BATTLE_CUBE_WIDTH, \
                       BATTLE_CUBE_ORIENT, BATTLE_CUBE_MIN_ALT, \
                       BATTLE_CUBE_MAX_ALT)
-    if SITL_LOCATION == 3:
-        ctr1 = (BATTLE_CUBE_SW_LAT, BATTLE_CUBE_SW_LON)
-    else:
-        ctr1 = gps.gps_newpos(BATTLE_CUBE_SW_LAT, \
-                              BATTLE_CUBE_SW_LON, \
-                              math.radians(BATTLE_CUBE_ORIENT) + math.pi/2.0, \
-                              BATTLE_CUBE_WIDTH / 2.0)
+    ctr1 = gps.gps_newpos(BATTLE_CUBE_SW_LAT, \
+                          BATTLE_CUBE_SW_LON, \
+                          math.radians(BATTLE_CUBE_ORIENT) + math.pi/2.0, \
+                          BATTLE_CUBE_WIDTH / 2.0)
     ctr2 = gps.gps_newpos(ctr1[0], ctr1[1],
                           math.radians(BATTLE_CUBE_ORIENT), \
                           BATTLE_CUBE_LENGTH)
@@ -377,9 +360,6 @@ if SITL_LOCATION == 2:
 elif SITL_LOCATION == 1:
     GOAL_POSITS['blue'] = ( 41.359730, -74.031820, 225.0 )
     GOAL_POSITS['red'] = ( 41.357625, -74.031650, 225.0 )
-elif SITL_LOCATION == 3:
-    GOAL_POSITS['blue'] = ( 0, 0, 279.5 )
-    GOAL_POSITS['red'] = ( 0, 0, 281.9 )
 else:
     GOAL_POSITS['blue'] = ( 35.722783, -120.769350, 279.5 )
     GOAL_POSITS['red'] = ( 35.721602, -120.766319, 281.9 )
