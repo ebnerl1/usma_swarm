@@ -172,7 +172,7 @@ for i in range(0, len(missions[0])):
     elif wp_num == LAST_WP:
         #last waypoint uses stack ID and mission-parameter alt
         for j in range(0, len(missions)):
-            set_std_alt(missions[j][i])
+            set_std_alt(missions[j][i]) #Sam G comment: comment this out for setting alt levels
             f.write("STACK_" + str(j+1) + " " + " ".join(missions[j][i]) + "\n")
 
 f.close()
