@@ -55,8 +55,8 @@ This page explains how to pull and push information from Github to keep common s
     - This will set this computers the Alfa Wifi IP address to 192.168.11.201
 2. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
 3. Copy BLESSED folder to ODROID ROOT
-  * `scp –r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
+  * `scp –r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
 4. Copy PYTHON behaviors to ODROID behavior directory
   * `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
 5. Copy AP_ENUMERATIONS to proper ODROID directory
-  * `scp /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@192.168.11.X:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
+  * `scp /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@192.168.11.X:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
