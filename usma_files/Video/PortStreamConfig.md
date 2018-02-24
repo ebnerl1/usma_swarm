@@ -3,10 +3,10 @@
 1. Get the ODROID connected to the internet so that it is capable of downloading packages. Execute the following command:
 `sudo nano /etc/network/interfaces`
 Then comment out the SASC wlan0 interface by entering "#" in front of each line. Below this commented out interface, enter:
-`auto wlan0`
-`iface wlan0 inet dhcp`
-`   wpa-ssid "YourSSID"`
-`   wpa-psk "YourPassword"`
+`auto wlan0
+iface wlan0 inet dhcp
+   wpa-ssid "YourSSID"
+   wpa-psk "YourPassword"`
 Restart the computer and it should connect to the new wireless interface.
 
 
