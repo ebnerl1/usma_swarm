@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = McMillanMod
+SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = McMillanMod
 
 # Enumeration for autopilot modes
 RTL = 0
@@ -74,8 +74,8 @@ LAND_B_WP = 28       # First WP in the west-to-east (RW10) landing sequence
 ATTACK_WP = 36       # First WP in the ground attack landing sequence
 
 # Default Values. These get updated on startup and again on flight ready
-MIN_REL_ALT = 5.0     # Minimum relative altitude that a controller can order
-MAX_REL_ALT = 1500.0   # Maximum relative altitude that a controller can order
+MIN_REL_ALT = -5.0     # Minimum relative altitude that a controller can order
+MAX_REL_ALT = 150.0   # Maximum relative altitude that a controller can order
 MAX_ABS_LAT = 60.0     # Maximum absolute value that is commandable to lat
 MAX_ABS_LON = 180.0    # Maximum absolute value that is commandable to lon
 MAX_ROLL = math.radians(60)  # Maximum commandable bank angle (phi)
@@ -84,7 +84,7 @@ MAX_YAW_RATE = 1.0     # Maximum commandable yaw rate
 MAX_PITCH_RATE = 1.0   # Maximum commandable pitch rate
 MIN_FWD_SPEED = 15.0   # Minimum commandable forward speed
 MAX_FWD_SPEED = 23.0   # Maximum commandable forward speed
-BASE_REL_ALT = 5.0   # Base rel_alt for "stacked" behaviors (original 100)
+BASE_REL_ALT = -5.0   # Base rel_alt for "stacked" behaviors (original 100)
 ALT_BLOCK_SIZE = 1.0  # Altitude block size for altitude-separated behaviors (original 10)
 
 # Enumeration for available swarm behaviors

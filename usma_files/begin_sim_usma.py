@@ -7,7 +7,7 @@ import ap_lib.acs_messages as messages
 import ap_lib.ap_enumerations as enums
 from ap_lib.acs_socket import Socket
 
-SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
 
 def usage():
     print "Usage: begin_sim.py [options] num_UAVs"
