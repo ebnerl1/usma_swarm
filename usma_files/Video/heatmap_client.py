@@ -8,17 +8,13 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 #THE SENSOR STATION MUST BE .201
 #connect the socket to the port where the server is listening
-server_address = ('192.168.11.203',10000)
+server_address = ('192.168.11.203',11000)
 print >>sys.stderr, 'connecting to %s port %s' % server_address
 sock.connect(server_address)
 
 try:
     #send data
-    lat = 
-    lon = 
-    alt = 
-    counts = 
-    message = "{0} {1} {2} {3}".format(lat, lon, alt, counts)
+    message = '125 4'
     print >>sys.stderr, 'sending %s' % message
     sock.sendall(message)
 
