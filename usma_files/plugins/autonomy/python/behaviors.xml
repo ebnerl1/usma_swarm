@@ -10,6 +10,14 @@
      6. vehicle_type
 -->
 <data>
+<behavior name="Fly" module="fly" class="Fly">
+    <param name="Starting Lat" type="float" default="35.723681" min="35.723681" max="35.723681"/>
+    <param name="Starting Lon" type="float" default="-120.768904" min="-120.768904" max="-120.768904"/>
+    <param name="Ending Lat" type="float" default="35.720011" min="35.720011" max="35.720011"/>
+    <param name="Ending Lon" type="float" default="-120.767293" min="-120.767293" max="-120.767293"/>
+    <param name="Number of Waypoints" type="int" default="16" min="0" max="20"/>
+    </behavior>
+  <behavior name="Greedy Goto" module="greedy_goto" class="GreedyGoto"/>
   <behavior name="Greedy Shooter Int" module="greedy_shooter_int" class="GreedyShooterInt"/>
   <behavior name="Evader Attacker" module="evade_attack" class="EvadeAttack"/>
   <behavior name="USMA Quad" module="usma_quad" class="USMAQuad"/>

@@ -47,10 +47,11 @@ def listen():
             print >>sys.stderr, 'connection from UAS#%s on port %s' % (quad_num,client_address[1])
         
             while True:
-                data=connection.recv(32)
+                data=connection.recv(128)
                 if (len(data) > 1):
                     print >>sys.stderr, 'Message received from UAS#%s: %s' % (quad_num, data)
-                    update_waypoints(data,quad_num)
+                    #update_waypoints(data,quad_num)
+                    print(data)
                     print >>sys.stderr, 'sending updated waypoint list back to UAS#',quad_num
                     
                     #senall argument must be string or buffer, not a list
