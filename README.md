@@ -52,10 +52,6 @@
     * `cd ~/ACS/acs-env`   (Note: should see green “(master)”)
     * `git checkout livefly`   (Note: now should see green “(livefly)”)    
     * `./install.sh`   (Note: this recompiles)    
-  - acs_lib    
-    * `cd ~/ACS/acs_lib`   (Note: should see green “(master)”)
-    * `git checkout usma`   (NOTE: NOW SHOULD SEE GREEN “(usma)” NOT LIVEFLY!!!)
-    * `python3 setup.py build install --user`   (Note: this recompiles)
   - arbiter    
     * `cd ~/ACS/arbiter`   (Note: should see green “(master)”)
     * `git checkout livefly`   (Note: now should see green “(livefly)”)    
