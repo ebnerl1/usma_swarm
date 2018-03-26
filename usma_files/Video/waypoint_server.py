@@ -4,6 +4,7 @@ import subprocess
 
 #create a list of waypoints that must be visited 
 waypoints = dict()
+behaviorflag = False
 
 #updates the waypoints based on the quads updates
 def update_waypoints(data,quad_num):
@@ -27,6 +28,7 @@ def list2string(list1):
     
 def listen():
     global waypoints
+    global behaviorflag
     #create a TCP/IP socket
     sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
@@ -39,7 +41,7 @@ def listen():
     sock.listen(10)
     active_connections = 0
     while True:
-        print >>sys.stderr, 'Waiting for a connection \n'
+        print >>sys.stderr, 'Waiting for a connection... \n'
         connection, client_address = sock.accept()
         active_connections += 1
         try:
@@ -48,16 +50,22 @@ def listen():
         
             while True:
                 data=connection.recv(128)
+                #newdata = eval(data)
                 if (len(data) > 1):
+                    newdata = eval(data)
                     #print >>sys.stderr, 'Message received from UAS#%s: %s' % (quad_num, data)
                     #update_waypoints(data,quad_num)
-                    print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (data[:2],client_address[1])
-                    newdata = data[2:]
-                    print(newdata +"\n")
+                    print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
+              
+                    print("Working WP List: " + str(newdata[1]))
+                    print("Finished WP: " + str(newdata[2]))
+                    print("At Index: " + str(newdata[3]))
+                    print("Flag: " + str(newdata[4]))
+                    #print("\n")
                     #print >>sys.stderr, 'sending updated waypoint list back to UAS#',quad_num
                     
                     #sendall argument must be string or buffer, not a list
-                    connection.sendall("Index to Start: " + newdata[-1:])
+                    connection.sendall(str(behaviorflag))
                 else:
                     #print >>sys.stderr, 'no more data from UAS#', quad_num
                     break
