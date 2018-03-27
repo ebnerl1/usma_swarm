@@ -30,7 +30,8 @@ def writeGJ(data):
     
     data = data.split(' ')
     entry = [data[0],data[1],colorSelect(altConvert(data[3], data[2]))]
-
+    
+    # Deletes last two lines in order to write new map objects
     outf = open(outfile, 'r')
     lines = outf.readlines()
     outf.close()
