@@ -26,10 +26,6 @@ def parseIn():
       data.append([row[0],row[1],row[2],colorSelect(int(row[2]))])
     return data
 
-# Converts sample counts to actual counts
-def altConvert(sample, alt):
-  return (sample * (alt**2))
-
 # Iterates through entire parsed file to overwrite .geojson
 def writeGJ():
   data = parseIn()
@@ -55,11 +51,11 @@ def writeGJ():
       outf.write('        "type": "Polygon",\n')
       outf.write('        "coordinates": [\n')
       outf.write('          [\n')
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) - sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) + sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) + sqrrad))
-      outf.write('            [{0},{1}]\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
+      outf.write('            [{1},{0}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
+      outf.write('            [{1},{0}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) - sqrrad))
+      outf.write('            [{1},{0}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) + sqrrad))
+      outf.write('            [{1},{0}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) + sqrrad))
+      outf.write('            [{1},{0}]\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
       outf.write('          ]\n')
       outf.write('        ]\n')
       outf.write('      }\n')
