@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = McMillanMod
+SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
 
 # Enumeration for autopilot modes
 RTL = 0
@@ -255,13 +255,13 @@ elif SITL_LOCATION == 1:
     BATTLE_CUBE_MIN_ALT = 275         # Battle cube floor (meters MSL)
     BATTLE_CUBE_MAX_ALT = 500         # Battle cube ceiling (meters MSL)
 elif SITL_LOCATION == 3:
-    BATTLE_CUBE_SW_LAT = 35.7197238    # Latitude of the battle cube SW corner
-    BATTLE_CUBE_SW_LON = -120.7746358  # Longitude of the battle cube SW corner
-    BATTLE_CUBE_LENGTH = 900          # N/S dimension (meters) of the battle cube
-    BATTLE_CUBE_WIDTH = 900           # E/W dimension (meters) of the battle cube
-    BATTLE_CUBE_ORIENT = 25.183537917993224   # Battle cube orientation (clockwise degrees)
-    BATTLE_CUBE_MIN_ALT = 354         # Battle cube floor (meters MSL)
-    BATTLE_CUBE_MAX_ALT = 854         # Battle cube ceiling (meters MSL)
+    BATTLE_CUBE_SW_LAT = 43.867794    # Latitude of the battle cube SW corner
+    BATTLE_CUBE_SW_LON = -112.732598  # Longitude of the battle cube SW corner
+    BATTLE_CUBE_LENGTH = 1000          # N/S dimension (meters) of the battle cube
+    BATTLE_CUBE_WIDTH = 1000           # E/W dimension (meters) of the battle cube
+    BATTLE_CUBE_ORIENT = 0   # Battle cube orientation (clockwise degrees)
+    BATTLE_CUBE_MIN_ALT = 1465         # Battle cube floor (meters MSL)
+    BATTLE_CUBE_MAX_ALT = 1665         # Battle cube ceiling (meters MSL)
 else:
     BATTLE_CUBE_SW_LAT = 35.720680    # Latitude of the battle cube SW corner
     BATTLE_CUBE_SW_LON = -120.771775  # Longitude of the battle cube SW corner
@@ -378,8 +378,8 @@ elif SITL_LOCATION == 1:
     GOAL_POSITS['blue'] = ( 41.359730, -74.031820, 225.0 )
     GOAL_POSITS['red'] = ( 41.357625, -74.031650, 225.0 )
 elif SITL_LOCATION == 3:
-    GOAL_POSITS['blue'] = ( 0, 0, 279.5 )
-    GOAL_POSITS['red'] = ( 0, 0, 281.9 )
+    GOAL_POSITS['blue'] = ( 43.873141, -112.727151, 1465.0 )
+    GOAL_POSITS['red'] = ( 43.873141, -112.727151, 1465.0 )
 else:
     GOAL_POSITS['blue'] = ( 35.722783, -120.769350, 279.5 )
     GOAL_POSITS['red'] = ( 35.721602, -120.766319, 281.9 )
