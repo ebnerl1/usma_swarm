@@ -33,8 +33,8 @@ def listen():
     sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
     #bind the socket to the port. SENSOR STATION IS 203!!
-    server_address = ('192.168.11.202',10000)
-    print >>sys.stderr, 'starting up on %s port %s' % server_address
+    server_address = ('127.0.0.1',10000)
+    print >>sys.stderr, 'Starting up on %s port %s...' % server_address
     sock.bind(server_address)
 
     #Listen for incoming connections. You can increase this but you must also allow threading.
@@ -49,7 +49,7 @@ def listen():
             #print >>sys.stderr, 'connection from UAS#%s on port %s' % (quad_num,client_address[1])
         
             while True:
-                data=connection.recv(128)
+                data=connection.recv(1024)
                 #newdata = eval(data)
                 if (len(data) > 1):
                     newdata = eval(data)
