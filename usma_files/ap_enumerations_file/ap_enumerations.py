@@ -244,7 +244,7 @@ if SITL_LOCATION == 2:
     BATTLE_CUBE_LENGTH = 80          # N/S dimension (meters) of the battle cube
     BATTLE_CUBE_WIDTH = 140           # E/W dimension (meters) of the battle cube
     BATTLE_CUBE_ORIENT = -70.0   # Battle cube orientation (clockwise degrees)
-    BATTLE_CUBE_MIN_ALT = 40         # Battle cube floor (meters MSL)
+    BATTLE_CUBE_MIN_ALT = -5         # Battle cube floor (meters MSL)
     BATTLE_CUBE_MAX_ALT = 130         # Battle cube ceiling (meters MSL)
 elif SITL_LOCATION == 1:
     BATTLE_CUBE_SW_LAT = 41.356589    # Latitude of the battle cube SW corner
