@@ -1,0 +1,16 @@
+sudo v4l2-ctl -d /dev/video0 -l                     
+                     brightness (int)    : min=-64 max=64 step=1 default=0 value=0
+                       contrast (int)    : min=0 max=64 step=1 default=32 value=32
+                     saturation (int)    : min=1 max=128 step=1 default=64 value=64
+                            hue (int)    : min=-40 max=40 step=1 default=0 value=0
+                          gamma (int)    : min=72 max=500 step=1 default=100 value=100
+                           gain (int)    : min=0 max=100 step=1 default=0 value=0
+           power_line_frequency (menu)   : min=0 max=2 default=1 value=1
+                      sharpness (int)    : min=0 max=6 step=1 default=2 value=2
+         backlight_compensation (int)    : min=0 max=2 step=1 default=1 value=1
+
+sudo v4l2-ctl -d /dev/video0 --set-ctrl=saturation=1
+
+You can change the camera control settings with v4l2 while also streaming the video with gstreamer!
+This could possibly be a solution to the exposure when you are outside to make the image quality
+greater.
