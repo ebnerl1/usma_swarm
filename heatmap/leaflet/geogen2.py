@@ -1,5 +1,7 @@
 import csv
 import time
+import json
+import urllib.request
 
 ######################## VARIABLES ########################
 
@@ -9,6 +11,21 @@ radcap = 0 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
 
 ###########################################################
+
+def elevation(lat, lng):
+    apikey = "AIzaSyDvuEAYeb9xoSun0PHXVkM7oxl_sRZD2H4"
+    url = "https://maps.googleapis.com/maps/api/elevation/json"
+    request = urllib.request.urlopen(url+"?locations="+str(lat)+","+str(lng)+"&key="+apikey)
+    try:
+        results = json.load(request).get('results')
+        if 0 < len(results):
+            elevation = results[0].get('elevation')
+            # ELEVATION
+            return elevation
+        else:
+            print ('HTTP GET Request failed.')
+    except ValueError:
+        print ('JSON decode failed: '+str(request))
 
 # [0] and [1] are long/lat, [2] is rads, [3] is alt
 def parseIn():
@@ -31,14 +48,15 @@ def parseIn():
       data.append([lat, lon, counts, alt])
 
     for i in range(len(data)):
-      data[i][2] = altConvert(data[i][2],data[i][3])
+      data[i][2] = altConvert(data[i][0], data[i][1], data[i][2], data[i][3])
 
     return data
 
 # Converts sample counts to actual counts
-def altConvert(sample, alt):
+def altConvert(lat, long, sample, alt):
   global radcap
-  conv = sample * ((alt*0.3048)**2)
+  heightAboveGround = (alt - elevation(lat, long)) * 0.3048
+  conv = sample * ((heightAboveGround)**2)
   return (float(conv / radcap))
 
 # Iterates through entire parsed file to overwrite .geojson
