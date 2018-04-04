@@ -7,9 +7,7 @@
 	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 	<link rel="stylesheet" charset="utf-8" href="leaflet.css" />
 	<script type="text/javascript" charset="utf-8" src="leaflet.js"></script>
-	<script src="sample_gj.json"></script>
-	<script src="leaflet.ajax.min"></script>
-
+	<script src="sample_gj.js"></script>
 
 </head>
 <body>
@@ -18,22 +16,17 @@
 <script>
 
 	// Local Map Atlas
-	var mymap = L.map('mapid').setView([41.393359,-73.951979], 15);
-	var tiles =	L.tileLayer('atlas/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(mymap);
-	tiles.addTo(mymap)
+	var mymap = L.map('mapid').setView([41.390912889999996,-73.95394585], 15);
+	L.tileLayer('atlas/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(mymap);
 
-	// Data Layer
-	var geojsonLayer = new L.GeoJSON.AJAX("sample_gj.json");
-	geojsonLayer.addTo(mymap);
-	//L.geoJSON.AJAX("sample_gj.geojson",{style:myStyle});//.addTo(map)
+  L.geoJSON(geojsonFeature).addTo(mymap);
 
-
-	L.circle([41.393359, -73.951979], {
+	L.circle([41.390912889999996,-73.95394585], {
 		color: 'red',
 		fillColor: '#f03',
 		fillOpacity: 0.5,
 		radius: 500
-	}).addTo(map);
+	}).addTo(mymap);
 
 </script>
 

@@ -1,12 +1,12 @@
-import csv
+cd import csv
 import time
 
 #################### VARIABLES ####################
 
-infile = "sample_data.csv" # Input file as a .csv
-outfile = "sample_gj.geojson" # Output file as a .geojson
+infile = "sample_data2.csv" # Input file as a .csv
+outfile = "sample_gj2.geojson" # Output file as a .geojson
 radcap = 100 # Highest amount of radiation to scale color gradient
-sqrrad = 0.0005 # Area covered by one drone as a "square radius"
+sqrrad = 0.00005 # Area covered by one drone as a "square radius"
 interval = 5 # Time in seconds in between scans
 
 ############################################################
@@ -52,16 +52,23 @@ def writeGJ():
       outf.write('        "fill-opacity": 0.6\n')
       outf.write('      },\n')
       outf.write('      "geometry": {\n')
-      outf.write('        "type": "Polygon",\n')
+      outf.write('        "type": "LineString",\n')
       outf.write('        "coordinates": [\n')
       outf.write('          [\n')
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) - sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) + sqrrad))
-      outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) + sqrrad))
-      outf.write('            [{0},{1}]\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
+      outf.write('            [{0},{1}],\n'.format(float(entry[0]), float(entry[1])))
+      outf.write('            [{0},{1}],\n'.format(float(entry[0]) + 0.0000001, float(entry[1]) + 0.0000001))
       outf.write('          ]\n')
       outf.write('        ]\n')
+      # outf.write('        "type": "Polygon",\n')
+      # outf.write('        "coordinates": [\n')
+      # outf.write('          [\n')
+      # outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
+      # outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) - sqrrad))
+      # outf.write('            [{0},{1}],\n'.format(float(entry[0]) + sqrrad, float(entry[1]) + sqrrad))
+      # outf.write('            [{0},{1}],\n'.format(float(entry[0]) - sqrrad, float(entry[1]) + sqrrad))
+      # outf.write('            [{0},{1}]\n'.format(float(entry[0]) - sqrrad, float(entry[1]) - sqrrad))
+      # outf.write('          ]\n')
+      # outf.write('        ]\n')
       outf.write('      }\n')
 
       if i+1 < len(data):
