@@ -6,7 +6,9 @@ import csv
 #create a list of waypoints that must be visited 
 finishedwp = set([])
 outfile = "raw_data.csv"
-    
+
+subprocess.Popen(["python", "geogen2.py"])
+
 def listen():
     global finishedwp
     global behaviorflag
@@ -15,7 +17,8 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    server_address = ('192.168.11.202',10000)
+    server_address = ('127.0.0.1',10000)
+    #server_address = ('192.168.11.202',10000)
     print >>sys.stderr, 'Starting up on %s port %s...' % server_address
     sock.bind(server_address)
 
