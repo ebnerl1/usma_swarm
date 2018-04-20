@@ -6,6 +6,7 @@ import csv
 #create a list of waypoints that must be visited 
 finishedwp = set([])
 outfile = "raw_data.csv"
+wpfile = "wpledger.csv"
 
 #subprocess.Popen(["python", "geogen2.py"])
 
@@ -32,7 +33,7 @@ def listen():
         active_connections += 1
         try:
             while True:
-                data=connection.recv(1024)
+                data=connection.recv(4194304)
                 print("Connected!")
                 #newdata = eval(data)
                 if (len(data) > 1):
@@ -43,6 +44,7 @@ def listen():
                     print("Finished WP: " + str(newdata[2]))
                     finishedwp.add(newdata[2])
                     print("Finished WP Set: " + str(finishedwp))
+                    print("# of Finished: " + str(len(finishedwp))) + "/" + str(newdata[1])
                     print("At Index: " + str(newdata[3]))
                     
                     #sendall argument must be string or buffer, not a list
@@ -53,6 +55,9 @@ def listen():
                     with open(outfile, 'a') as outf:
                         outfwriter = csv.writer(outf)
                         outfwriter.writerow([newdata[5],newdata[6],newdata[7],newdata[8],newdata[0]])
+                    with open(wpfile, 'w') as outwp:
+                        outfwriter = csv.writer(outwp)
+                        outfwriter.writerow(str(finishedwp))
                 else:
                     break
                 
