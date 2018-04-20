@@ -50,7 +50,7 @@ def parseIn():
       if counts > radcap:
         radcap = counts
 
-      data.append([lat, lon, counts, alt, rawalt, droneID])
+      data.append([lat, lon, counts, alt, droneID])
 
     for i in range(len(data)):
       data[i][2] = altConvert(data[i][0], data[i][1], data[i][2], data[i][3])
