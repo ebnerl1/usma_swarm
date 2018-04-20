@@ -6,9 +6,15 @@ import csv
 #create a list of waypoints that must be visited 
 finishedwp = set([])
 outfile = "raw_data.csv"
+<<<<<<< HEAD
 wpfile = "wpledger.csv"
 
 #subprocess.Popen(["python", "geogen2.py"])
+=======
+wpfile = "wp_data.txt"
+
+#subprocess.Popen(["python", "geogen.py"])
+>>>>>>> 7395880d4c395fb79c8579f3634e7f0ee68fadd6
 
 def listen():
     global finishedwp
@@ -55,9 +61,14 @@ def listen():
                     with open(outfile, 'a') as outf:
                         outfwriter = csv.writer(outf)
                         outfwriter.writerow([newdata[5],newdata[6],newdata[7],newdata[8],newdata[0]])
+<<<<<<< HEAD
                     with open(wpfile, 'w') as outwp:
                         outfwriter = csv.writer(outwp)
                         outfwriter.writerow(str(finishedwp))
+=======
+                    with open(wpfile, 'w') as outf:
+                        outf.write(str(finishedwp) + '\n')
+>>>>>>> 7395880d4c395fb79c8579f3634e7f0ee68fadd6
                 else:
                     break
                 

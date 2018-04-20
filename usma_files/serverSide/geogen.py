@@ -1,5 +1,6 @@
 import csv
 import time
+from datetime import datetime
 import json
 import urllib
 
@@ -7,10 +8,13 @@ import urllib
 
 infile = "raw_data.csv" # Input file as a .csv
 outfile = "parsed_data.js" # Output file as a .geojson
+archive = "archive_" + str(datetime.now()) + ".csv"
 radcap = 0 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
 
 ###########################################################
+
+mapalt = 0
 
 def elevation(lat, lng):
     apikey = "AIzaSyDvuEAYeb9xoSun0PHXVkM7oxl_sRZD2H4"
@@ -54,11 +58,18 @@ def parseIn():
     return data
 
 # Converts sample counts to actual counts
-def altConvert(lat, long, sample, alt):
+def altConvert(lat, lon, sample, alt):
   global radcap
-  heightAboveGround = (alt - elevation(lat, long)) * 0.3048
+  global mapalt
+  mapalt = elevation(lat, lon)
+  heightAboveGround = (alt - mapalt) * 0.3048
   conv = sample * ((heightAboveGround)**2)
   return (float(conv / radcap))
+
+#def writeArchive(data):
+#  with open(archive, 'w') as outf:
+#    outfwriter = csv.writer(outf)
+#    outfwriter.writerow(
 
 # Iterates through entire parsed file to overwrite .geojson
 def writeGJ():
@@ -75,6 +86,8 @@ def writeGJ():
         outf.write('\n')
 
     outf.write('];')
+
+
 
 # Timer
 def main():
