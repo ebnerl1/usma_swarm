@@ -6,15 +6,14 @@ import csv
 #create a list of waypoints that must be visited 
 finishedwp = set([])
 outfile = "raw_data.csv"
-<<<<<<< HEAD
+
 wpfile = "wpledger.csv"
 
 #subprocess.Popen(["python", "geogen2.py"])
-=======
+
 wpfile = "wp_data.txt"
 
 #subprocess.Popen(["python", "geogen.py"])
->>>>>>> 7395880d4c395fb79c8579f3634e7f0ee68fadd6
 
 def listen():
     global finishedwp
@@ -24,8 +23,13 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    #server_address = ('127.0.0.1',10000)
-    server_address = ('192.168.11.202',10000)
+    serverflag = 0
+    if (serverflag == 1):
+        server_address = ('192.168.11.202',10000)
+    else: 
+        server_address = ('127.0.0.1',10000)
+
+    #server_address = ('192.168.11.202',10000)
     print >>sys.stderr, 'Starting up on %s port %s...' % server_address
     sock.bind(server_address)
 
@@ -40,7 +44,7 @@ def listen():
         try:
             while True:
                 data=connection.recv(4194304)
-                print("Connected!")
+                #print("Connected!")
                 #newdata = eval(data)
                 if (len(data) > 1):
                     newdata = eval(data)
@@ -50,25 +54,28 @@ def listen():
                     print("Finished WP: " + str(newdata[2]))
                     finishedwp.add(newdata[2])
                     print("Finished WP Set: " + str(finishedwp))
-                    print("# of Finished: " + str(len(finishedwp))) + "/" + str(newdata[1])
-                    print("At Index: " + str(newdata[3]))
+                    print("# of Finished: " + str(len(finishedwp))) + "/" + str(newdata[4])
+                    print("At Index: " + str(newdata[3]+1) + "/" + str(newdata[1]))
                     
                     #sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
+                    if ((len(finishedwp)) == newdata[4]):
+                      print("FINISHED!")
+                      quit()
                     #sendbackmsg = [newdata[4],newdata[3]]
                     connection.sendall(str(finishedwp))
                     # Heatmap Portion
                     with open(outfile, 'a') as outf:
                         outfwriter = csv.writer(outf)
                         outfwriter.writerow([newdata[5],newdata[6],newdata[7],newdata[8],newdata[0]])
-<<<<<<< HEAD
+
                     with open(wpfile, 'w') as outwp:
                         outfwriter = csv.writer(outwp)
                         outfwriter.writerow(str(finishedwp))
-=======
+
                     with open(wpfile, 'w') as outf:
                         outf.write(str(finishedwp) + '\n')
->>>>>>> 7395880d4c395fb79c8579f3634e7f0ee68fadd6
+
                 else:
                     break
                 

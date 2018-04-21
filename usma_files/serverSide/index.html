@@ -31,9 +31,9 @@ L.tileLayer('idaho/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
 points = points.map(function (p) { return [p[0], p[1]]; });
 
 var heat = L.heatLayer(points, {
-	minOpacity: 0.2,
-	radius: 50,
-	blur: 90,
+	minOpacity: 0.5,
+	radius: 15,
+	blur: 25,
 	0.0: 'blue',
 	0.25: 'green',
 	0.4: 'yellow',
