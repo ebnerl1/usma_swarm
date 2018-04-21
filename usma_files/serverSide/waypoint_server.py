@@ -7,8 +7,6 @@ import csv
 finishedwp = set([])
 outfile = "raw_data.csv"
 
-wpfile = "wpledger.csv"
-
 #subprocess.Popen(["python", "geogen2.py"])
 
 wpfile = "wp_data.txt"
@@ -73,7 +71,7 @@ def listen():
                         outfwriter = csv.writer(outwp)
                         outfwriter.writerow(str(finishedwp))
 
-                    with open(wpfile, 'w') as outf:
+                    with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
 
                 else:
