@@ -3,11 +3,8 @@ import time
 from datetime import datetime
 import json
 import urllib
-<<<<<<< HEAD
-=======
 import rasterio
 import numpy as np
->>>>>>> cd82838687c4505b78e59b946406372333689cf5
 import procname
 import os
 
@@ -17,15 +14,15 @@ procname.setprocname("serverSide")
 
 infile = "raw_data.csv" # Input file as a .csv
 outfile = "parsed_data.js" # Output file as a .geojson
+archive_path = "archive/archive_" + str(datetime.now()) + ".csv"
 radcap = 0 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
-
-###########################################################
-
 mapalt = 0
 online = False
 elevationFile = 'srtm_14_04.tif'
 log = []
+
+###########################################################
 
 def elevationOffline(lat, lng):
   global elevationFile
@@ -94,7 +91,7 @@ def altConvert(lat, lon, sample, alt):
   return (float(conv / radcap))
 
 def writeArchive(log):
-  archive_path = "archive_" + str(datetime.now()) + ".csv"
+  global archive_path
   script_dir = os.path.dirname(__file__)
   absolute_path = os.path.join(script_dir, archive_path)
 
