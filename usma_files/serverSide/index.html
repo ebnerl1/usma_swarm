@@ -24,7 +24,7 @@
 <script src="parsed_data.js"></script>
 <script>
 
-var map = L.map('map').setView([43.873947, -112.729869], 15);
+var map = L.map('map').setView([43.873947, -112.729869], 17);
 
 L.tileLayer('idaho/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
 
@@ -32,8 +32,8 @@ points = points.map(function (p) { return [p[0], p[1]]; });
 
 var heat = L.heatLayer(points, {
 	minOpacity: 0.5,
-	radius: 15,
-	blur: 25,
+	radius: 10,
+	blur: 20,
 	0.0: 'blue',
 	0.25: 'green',
 	0.4: 'yellow',

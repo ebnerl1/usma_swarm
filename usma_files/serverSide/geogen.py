@@ -3,8 +3,11 @@ import time
 from datetime import datetime
 import json
 import urllib
+<<<<<<< HEAD
+=======
 import rasterio
 import numpy as np
+>>>>>>> cd82838687c4505b78e59b946406372333689cf5
 import procname
 import os
 
