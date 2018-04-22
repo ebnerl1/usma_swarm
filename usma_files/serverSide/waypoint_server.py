@@ -24,7 +24,7 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 1
+    serverflag = 0
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
@@ -44,12 +44,11 @@ def listen():
         active_connections += 1
         try:
             while True:
-                data=connection.recv(4194304)
+                data=connection.recv(4096)
                 #print("Connected!")
                 #newdata = eval(data)
                 if (len(data) > 1):
                     newdata = eval(data)
-                    savedata = eval(data)
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
                     print("Finished WP: " + str(newdata[2]))
