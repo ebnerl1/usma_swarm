@@ -5,6 +5,9 @@ import json
 import urllib
 import rasterio
 import numpy as np
+import procname
+
+procname.setprocname("serverSide")
 
 ######################## VARIABLES ########################
 

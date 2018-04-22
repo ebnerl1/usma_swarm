@@ -2,6 +2,9 @@ import socket
 import sys
 import subprocess
 import csv
+import procname
+
+procname.setprocname("serverSide")
 
 #create a list of waypoints that must be visited 
 finishedwp = set([])
@@ -21,7 +24,7 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 0
+    serverflag = 1
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
@@ -66,10 +69,6 @@ def listen():
                     with open(outfile, 'a') as outf:
                         outfwriter = csv.writer(outf)
                         outfwriter.writerow([newdata[5],newdata[6],newdata[7],newdata[8],newdata[0]])
-
-                    with open(wpfile, 'w') as outwp:
-                        outfwriter = csv.writer(outwp)
-                        outfwriter.writerow(str(finishedwp))
 
                     with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
