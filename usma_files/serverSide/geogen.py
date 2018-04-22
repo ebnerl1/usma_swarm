@@ -3,6 +3,9 @@ import time
 from datetime import datetime
 import json
 import urllib
+import procname
+
+procname.setprocname("serverSide")
 
 ######################## VARIABLES ########################
 

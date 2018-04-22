@@ -2,6 +2,9 @@ import socket
 import sys
 import subprocess
 import csv
+import procname
+
+procname.setprocname("serverSide")
 
 #create a list of waypoints that must be visited 
 finishedwp = set([])
@@ -50,7 +53,8 @@ def listen():
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
                     print("Finished WP: " + str(newdata[2]))
-                    finishedwp.add(newdata[2])
+                    if (newdata[2] < 10000):                  
+                      finishedwp.add(newdata[2])
                     print("Finished WP Set: " + str(finishedwp))
                     print("# of Finished: " + str(len(finishedwp))) + "/" + str(newdata[4])
                     print("At Index: " + str(newdata[3]+1) + "/" + str(newdata[1]))
