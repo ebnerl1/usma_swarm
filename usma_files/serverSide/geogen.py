@@ -6,6 +6,7 @@ import urllib
 import rasterio
 import numpy as np
 import procname
+import os
 
 procname.setprocname("serverSide")
 
@@ -13,7 +14,6 @@ procname.setprocname("serverSide")
 
 infile = "raw_data.csv" # Input file as a .csv
 outfile = "parsed_data.js" # Output file as a .geojson
-archive = "archive_" + str(datetime.now()) + ".csv"
 radcap = 0 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
 
@@ -64,15 +64,16 @@ def parseIn():
       counts = float(row[2])
       alt = float(row[3])
       droneID = int(row[4])
+      relCounts = altConvert(lat, lon, counts, alt)      
 
       if counts > radcap:
         radcap = counts
 
-      data.append([lat, lon, counts, alt, droneID])
-      log.append([str(datetime.now()), droneID, lat, lon, alt, elevationOffline(lat, lon), counts])
+      data.append([lat, lon, relCounts, alt, droneID])
+      log.append([str(datetime.now()), droneID, lat, lon, alt, elevationOffline(lat, lon), counts, relCounts])
 
-    for i in range(len(data)):
-      data[i][2] = altConvert(data[i][0], data[i][1], data[i][2], data[i][3])
+#    for i in range(len(data)):
+#      data[i][2] = altConvert(data[i][0], data[i][1], data[i][2], data[i][3])
 
     return data
 
@@ -89,11 +90,15 @@ def altConvert(lat, lon, sample, alt):
   conv = sample * ((heightAboveGround)**2)
   return (float(conv / radcap))
 
-def writeArchive(data):
-  with open(archive, 'w') as outf:
+def writeArchive(log):
+  archive_path = "archive_" + str(datetime.now()) + ".csv"
+  script_dir = os.path.dirname(__file__)
+  absolute_path = os.path.join(script_dir, archive_path)
+
+  with open(archive_path, 'w') as outf:
     outfwriter = csv.writer(outf)
-    for i in data:
-      outfwriter.writerow(data)
+    for i in log:
+      outfwriter.writerow(i)
 
 # Iterates through entire parsed file to overwrite .geojson
 def writeGJ():
@@ -112,6 +117,7 @@ def writeGJ():
 
     outf.write('];')
   writeArchive(log)
+  print(log)
   
 
 
