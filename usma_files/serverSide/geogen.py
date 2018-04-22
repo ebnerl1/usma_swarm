@@ -3,6 +3,11 @@ import time
 from datetime import datetime
 import json
 import urllib
+<<<<<<< HEAD
+=======
+import rasterio
+import numpy as np
+>>>>>>> cd82838687c4505b78e59b946406372333689cf5
 import procname
 
 procname.setprocname("serverSide")
@@ -18,25 +23,38 @@ interval = 5 # Time in seconds in between scans
 ###########################################################
 
 mapalt = 0
+online = False
+elevationFile = 'srtm_14_04.tif'
+log = []
 
-def elevation(lat, lng):
-    apikey = "AIzaSyDvuEAYeb9xoSun0PHXVkM7oxl_sRZD2H4"
-    url = "https://maps.googleapis.com/maps/api/elevation/json"
-    request = urllib.urlopen(url+"?locations="+str(lat)+","+str(lng)+"&key="+apikey)
-    try:
-        results = json.load(request).get('results')
-        if 0 < len(results):
-            elevation = results[0].get('elevation')
-            # ELEVATION
-            return elevation
-        else:
-            print ('HTTP GET Request failed.')
-    except ValueError:
-        print ('JSON decode failed: '+str(request))
+def elevationOffline(lat, lng):
+  global elevationFile
+  coords = [(lat,lng)]
+  elevation = 0
+  with rasterio.open(elevationFile) as src:
+    for val in src.sample(coords):
+      elevation = val
+    return elevation[0]
+
+def elevationOnline(lat, lng):
+  apikey = "AIzaSyDvuEAYeb9xoSun0PHXVkM7oxl_sRZD2H4"
+  url = "https://maps.googleapis.com/maps/api/elevation/json"
+  request = urllib.urlopen(url+"?locations="+str(lat)+","+str(lng)+"&key="+apikey)
+  try:
+    results = json.load(request).get('results')
+    if 0 < len(results):
+      elevation = results[0].get('elevation')
+      # ELEVATION
+      return elevation
+    else:
+      print ('HTTP GET Request failed.')
+  except ValueError:
+    print ('JSON decode failed: '+str(request))
 
 # [0] and [1] are long/lat, [2] is rads, [3] is alt
 def parseIn():
   global radcap
+  global log
   data = []
   with open(infile, 'r') as inf:
 
@@ -54,6 +72,7 @@ def parseIn():
         radcap = counts
 
       data.append([lat, lon, counts, alt, droneID])
+      log.append([str(datetime.now()), droneID, lat, lon, alt, elevationOffline(lat, lon), counts])
 
     for i in range(len(data)):
       data[i][2] = altConvert(data[i][0], data[i][1], data[i][2], data[i][3])
@@ -64,18 +83,24 @@ def parseIn():
 def altConvert(lat, lon, sample, alt):
   global radcap
   global mapalt
-  mapalt = elevation(lat, lon)
+  global online
+  if online:  
+    mapalt = elevationOnline(lat, lon)
+  else:
+    mapalt = elevationOffline(lat, lon)
   heightAboveGround = (alt - mapalt) * 0.3048
   conv = sample * ((heightAboveGround)**2)
   return (float(conv / radcap))
 
-#def writeArchive(data):
-#  with open(archive, 'w') as outf:
-#    outfwriter = csv.writer(outf)
-#    outfwriter.writerow(
+def writeArchive(data):
+  with open(archive, 'w') as outf:
+    outfwriter = csv.writer(outf)
+    for i in data:
+      outfwriter.writerow(data)
 
 # Iterates through entire parsed file to overwrite .geojson
 def writeGJ():
+  global log
   data = parseIn()
   with open(outfile, 'w') as outf:
     outf.write('var points = [\n')
@@ -89,6 +114,8 @@ def writeGJ():
         outf.write('\n')
 
     outf.write('];')
+  writeArchive(log)
+  
 
 
 
