@@ -46,10 +46,11 @@ function onMapClick(e) {
     popup
         .setLatLng(e.latlng)
         .setContent(e.latlng.toString())
-        .openOn(mymap);
+        .openOn(map);
+   
 }
 
-mymap.on('click', onMapClick);
+map.on('click', onMapClick);
 
 </script>
 </body>
