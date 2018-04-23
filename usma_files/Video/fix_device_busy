@@ -1,0 +1,6 @@
+fuser /dev/video0
+ps axl | grep ####
+kill -9 ####
+
+The above commands will fix the device or resource busy error. The #### is a result of the output of the first command, which is ####m. Simply substite
+the number in to the following commands to kill the process using the /dev/video0.
