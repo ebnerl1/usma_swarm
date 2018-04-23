@@ -17,13 +17,13 @@ for i in "${arr[@]}"
             # Remove the directory before using scp to copy over
             echo "Updating $i"
             sshpass -p "odroid" ssh -o StrictHostKeyChecking=no odroid@$i rm -rf /home/odroid/blessed
-            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/blessed odroid@$i:/home/odroid/
+            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/blessed odroid@$i:
             
             sshpass -p "odroid" ssh -o StrictHostKeyChecking=no odroid@$i rm -rf /usma/plugins/autonomy/python
-            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@$i:/usma/plugins/autonomy/
+            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@$i:scrimmage/usma/plugins/autonomy/
             
             sshpass -p "odroid" ssh -o StrictHostKeyChecking=no odroid@$i rm /home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py
-            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@$i:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib
+            sshpass -p "odroid" scp -rp -o StrictHostKeyChecking=no /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@$i:acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib
             
             echo "COMPLETED UPDATING OF $i"
          else
