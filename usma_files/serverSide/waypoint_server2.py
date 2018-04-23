@@ -20,7 +20,7 @@ archive_path = "archive/archive_" + str(datetime.now()) + ".csv"
 radcap = 1 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
 mapalt = 0
-online = True
+online = False
 elevationFile = 'srtm_14_04.tif'
 log = []
 heatmapdata = []
@@ -49,7 +49,7 @@ def elevationOnline(lat, lng):
 
 def elevationOffline(lat, lng):
     global elevationFile
-    coords = [(lat,lng)]
+    coords = [(lng,lat)]
     elevation = 0
     with rasterio.open(elevationFile) as src:
         for val in src.sample(coords):
