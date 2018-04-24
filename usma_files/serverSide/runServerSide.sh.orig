@@ -1,0 +1,8 @@
+#!/bin/bash
+> parsed_data.js
+<<<<<<< HEAD
+python waypoint_server.py &
+=======
+python waypoint_server2.py &
+>>>>>>> f27d80e464b1ec51f329f7cb9dcc3eeaed2ead1d
+xdg-open index.html &

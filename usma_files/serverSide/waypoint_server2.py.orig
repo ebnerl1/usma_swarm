@@ -56,6 +56,7 @@ def elevationOffline(lat, lng):
             elevation = val
         return elevation[0]
         
+<<<<<<< HEAD
 def countsconvert(rawcounts, absalt, mapalt, radtype): 
     global detectors
     if radtype == "PRDER":
@@ -66,6 +67,11 @@ def countsconvert(rawcounts, absalt, mapalt, radtype):
         rval = 0.52
     heightAboveGround = absalt - mapalt
     conv = ((rawcounts - background) * ((heightAboveGround)**2) * 4 * math.pi) / rval
+=======
+def countsconvert(rawcounts, absalt, mapalt):
+    heightAboveGround = absalt - mapalt
+    conv = rawcounts * ((heightAboveGround)**2)
+>>>>>>> f27d80e464b1ec51f329f7cb9dcc3eeaed2ead1d
     return conv
     
 def writeArchive(log):
@@ -89,7 +95,7 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 0
+    serverflag = 1
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 

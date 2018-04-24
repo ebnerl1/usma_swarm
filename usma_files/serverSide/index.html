@@ -1,29 +1,10 @@
-<?php
-if ($_POST['submitted']) {
-  exec("/home/rrc/usma_swarm/usma_files/serverSide/runServerSide.sh");
-}
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>SWARMS Heatmap</title>
-		<link rel="stylesheet" charset="utf-8" href="leaflet_src/leaflet.css" />
-		<script type="text/javascript" charset="utf-8" src="leaflet_src/leaflet.js"></script>
+		<link rel="stylesheet" charset="utf-8" href="leaflet.css" />
+		<script type="text/javascript" charset="utf-8" src="leaflet.js"></script>
     <style>
-        .button{
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration:none;
-            display: inline-block;
-            font-size: 16px;
-        }
-        .button2 {background-color: #f44336;}
-
         #map { width: 1000px; height: 500px; }
         body { font: 16px/1.4 "Helvetica Neue", Arial, sans-serif; }
         .ghbtns { position: relative; top: 4px; margin-left: 5px; }
@@ -33,19 +14,14 @@ if ($_POST['submitted']) {
 </head>
 <body>
 
-<form method="post">
-    <input type="hidden" name="submitted">
-    <button type="submit" class="button">RUN</button>
-</form>
-
 <div id="map"></div>
 
 <!-- <script src="../node_modules/simpleheat/simpleheat.js"></script>
 <script src="../src/HeatLayer.js"></script> -->
 
-<script src="leaflet_src/leaflet-heat.js"></script>
+<script src="leaflet-heat.js"></script>
 
-<script src="leaflet_src/parsed_data.js"></script>
+<script src="parsed_data.js"></script>
 <script>
 
 var map = L.map('map').setView([43.873947, -112.729869], 17);
