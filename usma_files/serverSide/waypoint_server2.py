@@ -81,7 +81,7 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 0
+    serverflag = 1
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
