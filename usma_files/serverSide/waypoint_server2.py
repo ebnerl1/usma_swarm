@@ -10,6 +10,7 @@ import urllib
 import rasterio
 import numpy as np
 import os
+import math
 
 procname.setprocname("serverSide")
 
@@ -27,9 +28,21 @@ heatmapdata = []
 
 #create a list of waypoints that must be visited 
 finishedwp = set([])
-outfile = "raw_data.csv"
 wpfile = "wp_data.txt"
 
+# Radeye Dictionary
+'''
+detectors = { # TODO
+    30304: 0,     # PR
+    30285: 0,     # PR
+    31066: 0,     # G
+    30287: 0,     # PR
+    31074: 7,     # G3
+    31044: 11,    # G4
+    30289: 0,     # PR
+    31079: 0      # G
+}
+'''
 ###########################################################
 
 def elevationOnline(lat, lng):
@@ -56,9 +69,16 @@ def elevationOffline(lat, lng):
             elevation = val
         return elevation[0]
         
-def countsconvert(rawcounts, absalt, mapalt):
-    heightAboveGround = (absalt - mapalt) * 0.3048
-    conv = rawcounts * ((heightAboveGround)**2)
+def countsconvert(rawcounts, absalt, mapalt, radtype): # TODO
+    global detectors
+    if radtype == "PRDER":
+        background = 15.6
+        rval = 0.66
+    else:
+        background = 9.6
+        rval = 0.52
+    heightAboveGround = absalt - mapalt
+    conv = ((rawcounts - background) * ((heightAboveGround)**2) * 4 * math.pi) / rval
     return conv
     
 def writeArchive(log):
@@ -82,7 +102,7 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 0
+    serverflag = 1
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
@@ -133,31 +153,34 @@ def listen():
                     lon = float(newdata[6])
                     rawcounts = float(newdata[7])
                     absalt = float(newdata[8])
+                    radtype = float(newdata[9])
               
                     if online:
                         mapalt = float(elevationOnline(lat, lon))
                     else:
                         mapalt = float(elevationOffline(lat,lon))
-                    convcounts = countsconvert(rawcounts, absalt, mapalt) 
+                    convcounts = countsconvert(rawcounts, absalt, mapalt, radtype) 
                     
-                    log.append([timeNow, droneID, lat, lon, absalt, mapalt, convcounts])
+                    log.append([timeNow, droneID, lat, lon, absalt, mapalt, rawcounts, convcounts])
                     heatmapdata.append([lat, lon, convcounts])
                     
-                    with open(outfile, 'w') as outf:
+                    with open(outfile, 'w') as outf: # Write parsed js file
                         radcap = 1
                         for i in range(len(heatmapdata)):
                             if heatmapdata[i][2] > radcap:
                                 radcap = heatmapdata[i][2]
-                                
-                        outfwriter = csv.writer(outf)
-                        for i in heatmapdata:
-                            outfwriter.writerow([i[0], i[1], i[2]/radcap])
+                        outf.write('var points = [\n')
+                        for i in range(len(heatmapdata)):  
+                            outf.write('[{0},{1},"{2}"]'.format(heatmapdata[i][0],heatmapdata[i][1],heatmapdata[i][2]/radcap))
+                        if i+1 < len(data):
+                            outf.write(',\n')
+                        else:
+                            outf.write('\n')
+                        outf.write('];')
 
-                    writeArchive(log)
-
+                    writeArchive(log) # Write to log
                     with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
-
                 else:
                     break
                 
