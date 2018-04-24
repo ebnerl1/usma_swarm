@@ -27,7 +27,6 @@ heatmapdata = []
 
 #create a list of waypoints that must be visited 
 finishedwp = set([])
-outfile = "raw_data.csv"
 wpfile = "wp_data.txt"
 
 ###########################################################
@@ -57,7 +56,7 @@ def elevationOffline(lat, lng):
         return elevation[0]
         
 def countsconvert(rawcounts, absalt, mapalt):
-    heightAboveGround = (absalt - mapalt) * 0.3048
+    heightAboveGround = absalt - mapalt
     conv = rawcounts * ((heightAboveGround)**2)
     return conv
     
@@ -140,7 +139,7 @@ def listen():
                         mapalt = float(elevationOffline(lat,lon))
                     convcounts = countsconvert(rawcounts, absalt, mapalt) 
                     
-                    log.append([timeNow, droneID, lat, lon, absalt, mapalt, convcounts])
+                    log.append([timeNow, droneID, lat, lon, absalt, mapalt, rawcounts, convcounts])
                     heatmapdata.append([lat, lon, convcounts])
                     
                     with open(outfile, 'w') as outf:
