@@ -30,19 +30,6 @@ heatmapdata = []
 finishedwp = set([])
 wpfile = "wp_data.txt"
 
-# Radeye Dictionary
-'''
-detectors = { # TODO
-    30304: 0,     # PR
-    30285: 0,     # PR
-    31066: 0,     # G
-    30287: 0,     # PR
-    31074: 7,     # G3
-    31044: 11,    # G4
-    30289: 0,     # PR
-    31079: 0      # G
-}
-'''
 ###########################################################
 
 def elevationOnline(lat, lng):
@@ -69,7 +56,7 @@ def elevationOffline(lat, lng):
             elevation = val
         return elevation[0]
         
-def countsconvert(rawcounts, absalt, mapalt, radtype): # TODO
+def countsconvert(rawcounts, absalt, mapalt, radtype): 
     global detectors
     if radtype == "PRDER":
         background = 15.6
