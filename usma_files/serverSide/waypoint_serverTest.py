@@ -71,7 +71,7 @@ def countsconvert(rawcounts, absalt, mapalt, radtype):
         print("No radiation detected here")
         newcounts = 0
     heightaboveground = absalt - mapalt
-    print("heightaboveground: " + heightaboveground)
+    print("heightaboveground: " + str(heightaboveground))
     if heightaboveground < 0:
         print("Net height is negative")
         heightaboveground = 0
