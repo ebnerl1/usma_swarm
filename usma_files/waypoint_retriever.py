@@ -39,8 +39,8 @@ def getWP():
   lon = Label(window, text = "Longitude: ")
   lon.grid(row=1)
   lonlab = Label(window, text=enumList[int(waypointnum)][1]).grid(row=1,column=1)
+  print (enumList[int(waypointnum)])
   
-  print(enumList[int(waypointnum)][0])
 
 getbutton = Button(gui, text="Get Waypoint", command=getWP)
 getbutton.grid(row=2)
