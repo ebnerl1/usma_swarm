@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+ <meta http-equiv="refresh" content="16; URL=file:///home/user1/usma_swarm/usma_files/serverSide/index.html"
 <head>
     <title>SWARMS Heatmap</title>
 		<link rel="stylesheet" charset="utf-8" href="leaflet_src/leaflet.css" />
@@ -24,18 +25,18 @@
 <script src="parsed_data.js"></script>
 <script>
 
-var map = L.map('map').setView([43.873947, -112.729869], 17);
+var map = L.map('map').setView([43.87078824999999, -112.72678657142858], 18);
 
 L.tileLayer('idaho/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
 
 points = points.map(function (p) { return [p[0], p[1]]; });
 
 var heat = L.heatLayer(points, {
-	minOpacity: 0.5,
+	minOpacity: 0.0,
 	radius: 10,
 	blur: 20,
 	0.0: 'blue',
-	0.25: 'green',
+	0.20: 'green',
 	0.4: 'yellow',
 	0.8: 'red'
 }).addTo(map);
@@ -47,7 +48,6 @@ function onMapClick(e) {
         .setLatLng(e.latlng)
         .setContent(e.latlng.toString())
         .openOn(map);
-   
 }
 
 map.on('click', onMapClick);
