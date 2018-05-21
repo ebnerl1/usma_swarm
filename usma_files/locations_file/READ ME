@@ -1,0 +1,12 @@
+READ ME: 
+Andrew Kopeikin - 18 Oct 2017
+
+LOCATIONS.TXT
+The locations.txt has the lat/lon for starting locations of a SITL.
+This file has been updated here to add the RiverCourt.
+
+Copy this file over into: /home/user1/ACS/ardupilot/Tools/autotest
+
+
+
+

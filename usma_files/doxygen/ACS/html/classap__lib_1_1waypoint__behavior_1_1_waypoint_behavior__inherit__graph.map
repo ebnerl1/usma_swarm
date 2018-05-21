@@ -1,0 +1,7 @@
+<map id="ap_lib.waypoint_behavior.WaypointBehavior" name="ap_lib.waypoint_behavior.WaypointBehavior">
+<area shape="rect" id="node5" href="$classap__path__planning_1_1behavior__template_1_1_new_behavior.html" title="ap_path_planning.behavior\l_template.NewBehavior" alt="" coords="765,5,941,46"/>
+<area shape="rect" id="node6" href="$classap__path__planning_1_1patrol__box_1_1_patrol_box.html" title="ap_path_planning.patrol\l_box.PatrolBox" alt="" coords="774,70,933,111"/>
+<area shape="rect" id="node7" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html" title="ap_path_planning.tactic\l_interface.TacticInterface" alt="" coords="768,135,939,177"/>
+<area shape="rect" id="node2" href="$classap__lib_1_1behavior_1_1_behavior.html" title="ap_lib.behavior.Behavior" alt="" coords="331,77,495,104"/>
+<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html" title="ap_lib.nodeable.Nodeable" alt="" coords="112,77,283,104"/>
+</map>

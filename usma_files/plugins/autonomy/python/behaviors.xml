@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!-- 
+     Due to how behavior parameters are serially packed and unpacked, 
+     parameters can not have the following names:
+     1. tactic_id
+     2. id
+     3. team_id
+     4. swarm_id
+     5. start_time
+     6. vehicle_type
+-->
+<data>
+<behavior name="Fly" module="fly" class="Fly">
+    <param name="Starting Lat" type="float" default="35.723681" min="35.723681" max="35.723681"/>
+    <param name="Starting Lon" type="float" default="-120.768904" min="-120.768904" max="-120.768904"/>
+    <param name="Ending Lat" type="float" default="35.720011" min="35.720011" max="35.720011"/>
+    <param name="Ending Lon" type="float" default="-120.767293" min="-120.767293" max="-120.767293"/>
+    <param name="Number of Waypoints" type="int" default="16" min="0" max="20"/>
+    </behavior>
+  <behavior name="Greedy Goto" module="greedy_goto" class="GreedyGoto"/>
+  <behavior name="Greedy Shooter Int" module="greedy_shooter_int" class="GreedyShooterInt"/>
+  <behavior name="Evader Attacker" module="evade_attack" class="EvadeAttack"/>
+  <behavior name="USMA Quad" module="usma_quad" class="USMAQuad"/>
+  <behavior name="Storm Defender" module="storm_defend" class="StormDefend">
+    <param name="location" type="unsigned char" default="0" min="0" max="15"/>
+    <param name="rows" type="unsigned char" default="4" min="1" max="4"/>
+    <param name="columns" type="unsigned char" default="1" min="1" max="4"/>
+  </behavior>
+  <behavior name="Greedy Shooter Messaging" module="greedy_shooter_msg_v5" class="GreedyShooterMsg5"/>
+  <behavior name="Greedy Shooter All" module="greedy_shooter_all" class="GreedyShooterAll">
+    <param name="min_dist" type="float" default="300.0" min="100" max="99999.0"/>
+    <param name="target_dist" type="float" default="200.0" min="50.0" max="99999.0"/>
+    <param name="max_count" type="int" default="100" min="0" max="99999"/>
+    <param name="chase_safe" type="float" default="2.0" min="1.0" max="100.0"/>
+  </behavior>
+  <behavior name="Goto Defend" module="goto_defend_v2" class="GotoDefend">
+    <param name="location" type="unsigned char" default="3" min="0" max="15"/>    
+  </behavior>
+  <behavior name="Reserve" module="reserve" class="Reserve">
+    <param name="home" type="unsigned char" default="3" min="0" max="15"/>    
+  </behavior>
+    <behavior name="Raid" module="raid" class="Raid">
+    <param name="home" type="unsigned char" default="3" min="0" max="15"/>
+    <param name="target" type="unsigned char" default="15" min="0" max="15"/>    
+  </behavior>
+  <behavior name="Goto Attack" module="goto_attack" class="GotoAttack">
+    <param name="wp_dist" type="float" default="50.0" min="0.0" max="99999.0"/>
+    <param name="loc1" type="signed char" default="3" min="-1" max="99"/>
+    <param name="loc2" type="signed char" default="15" min="-1" max="99"/>
+    <param name="loc3" type="signed char" default="12" min="-1" max="99"/>
+    <param name="loc4" type="signed char" default="0" min="-1" max="99"/>
+  </behavior>
+  
+  <!--<behavior name="Tutorial 2" module="scrimmage_tutorial_2" class="HelloTactic">
+    <param name="Start Time" type="float" default="10" min="0" max="99999"/>
+    <param name="Altitude Step" type="float" default="5" min="-9999" max="9999"/>
+  </behavior>-->
+
+<!-- The following is the "example" behaviors.xml file -->
+<!--  
+  <behavior name="Greedy Shooter" module="hello_greedy_shooter" class="HelloGreedyShooter">    
+    <param name="Fire Range" type="unsigned char" default="110" min="0" max="200"/>
+    <param name="Stay on Target" type="bool" default="true"/>
+  </behavior>
+  
+  <behavior name="Safe Waypoint" module="scrimmage_tutorial_1" class="HelloTactic"/>  
+  
+  <behavior name="Increasing Alt" module="scrimmage_tutorial_2" class="HelloTactic"/>    
+  <behavior name="Flank" module="flank" class="Flank"/>
+  
+  <behavior name="Increasing Alt" module="scrimmage_tutorial_2" class="HelloTactic">  
+    <param name="Start Time" type="float" default="10" min="0" max="99999"/>
+    <param name="Altitude Step" type="float" default="5" min="-9999" max="9999"/>    
+  </behavior>
+-->
+
+  <!--
+  <behavior name="Set VO Params" module="set_vo_params" class="SetVOParams">
+    <param name="Hysteresis" type="float" default="0" min="0" max="99999"/>
+    <param name="Object Radius" type="float" default="5" min="0" max="9999"/>    
+    <param name="T CPA Thresh" type="float" default="5" min="0" max="9999"/>    
+    <param name="Mode 2D" type="bool" default="true"/>
+  </behavior>
+  -->
+
+  <!-- New behaviors from Kevin -->
+
+  <behavior name="Goto Orbit" module="goto_orbit" class="GotoOrbit">
+    <param name="lat" type="float" default="35.721112" min="0" max="99999"/>
+    <param name="lon" type="float" default="-120.770305" min="-9999" max="9999"/>    
+  </behavior>
+
+  <behavior name="Go to Defend" module="goto_defend" class="GotoDefend">
+    <param name="lat" type="float" default="35.722783" min="0" max="99999"/>
+    <param name="lon" type="float" default="-120.769350" min="-9999" max="9999"/>    
+  </behavior>
+
+  <behavior name="Flocking" module="local_flocking" class="LocalFlocking">
+    <param name="min_wall_time" type="int" default="5" min="0" max="99999"/>
+    <param name="max_neighbors" type="int" default="5" min="0" max="99999"/>
+    <param name="target_gain" type="float" default="0.5" min="0" max="99999"/>
+  </behavior>
+</data>

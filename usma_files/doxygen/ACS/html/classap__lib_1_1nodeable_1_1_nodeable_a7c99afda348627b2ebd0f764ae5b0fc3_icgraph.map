@@ -1,0 +1,7 @@
+<map id="ap_lib.nodeable.Nodeable.createPublisher" name="ap_lib.nodeable.Nodeable.createPublisher">
+<area shape="rect" id="node2" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a542a7931032423e3daf2c03cf5241a93" title="ap_mission_planning.swarm\l_control.SwarmController.publisherSetup" alt="" coords="265,5,524,46"/>
+<area shape="rect" id="node3" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html#a7f9428bc32a072ed66acd0ef64ba4aae" title="ap_path_planning.tactic\l_interface.TacticInterface.publisherSetup" alt="" coords="265,70,525,111"/>
+<area shape="rect" id="node4" href="$classap__perception_1_1hit__tracker_1_1_hit_tracker.html#ab37d88b80aec0f8361c97748f881bdc8" title="ap_perception.hit_tracker.\lHitTracker.publisherSetup" alt="" coords="308,135,481,177"/>
+<area shape="rect" id="node5" href="$classap__perception_1_1red__tracker_1_1_red_tracker.html#a0571eab81e8f60c71febbfa6db85d704" title="ap_perception.red_tracker.\lRedTracker.publisherSetup" alt="" coords="305,201,485,242"/>
+<area shape="rect" id="node6" href="$classap__perception_1_1swarm__tracker_1_1_swarm_tracker.html#a44b89a85019ebd63677a842b8e23c270" title="ap_perception.swarm\l_tracker.SwarmTracker.publisher\lSetup" alt="" coords="287,265,502,321"/>
+</map>

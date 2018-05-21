@@ -1,0 +1,12 @@
+<map id="ap_lib.bitmapped_bytes.VariableLengthBitmappedBytes" name="ap_lib.bitmapped_bytes.VariableLengthBitmappedBytes">
+<area shape="rect" id="node4" href="$classap__lib_1_1bitmapped__bytes_1_1_id_short_value_pair_parser.html" title="ap_lib.bitmapped_bytes.Id\lShortValuePairParser" alt="" coords="663,38,838,79"/>
+<area shape="rect" id="node6" href="$classap__lib_1_1bitmapped__bytes_1_1_number_list_parser.html" title="ap_lib.bitmapped_bytes.Number\lListParser" alt="" coords="646,169,855,210"/>
+<area shape="rect" id="node12" href="$classap__lib_1_1bitmapped__bytes_1_1_search_waypoint_parser.html" title="ap_lib.bitmapped_bytes.Search\lWaypointParser" alt="" coords="649,234,853,275"/>
+<area shape="rect" id="node2" href="$classap__lib_1_1bitmapped__bytes_1_1_bitmapped_bytes.html" title="ap_lib.bitmapped_bytes.Bitmapped\lBytes" alt="" coords="113,169,338,210"/>
+<area shape="rect" id="node5" href="$classap__lib_1_1bitmapped__bytes_1_1_id_float_value_pair_parser.html" title="ap_lib.bitmapped_bytes.Id\lFloatValuePairParser" alt="" coords="919,5,1094,46"/>
+<area shape="rect" id="node7" href="$classap__lib_1_1bitmapped__bytes_1_1_float_list_parser.html" title="ap_lib.bitmapped_bytes.Float\lListParser" alt="" coords="911,70,1103,111"/>
+<area shape="rect" id="node8" href="$classap__lib_1_1bitmapped__bytes_1_1_int_list_parser.html" title="ap_lib.bitmapped_bytes.Int\lListParser" alt="" coords="917,135,1096,177"/>
+<area shape="rect" id="node9" href="$classap__lib_1_1bitmapped__bytes_1_1_short_list_parser.html" title="ap_lib.bitmapped_bytes.Short\lListParser" alt="" coords="909,201,1104,242"/>
+<area shape="rect" id="node10" href="$classap__lib_1_1bitmapped__bytes_1_1_u_int_list_parser.html" title="ap_lib.bitmapped_bytes.UInt\lListParser" alt="" coords="913,266,1101,307"/>
+<area shape="rect" id="node11" href="$classap__lib_1_1bitmapped__bytes_1_1_u_short_list_parser.html" title="ap_lib.bitmapped_bytes.UShort\lListParser" alt="" coords="905,331,1109,373"/>
+</map>

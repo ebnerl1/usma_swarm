@@ -1,0 +1,9 @@
+These instructions will guide you through installing SimpleScreenRecorder - a screen video capture tool in Linux. 
+Run the following commands in the terminal:
+
+sudo add-apt-repository ppa:maarten-baert/simplescreenrecorder
+sudo apt-get update
+sudo apt-get install simplescreenrecorder
+
+You can now open the application in the "Applications" > "Sound & Video" > "SimpleScreenRecorder"
+This software should be used when capturing videos of anything you are typing/viewing on the computer.

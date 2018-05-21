@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SASCAutonomy_plugin</library>
+  <module>goto_attack</module>
+  <class>GotoAttack</class>
+  <wp_dist>50.0</wp_dist>
+  <loc1>8</loc1>
+  <loc2>0</loc2>
+  <loc3>3</loc3>
+  <loc4>11</loc4>
+</params>

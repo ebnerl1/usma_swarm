@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SASCAutonomy_plugin</library>
+  <module>raid</module>
+  <class>Raid</class>
+  <lat>35.719961</lat>
+  <lon>-120.767304</lon>
+</params>

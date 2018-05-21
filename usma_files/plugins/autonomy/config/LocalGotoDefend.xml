@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://gtri.gatech.edu"?>
+<params>
+  <library>SASCAutonomy_plugin</library>
+  <module>local_goto_defend</module>
+  <class>LocalGotoDefend</class>
+  <lat>35.721112</lat>
+  <lon>-120.770305</lon>
+</params>
