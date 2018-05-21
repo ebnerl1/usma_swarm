@@ -1,8 +1,0 @@
-<map id="ap_lib.bitmapped_bytes.PassedValueParser" name="ap_lib.bitmapped_bytes.PassedValueParser">
-<area shape="rect" id="node4" href="$classap__lib_1_1bitmapped__bytes_1_1_passed_float_parser.html" title="ap_lib.bitmapped_bytes.Passed\lFloatParser" alt="" coords="643,5,850,46"/>
-<area shape="rect" id="node5" href="$classap__lib_1_1bitmapped__bytes_1_1_passed_int_parser.html" title="ap_lib.bitmapped_bytes.Passed\lIntParser" alt="" coords="643,70,850,111"/>
-<area shape="rect" id="node6" href="$classap__lib_1_1bitmapped__bytes_1_1_passed_short_parser.html" title="ap_lib.bitmapped_bytes.Passed\lShortParser" alt="" coords="643,135,850,177"/>
-<area shape="rect" id="node7" href="$classap__lib_1_1bitmapped__bytes_1_1_passed_u_int_parser.html" title="ap_lib.bitmapped_bytes.Passed\lUIntParser" alt="" coords="643,201,850,242"/>
-<area shape="rect" id="node8" href="$classap__lib_1_1bitmapped__bytes_1_1_passed_u_short_parser.html" title="ap_lib.bitmapped_bytes.Passed\lUShortParser" alt="" coords="643,266,850,307"/>
-<area shape="rect" id="node2" href="$classap__lib_1_1bitmapped__bytes_1_1_bitmapped_bytes.html" title="ap_lib.bitmapped_bytes.Bitmapped\lBytes" alt="" coords="113,135,338,177"/>
-</map>

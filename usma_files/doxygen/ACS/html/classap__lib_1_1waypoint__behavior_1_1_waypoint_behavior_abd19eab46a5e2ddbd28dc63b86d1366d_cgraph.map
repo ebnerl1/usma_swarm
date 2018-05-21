@@ -1,7 +1,0 @@
-<map id="ap_lib.waypoint_behavior.WaypointBehavior.publishWaypoint" name="ap_lib.waypoint_behavior.WaypointBehavior.publishWaypoint">
-<area shape="rect" id="node2" href="$classap__lib_1_1behavior_1_1_behavior.html#aea17ebe50eb81c563f409c3f136079bf" title="ap_lib.behavior.Behavior.set\l_active" alt="" coords="283,81,469,122"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#aa7a18d271f35dd411be92798b05766b1" title="ap_lib.nodeable.Nodeable.log_warn" alt="" coords="517,5,744,32"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1nodeable_1_1_nodeable.html#abeb5ce6a985e5eb152e93eff4fe20641" title="ap_lib.nodeable.Nodeable.log_info" alt="" coords="793,85,1013,112"/>
-<area shape="rect" id="node5" href="$classap__lib_1_1behavior_1_1_behavior.html#a30a9a1490a1e04dc81d54dabfa9a050d" title="ap_lib.behavior.Behavior.\l_send_status_message" alt="" coords="819,151,987,193"/>
-<area shape="rect" id="node6" href="$classap__lib_1_1behavior_1_1_behavior.html#a634fd4b8b82528dfc4a8d495aba777d0" title="ap_lib.behavior.Behavior.set\l_ready_state" alt="" coords="537,107,724,149"/>
-</map>

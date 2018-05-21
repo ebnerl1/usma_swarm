@@ -1,8 +1,0 @@
-<map id="ap_lib.behavior.Behavior.subscribe_to_red_states" name="ap_lib.behavior.Behavior.subscribe_to_red_states">
-<area shape="rect" id="node2" href="$classap__lib_1_1behavior_1_1_behavior.html#a27171ef5ede747758ac8e6f64f088413" title="ap_lib.behavior.Behavior.\l_process_red_uav_states" alt="" coords="285,5,456,46"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#aa7a18d271f35dd411be92798b05766b1" title="ap_lib.nodeable.Nodeable.log_warn" alt="" coords="512,71,739,97"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1behavior_1_1_behavior.html#aea17ebe50eb81c563f409c3f136079bf" title="ap_lib.behavior.Behavior.set\l_active" alt="" coords="277,146,464,187"/>
-<area shape="rect" id="node5" href="$classap__lib_1_1nodeable_1_1_nodeable.html#abeb5ce6a985e5eb152e93eff4fe20641" title="ap_lib.nodeable.Nodeable.log_info" alt="" coords="787,151,1007,177"/>
-<area shape="rect" id="node6" href="$classap__lib_1_1behavior_1_1_behavior.html#a30a9a1490a1e04dc81d54dabfa9a050d" title="ap_lib.behavior.Behavior.\l_send_status_message" alt="" coords="813,217,981,258"/>
-<area shape="rect" id="node7" href="$classap__lib_1_1behavior_1_1_behavior.html#a634fd4b8b82528dfc4a8d495aba777d0" title="ap_lib.behavior.Behavior.set\l_ready_state" alt="" coords="532,173,719,214"/>
-</map>

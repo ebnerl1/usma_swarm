@@ -1,9 +1,0 @@
-<map id="ap_mission_planning.swarm_control.SwarmController.serviceSetup" name="ap_mission_planning.swarm_control.SwarmController.serviceSetup">
-<area shape="rect" id="node2" href="$classap__lib_1_1nodeable_1_1_nodeable.html#aa7f98b65b373bab73fe270eb1886a0a9" title="ap_lib.nodeable.Nodeable.create\lService" alt="" coords="304,5,515,46"/>
-<area shape="rect" id="node4" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#adb008fa30bbb8420fea714162b1caca4" title="ap_mission_planning.swarm\l_control.SwarmController.\l_register_behavior" alt="" coords="316,69,503,125"/>
-<area shape="rect" id="node5" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a06d66a58bb6c8e74c255d75c3374e451" title="ap_mission_planning.swarm\l_control.SwarmController.\l_run_behavior" alt="" coords="316,149,503,205"/>
-<area shape="rect" id="node6" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a1ec86bf50798d81242879849333724ac" title="ap_mission_planning.swarm\l_control.SwarmController.\l_pause_behavior" alt="" coords="316,229,503,285"/>
-<area shape="rect" id="node7" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a69a7abfd0dfba30c337d255c138687fa" title="ap_mission_planning.swarm\l_control.SwarmController.\l_set_subswarm_svc" alt="" coords="316,309,503,365"/>
-<area shape="rect" id="node8" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a0f5b87ace1dcd932ea9ff2a4f5b35730" title="ap_mission_planning.swarm\l_control.SwarmController.\l_set_swarm_state_svc" alt="" coords="316,389,503,445"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#a55ff40ae39b4185081c7fba973934e48" title="ap_lib.nodeable.Nodeable.log_dbug" alt="" coords="563,12,789,39"/>
-</map>

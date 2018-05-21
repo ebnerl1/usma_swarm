@@ -1,6 +1,0 @@
-<map id="safety.SafetyMonitor.run" name="safety.SafetyMonitor.run">
-<area shape="rect" id="node2" href="$classsafety_1_1_safety_monitor.html#a33b5a9f3cb7b7b32b2f36e35e546d039" title="safety.SafetyMonitor.\l_is_ok" alt="" coords="219,5,365,46"/>
-<area shape="rect" id="node3" href="$classsafety_1_1_safety_monitor.html#ad21bc7b83798bce4d2a0c2f14233bcac" title="safety.SafetyMonitor.\l_chk_set_state" alt="" coords="219,70,365,111"/>
-<area shape="rect" id="node4" href="$classsafety_1_1_safety_monitor.html#a7aa37fab8ca6646b27f8d022f814811b" title="safety.SafetyMonitor.\l_chk_nodes_alive" alt="" coords="219,135,365,177"/>
-<area shape="rect" id="node5" href="$classsafety_1_1_safety_monitor.html#aef531a17549a0938a4b9cf0c93cf88de" title="safety.SafetyMonitor.\l_chk_autopilot_pose" alt="" coords="219,201,365,242"/>
-</map>

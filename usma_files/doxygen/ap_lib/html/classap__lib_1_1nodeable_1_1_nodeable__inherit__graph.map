@@ -1,6 +1,0 @@
-<map id="ap_lib.nodeable.Nodeable" name="ap_lib.nodeable.Nodeable">
-<area shape="rect" id="node3" href="$classap__lib_1_1behavior_1_1_behavior.html" title="ap_lib.behavior.Behavior" alt="" coords="331,77,495,104"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1hybrid__behavior_1_1_hybrid_behavior.html" title="ap_lib.hybrid_behavior.Hybrid\lBehavior" alt="" coords="545,5,738,46"/>
-<area shape="rect" id="node5" href="$classap__lib_1_1rate__behavior_1_1_rate_behavior.html" title="ap_lib.rate_behavior.Rate\lBehavior" alt="" coords="556,70,727,111"/>
-<area shape="rect" id="node6" href="$classap__lib_1_1waypoint__behavior_1_1_waypoint_behavior.html" title="ap_lib.waypoint_behavior.\lWaypointBehavior" alt="" coords="555,135,727,177"/>
-</map>

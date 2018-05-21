@@ -1,7 +1,0 @@
-<map id="ap_path_planning.behavior_template.NewBehavior.set_behavior" name="ap_path_planning.behavior_template.NewBehavior.set_behavior">
-<area shape="rect" id="node2" href="$classap__lib_1_1behavior_1_1_behavior.html#a10c5b2ad582ace994a9ad2fcb07ecb65" title="ap_lib.behavior.Behavior.subscribe\l_to_swarm" alt="" coords="237,5,461,46"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1behavior_1_1_behavior.html#a634fd4b8b82528dfc4a8d495aba777d0" title="ap_lib.behavior.Behavior.set\l_ready_state" alt="" coords="256,70,443,111"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1behavior_1_1_behavior.html#a782677a679901af665090d061edb3e09" title="ap_lib.behavior.Behavior.\l_process_swarm_uav_states" alt="" coords="524,5,716,46"/>
-<area shape="rect" id="node5" href="$classap__lib_1_1behavior_1_1_behavior.html#a30a9a1490a1e04dc81d54dabfa9a050d" title="ap_lib.behavior.Behavior.\l_send_status_message" alt="" coords="536,70,704,111"/>
-<area shape="rect" id="node6" href="$classap__lib_1_1nodeable_1_1_nodeable.html#abeb5ce6a985e5eb152e93eff4fe20641" title="ap_lib.nodeable.Nodeable.log_info" alt="" coords="510,136,730,163"/>
-</map>

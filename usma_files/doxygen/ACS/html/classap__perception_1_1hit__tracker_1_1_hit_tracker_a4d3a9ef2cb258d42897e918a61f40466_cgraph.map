@@ -1,7 +1,0 @@
-<map id="ap_perception.hit_tracker.HitTracker.serviceSetup" name="ap_perception.hit_tracker.HitTracker.serviceSetup">
-<area shape="rect" id="node2" href="$classap__lib_1_1nodeable_1_1_nodeable.html#aa7f98b65b373bab73fe270eb1886a0a9" title="ap_lib.nodeable.Nodeable.create\lService" alt="" coords="245,5,456,46"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1distributed__algorithms_1_1_lossy_data_exchange.html#afb05c4628f2ff2c7ea85c6a5028d45fa" title="ap_lib.distributed\l_algorithms.LossyDataExchange.reset" alt="" coords="227,70,474,111"/>
-<area shape="rect" id="node5" href="$classap__perception_1_1hit__tracker_1_1_hit_tracker.html#a7c9f1c4991abc99af3b9d9c053c50db1" title="ap_perception.hit_tracker.\lHitTracker.reset" alt="" coords="265,135,437,177"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#a55ff40ae39b4185081c7fba973934e48" title="ap_lib.nodeable.Nodeable.log_dbug" alt="" coords="523,12,749,39"/>
-<area shape="rect" id="node6" href="$classap__perception_1_1hit__tracker_1_1_hit_tracker.html#a9fba0b41f470d6a8acc03da7a63f46bd" title="ap_perception.hit_tracker.\lHitTracker._processNetReset" alt="" coords="538,135,734,177"/>
-</map>

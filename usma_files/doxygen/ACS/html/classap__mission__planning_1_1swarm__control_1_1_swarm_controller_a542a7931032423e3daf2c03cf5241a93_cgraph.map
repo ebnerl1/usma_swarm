@@ -1,7 +1,0 @@
-<map id="ap_mission_planning.swarm_control.SwarmController.publisherSetup" name="ap_mission_planning.swarm_control.SwarmController.publisherSetup">
-<area shape="rect" id="node2" href="$classap__lib_1_1nodeable_1_1_nodeable.html#a7c99afda348627b2ebd0f764ae5b0fc3" title="ap_lib.nodeable.Nodeable.create\lPublisher" alt="" coords="327,5,537,46"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1sasc__scrimmage_1_1_tactic.html#a3adcb511cf6fafc37ad4f353c103a0e4" title="ap_lib.sasc_scrimmage.Tactic.create\lPublisher" alt="" coords="313,70,551,111"/>
-<area shape="rect" id="node4" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a918b4f860b9a0ffed49f3c8b8d36e4e1" title="ap_mission_planning.swarm\l_control.SwarmController.\l_update_subswarm" alt="" coords="339,135,525,191"/>
-<area shape="rect" id="node5" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#ac68d752c0f452bb0fc68555a30bde085" title="ap_mission_planning.swarm\l_control.SwarmController.\l_update_swarm_state" alt="" coords="339,215,525,271"/>
-<area shape="rect" id="node6" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a18f5e18fcc6ab7d3b38b6db1e84ac015" title="ap_mission_planning.swarm\l_control.SwarmController.\l_update_swarm_behavior" alt="" coords="339,295,525,351"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="ap_path_planning.tactic_interface.TacticInterface.callbackSetup" name="ap_path_planning.tactic_interface.TacticInterface.callbackSetup">
-<area shape="rect" id="node2" href="$classap__lib_1_1nodeable_1_1_nodeable.html#ad3b9800462db5427d03ef69c3dcdea68" title="ap_lib.nodeable.Nodeable.create\lSubscriber" alt="" coords="309,5,520,46"/>
-<area shape="rect" id="node4" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html#abf90a102b61a14dd05cc8127adf5b823" title="ap_path_planning.tactic\l_interface.TacticInterface.\l_update_own_pose" alt="" coords="327,69,502,125"/>
-<area shape="rect" id="node5" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html#a05e19dd8c2e6dbb93db35d086ce62b2e" title="ap_path_planning.tactic\l_interface.TacticInterface.\l_update_hit_list" alt="" coords="327,149,502,205"/>
-<area shape="rect" id="node6" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html#a829f421a7961510f2e626c49acbc210d" title="ap_path_planning.tactic\l_interface.TacticInterface._reset" alt="" coords="309,229,520,270"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1nodeable_1_1_nodeable.html#a55ff40ae39b4185081c7fba973934e48" title="ap_lib.nodeable.Nodeable.log_dbug" alt="" coords="568,12,795,39"/>
-</map>

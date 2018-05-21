@@ -1,8 +1,0 @@
-<map id="ap_lib.nodeable.Nodeable.createSubscriber" name="ap_lib.nodeable.Nodeable.createSubscriber">
-<area shape="rect" id="node2" href="$classap__mission__planning_1_1swarm__control_1_1_swarm_controller.html#a21b85a68c7bfaaad8ab03d53b6b494ce" title="ap_mission_planning.swarm\l_control.SwarmController.callbackSetup" alt="" coords="265,5,519,46"/>
-<area shape="rect" id="node3" href="$classap__path__planning_1_1patrol__box_1_1_patrol_box.html#a2f60fb22d587940719a25c5cb63e25a1" title="ap_path_planning.patrol\l_box.PatrolBox.callbackSetup" alt="" coords="293,70,491,111"/>
-<area shape="rect" id="node4" href="$classap__path__planning_1_1tactic__interface_1_1_tactic_interface.html#adb6f7ab13c13bf4063d6367758f7152b" title="ap_path_planning.tactic\l_interface.TacticInterface.callbackSetup" alt="" coords="264,135,520,177"/>
-<area shape="rect" id="node5" href="$classap__perception_1_1hit__tracker_1_1_hit_tracker.html#a69699c4ff22cf68cf394dbcd44c2b032" title="ap_perception.hit_tracker.\lHitTracker.callbackSetup" alt="" coords="306,201,478,242"/>
-<area shape="rect" id="node6" href="$classap__perception_1_1red__tracker_1_1_red_tracker.html#ae6b958121ca915624a999706d7376555" title="ap_perception.red_tracker.\lRedTracker.callbackSetup" alt="" coords="304,266,480,307"/>
-<area shape="rect" id="node7" href="$classap__perception_1_1swarm__tracker_1_1_swarm_tracker.html#a8663cad9e65db8c9561be6a8b119a90b" title="ap_perception.swarm\l_tracker.SwarmTracker.callback\lSetup" alt="" coords="287,331,497,387"/>
-</map>

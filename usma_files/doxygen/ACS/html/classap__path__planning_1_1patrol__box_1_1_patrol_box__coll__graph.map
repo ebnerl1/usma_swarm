@@ -1,5 +1,0 @@
-<map id="ap_path_planning.patrol_box.PatrolBox" name="ap_path_planning.patrol_box.PatrolBox">
-<area shape="rect" id="node2" href="$classap__lib_1_1waypoint__behavior_1_1_waypoint_behavior.html" title="ap_lib.waypoint_behavior.\lWaypointBehavior" alt="" coords="5,230,176,271"/>
-<area shape="rect" id="node3" href="$classap__lib_1_1behavior_1_1_behavior.html" title="ap_lib.behavior.Behavior" alt="" coords="9,155,172,181"/>
-<area shape="rect" id="node4" href="$classap__lib_1_1nodeable_1_1_nodeable.html" title="ap_lib.nodeable.Nodeable" alt="" coords="5,80,176,107"/>
-</map>
