@@ -1,3 +1,6 @@
+
+1. To list the settings you can adjust with v4l2, run the following commands:
+
 sudo v4l2-ctl -d /dev/video0 -l                     
                      brightness (int)    : min=-64 max=64 step=1 default=0 value=0
                        contrast (int)    : min=0 max=64 step=1 default=32 value=32
@@ -9,8 +12,8 @@ sudo v4l2-ctl -d /dev/video0 -l
                       sharpness (int)    : min=0 max=6 step=1 default=2 value=2
          backlight_compensation (int)    : min=0 max=2 step=1 default=1 value=1
 
+2. This is the command that I most often ran (on the vehicle) that fixed the white balance issue. Make sure you are ssh'ed into the vehicle before executing this command.
+
 sudo v4l2-ctl -d /dev/video0 --set-ctrl=power_line_frequency=0
 
-You can change the camera control settings with v4l2 while also streaming the video with gstreamer!
-This could possibly be a solution to the exposure when you are outside to make the image quality
-greater.
+3. If you wish to adjust other camera settings, you can apply a similar concept and replace power_line_frequency with whatever setting you desire.

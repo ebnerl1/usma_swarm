@@ -1,4 +1,9 @@
+1. If you notice that there is a "device or resource busy" error, run the following commands:
+
 fuser /dev/video0
+
+2. You will see a process ID number that is associated with using the /dev/video0 device. Run the following two commands using that process ID number.
+
 ps axl | grep ####
 kill -9 ####
 

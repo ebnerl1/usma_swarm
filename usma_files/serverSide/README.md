@@ -11,9 +11,9 @@ TLDR:
 
 To run this right off the bat:
 
-1. Use `./runServerSide.sh`
+1. Use `./runServerSide.sh` (create executable if needed `chmod +x runServerSide.sh`)
 2. Open index.html in Firefox
-3. Use `./killServerSide.sh` to close
+3. Use `./killServerSide.sh` to close (create executable if needed `chmod +x killServerSide.sh`)
 
 ### CONTENTS:
 *Items listed in **bold** are folders
@@ -83,3 +83,18 @@ To generate map tile for other locations, first download Mobile Atlas Creator an
 `L.tileLayer('<Location Name>/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);`
 to the desired location name
 - Change the starting location coordinate to one in the new location
+
+### To Plot Archived Data
+
+- `cd usma_swarm/usma_files/serverSide/archive`
+- Update `saver.py` line 5 with the file name of the .csv you want to plot
+- `python saver.py`
+- Copy the `savedparse.js` file to `usma_swarm/usma_files/serverSide`
+- Update `index.html` file to read in `savedparse.js` (line 26)
+- `./runServerSide.sh`
+
+### Other Notes (AK)
+
+- To run this in SITL vs live, there are 2 flags to update in behavior (search for flag) and 1-2 in the ServerSide.  These switch local-host on/off
+- If waypoint server crashes during run, can paste in data from `wp_data.tx` into `waypoint_server.py` finishedwp (line 30)
+
