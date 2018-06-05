@@ -1,7 +1,7 @@
 # SERVER SIDE QUICK START
 ## ZIWEI PENG AND PETER JANG AY18-1/2
 
-Last updated 21MAY2018, files made in Python 2.7
+Last updated 05JUN2018, files made in Python 2.7
 
 ### PURPOSE:
 
@@ -36,6 +36,7 @@ To run this right off the bat:
 - wpledger.csv _Another set of survey points, deprecated_
 - runServerSide.sh _Script to clear the working parsed_data.js file, run the waypoint server, and open the heatmap._
 - killServerSide.sh _Script to quit the waypoint server_
+- saver.py _Python script to extract arhive log data into a .js_
 
 ### THE WAYPOINT SERVER (waypoint_server.py)
 
@@ -93,8 +94,10 @@ to the desired location name
 - Update `index.html` file to read in `savedparse.js` (line 26)
 - `./runServerSide.sh`
 
-### Other Notes (AK)
+### Other Notes
 
-- To run this in SITL vs live, there are 2 flags to update in behavior (search for flag) and 1-2 in the ServerSide.  These switch local-host on/off
-- If waypoint server crashes during run, can paste in data from `wp_data.tx` into `waypoint_server.py` finishedwp (line 30)
-
+- To run this in SITL vs live, there are 2 flags to update in behavior (search for flag) and 1-2 in the ServerSide.  These switch local-host on/off (AK)
+- If waypoint server crashes during run, can paste in data from `wp_data.txt` into `waypoint_server.py` finishedwp (line 30) (AK)
+- The purpose of the variable finishedwp (a set) is to initialize the waypoint server in a state that already includes "finished" waypoints. The server immediately sends this data to each quad as well so that all members can begin the mission excluding the given points. This is useful in the event of a server crash (where otherwise the mission would have to start again from the very beginning), or if a certain area needs to be excluded. (ZP)
+- If a mission is halted and restarted, it is important to note that the `./runServerSide` command should not be used as it would clear out the parsed_data.js file. Instead, run ./killServerSide to clear out any orphaned processes, then run `python waypoint_server.py &` and then `firefox index.html` to manually start the waypoint server. (ZP)
+- In the event that the parsed_data.js file is cleared, a saved copy should still be available in the /archive directory. To extract the data from the log file, edit the `saver.py` file to open the desired log, and run `python saver.py` to produce the .js file. (ZP)
