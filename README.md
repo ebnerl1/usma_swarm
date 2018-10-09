@@ -82,7 +82,7 @@
     * `cd ~/`  
     * `gedit .bashrc`  
     * Scroll to bottom, and add the following line:  
-      `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
+      `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml` (Note: "user1" maybe replaced by another username like "rrc" or "osrf")
     * Save and close bashrc file  
     * `source .bashrc` (To source the updated .bashrc file)
 4. Install USMA SWARM files from westpoint-robotics Github
