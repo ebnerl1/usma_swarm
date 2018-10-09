@@ -11,7 +11,7 @@
 3. Check hosts file is consistent with host name:
     * `echo $HOSTNAME` 
     * Copy the output (ex: ros305)
-    * `sudo gedit /etc/hosts.` 
+    * `gksu gedit /etc/hosts` 
     * Make sure the line 2 of the file is the same as $HOSTNAME.  If not, then correct/past in, and save.
 4. Connect to the internet (EECS DS3 Network).  Preferably select a high speed wired line.  EECSNet instructions forthcoming.
 5. Install Git:
@@ -82,7 +82,7 @@
     * `cd ~/`  
     * `gedit .bashrc`  
     * Scroll to bottom, and add the following line:  
-      `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml`
+      `export SCRIMMAGE_TACTIC_INTERFACE_FILE=/home/user1/scrimmage/usma/plugins/autonomy/python/behaviors.xml` (Note: "user1" maybe replaced by another username like "rrc" or "osrf")
     * Save and close bashrc file  
     * `source .bashrc` (To source the updated .bashrc file)
 4. Install USMA SWARM files from westpoint-robotics Github
