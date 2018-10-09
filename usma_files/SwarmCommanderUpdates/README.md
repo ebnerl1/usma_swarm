@@ -10,4 +10,12 @@
     * `cd ~/ACS/swarmcommander`
     * `python3 setup.py build install --user` (Note: this recompiles)
 
-
+### To enable vehicles on the ground to be seen by Swarm Commander:
+1. Copy the `dashboardDialogWrapper.py` here into: `/home/user1/ACS/swarmcommander/modules/sc_qt_gui/`
+2. Alternatively can:
+    * Navigate to `/home/user1/ACS/swarmcommander/modules/sc_qt_gui/`
+    * Edit `dashboardDialogWrapper.py`
+    * Comment out lines 122-125 (with `self.__do_not_display_states.add`)
+3. Then in a Terminal:
+    * `cd ~/ACS/swarmcommander`
+    * `python3 setup.py build install --user` (Note: this recompiles)
