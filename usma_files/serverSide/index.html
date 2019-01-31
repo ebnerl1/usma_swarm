@@ -26,9 +26,9 @@
 <script src="parsed_data.js"></script>
 <script>
 
-var map = L.map('map').setView([43.87078824999999, -112.72678657142858], 18);
+var map = L.map('map').setView([41.390717,-73.953278], 18);
 
-L.tileLayer('idaho/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
+L.tileLayer('rivercourts/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
 
 points = points.map(function (p) { return [p[0], p[1]]; });
 
