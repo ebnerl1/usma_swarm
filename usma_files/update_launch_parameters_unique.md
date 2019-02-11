@@ -12,10 +12,13 @@
 This page explains how to pull and push information from Github to keep common software configuration, how to create new mission parameters, and how to upload those mission parameters to the GCS laptop and UAS
 
 ### Pull & Push Updates to usma_swarm from Westpoint Robotics Github
+### Change current branch from master -> launchBranch
 1. Pull Latest Updates from usma_swarm/usma_files on Github
   * `cd ~/usma_swarm/usma_files`
   * `git pull`
-2. Push latest updates to usma_swarm/usma_files on Github (if you make changes)
+2. Change git branch to track launchBranch
+  * `git checkout launchBranch`
+3. Push latest updates to usma_swarm/usma_files on Github (if you make changes)
   * `cd ~/usma_swarm/usma_files`
   * `git add -A`
   * `git commit –m “comments”` (include comments for addition)
