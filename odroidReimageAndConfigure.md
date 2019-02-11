@@ -35,6 +35,7 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
 ### Configure new ODROID vehicle ID and Team Number
 1. Insert the imaged EMMC card into the ODROID of the vehicle to reconfigure
   * Make note of the tail number from the image.
+  
 2. Power up the UAS with a DC power supply.
 3. Configure Alfa Wi-Fi dongle on SASC Linux Laptop
   * Attach an Alfa USB Wi-Fi adapter to the computer
