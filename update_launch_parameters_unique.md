@@ -40,8 +40,8 @@ This page explains how to pull and push information from Github to keep common s
   * Change # of drones being launched
 6. Run wpDuplicate.py to create unique wp files
   * `./wpDuplicate.py launch.csv`
-  *This will create new & unique wp files for each drone in the current directory
-  *To remove these files for clean-up purposes, run:
+  * This will create new & unique wp files for each drone in the current directory
+  * To remove these files for clean-up purposes, run:
   * `./clean_waypoints.sh`
 7. Navigate back to the usma_files directory
   * `cd ..`
