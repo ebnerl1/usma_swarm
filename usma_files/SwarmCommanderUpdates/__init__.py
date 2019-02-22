@@ -15,7 +15,7 @@ from SwarmCommander.modules.sc_qt_gui.dashboardDialogWrapper import DashboardDia
 import ap_lib.ap_enumerations as enums
 import sys
 
-SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
 
 class SC_QtGUIModule(sc_module.SCModule):
     def __init__(self, sc_state):
