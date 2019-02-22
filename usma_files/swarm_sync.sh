@@ -9,22 +9,24 @@
 
 # A smaller list for testing
 
-declare -a arr=("192.168.11.111" "192.168.11.113" "192.168.11.115" "192.168.11.120" "192.168.11.121" "192.168.11.122" "192.168.11.123" "192.168.11.125") 
-#declare -a arr=("192.168.11.111")
+#declare -a arr=("192.168.11.111" "192.168.11.113" "192.168.11.115" "192.168.11.120" "192.168.11.121" "192.168.11.122" "192.168.11.123" "192.168.11.125") 
+declare -a arr=("192.168.11.124" "192.168.11.110")
 
 # Below is the previous commit of the master branch before the EOY pull request 
 #declare -a arr=("192.168.11.125") 
 # end 
 
 #Declare var used for tracking what # drone in the array is being configured
-NDRONE = 0
+declare -i NDRONE=0
 
 # For each quadcopter update the listed directories
 for i in "${arr[@]}"
     do
         if ping -c1 -w3 $i >/dev/null 2>&1; then
             #Update blessed folder with specific drone launch file
-            ./blessed_files/dynamic_update_templates.usma.py quadWP_$NDRONE.wp
+            echo "Creating WP file for drone # $NDRONE"
+            ./blessed_files/dynamic_update_templates_usma.py quadWP_$NDRONE.wp
+            NDRONE=$NDRONE+1
 
             #Remove the directory before using scp to copy over
             echo "Updating $i"
