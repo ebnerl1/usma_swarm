@@ -58,6 +58,7 @@ def main():
         print("Creating " + filename + "...")
         r = csv.reader(open(filename))
         lines = list(r)
+        newWaypoint3 = lines[4][0].split("\t")
         newWaypoint4 = lines[5][0].split("\t")
         newWaypoint5 = lines[6][0].split("\t")
         #id4 = newWaypoint4[0]
@@ -67,8 +68,11 @@ def main():
         newWaypoint4[9] = str(ys[i])
         newWaypoint5[8] = newWaypoint4[8]
         newWaypoint5[9] = newWaypoint4[9]
+        newWaypoint3[8] = newWaypoint4[8]
+        newWaypoint3[9] = newWaypoint4[9]
         lines[5][0] = "\t".join(newWaypoint4)
         lines[6][0] = "\t".join(newWaypoint5)
+        lines[4][0] = "\t".join(newWaypoint3)
         writer = csv.writer(open(filename, 'w'))
         writer.writerows(lines)
         print("Creation of " + filename + "complete!")
