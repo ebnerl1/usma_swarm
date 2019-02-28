@@ -19,20 +19,20 @@ This page explains how to pull and push information from Github to keep common s
 2. Change git branch to track launchBranch
     * `git checkout launchBranch`
 3. Push latest updates to usma_swarm/usma_files on Github (if you make changes)
-    * `cd ~/usma_swarm/usma_files`
-    * `git add -A`
-    * `git commit –m “comments”` (include comments for addition)
-    * `git push`
+    1. `cd ~/usma_swarm/usma_files`
+    2. `git add -A`
+    3. `git commit –m “comments”` (include comments for addition)
+    4. `git push`
 
 ### Configure GCS Laptop Connections
 1. Configure Alfa Wi-Fi dongle on SASC Linux Laptop  
     * Attach an Alfa USB Wi-Fi adapter to the computer  
     * `ifconfig` - Identify the Alfa Wi-Fi adapter (usually the last one) (ex: wlx00c0ca904414, or wlan2)  
     * `wifi_config.sh -T 11 wlx00c0ca904414 201` 
-        - Note: 11 is the Team # (11 = Army), 201 is the selected network address for the computer (201-209 are recommended, make sure no other SASC computers are set to that).     
-        - "11" is the team # (11 = Army)    
-        - "201" is the # w/i the team (201-209 recommended for dongles, must be unique from other active SASC computers)    
-        - This will set this computers the Alfa Wifi IP address to 192.168.11.201
+        * Note: 11 is the Team # (11 = Army), 201 is the selected network address for the computer (201-209 are recommended, make sure no other SASC computers are set to that).     
+        * "11" is the team # (11 = Army)    
+        * "201" is the # w/i the team (201-209 recommended for dongles, must be unique from other active SASC computers)    
+        * This will set this computers the Alfa Wifi IP address to 192.168.11.201
 2. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
 
 ### Create New "Blessed Files" with mission waypoints, geofence, and rally points
@@ -53,7 +53,7 @@ This page explains how to pull and push information from Github to keep common s
     * `./wpDuplicate.py launch.csv`
     * This will create new & unique wp files for each drone in the current directory
     * To remove these files for clean-up purposes, run:
-        - `./clean_waypoints.sh`
+        * `./clean_waypoints.sh`
 7. Navigate back to the usma_files directory
     * `cd ..`
 8. Update swarm_sync.sh line 12 with correct array of drone IP addresses
@@ -64,14 +64,16 @@ This page explains how to pull and push information from Github to keep common s
 10. Check each odroid folder to ensure proper syncing of individual files
     * Open up another terminator window
     * Launch FTI
-        - `>fti.py -d wlx00c0ca904414 -z`
+        * `>fti.py -d wlx00c0ca904414 -z`
     * Hit 'Run MAVPROXY' button
-        - Sync WP File
-            - `wp list`
-        - Open map for visual check
-            - `module load map`
-        - If need be, check actual loaded wp list
-            - `module load misseditor`
+    * In MAVPROXY window:
+        * Sync WP File
+            * `wp list`
+        * Open map for visual check
+            * `module load map`
+        * If need be, check actual loaded wp list
+            * `module load misseditor`
+11. Drones are ready to **launch**! Navigate to the FTI interface to begin launch
 
 ### Manually Update AP_ENUMERATIONS and LOCATIONS files
 #### Use-case: swarm_sync.sh fails to run/new behavior needs loading after initial mission configuration
