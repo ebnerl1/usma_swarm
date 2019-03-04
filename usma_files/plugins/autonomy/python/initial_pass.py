@@ -155,9 +155,9 @@ class InitialPass(ss.Tactic):
 
 			print "way point id list :", self._wp_id_list
 			# Proceed to the first Waypoint in the bundle
-			#self._loc = self._wp_id_list[0]
-			#self._desired_lat = float([self._loc][0][0])
-			#self._desired_lon = float([self._loc][0][1])
+			self._loc = self._wp_id_list[0]
+			self._desired_lat = float([self._loc][0][0])
+			self._desired_lon = float([self._loc][0][1])
 		    
 			print "subswarm_wp_assignment: ", self._subswarm_wp_assignment, "\n"
 		    # Proceed to the first coordinate in the lanes bundle
