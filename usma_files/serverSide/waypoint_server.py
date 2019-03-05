@@ -125,6 +125,7 @@ def listen():
                 
                     timeNow = str(datetime.now())
                     newdata = eval(data)
+                    print("New Data: ", newdata)
                     
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
