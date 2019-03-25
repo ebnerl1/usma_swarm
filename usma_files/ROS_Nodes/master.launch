@@ -1,0 +1,161 @@
+<!-- This is the main launch file for all autonomy-payload instance -->
+
+<!-- Note: args 'id' and 'name' are mandatory -->
+
+<launch>
+
+  <!-- User-supplied arguments -->
+  <arg name="id" default="0" />           <!-- Aircraft ID -->
+  <arg name="name" default="foo" />       <!-- Aircraft Name -->
+  <arg name="team" default="1" />         <!-- 1="blue", 2="red" -->
+  <arg name="range" default="100000" />   <!-- Onboard sensor maximum range -->
+  <arg name="gps" default="1" />          <!-- Autopilot has GPS signal; sync clock -->
+  <arg name="do_bag" default="0" />       <!-- Enable rosbagging -->
+  <arg name="do_fetch" default="0" />     <!-- Enable param/fence/rally/wp fetch fm server -->
+  <arg name="do_verify" default="0" />    <!-- Enable param/fence/rally/wp verification -->
+  <arg name="ap_dev" default="/dev/ttyACM*" />  <!-- Device string -->
+  <arg name="net_dev" default="wlan0" />  <!-- Network device -->
+  <arg name="net_port" default="5554" />  <!-- Network port -->
+
+  <arg name="do_decon_land" default="1" /> <!-- Whether or not to attempt to deconflict landing points (and rally points) between aircraft -->
+  <arg name="land_dis" default="2.0"/> <!-- distance between landing (and rally) points when deconflicting (in meters)-->
+      
+  <!-- Derived (conditional) arguments -->
+  <arg name="gps_arg" default="--gps-time-hack" if="$(arg gps)" />
+  <arg name="gps_arg" default="" unless="$(arg gps)" />
+
+  <!-- Instance ROS parameters -->
+  <param name="aircraft_id" type="int" value="$(arg id)" />
+  <param name="aircraft_name" type="str" value="$(arg name)" />
+  <param name="aircraft_type" type="int" value="0" />
+  <param name="network_device" type="str" value="$(arg net_dev)" />
+  <param name="network_port" type="int" value="$(arg net_port)" />
+  <param name="subswarm_id" type="int" value="0" />
+  <param name="flight_ready" type="bool" value="false" />
+  <param name="rosbag_enable" type="bool" value="$(arg do_bag)" />
+  <param name="fetch_enable" type="bool" value="$(arg do_fetch)" />
+  <param name="verify_enable" type="bool" value="$(arg do_verify)" />
+  <param name="sensor_range" type="int" value="$(arg range)" />
+  <param name="swarm_team" type="int" value="$(arg team)" />
+
+  <param name="do_deconflict_land" type="bool" value="$(arg do_decon_land)" />
+  <param name='dis_between_land_points' type='double' value="$(arg land_dis)" />
+
+  <!-- the following two points define a line along a runway for deconfliction
+       of landing points for fixed wing platforms -->
+  <param name='runway_pt1_lat' type='double' value="35.7202619746" />
+  <param name='runway_pt1_lon' type='double' value="-120.7736565187" />
+  <param name='runway_pt2_lat' type='double' value="35.7161025280" />
+  <param name='runway_pt2_lon' type='double' value="-120.7625645593" />
+
+  <!-- Core Nodes -->
+
+  <node name="autopilot" pkg="autopilot_bridge" type="mavbridge.py" output="screen" args="--device $(arg ap_dev) --baudrate 115200 --serial-relief 1024 -m acs -m file -m fpr -m slave -m wp -m ap_msg_queue $(arg gps_arg)" />
+  <node name="safety" pkg="ap_safety_monitor" type="safety.py" output="screen" >
+    <remap from="safety/heartbeat" to="autopilot/heartbeat_onboard" />
+    <remap from="safety/gnd_heartbeat" to="autopilot/heartbeat_ground" />
+    <remap from="safety/ap_pose" to="autopilot/acs_pose" />
+  </node>
+  <node name="altitude_sensor" pkg="ap_safety_monitor" type="altitude_eye_ROS.py" respawn="true"/>
+  <node name="radiation_sensor" pkg="ap_safety_monitor" type="rad_eye2_ROS.py" respawn="true"/>
+  <node name="network" pkg="ap_network_bridge" type="network.py" output="screen" args="--device $(arg net_dev)" >
+    <remap from="network/recv_heart_ground" to="autopilot/heartbeat_ground" />
+    <remap from="network/recv_arm" to="autopilot/arm" />
+    <remap from="network/recv_mode" to="autopilot/mode_num" />
+    <remap from="network/recv_land" to="autopilot/land" />
+    <remap from="network/recv_land_abort" to="autopilot/land_abort" />
+    <remap from="network/recv_guided_goto" to="safety/payload_waypoint" />
+    <remap from="network/recv_waypoint_goto" to="autopilot/waypoint_goto" />
+    <remap from="network/recv_ap_reboot" to="autopilot/reboot" />
+    <remap from="network/send_pose" to="autopilot/acs_pose" />
+    <remap from="network/update_flight_status" to="autopilot/status" />
+    <remap from="network/slave_setup" to="autopilot/slave_setup" />
+    <remap from="network/cal_pressure" to="autopilot/cal_pressure" />
+    <remap from="network/cal_gyros" to="autopilot/cal_gyros" />
+    <remap from="network/demo_servos" to="autopilot/demo_servos" />
+    <remap from="network/demo_motor" to="autopilot/demo_motor" />
+    <remap from="network/health_state" to="safety/set_health_state" />
+    <remap from="network/run_behavior" to="swarm_control/run_behavior" />
+    <remap from="network/pause_behavior" to="swarm_control/pause_behavior" />
+    <remap from="network/swarm_behavior" to="swarm_control/swarm_behavior" />
+    <remap from="network/set_swarm_state" to="swarm_control/set_swarm_state" />
+    <remap from="network/set_subswarm" to="swarm_control/set_subswarm" />
+    <remap from="network/subswarm_id" to="swarm_control/subswarm_id" />
+    <remap from="network/swarm_state" to="swarm_control/swarm_state" />
+    <remap from="network/behavior_summary" to="swarm_control/behavior_summary" />
+    <remap from="network/send_swarm_search_waypoint" to="swarm_searcher/send_swarm_search_waypoint" />
+    <remap from="network/param_setlist" to="autopilot/fpr_param_setlist" />
+    <remap from="network/load_param" to="autopilot/load_param" />
+    <remap from="network/load_fence" to="autopilot/load_fence" />
+    <remap from="network/load_rally" to="autopilot/load_rally" />
+    <remap from="network/load_wp" to="autopilot/load_wp" />
+    <remap from="network/recv_weather" to="autopilot/weather_update" />
+    <remap from="network/recv_takeoff" to="autopilot/copter_takeoff" />
+    <remap from="network/ap_msg_queue_last_n" to="autopilot/ap_msg_queue_last_n" />
+    <remap from="network/wp_getall" to="autopilot/wp_getall" />
+    <remap from="network/wp_getrange" to="autopilot/wp_getrange" />
+    <remap from="network/fpr_param_get" to="autopilot/fpr_param_get" />
+    <remap from="network/fpr_fence_getall" to="autopilot/fpr_fence_getall" />
+    <remap from="network/firing_reports" to="air_to_air/firing_reports" />
+  </node>
+
+  <node name="swarm_tracker" pkg="ap_perception" type="swarm_tracker_node.py" output="screen" args="" >
+    <remap from="swarm_tracker/acs_pose" to="autopilot/acs_pose" />
+    <remap from="swarm_tracker/recv_pose" to="network/recv_pose" />
+    <remap from="swarm_tracker/recv_swarm_ctl_state" to="network/recv_swarm_ctl_state" />
+    <remap from="swarm_tracker/swarm_state" to="swarm_control/swarm_state" />
+    <remap from="swarm_tracker/swarm_behavior" to="swarm_control/swarm_behavior" />
+    <remap from="swarm_tracker/subswarm_id" to="swarm_control/subswarm_id" />
+    <remap from="swarm_tracker/autopilot/status" to="autopilot/status" />
+  </node>
+
+  <node name="red_tracker" pkg="ap_perception" type="red_tracker.py" output="screen" args="" >
+    <remap from="red_tracker/acs_pose" to="autopilot/acs_pose" />
+    <remap from="red_tracker/recv_red_pose" to="network/recv_red_pose" />
+  </node>
+
+  <node name="hit_tracker" pkg="ap_perception" type="hit_tracker.py" output="screen" args="" >
+    <remap from="hit_tracker/recv_swarm_data" to="network/recv_swarm_data" />
+    <remap from="hit_tracker/net_reset" to="network/net_reset" />
+  </node>
+
+  <node name="task_runner" pkg="ap_tasks" type="task_runner.py" output="screen" args="" />
+
+  <node name="recv_pose_rate" pkg="ap_logging" type="recv_pose_rate.py" output="screen" args="" />
+
+  <node name="swarm_control" pkg="ap_mission_planning" type="swarm_control.py" output="screen" args="" >
+    <remap from="swarm_control/swarm_uav_states" to="swarm_tracker/swarm_uav_states" />
+    <remap from="swarm_control/wp_getlast" to="autopilot/wp_getlast" />
+    <remap from="swarm_control/wp_getrange" to="autopilot/wp_getrange" />
+    <remap from="swarm_control/status" to="autopilot/status" />
+    <remap from="swarm_control/waypoint_goto" to="autopilot/waypoint_goto" />
+    <remap from="swarm_control/mode_num" to="autopilot/mode_num" />
+    <remap from="swarm_control/recv_swarm_data" to="network/recv_swarm_data" />
+    <remap from="swarm_control/net_reset" to="network/net_reset" />
+  </node>
+
+  <!-- Controller Nodes -->
+
+  <node name="independent_transit" pkg="ap_path_planning" type="independent_transit.py" output="screen" args=""/>
+
+  <node name="patrol_box" pkg="ap_path_planning" type="patrol_box.py" output="screen" args="">
+    <remap from="patrol_box/acs_pose" to="autopilot/acs_pose" />
+  </node>
+
+  <node name="simple_ground_attack" pkg="ap_path_planning" type="simple_ground_attack.py" output="screen" args=""/>
+
+  <node name="tactic_interface" pkg="ap_path_planning" type="tactic_interface.py" output="screen" args="">
+    <remap from="tactic_interface/send_swarm_behavior_data" to="network/send_swarm_behavior_data" />
+    <remap from="tactic_interface/net_reset" to="network/net_reset" />
+    <remap from="tactic_interface/swarm_sub_behavior" to="network/swarm_sub_behavior" />
+    <remap from="tactic_interface/acs_pose" to="autopilot/acs_pose" />
+    <remap from="tactic_interface/wp_getlast" to="autopilot/wp_getlast" />
+    <remap from="tactic_interface/hit_uavs" to="hit_tracker/hit_uavs" />
+    <remap from="tactic_interface/waypoint_goto" to="autopilot/waypoint_goto" />
+    <remap from="tactic_interface/firing_reports" to="air_to_air/firing_reports" />    
+  </node>
+
+  <!-- TODO(tfoote) how to replace this gracefully? -->
+  <include file="$(find autonomy_itar)/launch/itar.launch" />
+
+</launch>
