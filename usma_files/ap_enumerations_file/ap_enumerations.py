@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL, 4 = SRNL
 
 # Enumeration for autopilot modes
 RTL = 0
@@ -262,6 +262,14 @@ elif SITL_LOCATION == 3:
     BATTLE_CUBE_ORIENT = 0   # Battle cube orientation (clockwise degrees)
     BATTLE_CUBE_MIN_ALT = 1465         # Battle cube floor (meters MSL)
     BATTLE_CUBE_MAX_ALT = 1665         # Battle cube ceiling (meters MSL)
+elif SITL_LOCATION == 4:
+    BATTLE_CUBE_SW_LAT = 33.272789	  # Latitude of the battle cube SW corner
+    BATTLE_CUBE_SW_LON = -81.584893   # Longitude of the battle cube SW corner
+    BATTLE_CUBE_LENGTH = 1290          # N/S dimension (meters) of the battle cube
+    BATTLE_CUBE_WIDTH = 660           # E/W dimension (meters) of the battle cube
+    BATTLE_CUBE_ORIENT = 55.32   # Battle cube orientation (clockwise degrees)
+    BATTLE_CUBE_MIN_ALT = 267         # Battle cube floor (meters MSL)
+    BATTLE_CUBE_MAX_ALT = 500         # Battle cube ceiling (meters MSL)
 else:
     BATTLE_CUBE_SW_LAT = 35.720680    # Latitude of the battle cube SW corner
     BATTLE_CUBE_SW_LON = -120.771775  # Longitude of the battle cube SW corner
@@ -294,6 +302,12 @@ elif SITL_LOCATION == 3:
     RED_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
     RED_STAGE_SW_LON = BATTLE_CUBE_SW_LON
     STAGE_CUBE_WIDTH = BATTLE_CUBE_WIDTH
+elif SITL_LOCATION == 4:
+    BLUE_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
+    BLUE_STAGE_SW_LON = BATTLE_CUBE_SW_LON
+    RED_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
+    RED_STAGE_SW_LON = BATTLE_CUBE_SW_LON
+    STAGE_CUBE_WIDTH = BATTLE_CUBE_WIDTH
 else:
     BLUE_STAGE_SW_LAT = 35.7214444888298
     BLUE_STAGE_SW_LON = -120.77377763463352
@@ -312,6 +326,8 @@ def get_battleboxes():
                       BATTLE_CUBE_ORIENT, BATTLE_CUBE_MIN_ALT, \
                       BATTLE_CUBE_MAX_ALT)
     if SITL_LOCATION == 3:
+        ctr1 = (BATTLE_CUBE_SW_LAT, BATTLE_CUBE_SW_LON)
+    elif SITL_LOCATION == 4:
         ctr1 = (BATTLE_CUBE_SW_LAT, BATTLE_CUBE_SW_LON)
     else:
         ctr1 = gps.gps_newpos(BATTLE_CUBE_SW_LAT, \
@@ -380,6 +396,9 @@ elif SITL_LOCATION == 1:
 elif SITL_LOCATION == 3:
     GOAL_POSITS['blue'] = ( 43.873141, -112.727151, 1465.0 )
     GOAL_POSITS['red'] = ( 43.873141, -112.727151, 1465.0 )
+elif SITL_LOCATION == 4:
+    GOAL_POSITS['blue'] = ( 33.275375, -81.576891, 267.0 )
+    GOAL_POSITS['red'] = ( 33.275375, -81.576891, 267.0 )
 else:
     GOAL_POSITS['blue'] = ( 35.722783, -120.769350, 279.5 )
     GOAL_POSITS['red'] = ( 35.721602, -120.766319, 281.9 )
