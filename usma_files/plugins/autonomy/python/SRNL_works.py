@@ -14,9 +14,7 @@
 # USMA
 # 27 Jan 2018
 
-#please dont break me
 
-import rospy
 import numpy as np
 import math
 import autopilot_bridge.msg as apbrg
@@ -25,17 +23,14 @@ from autopilot_bridge.msg import LLA
 import ap_lib.gps_utils as gps
 import ap_lib.ap_enumerations as enums
 import ap_lib.sasc_scrimmage as ss
+#import spudX_enums as usma_enums
 import spud_unified as usma_enums
+#import rivercourt_enumerations as usma_enums
 import timeit
 import socket
 import sys
 import subprocess
 from os.path import expanduser
-from std_msgs.msg import String
-import autopilot_bridge.msg as ap_bridge_msg
-from geometry_msgs.msg import PointStamped#BB
-import time
-
 
 DIST2WP_QUAD = 10000
 DIST2WP_ZEPH = 10
@@ -46,18 +41,16 @@ SURVEY_ALT = 20
 BUFFER = 20000
 SERVER_FLAG = 1
 
-class GreedyGoto(ss.Tactic):
-
+class InitialPass(ss.Tactic):
+	# Initialize survey area--one lane looks like [[[w1,x1],[y1,z1]],[[w2,x2],[y2,z2]]]
+	lanes = False
+	
     def init(self, params):
         self._id = int(params['id'])
         self._target_id = -1
         self._wp = np.array([0, 0, 0])
-        self._max_range = enums.MAX_RANGE_DEF
-        self._fov_width = enums.HFOV_DEF
-        self._fov_height = enums.VFOV_DEF
         self._own_pose = apbrg.Geodometry()
         self._blues = dict()
-        #self._reds = dict()
         self._shot = set()
         self._safe_waypoint = np.array([0, 0, 0])
         self._last_ap_wp = np.array([0, 0, 0])
@@ -66,8 +59,6 @@ class GreedyGoto(ss.Tactic):
         self._spud = int(params['Survey Number'])
         self.home = expanduser("~")
         self.radeyeDir = self.home + "/scrimmage/usma/plugins/autonomy/python/"
-#        self.altitudeeyeDir = self.home + "/scrimmage/usma/plugins/autonomy/python/"
-        self.logDir = self.home + "/logs/"
         if (self._spud == 1):
             self._enumList = usma_enums.WP_LOC_S1
         elif (self._spud == 0):
@@ -78,10 +69,11 @@ class GreedyGoto(ss.Tactic):
             self._enumList = usma_enums.WP_LOC_S5
         elif (self._spud == 6):
             self._enumList = usma_enums.WP_LOC_RiverCourt
-        self._name = 'GreedyGoto'
+        self._name = 'InitialPass'
         #self._location = int(params['location'])
         #self._desired_lat = float(self._enumList[self._location][0])
         #self._desired_lon = float(self._enumList[self._location][1])
+
         # Initialize Variables for Waypoint Assignment
         self._subswarm_id = 0
         self._id_in_subswarm = []
@@ -92,47 +84,22 @@ class GreedyGoto(ss.Tactic):
         for i in range(0, len(self._enumList)):
             self._wp_assigned.append(False)
 
-        # Initialize Variables for Sequencing between Waypoints
-        self._wp_id_list = []   # List of WPs to be assigned to this UAS
-        for i in range(0, len(self._enumList)):
-            self._wp_id_list.append(i)  # Place holder for other logic
-        self._wp_id_list_id = 0     # Index within assigned list of WPs
-        self._loc = self._wp_id_list[self._wp_id_list_id]
-        self._desired_lat = float(self._enumList[self._loc][0])
-        self._desired_lon = float(self._enumList[self._loc][1])
-        self._desired_alt = self._last_ap_wp[2]
-        self._original_alt = SAFE_ALT
-        self._time_at_wp = 0
-        self._time_start = 0
-        self._at_wp = False
-        self._base_alt = int(params['Base Altitude']) #sam g new
-        self._alt_change = int(params['Altitude Change']) #sam g new
-        self._altitude = 0.0
-        self._radiation = 0.0
-        topic='/autopilot/acs_pose'
-        outstring = "THIS IS MODIFIED TO FIND error logs"
-        print >>sys.stderr, "TESTINGTESTING1 "+ outstring
-        rospy.Subscriber('/tactic_interface/altitude', PointStamped, self.altitude_cb)
-        rospy.Subscriber('/tactic_interface/radiation', PointStamped, self.radeye_cb)
-#        self.callbackSetup()#BB
+		# Initialize Variables for Waypoint Assignment
+		self._subswarm_id = 0
+		self._id_in_subswarm = [] # number of vehicles?
+		self._first_tick = True
+		self._subswarm_num_to_assign = []
+		self._subswarm_wp_assignment = dict()
+		self._wp_assigned = []
+		for i in range(0, len(usma_enums.WP_LOC)):
+		    self._wp_assigned.append(False)
 
-#    def callbackSetup(self):#BB
-#        self._parent.createSubscriber('/altitude', PointStamped, self.altitude_cb)
-
-    def radeye_cb(self, msg):#BB
-        self._radiation = msg.point.x
-
-    def altitude_cb(self, msg):#BB
-        self._altitude = msg.point.x
-        #self._parent.log_info("The altitude issss: %f" %msg.point.x)
 
     def step_autonomy(self, t, dt):
         # Execute this portion of the code on the loop only
         if self._first_tick == True:
             raddir = self.radeyeDir + 'radeye.py'
             subprocess.Popen(["python", raddir]) # Runs Radeye in the background
-#            altitudedir = self.altitudeeyeDir + 'altitude_eye.py' 
-#            subprocess.Popen(["python", altitudedir]) #Runs Altitude eye in the background 
 
             self._first_tick = False
             finishedset = set([])
@@ -147,9 +114,8 @@ class GreedyGoto(ss.Tactic):
             #connect the socket to the port where the server is listening
             #server_address = ('127.0.0.1',10000)
             print >>sys.stderr, '---connecting to %s port %s---' % server_address
+            sock.connect(server_address)
             try:
-                sock.connect(server_address)
-           
 
                 messageArray = [self._id, 100000, 100000, 99999, 100000, self._desired_lat, self._desired_lon, 0, self._desired_alt, "PRDER"]
                 message = str(messageArray)
@@ -163,9 +129,6 @@ class GreedyGoto(ss.Tactic):
                     delta = len(data)
                     print >>sys.stderr,'Received: %s' % data
                 finishedset = eval(data)
-            except:
-                #self._parent.log_info("socket communication failed")
-                pass
 
             finally:
                 print >>sys.stderr, '---closing socket---'
@@ -195,7 +158,6 @@ class GreedyGoto(ss.Tactic):
                     blue_in_subswarm[i] = blue
                     i = i+1
             print "id_in_subswarm: ", self._id_in_subswarm
-            print(self._vehicle_type)
 
             for n in finishedset:
               self._wp_assigned[n] = True
@@ -210,51 +172,45 @@ class GreedyGoto(ss.Tactic):
 
 
             # Perform sequencial greedy wpt assignment.  Loop over each UAS in subswarm.
-            for i in range(0, num_in_subwarm):
-                # Set the start location to current UAS position
-                temp_lat = blue_in_subswarm[i].state.pose.pose.position.lat
-                temp_lon = blue_in_subswarm[i].state.pose.pose.position.lon
-                assignment_list = []
-                # Loop over each element of the waypoint bundle
-                for j in range(0, self._subswarm_num_to_assign[i]):
-                    min_dist = 99999 #initialize as large number
-                    new_wp_assigned = False
-                    # Loop over each waypoint defined in the mission
-                    for k in range(0, len(self._enumList)):
-                        # Skip to next if that waypoint is already assigned
-                        if self._wp_assigned[k] == False :
-                            # Set the end location to that waypoint
-                            temp2_lat = float(self._enumList[k][0])
-                            temp2_lon = float(self._enumList[k][1])
-                            # Check if start to end location distance is new minimum, if so mark
-                            # if for assignment
-                            temp_dist = gps.gps_distance(temp_lat, temp_lon, temp2_lat, temp2_lon)
-                            if temp_dist < min_dist:
-                                min_dist = temp_dist
-                                wp_to_assign = k
-                                new_wp_assigned = True
-                    # Add the next closest waypoint to the bundle
-                    if new_wp_assigned == True:
-                        assignment_list.append(wp_to_assign)
-                        self._subswarm_wp_assignment[i] = assignment_list
-                        # Mark that waypoint as "assigned" so unavailable to others
-                        self._wp_assigned[wp_to_assign] = True
-                        # Update the start location to that waypoint
-                        temp_lat = float(self._enumList[wp_to_assign][0])
-                        temp_lon = float(self._enumList[wp_to_assign][1])
-                # Assign yourself your own bundle of waypoints
-                if blue_in_subswarm[i].vehicle_id == self._id:
-                    self._wp_id_list = self._subswarm_wp_assignment[i]
-            print "subswarm_wp_assignment: ", self._subswarm_wp_assignment
-            # Proceed to the first Waypoint in the bundle
-            self._loc = self._wp_id_list[0]
-            self._desired_lat = float(self._enumList[self._loc][0])
-            self._desired_lon = float(self._enumList[self._loc][1])
-            print "Going to WP: ", self._loc
+			for i in range(0, num_in_subwarm): #from 0 to 5
+		        # Set the start location to current UAS position
+				place_in_lane = 0
+				if i > 0:
+					if i == num_in_subwarm - 1:
+						place_in_lane = i*self._subswarm_num_to_assign[i-1]
+					else:
+						place_in_lane = i*self._subswarm_num_to_assign[i] # [3,3,2]
+					print ("place in lane :", place_in_lane)
+
+				temp_lat = blue_in_subswarm[i].state.pose.pose.position.lat
+				temp_lon = blue_in_subswarm[i].state.pose.pose.position.lon
+				assignment_list = []
+		        # Loop over each element of the lanes bundle 
+				for j in range(0, self._subswarm_num_to_assign[i]): #self._sub_num_to_assign[0] = 6
+		            # Loop over each end of lane defined in the mission
+					if i > 0:
+						for k in self.lanes[j+place_in_lane]:
+							coord_to_assign = k
+							assignment_list.append(coord_to_assign)
+							self._subswarm_wp_assignment[i] = assignment_list
+					else:
+						for k in self.lanes[j]: #looking at both
+							#coordinates in a single lane--should be 2
+							coord_to_assign = k #full coordinate
+							assignment_list.append(coord_to_assign)
+							self._subswarm_wp_assignment[i] = assignment_list
+
+				print "list for drone: ",i, ": ", self._subswarm_wp_assignment[i], "\n"
+		        # Assign yourself your own bundle of lanes
+				print "vehicle id: ", blue_in_subswarm[i].vehicle_id, "self._id: ", self._id
+		        #if blue_in_subswarm[i].vehicle_id == self._id:
+				if self._id == blue_in_subswarm[i].vehicle_id:
+					self._wp_id_list = self._subswarm_wp_assignment[i]
+					print "vehicle id: ", self._id, " waypoints: ", self._subswarm_wp_assignment[i]
+					print "this is the i: ", i
+					#self._loc = self._wp_id_list[self._wp_id_list_id]
 
 
-
-        self._parent.log_info("The altitude global is: %f and radiation is: %f" %(self._altitude,self._radiation))
         # Go to desired latitude, longitude, and maintain altitude
         # deconfliction:
         self._wp = np.array([self._desired_lat, self._desired_lon,
@@ -281,12 +237,7 @@ class GreedyGoto(ss.Tactic):
             self._at_wp = False
             self._time_at_wp = 0
 
-        # Detect if Quad is close enough to first WP to descend to survey altitude
-        if self._vehicle_type == 1 and dist < DIST_START_DESCENT:
-            self._desired_alt = SURVEY_ALT
 
-        # After X time has elapsed at WP, move onto next WP in your bundle
-        if self._time_at_wp > TIME_AT_WP:
 
           ############################# HEATMAP VARS ##############################
             def getcounts():
@@ -301,19 +252,7 @@ class GreedyGoto(ss.Tactic):
             counts, radtype = getcounts()
             print(counts)
             print(radtype)
-#	    self._parent.log_info('Current Counts:'+counts)
-
- 
-#            def getaltitude():
-
-#                with open(self.altitudeeyeDir + 'altitudefile.csv', 'r') as altitudefile:
-#                    firstline2 = altitudefile.readline()
-#                    return(firstline2)
-
-#            read_altitude = getaltitude()
-#            self._parent.log_info('Current Altitude:'+str(read_altitude))
-    
- #########################################################################
+            #########################################################################
             #create a TCP/IP socket
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             #192.168.11.202
@@ -326,9 +265,8 @@ class GreedyGoto(ss.Tactic):
             else: 
               server_address = ('127.0.0.1',10000)
             print >>sys.stderr, '---connecting to %s port %s---' % server_address
+            sock.connect(server_address)
             try:
-                sock.connect(server_address)
-            
                 #send data
                 #str(self._subswarm_wp_assignment)
 
@@ -349,25 +287,27 @@ class GreedyGoto(ss.Tactic):
                     delta = len(data)
                     #print >>sys.stderr,'Received: %s' % data
 
-            except:
-                pass
+
             finally:
                 print >>sys.stderr, '---closing socket---'
                 sock.close()
-            self._wp_id_list_id = self._wp_id_list_id + 1
 
-            # If you get to the end of your bundle, repeat from its beginning
-            # and reset to original altitude
-            if self._wp_id_list_id > (len(self._wp_id_list)-1):
-                self._wp_id_list_id = 0
-                self._desired_alt = self._original_alt
-            self._loc = self._wp_id_list[self._wp_id_list_id]
-            self._desired_lat = float(self._enumList[self._loc][0])
-            self._desired_lon = float(self._enumList[self._loc][1])
-            # Reset these so that UAV knows it's no longer at its goal WP
-            self._at_wp = False
-            self._time_at_wp = 0
-            print "Going to WP: ", self._loc
-            time.sleep(0.05)
+		# If you reach your point, proceed to the next one
+		if self._at_wp == True:
+			self._wp_id_list_id = self._wp_id_list_id + 1
+
+		    # If you get to the end of your bundle, repeat from its beginning 
+		    # and reset to original altitude
+			if self._wp_id_list_id > (len(self._wp_id_list)-1):
+				print("test") 
+				self._wp_id_list_id = 0
+				self._desired_alt = self._original_alt
+			self._loc = self._wp_id_list[self._wp_id_list_id]
+			self._desired_lat = float(self._loc[0])
+			self._desired_lon = float(self._loc[1]) 
+			# Reset these so that UAV knows it's no longer at its goal WP
+			self._at_wp = False
+			print "Going to coordinate: ", self._loc
+			self._wp = np.array([self._desired_lat, self._desired_lon, self._desired_alt])
 
         return True

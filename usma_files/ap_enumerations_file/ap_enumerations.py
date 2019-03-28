@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
 
 # Enumeration for autopilot modes
 RTL = 0
