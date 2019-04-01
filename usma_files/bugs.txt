@@ -1,0 +1,7 @@
+Identified Code Bugs:
+- Drone 132 -> Faulty connectivity to GCS
+- Range 11
+  - Drones read from Stack1/2 instead of Stack3 WP files
+  - Differed from usual behavior where S1/2 are zephr files and
+    S3/4 are quad files
+

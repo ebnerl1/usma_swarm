@@ -18,8 +18,8 @@ LAST_WP=45
 
 #standard strings
 #Oth member of this list is STACK 1, 1th is STACK 2, and so on.
-wp_files=['zeph_blue.wp', 'zeph_red.wp',
-          sys.argv[1], 'quad_red.wp']
+wp_files=[sys.argv[1], sys.argv[1],
+          sys.argv[1], sys.argv[1]]
 #Adjusted the wp_files so that the wp file is being put in as stack 3
 #Previously it was being sent to the blessed folder as stack 1
 #causing errors when loading inbetween A/B files

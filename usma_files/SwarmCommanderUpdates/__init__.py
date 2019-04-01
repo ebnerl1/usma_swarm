@@ -47,6 +47,8 @@ class SC_QtGUIModule(sc_module.SCModule):
             self.mapWidget.zoomTo(16, 41.390717, -73.953278)
         elif SITL_LOCATION == 1: 
             self.mapWidget.zoomTo(16, 41.360461, -74.032838)
+        elif SITL_LOCATION == 4: 
+            self.mapWidget.zoomTo(16, 33.274562, -81.577593)
         else:
             self.mapWidget.zoomTo(16, 35.716888, -120.7646408)
 
