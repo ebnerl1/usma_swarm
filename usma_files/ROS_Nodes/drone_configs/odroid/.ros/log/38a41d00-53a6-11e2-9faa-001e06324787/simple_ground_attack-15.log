@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2019-03-28 07:34:52,826: init_node, name[/simple_ground_attack], pid[2962]
+[xmlrpc][INFO] 2019-03-28 07:34:52,827: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-03-28 07:34:52,829: ROS Slave URI: [http://copter131:38975/]
+[xmlrpc][INFO] 2019-03-28 07:34:52,829: Started XML-RPC server [http://copter131:38975/]
+[rospy.impl.masterslave][INFO] 2019-03-28 07:34:52,830: _ready: http://copter131:38975/
+[rospy.registration][INFO] 2019-03-28 07:34:52,836: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-03-28 07:34:52,837: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-03-28 07:34:52,930: registered with master
+[rospy.rosout][INFO] 2019-03-28 07:34:52,930: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-28 07:34:53,035: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-28 07:34:53,150: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-28 07:34:53,265: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:54,335: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:54,606: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:54,608: topic[/safety/payload_rate] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:55,507: topic[/autopilot/status] adding connection to [http://copter131:53836/], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:55,823: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:40805/], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:55,933: topic[/swarm_control/ap_intent] adding connection to [http://copter131:40805/], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:56,034: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-28 07:34:56,035: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0

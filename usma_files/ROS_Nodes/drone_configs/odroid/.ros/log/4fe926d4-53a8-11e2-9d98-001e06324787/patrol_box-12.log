@@ -1,0 +1,25 @@
+[rospy.client][INFO] 2019-02-26 13:30:37,157: init_node, name[/patrol_box], pid[2933]
+[xmlrpc][INFO] 2019-02-26 13:30:37,158: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-02-26 13:30:37,161: ROS Slave URI: [http://copter131:56618/]
+[xmlrpc][INFO] 2019-02-26 13:30:37,161: Started XML-RPC server [http://copter131:56618/]
+[rospy.impl.masterslave][INFO] 2019-02-26 13:30:37,161: _ready: http://copter131:56618/
+[xmlrpc][INFO] 2019-02-26 13:30:37,162: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-26 13:30:37,163: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-26 13:30:37,261: registered with master
+[rospy.rosout][INFO] 2019-02-26 13:30:37,262: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-26 13:30:38,325: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-26 13:30:38,462: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-26 13:30:38,606: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:38,937: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,120: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,895: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,918: topic[/autopilot/acs_pose] adding connection to [http://copter131:46730/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,185: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:47490/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,261: topic[/swarm_control/ap_intent] adding connection to [http://copter131:47490/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,615: topic[/autopilot/status] adding connection to [http://copter131:46730/], count 0
+[rosout][INFO] 2019-02-26 13:33:14,593: patrol_box activate request False returned False
+[rosout][INFO] 2019-02-26 13:33:19,415: patrol_box activate request False returned False
+[rosout][INFO] 2019-02-26 13:34:45,693: patrol_box activate request False returned False
+[rosout][INFO] 2019-02-26 13:53:32,616: patrol_box activate request False returned False
+[rosout][INFO] 2019-02-26 13:55:53,857: patrol_box activate request False returned False
+[rosout][INFO] 2019-02-26 14:01:45,417: patrol_box activate request False returned False

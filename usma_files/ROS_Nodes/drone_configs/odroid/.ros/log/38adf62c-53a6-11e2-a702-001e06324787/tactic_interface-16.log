@@ -1,0 +1,42 @@
+[rospy.client][INFO] 2012-12-31 16:00:21,162: init_node, name[/tactic_interface], pid[2972]
+[xmlrpc][INFO] 2012-12-31 16:00:21,166: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:21,167: Started XML-RPC server [http://copter131:48765/]
+[rospy.init][INFO] 2012-12-31 16:00:21,167: ROS Slave URI: [http://copter131:48765/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:21,168: _ready: http://copter131:48765/
+[xmlrpc][INFO] 2012-12-31 16:00:21,170: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:21,170: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2012-12-31 16:00:21,171: Registering publisher topic [/safety/payload_waypoint] type [autopilot_bridge/LLA] with master
+[rospy.registration][INFO] 2012-12-31 16:00:21,192: registering subscriber topic [/autopilot/status] type [autopilot_bridge/Status] with master
+[rospy.internal][INFO] 2012-12-31 16:00:21,262: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.init][INFO] 2012-12-31 16:00:21,269: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:21,269: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:21,282: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:21,301: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:21,553: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:22,706: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,462: topic[/autopilot/status] adding connection to [http://copter131:53923/], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,640: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:58640/], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,748: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,759: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,761: topic[/network/swarm_sub_behavior] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,877: topic[/autopilot/acs_pose] adding connection to [http://copter131:53923/], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:41,570: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:41,688: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:60713/], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:41,789: topic[/swarm_control/ap_intent] adding connection to [http://copter131:60713/], count 0
+[rospy.internal][INFO] 2019-03-05 08:40:25,421: topic[/red_tracker/red_uav_states] adding connection to [http://copter131:55856/], count 0
+[rospy.internal][INFO] 2019-03-05 08:40:25,940: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:52023/], count 0
+[rosout][INFO] 2019-03-05 08:40:26,586: tactic_interface ready state set to 'True'
+[rosout][INFO] 2019-03-05 08:40:26,588: tactic_interface set request returned True
+[rosout][INFO] 2019-03-05 08:40:26,710: tactic_interface activate request False returned False
+[rosout][INFO] 2019-03-05 08:40:27,735: activating behavior tactic_interface
+[rosout][INFO] 2019-03-05 08:40:27,736: tactic_interface activate request True returned True
+[rosout][WARNING] 2019-03-05 08:45:23,335: Autopilot not in AUTO:  deactivating tactic_interface
+[rosout][INFO] 2019-03-05 08:45:23,337: deactivating behavior tactic_interface
+[rospy.internal][INFO] 2019-03-05 08:45:23,342: topic impl's ref count is zero, deleting topic /swarm_tracker/swarm_uav_states...
+[rospy.internal][INFO] 2019-03-05 08:45:23,344: topic[/swarm_tracker/swarm_uav_states] removing connection to http://copter131:52023/
+[rospy.internal][INFO] 2019-03-05 08:45:23,352: topic impl's ref count is zero, deleting topic /red_tracker/red_uav_states...
+[rospy.internal][INFO] 2019-03-05 08:45:23,353: topic[/red_tracker/red_uav_states] removing connection to http://copter131:55856/
+[rosout][INFO] 2019-03-05 08:45:23,359: tactic_interface ready state and active state set to 'False'
+[rosout][INFO] 2019-03-05 08:45:23,510: tactic_interface activate request False returned False
+[rosout][INFO] 2019-03-05 08:45:23,639: tactic_interface activate request False returned False
+[rosout][INFO] 2019-03-05 09:31:30,742: tactic_interface activate request False returned False

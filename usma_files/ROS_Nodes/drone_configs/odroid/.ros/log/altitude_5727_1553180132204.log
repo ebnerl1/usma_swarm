@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2019-03-21 07:55:32,247: init_node, name[/altitude_5727_1553180132204], pid[5727]
+[xmlrpc][INFO] 2019-03-21 07:55:32,248: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-21 07:55:32,249: Started XML-RPC server [http://copter131:37944/]
+[rospy.init][INFO] 2019-03-21 07:55:32,249: ROS Slave URI: [http://copter131:37944/]
+[rospy.impl.masterslave][INFO] 2019-03-21 07:55:32,249: _ready: http://copter131:37944/
+[xmlrpc][INFO] 2019-03-21 07:55:32,251: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-21 07:55:32,251: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-21 07:55:32,350: registered with master
+[rospy.rosout][INFO] 2019-03-21 07:55:32,350: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-21 07:55:32,357: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-21 07:55:32,363: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.core][INFO] 2019-03-21 07:55:32,407: signal_shutdown [atexit]
+[rospy.internal][INFO] 2019-03-21 07:55:32,422: topic[/autopilot/imu] adding connection to [http://copter131:37060/], count 0
+[rospy.internal][INFO] 2019-03-21 07:55:32,426: topic[/autopilot/imu] removing connection to http://copter131:37060/
+[rospy.impl.masterslave][INFO] 2019-03-21 07:55:32,430: atexit
+[rospy.internal][WARNING] 2019-03-21 07:55:32,433: Unknown error initiating TCP/IP socket to copter131:59262 (http://copter131:37060/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][ERROR] 2019-03-21 07:55:32,438: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 0.5s

@@ -1,0 +1,67 @@
+[rospy.client][INFO] 2019-03-05 08:30:49,969: init_node, name[/rostopic_11363_1551803449923], pid[11363]
+[xmlrpc][INFO] 2019-03-05 08:30:49,970: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-05 08:30:49,971: Started XML-RPC server [http://copter131:53500/]
+[rospy.init][INFO] 2019-03-05 08:30:49,971: ROS Slave URI: [http://copter131:53500/]
+[rospy.impl.masterslave][INFO] 2019-03-05 08:30:49,971: _ready: http://copter131:53500/
+[rospy.registration][INFO] 2019-03-05 08:30:49,972: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-03-05 08:30:49,972: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-03-05 08:30:50,072: registered with master
+[rospy.rosout][INFO] 2019-03-05 08:30:50,072: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-05 08:30:50,079: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-05 08:30:50,087: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-05 08:30:50,194: topic[/tactic_interface/altitude] adding connection to [http://copter131:45614/], count 0
+[rospy.internal][INFO] 2019-03-05 08:30:50,300: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][ERROR] 2019-03-05 08:51:24,536: Unable to initiate TCP/IP socket to copter131:35590 (http://copter131:45614/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: node shutting down
+
+[rospy.internal][WARNING] 2019-03-05 08:51:25,542: Unknown error initiating TCP/IP socket to copter131:35590 (http://copter131:45614/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2019-03-05 08:51:25,543: topic[/tactic_interface/altitude] removing connection to http://copter131:45614/
+[rospy.internal][INFO] 2019-03-05 08:51:27,408: topic[/tactic_interface/altitude] adding connection to [http://copter131:52472/], count 0
+[rospy.internal][ERROR] 2019-03-05 08:53:37,376: Unable to initiate TCP/IP socket to copter131:37151 (http://copter131:52472/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: node shutting down
+
+[rospy.internal][WARNING] 2019-03-05 08:53:38,378: Unknown error initiating TCP/IP socket to copter131:37151 (http://copter131:52472/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2019-03-05 08:53:38,379: topic[/tactic_interface/altitude] removing connection to http://copter131:52472/
+[rospy.internal][INFO] 2019-03-05 08:53:43,948: topic[/tactic_interface/altitude] adding connection to [http://copter131:41096/], count 0
+[rospy.internal][ERROR] 2019-03-05 09:05:24,723: Unable to initiate TCP/IP socket to copter131:33377 (http://copter131:41096/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: node shutting down
+
+[rospy.internal][WARNING] 2019-03-05 09:05:25,726: Unknown error initiating TCP/IP socket to copter131:33377 (http://copter131:41096/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2019-03-05 09:05:25,727: topic[/tactic_interface/altitude] removing connection to http://copter131:41096/
+[rospy.internal][INFO] 2019-03-05 09:06:07,523: topic[/tactic_interface/altitude] adding connection to [http://copter131:42063/], count 0

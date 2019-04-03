@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,789: init_node, name[/swarm_tracker], pid[2818]
+[xmlrpc][INFO] 2012-12-31 16:00:17,805: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:17,819: Started XML-RPC server [http://copter131:55884/]
+[rospy.init][INFO] 2012-12-31 16:00:17,820: ROS Slave URI: [http://copter131:55884/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,820: _ready: http://copter131:55884/
+[rospy.registration][INFO] 2012-12-31 16:00:17,835: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:17,835: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:17,921: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,922: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:18,003: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:18,140: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:18,300: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,605: topic[/swarm_tracker/swarm_uav_states] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,654: topic[/autopilot/acs_pose] adding connection to [http://copter131:40815/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,681: topic[/autopilot/status] adding connection to [http://copter131:40815/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,768: topic[/swarm_tracker/swarm_uav_states] adding connection to [/swarm_control], count 1
+[rospy.internal][INFO] 2019-03-25 08:28:25,037: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:42656/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:25,121: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:42656/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:25,137: topic[/swarm_control/swarm_state] adding connection to [http://copter131:42656/], count 0
+[rosout][WARNING] 2019-03-25 08:28:39,187: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-25 08:28:49,617: Received update to own UAV 131
+[rospy.internal][INFO] 2019-03-25 08:29:24,280: topic[/swarm_tracker/swarm_uav_states] adding connection to [/tactic_interface], count 2

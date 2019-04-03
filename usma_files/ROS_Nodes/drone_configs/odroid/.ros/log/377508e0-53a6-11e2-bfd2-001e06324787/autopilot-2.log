@@ -1,0 +1,179 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,519: init_node, name[/autopilot], pid[2810]
+[xmlrpc][INFO] 2012-12-31 16:00:16,522: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:16,532: Started XML-RPC server [http://copter131:54699/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,533: _ready: http://copter131:54699/
+[rospy.init][INFO] 2012-12-31 16:00:16,532: ROS Slave URI: [http://copter131:54699/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,536: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:16,539: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:16,636: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:16,636: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:16,696: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:16,772: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:16,941: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2012-12-31 16:00:17,065: MAVLinkBridge: Connecting to /dev/ttyACM99 ...
+[rosout][INFO] 2012-12-31 16:00:17,077: MAVLinkBridge: Waiting for autopilot heartbeat ...
+[rosout][INFO] 2012-12-31 16:00:17,220: MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+[rosout][INFO] 2019-03-19 08:18:25,005: Successfully synced local clock.
+[rosout][INFO] 2019-03-19 08:18:25,008: MAVLinkBridge initialized.
+[rospy.internal][INFO] 2019-03-19 08:18:27,174: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:40994/], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,280: topic[/autopilot/heartbeat_onboard] adding connection to [http://copter131:58912/], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,552: topic[/autopilot/payload_waypoint] adding connection to [http://copter131:58912/], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,833: topic[/autopilot/heartbeat_ground] adding connection to [http://copter131:46958/], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,856: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:57182/], count 1
+[rospy.internal][INFO] 2019-03-19 08:18:27,857: topic[/autopilot/acs_pose] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,864: topic[/autopilot/status] adding connection to [/simple_ground_attack], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:27,872: topic[/autopilot/acs_pose] adding connection to [/evader], count 1
+[rospy.internal][INFO] 2019-03-19 08:18:27,882: topic[/autopilot/acs_pose] adding connection to [/safety], count 2
+[rospy.internal][INFO] 2019-03-19 08:18:27,892: topic[/autopilot/acs_pose] adding connection to [/swarm_tracker], count 3
+[rospy.internal][INFO] 2019-03-19 08:18:27,900: topic[/autopilot/status] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-19 08:18:27,908: topic[/autopilot/status] adding connection to [/independent_transit], count 2
+[rospy.internal][INFO] 2019-03-19 08:18:27,915: topic[/autopilot/status] adding connection to [/swarm_landing_sequencer], count 3
+[rospy.internal][INFO] 2019-03-19 08:18:27,928: topic[/autopilot/status] adding connection to [/tactic_interface], count 4
+[rospy.internal][INFO] 2019-03-19 08:18:27,930: topic[/autopilot/status] adding connection to [/evader], count 5
+[rospy.internal][INFO] 2019-03-19 08:18:27,934: topic[/autopilot/status] adding connection to [/task_runner], count 6
+[rospy.internal][INFO] 2019-03-19 08:18:27,935: topic[/autopilot/status] adding connection to [/pn_interceptor], count 7
+[rospy.internal][INFO] 2019-03-19 08:18:27,937: topic[/autopilot/status] adding connection to [/swarm_tracker], count 8
+[rospy.internal][INFO] 2019-03-19 08:18:27,940: topic[/autopilot/status] adding connection to [/smart_shooter], count 9
+[rospy.internal][INFO] 2019-03-19 08:18:27,943: topic[/autopilot/status] adding connection to [/wingman], count 10
+[rospy.internal][INFO] 2019-03-19 08:18:27,948: topic[/autopilot/status] adding connection to [/greedy_shooter], count 11
+[rospy.internal][INFO] 2019-03-19 08:18:27,950: topic[/autopilot/status] adding connection to [/patrol_box], count 12
+[rospy.internal][INFO] 2019-03-19 08:18:28,003: topic[/autopilot/status] adding connection to [/linear_formation], count 13
+[rospy.internal][INFO] 2019-03-19 08:18:28,074: topic[/autopilot/acs_pose] adding connection to [/wingman], count 4
+[rospy.internal][INFO] 2019-03-19 08:18:28,153: topic[/autopilot/status] adding connection to [/constrained_shooter], count 14
+[rospy.internal][INFO] 2019-03-19 08:18:28,165: topic[/autopilot/acs_pose] adding connection to [/greedy_shooter], count 5
+[rospy.internal][INFO] 2019-03-19 08:18:28,243: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:46690/], count 2
+[rospy.internal][INFO] 2019-03-19 08:18:28,248: topic[/autopilot/acs_pose] adding connection to [/tactic_interface], count 6
+[rosout][INFO] 2019-03-19 08:18:28,278: ROS srv recvd: fpr_param_set
+[rospy.internal][INFO] 2019-03-19 08:18:28,311: topic[/autopilot/acs_pose] adding connection to [/constrained_shooter], count 7
+[rospy.internal][INFO] 2019-03-19 08:18:28,359: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:50357/], count 3
+[rospy.internal][INFO] 2019-03-19 08:18:28,360: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:39053/], count 4
+[rospy.internal][INFO] 2019-03-19 08:18:28,489: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:54475/], count 5
+[rospy.internal][INFO] 2019-03-19 08:18:28,536: topic[/autopilot/acs_pose] adding connection to [/patrol_box], count 8
+[rospy.internal][INFO] 2019-03-19 08:18:28,553: topic[/autopilot/status] adding connection to [/swarm_control], count 15
+[rospy.internal][INFO] 2019-03-19 08:18:28,558: topic[/autopilot/acs_pose] adding connection to [/smart_shooter], count 9
+[rospy.internal][INFO] 2019-03-19 08:18:28,746: topic[/autopilot/acs_pose] adding connection to [/red_tracker], count 10
+[rospy.internal][INFO] 2019-03-19 08:18:28,787: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:47513/], count 6
+[rospy.internal][INFO] 2019-03-19 08:18:28,792: topic[/autopilot/mode_num] adding connection to [http://copter131:47513/], count 0
+[rospy.internal][INFO] 2019-03-19 08:18:30,351: topic[/autopilot/status] adding connection to [/patrol_box_shooter], count 16
+[rospy.internal][INFO] 2019-03-19 08:18:30,426: topic[/autopilot/acs_pose] adding connection to [/patrol_box_shooter], count 11
+[rosout][INFO] 2019-03-19 08:18:36,396: ROS srv recvd: fpr_param_setlist
+[rosout][INFO] 2019-03-19 08:18:36,453: MAVLink STATUSTEXT: APM:Copter V3.5-dev (f3195c7e)
+[rosout][INFO] 2019-03-19 08:18:36,457: MAVLink STATUSTEXT: PX4: 3df5644c NuttX: be6ff61a
+[rosout][INFO] 2019-03-19 08:18:36,460: MAVLink STATUSTEXT: Frame: QUAD
+[rosout][INFO] 2019-03-19 08:18:36,461: MAVLink STATUSTEXT: PX4v2 003E0023 31355103 33333832
+[rospy.internal][INFO] 2019-03-19 08:18:39,493: topic[/autopilot/arm] adding connection to [http://copter131:46958/], count 0
+[rosout][INFO] 2019-03-19 08:18:39,496: ROS sub recvd: arm
+[rosout][WARNING] 2019-03-19 08:18:40,403: PARAM ALT_HOLD_RTL doesn't exist
+[rosout][INFO] 2019-03-19 08:18:40,413: ROS srv recvd: load_rally
+[rosout][INFO] 2019-03-19 08:18:40,423: ROS srv recvd: fpr_rally_setall
+[rosout][INFO] 2019-03-19 08:18:44,124: ROS srv recvd: slave_setup
+[rosout][INFO] 2019-03-19 08:18:46,642: ROS srv recvd: load_wp
+[rosout][INFO] 2019-03-19 08:18:46,655: ROS srv recvd: wp_setall
+[rosout][INFO] 2019-03-19 08:18:48,202: MAVLink STATUSTEXT: Flight plan received
+[rospy.internal][INFO] 2019-03-19 08:18:48,314: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:46958/], count 7
+[rosout][INFO] 2019-03-19 08:18:48,319: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-03-19 08:18:48,867: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-03-19 08:18:50,817: topic[/autopilot/mode_num] adding connection to [http://copter131:46958/], count 1
+[rosout][INFO] 2019-03-19 08:18:50,823: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:50,824: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:50,824: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:50,846: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:51,288: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:51,289: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:51,290: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:51,301: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:51,754: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:51,756: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:51,758: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:51,781: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:52,270: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:52,272: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:52,274: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:52,301: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:52,787: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:52,789: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:52,790: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:52,801: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:56,902: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:56,905: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:56,908: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:56,932: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:57,419: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:57,422: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:57,424: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:57,442: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:57,886: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:57,889: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:57,891: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:57,920: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:58,405: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:58,408: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:58,411: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:58,441: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:18:58,922: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:18:58,926: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:18:58,929: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:18:58,960: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:04,927: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:04,931: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:04,939: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:04,955: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:05,442: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:05,444: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:05,447: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:05,465: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:05,959: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:05,962: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:05,965: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:06,001: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:06,425: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:06,428: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:06,432: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:06,461: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:06,940: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:06,943: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:06,945: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:06,962: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:09,880: ROS srv recvd: wp_getrange
+[rosout][INFO] 2019-03-19 08:19:29,729: ROS sub recvd: arm
+[rosout][INFO] 2019-03-19 08:19:30,193: ROS sub recvd: arm
+[rosout][INFO] 2019-03-19 08:19:36,815: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:36,817: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:36,819: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:36,841: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:37,282: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:37,285: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:37,288: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:37,300: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:37,801: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:37,807: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:37,811: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:37,845: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:38,317: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:38,319: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:38,322: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:38,341: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:38,839: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:38,846: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:38,848: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:38,862: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:57,108: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:57,110: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:57,112: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:57,123: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:57,626: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:57,629: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:57,633: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:57,650: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:58,092: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:58,095: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:58,097: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:58,123: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:58,608: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:58,611: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:58,613: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:58,625: MAVLink STATUSTEXT: Flight mode change failed
+[rosout][INFO] 2019-03-19 08:19:59,124: Mode settings are for copter.
+[rosout][INFO] 2019-03-19 08:19:59,128: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-03-19 08:19:59,131: ROS sub recvd: mode_num
+[rosout][INFO] 2019-03-19 08:19:59,145: MAVLink STATUSTEXT: Flight mode change failed

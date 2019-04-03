@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2012-12-31 16:00:19,180: init_node, name[/swarm_tracker], pid[2763]
+[xmlrpc][INFO] 2012-12-31 16:00:19,198: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:19,201: Started XML-RPC server [http://copter131:51053/]
+[rospy.init][INFO] 2012-12-31 16:00:19,201: ROS Slave URI: [http://copter131:51053/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:19,202: _ready: http://copter131:51053/
+[rospy.registration][INFO] 2012-12-31 16:00:19,220: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:19,220: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:19,302: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:19,303: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:19,433: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-28 07:19:22,742: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-28 07:19:22,890: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,258: topic[/autopilot/acs_pose] adding connection to [http://copter131:47807/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,282: topic[/swarm_tracker/swarm_uav_states] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,547: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:46378/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,556: topic[/swarm_control/swarm_state] adding connection to [http://copter131:46378/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,634: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:46378/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,738: topic[/swarm_tracker/swarm_uav_states] adding connection to [/safety], count 1
+[rospy.internal][INFO] 2019-03-28 07:19:26,771: topic[/autopilot/status] adding connection to [http://copter131:47807/], count 0
+[rosout][WARNING] 2019-03-28 07:20:47,467: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-28 07:20:57,756: Received update to own UAV 131
+[rosout][WARNING] 2019-03-28 07:22:58,567: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-28 07:23:08,295: Received update to own UAV 131

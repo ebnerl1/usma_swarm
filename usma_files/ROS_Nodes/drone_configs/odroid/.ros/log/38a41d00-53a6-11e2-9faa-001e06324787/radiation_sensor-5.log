@@ -1,0 +1,13 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,569: init_node, name[/radiation_sensor], pid[2813]
+[xmlrpc][INFO] 2012-12-31 16:00:17,589: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:17,591: Started XML-RPC server [http://copter131:47745/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,591: _ready: http://copter131:47745/
+[rospy.init][INFO] 2012-12-31 16:00:17,591: ROS Slave URI: [http://copter131:47745/]
+[rospy.registration][INFO] 2012-12-31 16:00:17,611: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:17,611: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:17,692: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,693: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:17,728: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,742: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,967: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-28 07:41:16,609: topic[/tactic_interface/radiation] adding connection to [/rostopic_27895_1553784076337], count 0

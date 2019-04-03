@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,537: init_node, name[/hit_tracker], pid[2843]
+[xmlrpc][INFO] 2012-12-31 16:00:16,552: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:16,555: Started XML-RPC server [http://copter131:39107/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,556: _ready: http://copter131:39107/
+[rospy.init][INFO] 2012-12-31 16:00:16,556: ROS Slave URI: [http://copter131:39107/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,564: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:16,565: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:16,658: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:16,658: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:16,728: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:16,847: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,014: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-07 07:52:52,340: topic[/hit_tracker/hit_uavs] adding connection to [/evader], count 0
+[rospy.internal][INFO] 2019-03-07 07:52:53,523: topic[/hit_tracker/hit_uavs] adding connection to [/patrol_box_shooter], count 1
+[rospy.internal][INFO] 2019-03-07 07:52:53,708: topic[/hit_tracker/hit_uavs] adding connection to [/tactic_interface], count 2
+[rospy.internal][INFO] 2019-03-07 07:52:53,746: topic[/hit_tracker/hit_uavs] adding connection to [/smart_shooter], count 3
+[rospy.internal][INFO] 2019-03-07 07:52:53,858: topic[/hit_tracker/hit_uavs] adding connection to [/constrained_shooter], count 4
+[rospy.internal][INFO] 2019-03-07 07:52:53,884: topic[/hit_tracker/hit_uavs] adding connection to [/wingman], count 5
+[rospy.internal][INFO] 2019-03-07 07:52:54,389: topic[/hit_tracker/hit_uavs] adding connection to [/greedy_shooter], count 6

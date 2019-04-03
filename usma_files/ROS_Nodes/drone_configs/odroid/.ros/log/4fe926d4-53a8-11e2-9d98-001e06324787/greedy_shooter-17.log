@@ -1,0 +1,30 @@
+[rospy.client][INFO] 2019-02-26 13:30:39,104: init_node, name[/greedy_shooter], pid[3023]
+[xmlrpc][INFO] 2019-02-26 13:30:39,105: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-26 13:30:39,106: Started XML-RPC server [http://copter131:40096/]
+[rospy.init][INFO] 2019-02-26 13:30:39,107: ROS Slave URI: [http://copter131:40096/]
+[rospy.impl.masterslave][INFO] 2019-02-26 13:30:39,107: _ready: http://copter131:40096/
+[rospy.registration][INFO] 2019-02-26 13:30:39,108: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-02-26 13:30:39,108: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-26 13:30:39,109: Registering publisher topic [/safety/payload_waypoint] type [autopilot_bridge/LLA] with master
+[rospy.registration][INFO] 2019-02-26 13:30:39,127: registering subscriber topic [/autopilot/status] type [autopilot_bridge/Status] with master
+[rospy.init][INFO] 2019-02-26 13:30:39,208: registered with master
+[rospy.rosout][INFO] 2019-02-26 13:30:39,208: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-26 13:30:39,230: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-26 13:30:39,239: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-26 13:30:39,268: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,425: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,589: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,901: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:39,957: topic[/autopilot/acs_pose] adding connection to [http://copter131:46730/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,022: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:52094/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,133: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,169: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,228: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:47490/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,286: topic[/swarm_control/ap_intent] adding connection to [http://copter131:47490/], count 0
+[rospy.internal][INFO] 2019-02-26 13:30:40,655: topic[/autopilot/status] adding connection to [http://copter131:46730/], count 0
+[rosout][INFO] 2019-02-26 13:33:14,548: greedy_shooter activate request False returned False
+[rosout][INFO] 2019-02-26 13:33:19,377: greedy_shooter activate request False returned False
+[rosout][INFO] 2019-02-26 13:34:45,636: greedy_shooter activate request False returned False
+[rosout][INFO] 2019-02-26 13:53:32,581: greedy_shooter activate request False returned False
+[rosout][INFO] 2019-02-26 13:55:53,791: greedy_shooter activate request False returned False
+[rosout][INFO] 2019-02-26 14:01:45,378: greedy_shooter activate request False returned False

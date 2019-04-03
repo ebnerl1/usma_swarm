@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2012-12-31 16:00:18,483: init_node, name[/simple_ground_attack], pid[2945]
+[xmlrpc][INFO] 2012-12-31 16:00:18,514: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:18,516: Started XML-RPC server [http://copter131:48816/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:18,516: _ready: http://copter131:48816/
+[rospy.init][INFO] 2012-12-31 16:00:18,518: ROS Slave URI: [http://copter131:48816/]
+[xmlrpc][INFO] 2012-12-31 16:00:18,533: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:18,543: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:18,619: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:18,620: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-25 08:28:21,819: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-25 08:28:21,901: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-25 08:28:22,105: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:23,687: topic[/safety/payload_rate] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:23,689: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:23,975: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,288: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,726: topic[/autopilot/status] adding connection to [http://copter131:40815/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:24,827: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:25,085: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:42656/], count 0
+[rospy.internal][INFO] 2019-03-25 08:28:25,164: topic[/swarm_control/ap_intent] adding connection to [http://copter131:42656/], count 0
+[rosout][INFO] 2019-03-25 08:29:14,969: simple_ground_attack activate request False returned False
+[rosout][INFO] 2019-03-25 08:29:25,096: simple_ground_attack activate request False returned False

@@ -1,0 +1,112 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,767: init_node, name[/autopilot], pid[2809]
+[xmlrpc][INFO] 2012-12-31 16:00:16,775: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:16,776: Started XML-RPC server [http://copter131:36903/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,777: _ready: http://copter131:36903/
+[rospy.init][INFO] 2012-12-31 16:00:16,777: ROS Slave URI: [http://copter131:36903/]
+[rospy.registration][INFO] 2012-12-31 16:00:16,779: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:16,779: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:16,878: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:16,878: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:16,982: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,066: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,110: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2012-12-31 16:00:17,319: MAVLinkBridge: Connecting to /dev/ttyACM99 ...
+[rosout][INFO] 2012-12-31 16:00:17,336: MAVLinkBridge: Waiting for autopilot heartbeat ...
+[rosout][INFO] 2012-12-31 16:00:17,522: MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+[rosout][INFO] 2019-02-27 13:10:36,356: Successfully synced local clock.
+[rosout][INFO] 2019-02-27 13:10:36,359: MAVLinkBridge initialized.
+[rospy.internal][INFO] 2019-02-27 13:10:38,420: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:58335/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,449: topic[/autopilot/heartbeat_onboard] adding connection to [http://copter131:41445/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,468: topic[/autopilot/heartbeat_ground] adding connection to [http://copter131:34393/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,514: topic[/autopilot/payload_waypoint] adding connection to [http://copter131:41445/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,752: topic[/autopilot/acs_pose] adding connection to [/red_tracker], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,759: topic[/autopilot/acs_pose] adding connection to [/wingman], count 1
+[rospy.internal][INFO] 2019-02-27 13:10:38,767: topic[/autopilot/acs_pose] adding connection to [/safety], count 2
+[rospy.internal][INFO] 2019-02-27 13:10:38,776: topic[/autopilot/acs_pose] adding connection to [/swarm_tracker], count 3
+[rospy.internal][INFO] 2019-02-27 13:10:38,784: topic[/autopilot/acs_pose] adding connection to [/evader], count 4
+[rospy.internal][INFO] 2019-02-27 13:10:38,791: topic[/autopilot/acs_pose] adding connection to [/network], count 5
+[rospy.internal][INFO] 2019-02-27 13:10:38,791: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:57499/], count 1
+[rospy.internal][INFO] 2019-02-27 13:10:38,823: topic[/autopilot/acs_pose] adding connection to [/smart_shooter], count 6
+[rospy.internal][INFO] 2019-02-27 13:10:38,915: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:46672/], count 2
+[rospy.internal][INFO] 2019-02-27 13:10:38,924: topic[/autopilot/acs_pose] adding connection to [/patrol_box_shooter], count 7
+[rospy.internal][INFO] 2019-02-27 13:10:39,009: topic[/autopilot/acs_pose] adding connection to [/greedy_shooter], count 8
+[rospy.internal][INFO] 2019-02-27 13:10:39,082: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:50031/], count 3
+[rospy.internal][INFO] 2019-02-27 13:10:39,191: topic[/autopilot/status] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,200: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:49993/], count 4
+[rospy.internal][INFO] 2019-02-27 13:10:39,223: topic[/autopilot/status] adding connection to [/patrol_box_shooter], count 1
+[rospy.internal][INFO] 2019-02-27 13:10:39,234: topic[/autopilot/status] adding connection to [/greedy_shooter], count 2
+[rospy.internal][INFO] 2019-02-27 13:10:39,242: topic[/autopilot/status] adding connection to [/wingman], count 3
+[rospy.internal][INFO] 2019-02-27 13:10:39,258: topic[/autopilot/status] adding connection to [/independent_transit], count 4
+[rospy.internal][INFO] 2019-02-27 13:10:39,276: topic[/autopilot/status] adding connection to [/simple_ground_attack], count 5
+[rospy.internal][INFO] 2019-02-27 13:10:39,291: topic[/autopilot/status] adding connection to [/constrained_shooter], count 6
+[rospy.internal][INFO] 2019-02-27 13:10:39,294: topic[/autopilot/status] adding connection to [/linear_formation], count 7
+[rospy.internal][INFO] 2019-02-27 13:10:39,297: topic[/autopilot/status] adding connection to [/pn_interceptor], count 8
+[rospy.internal][INFO] 2019-02-27 13:10:39,300: topic[/autopilot/status] adding connection to [/evader], count 9
+[rospy.internal][INFO] 2019-02-27 13:10:39,303: topic[/autopilot/status] adding connection to [/task_runner], count 10
+[rospy.internal][INFO] 2019-02-27 13:10:39,308: topic[/autopilot/status] adding connection to [/smart_shooter], count 11
+[rospy.internal][INFO] 2019-02-27 13:10:39,311: topic[/autopilot/status] adding connection to [/swarm_landing_sequencer], count 12
+[rospy.internal][INFO] 2019-02-27 13:10:39,329: topic[/autopilot/acs_pose] adding connection to [/constrained_shooter], count 9
+[rospy.internal][INFO] 2019-02-27 13:10:39,383: topic[/autopilot/status] adding connection to [/swarm_tracker], count 13
+[rospy.internal][INFO] 2019-02-27 13:10:39,409: topic[/autopilot/mode_num] adding connection to [http://copter131:44193/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,429: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:44193/], count 5
+[rospy.internal][INFO] 2019-02-27 13:10:39,458: topic[/autopilot/status] adding connection to [/tactic_interface], count 14
+[rospy.internal][INFO] 2019-02-27 13:10:39,479: topic[/autopilot/status] adding connection to [/patrol_box], count 15
+[rospy.internal][INFO] 2019-02-27 13:10:39,559: topic[/autopilot/status] adding connection to [/swarm_control], count 16
+[rospy.internal][INFO] 2019-02-27 13:10:39,581: topic[/autopilot/acs_pose] adding connection to [/patrol_box], count 10
+[rosout][INFO] 2019-02-27 13:10:39,600: ROS srv recvd: fpr_param_set
+[rospy.internal][INFO] 2019-02-27 13:10:39,723: topic[/autopilot/acs_pose] adding connection to [/tactic_interface], count 11
+[rospy.internal][INFO] 2019-02-27 13:10:39,838: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:39710/], count 6
+[rosout][INFO] 2019-02-27 13:10:40,547: MAVLink STATUSTEXT: u-blox 0 HW: 00040007 SW: 7.03 (45970)
+[rospy.internal][INFO] 2019-02-27 13:10:46,505: topic[/autopilot/arm] adding connection to [http://copter131:34393/], count 0
+[rosout][INFO] 2019-02-27 13:10:46,508: ROS sub recvd: arm
+[rosout][INFO] 2019-02-27 13:10:47,637: MAVLink STATUSTEXT: EKF variance
+[rosout][INFO] 2019-02-27 13:10:53,780: ROS srv recvd: fpr_param_setlist
+[rosout][INFO] 2019-02-27 13:10:53,803: MAVLink STATUSTEXT: APM:Copter V3.5-dev (f3195c7e)
+[rosout][INFO] 2019-02-27 13:10:53,804: MAVLink STATUSTEXT: PX4: 3df5644c NuttX: be6ff61a
+[rosout][INFO] 2019-02-27 13:10:53,821: MAVLink STATUSTEXT: Frame: QUAD
+[rosout][INFO] 2019-02-27 13:10:53,822: MAVLink STATUSTEXT: PX4v2 003E0023 31355103 33333832
+[rosout][WARNING] 2019-02-27 13:10:57,790: PARAM ALT_HOLD_RTL doesn't exist
+[rosout][INFO] 2019-02-27 13:10:57,807: ROS srv recvd: load_rally
+[rosout][INFO] 2019-02-27 13:10:57,821: ROS srv recvd: fpr_rally_setall
+[rosout][INFO] 2019-02-27 13:11:01,791: ROS srv recvd: slave_setup
+[rosout][INFO] 2019-02-27 13:11:03,066: ROS srv recvd: slave_setup
+[rosout][INFO] 2019-02-27 13:11:04,038: ROS srv recvd: load_wp
+[rosout][INFO] 2019-02-27 13:11:04,051: ROS srv recvd: wp_setall
+[rosout][INFO] 2019-02-27 13:11:05,592: MAVLink STATUSTEXT: Flight plan received
+[rospy.internal][INFO] 2019-02-27 13:11:05,781: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:34393/], count 7
+[rosout][INFO] 2019-02-27 13:11:05,786: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-27 13:11:06,249: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-02-27 13:11:07,598: topic[/autopilot/mode_num] adding connection to [http://copter131:34393/], count 1
+[rosout][INFO] 2019-02-27 13:11:07,603: Mode settings are for copter.
+[rosout][INFO] 2019-02-27 13:11:07,604: Sent mode STABILIZE (0) to autopilot 
+[rosout][INFO] 2019-02-27 13:11:07,604: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-27 13:11:09,470: Mode settings are for copter.
+[rosout][INFO] 2019-02-27 13:11:09,472: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-27 13:11:09,473: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-27 13:11:09,936: Mode settings are for copter.
+[rosout][INFO] 2019-02-27 13:11:09,938: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-27 13:11:09,940: ROS sub recvd: mode_num
+[rospy.internal][INFO] 2019-02-27 13:11:10,465: topic[/autopilot/copter_takeoff] adding connection to [http://copter131:34393/], count 0
+[rosout][INFO] 2019-02-27 13:11:10,469: ROS sub recvd: copter_takeoff
+[rosout][INFO] 2019-02-27 13:11:15,452: Mode settings are for copter.
+[rosout][INFO] 2019-02-27 13:11:15,458: Sent mode AUTO (3) to autopilot 
+[rosout][INFO] 2019-02-27 13:11:15,462: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-27 13:11:20,108: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-27 13:11:20,257: ROS srv recvd: wp_getrange
+[rosout][INFO] 2019-02-27 13:12:11,121: ROS srv recvd: wp_getlast
+[rosout][INFO] 2019-02-27 13:12:12,342: ROS srv recvd: wp_getlast
+[rosout][INFO] 2019-02-27 13:12:12,585: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-27 13:12:13,032: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-02-27 13:12:14,217: topic[/autopilot/gps_odom] adding connection to [/radeyeNode_10850_1551301933983], count 0
+[rospy.internal][INFO] 2019-02-27 13:12:14,242: topic[/autopilot/gps] adding connection to [/radeyeNode_10850_1551301933983], count 0
+[rospy.internal][INFO] 2019-02-27 13:12:16,449: topic[/autopilot/gps_odom] removing connection to /radeyeNode_10850_1551301933983
+[rospy.internal][INFO] 2019-02-27 13:12:16,476: topic[/autopilot/gps] removing connection to /radeyeNode_10850_1551301933983
+[rosout][INFO] 2019-02-27 13:16:09,453: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-27 13:16:10,044: ROS srv recvd: wp_getrange
+[rosout][INFO] 2019-02-27 13:16:59,817: ROS srv recvd: wp_getlast
+[rosout][INFO] 2019-02-27 13:17:00,078: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-27 13:17:01,052: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-02-27 13:17:01,730: topic[/autopilot/gps_odom] adding connection to [/radeyeNode_28687_1551302221501], count 1
+[rospy.internal][INFO] 2019-02-27 13:17:01,761: topic[/autopilot/gps] adding connection to [/radeyeNode_28687_1551302221501], count 1
+[rospy.internal][INFO] 2019-02-27 13:17:14,951: topic[/autopilot/gps] removing connection to /radeyeNode_28687_1551302221501
+[rospy.internal][INFO] 2019-02-27 13:17:14,970: topic[/autopilot/gps_odom] removing connection to /radeyeNode_28687_1551302221501

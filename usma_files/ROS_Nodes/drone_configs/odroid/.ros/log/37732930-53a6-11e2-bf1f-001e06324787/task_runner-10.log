@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,918: init_node, name[/task_runner], pid[2781]
+[xmlrpc][INFO] 2012-12-31 16:00:16,920: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:16,924: ROS Slave URI: [http://copter131:56920/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,924: Started XML-RPC server [http://copter131:56920/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,924: _ready: http://copter131:56920/
+[xmlrpc][INFO] 2012-12-31 16:00:16,926: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:16,928: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:17,024: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,025: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:17,126: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,196: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,366: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2012-12-31 16:00:21,488: Task Runner: Starting Event 'on_start'
+[rosout][INFO] 2012-12-31 16:00:21,558: Task Runner: Event 'on_start' Task 'Tx Power' Time 0.1s: Succeeded
+[rosout][INFO] 2012-12-31 16:00:21,559: Task Runner: Completed Event 'on_start'
+[rospy.internal][INFO] 2019-03-27 06:22:31,303: topic[/autopilot/status] adding connection to [http://copter131:34450/], count 0
+[rosout][INFO] 2019-03-27 06:22:31,601: Task Runner: Starting Event 'on_status'
+[rosout][INFO] 2019-03-27 06:22:31,819: Task Runner: Event 'on_status' Task 'AP Set ID' Time 0.2s: Succeeded
+[rosout][INFO] 2019-03-27 06:22:31,820: Task Runner: Completed Event 'on_status'

@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2019-02-27 12:41:38,389: init_node, name[/pn_interceptor], pid[3088]
+[xmlrpc][INFO] 2019-02-27 12:41:38,391: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 12:41:38,392: Started XML-RPC server [http://copter131:50560/]
+[rospy.init][INFO] 2019-02-27 12:41:38,393: ROS Slave URI: [http://copter131:50560/]
+[rospy.impl.masterslave][INFO] 2019-02-27 12:41:38,393: _ready: http://copter131:50560/
+[rospy.registration][INFO] 2019-02-27 12:41:38,395: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-02-27 12:41:38,396: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-02-27 12:41:38,494: registered with master
+[rospy.rosout][INFO] 2019-02-27 12:41:38,494: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 12:41:38,522: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 12:41:38,546: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 12:41:38,775: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:38,992: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:39,895: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,305: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,536: topic[/autopilot/status] adding connection to [http://copter131:48134/], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,566: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:52337/], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,724: topic[/swarm_control/ap_intent] adding connection to [http://copter131:52337/], count 0
+[rosout][INFO] 2019-02-27 12:44:57,071: pn_interceptor activate request False returned False
+[rosout][INFO] 2019-02-27 12:46:00,913: pn_interceptor activate request False returned False
+[rosout][INFO] 2019-02-27 12:48:38,579: pn_interceptor activate request False returned False

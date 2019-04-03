@@ -1,0 +1,47 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,095: init_node, name[/swarm_tracker], pid[2824]
+[xmlrpc][INFO] 2012-12-31 16:00:17,097: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:17,099: ROS Slave URI: [http://copter131:42919/]
+[xmlrpc][INFO] 2012-12-31 16:00:17,099: Started XML-RPC server [http://copter131:42919/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,100: _ready: http://copter131:42919/
+[xmlrpc][INFO] 2012-12-31 16:00:17,100: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:17,101: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:17,200: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,200: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-04 17:23:52,821: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-04 17:23:52,957: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-04 17:23:53,117: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,374: topic[/autopilot/acs_pose] adding connection to [http://copter131:49875/], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,523: topic[/swarm_tracker/swarm_uav_states] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,549: topic[/autopilot/status] adding connection to [http://copter131:49875/], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,750: topic[/swarm_tracker/swarm_uav_states] adding connection to [/safety], count 1
+[rospy.internal][INFO] 2019-03-04 17:23:55,911: topic[/swarm_control/swarm_state] adding connection to [http://copter131:39371/], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,919: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:39371/], count 0
+[rospy.internal][INFO] 2019-03-04 17:23:55,940: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:39371/], count 0
+[rospy.internal][INFO] 2019-03-04 17:25:53,007: topic[/network/recv_swarm_ctl_state] adding connection to [http://copter131:54483/], count 0
+[rospy.internal][INFO] 2019-03-04 17:25:53,421: topic[/network/recv_pose] adding connection to [http://copter131:54483/], count 0
+[rosout][WARNING] 2019-03-04 17:27:46,459: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-04 17:27:57,239: Received update to own UAV 131
+[rospy.internal][INFO] 2019-03-04 17:28:36,606: topic[/swarm_tracker/swarm_uav_states] adding connection to [/tactic_interface], count 2
+[rospy.internal][INFO] 2019-03-04 17:29:47,582: topic[/swarm_tracker/swarm_uav_states] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-03-04 17:29:57,093: topic[/swarm_tracker/swarm_uav_states] adding connection to [/tactic_interface], count 3
+[rospy.internal][INFO] 2019-03-04 17:33:35,405: topic[/swarm_tracker/swarm_uav_states] removing connection to /tactic_interface
+[rosout][WARNING] 2019-03-04 17:33:36,253: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-04 17:33:36,257: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-04 17:47:39,459: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-04 17:47:48,196: Received update to own UAV 131
+[rosout][WARNING] 2019-03-04 17:59:39,859: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-04 17:59:48,506: Received update to own UAV 131
+[rosout][WARNING] 2019-03-04 18:06:58,759: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-04 18:07:07,388: Received update to own UAV 131
+[rosout][WARNING] 2019-03-04 18:12:36,159: UAV 131 possible crash: no updates for 6.000000 secs
+[rosout][WARNING] 2019-03-04 18:12:44,459: UAV 128 possible crash: no updates for 6.000000 secs
+[rosout][INFO] 2019-03-04 18:12:44,810: Received update to own UAV 131
+[rosout][INFO] 2019-03-04 18:12:54,630: Received update to possibly crashed UAV 128
+[rosout][WARNING] 2019-03-04 18:15:23,959: UAV 128 possible crash: no updates for 16.224266 secs

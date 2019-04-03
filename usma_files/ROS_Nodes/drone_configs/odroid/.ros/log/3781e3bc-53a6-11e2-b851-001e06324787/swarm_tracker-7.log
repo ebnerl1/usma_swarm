@@ -1,0 +1,19 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,478: init_node, name[/swarm_tracker], pid[2820]
+[xmlrpc][INFO] 2012-12-31 16:00:17,479: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:17,481: ROS Slave URI: [http://copter131:40602/]
+[xmlrpc][INFO] 2012-12-31 16:00:17,482: Started XML-RPC server [http://copter131:40602/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,482: _ready: http://copter131:40602/
+[rospy.registration][INFO] 2012-12-31 16:00:17,488: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:17,489: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:17,582: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,583: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-21 06:58:34,847: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-21 06:58:34,946: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-21 06:58:35,119: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:38,302: topic[/autopilot/acs_pose] adding connection to [http://copter131:41662/], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:38,487: topic[/swarm_tracker/swarm_uav_states] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:38,734: topic[/autopilot/status] adding connection to [http://copter131:41662/], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:39,355: topic[/swarm_tracker/swarm_uav_states] adding connection to [/swarm_control], count 1
+[rospy.internal][INFO] 2019-03-21 06:58:39,546: topic[/swarm_control/swarm_state] adding connection to [http://copter131:57879/], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:40,498: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:57879/], count 0
+[rospy.internal][INFO] 2019-03-21 06:58:40,509: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:57879/], count 0

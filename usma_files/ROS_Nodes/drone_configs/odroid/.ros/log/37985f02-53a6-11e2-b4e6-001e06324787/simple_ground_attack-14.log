@@ -1,0 +1,23 @@
+[rospy.client][INFO] 2019-02-27 12:41:36,968: init_node, name[/simple_ground_attack], pid[2927]
+[xmlrpc][INFO] 2019-02-27 12:41:36,971: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-02-27 12:41:36,972: ROS Slave URI: [http://copter131:49786/]
+[xmlrpc][INFO] 2019-02-27 12:41:36,972: Started XML-RPC server [http://copter131:49786/]
+[rospy.impl.masterslave][INFO] 2019-02-27 12:41:36,972: _ready: http://copter131:49786/
+[xmlrpc][INFO] 2019-02-27 12:41:36,973: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 12:41:36,978: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 12:41:37,072: registered with master
+[rospy.rosout][INFO] 2019-02-27 12:41:37,073: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 12:41:40,082: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 12:41:40,085: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 12:41:40,177: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,195: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,203: topic[/safety/payload_rate] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,351: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,544: topic[/autopilot/status] adding connection to [http://copter131:48134/], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,660: topic[/swarm_control/ap_intent] adding connection to [http://copter131:52337/], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,666: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:52337/], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,813: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 12:41:40,815: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rosout][INFO] 2019-02-27 12:44:57,126: simple_ground_attack activate request False returned False
+[rosout][INFO] 2019-02-27 12:46:01,001: simple_ground_attack activate request False returned False
+[rosout][INFO] 2019-02-27 12:48:38,644: simple_ground_attack activate request False returned False

@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2019-02-27 12:26:48,518: init_node, name[/altitude_11463_1551299208474], pid[11463]
+[xmlrpc][INFO] 2019-02-27 12:26:48,519: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 12:26:48,520: Started XML-RPC server [http://copter131:52035/]
+[rospy.init][INFO] 2019-02-27 12:26:48,520: ROS Slave URI: [http://copter131:52035/]
+[rospy.impl.masterslave][INFO] 2019-02-27 12:26:48,520: _ready: http://copter131:52035/
+[xmlrpc][INFO] 2019-02-27 12:26:48,522: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 12:26:48,523: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 12:26:48,621: registered with master
+[rospy.rosout][INFO] 2019-02-27 12:26:48,621: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 12:26:48,629: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 12:26:48,635: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 12:26:48,709: topic[/tactic_interface/altitude] adding connection to [/tactic_interface], count 0
+[rospy.internal][INFO] 2019-02-27 12:26:48,863: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2019-02-27 12:35:15,053: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2019-02-27 12:35:15,064: topic[/tactic_interface/altitude] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-02-27 12:35:15,066: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2019-02-27 12:35:15,067: signal-2
+[rospy.core][INFO] 2019-02-27 12:35:15,224: signal_shutdown [signal-2]
+[rospy.core][INFO] 2019-02-27 12:35:15,366: signal_shutdown [signal-2]
+[rospy.core][INFO] 2019-02-27 12:35:15,670: signal_shutdown [atexit]

@@ -1,0 +1,528 @@
+[rosmaster.main][INFO] 2012-12-31 16:00:16,144: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2012-12-31 16:00:16,144: Starting ROS Master Node
+[xmlrpc][INFO] 2012-12-31 16:00:16,146: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2012-12-31 16:00:16,147: Started XML-RPC server [http://copter131:11311/]
+[rosmaster.master][INFO] 2012-12-31 16:00:16,147: Master initialized: port[11311], uri[http://copter131:11311/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,147: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2012-12-31 16:00:16,232: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,234: +PARAM [/roslaunch/uris/host_copter131__35678] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,354: +PARAM [/swarm_team] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,355: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,355: +PARAM [/aircraft_name] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,355: +PARAM [/fetch_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,355: +PARAM [/dis_between_land_points] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,355: +PARAM [/network_port] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,356: +PARAM [/aircraft_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,356: +PARAM [/do_deconflict_land] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,356: +PARAM [/subswarm_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,356: +PARAM [/aircraft_type] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,357: +PARAM [/sensor_range] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,357: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,357: +PARAM [/runway_pt2_lat] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,357: +PARAM [/runway_pt2_lon] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,358: +PARAM [/flight_ready] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,358: +PARAM [/runway_pt1_lat] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,358: +PARAM [/network_device] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,358: +PARAM [/verify_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,358: +PARAM [/rosbag_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,359: +PARAM [/runway_pt1_lon] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:16,456: +SERVICE [/rosout/get_loggers] /rosout http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,458: +SERVICE [/rosout/set_logger_level] /rosout http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,462: +PUB [/rosout_agg] /rosout http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,471: +SUB [/rosout] /rosout http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,446: +PUB [/rosout] /radiation_sensor http://copter131:34246/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,449: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,507: +SERVICE [/radiation_sensor/get_loggers] /radiation_sensor http://copter131:34246/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,517: +SERVICE [/radiation_sensor/set_logger_level] /radiation_sensor http://copter131:34246/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,529: +PUB [/rosout] /altitude_sensor http://copter131:59017/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,541: +PUB [/tactic_interface/radiation] /radiation_sensor http://copter131:34246/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,549: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,600: +SERVICE [/altitude_sensor/get_loggers] /altitude_sensor http://copter131:59017/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,631: +SERVICE [/altitude_sensor/set_logger_level] /altitude_sensor http://copter131:59017/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,661: +PUB [/tactic_interface/altitude] /altitude_sensor http://copter131:59017/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,768: +SUB [/autopilot/imu] /altitude_sensor http://copter131:59017/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,849: +PUB [/rosout] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,851: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,921: +SERVICE [/safety/get_loggers] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,951: +SERVICE [/safety/set_logger_level] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,076: +PUB [/rosout] /network http://copter131:60362/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,157: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,166: +SERVICE [/network/get_loggers] /network http://copter131:60362/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,221: +SERVICE [/network/set_logger_level] /network http://copter131:60362/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,241: +PUB [/autopilot/heartbeat_onboard] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,271: +PUB [/safety/healthy] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,316: +PUB [/autopilot/payload_waypoint] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,331: +PUB [/rosout] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,359: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,375: +PUB [/autopilot/payload_rate] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,396: +PUB [/rosout] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,423: +PUB [/autopilot/payload_attitude] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,445: +SERVICE [/autopilot/get_loggers] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,463: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,481: +SERVICE [/autopilot/set_logger_level] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,501: +SERVICE [/hit_tracker/get_loggers] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,540: +SERVICE [/hit_tracker/set_logger_level] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,615: +SERVICE [/hit_tracker/reset] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,645: +PUB [/rosout] /task_runner http://copter131:38198/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,664: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,781: +SUB [/autopilot/heartbeat_ground] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,805: +PUB [/rosout] /recv_pose_rate http://copter131:58108/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,845: +SERVICE [/task_runner/get_loggers] /task_runner http://copter131:38198/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,881: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,975: +PUB [/rosout] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,982: +SERVICE [/task_runner/set_logger_level] /task_runner http://copter131:38198/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,982: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,014: +PARAM [/subswarm_id] by /unnamed
+[rosmaster.master][INFO] 2012-12-31 16:00:19,046: +SERVICE [/recv_pose_rate/get_loggers] /recv_pose_rate http://copter131:58108/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,151: +SERVICE [/recv_pose_rate/set_logger_level] /recv_pose_rate http://copter131:58108/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,199: +SERVICE [/red_tracker/get_loggers] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,203: +SUB [/network/recv_swarm_data] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,233: +SUB [/swarm_control/subswarm_id] /network http://copter131:60362/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,246: +SERVICE [/red_tracker/set_logger_level] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,390: +SUB [/autopilot/acs_pose] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,431: +PUB [/rosout] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2012-12-31 16:00:19,483: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:22,746: +SUB [/autopilot/status] /task_runner http://copter131:38198/
+[rosmaster.master][INFO] 2019-03-28 07:19:22,856: +PUB [/rosout] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:22,872: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:22,942: +SUB [/network/recv_pose] /recv_pose_rate http://copter131:58108/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,022: +PUB [/rosout] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,059: +PUB [/logging/recv_pose_rate] /recv_pose_rate http://copter131:58108/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,075: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,078: +SUB [/swarm_control/swarm_behavior] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,096: +SERVICE [/independent_transit/get_loggers] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,145: +SUB [/autopilot/acs_pose] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,195: +PUB [/rosout] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,202: +SERVICE [/independent_transit/set_logger_level] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,261: +SUB [/safety/payload_waypoint] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,279: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,280: +SERVICE [/simple_ground_attack/get_loggers] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,346: +SERVICE [/simple_ground_attack/set_logger_level] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,385: +SERVICE [/swarm_control/get_loggers] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,507: +SERVICE [/swarm_control/set_logger_level] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,561: +PUB [/rosout] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,581: +PUB [/autopilot/waypoint_goto] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,581: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,606: +PUB [/rosout] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,689: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,701: +PUB [/safety/payload_rate] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,732: +SERVICE [/swarm_tracker/get_loggers] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,738: +SUB [/network/recv_red_pose] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,761: +PUB [/rosout] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,775: +SERVICE [/swarm_landing_sequencer/get_loggers] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,781: +PUB [/safety/payload_waypoint] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,790: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,791: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,836: +SERVICE [/linear_formation/get_loggers] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,852: +SERVICE [/swarm_tracker/set_logger_level] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,861: +PUB [/red_tracker/red_uav_states] /red_tracker http://copter131:34998/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,894: +SERVICE [/swarm_landing_sequencer/set_logger_level] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,931: +PUB [/rosout] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,946: +SERVICE [/linear_formation/set_logger_level] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:23,997: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,156: +SERVICE [/smart_shooter/get_loggers] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,197: +SERVICE [/smart_shooter/set_logger_level] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,205: +SUB [/autopilot/status] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,226: +PUB [/safety/payload_waypoint] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,232: +SUB [/autopilot/status] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,237: +PUB [/rosout] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,239: +SUB [/autopilot/acs_pose] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,272: +SERVICE [/wingman/get_loggers] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,281: +SERVICE [/wingman/set_logger_level] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,283: +SUB [/autopilot/status] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,300: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,303: +PUB [/safety/payload_waypoint] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,306: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,310: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,315: +SUB [/autopilot/status] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,325: +SERVICE [/patrol_box/get_loggers] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,328: +SUB [/swarm_control/subswarm_id] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,336: +SUB [/swarm_control/subswarm_id] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,345: +PUB [/safety/payload_waypoint] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,349: +SUB [/network/recv_pose] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,353: +PUB [/safety/payload_waypoint] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,356: +SERVICE [/patrol_box/set_logger_level] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,377: +SUB [/autopilot/status] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,414: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,429: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,447: +PUB [/rosout] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,455: +SUB [/swarm_control/subswarm_id] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,466: +SUB [/swarm_control/ap_intent] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,478: +SUB [/swarm_control/ap_intent] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,482: +SUB [/swarm_control/subswarm_id] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,484: +SUB [/network/recv_swarm_ctl_state] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,489: +SERVICE [/tactic_interface/get_loggers] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,502: +SERVICE [/tactic_interface/set_logger_level] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,504: +SUB [/autopilot/status] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,515: +PUB [/safety/payload_waypoint] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,521: +SERVICE [/swarm_control/register_behavior] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,526: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,526: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,540: +SERVICE [/swarm_control/run_behavior] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,551: +SUB [/swarm_control/ap_intent] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,555: +SERVICE [/swarm_control/pause_behavior] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,558: +SUB [/network/recv_swarm_data] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,565: +SUB [/network/recv_swarm_data] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,567: +SUB [/swarm_control/ap_intent] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,569: +SERVICE [/swarm_control/set_subswarm] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,573: +PUB [/swarm_control/behavior_status] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,576: +SUB [/network/swarm_sub_behavior] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,578: +PUB [/swarm_control/behavior_status] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,583: +SERVICE [/swarm_control/set_swarm_state] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,584: +PUB [/network/send_swarm_behavior_data] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,587: +SUB [/swarm_control/subswarm_id] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,591: +PUB [/network/send_swarm_behavior_data] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,598: +SERVICE [/independent_transit/set] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,603: +PUB [/rosout] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,604: +SERVICE [/simple_ground_attack/set] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,608: +SERVICE [/independent_transit/run] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,615: +SERVICE [/simple_ground_attack/run] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,618: +SERVICE [/independent_transit/pause] /independent_transit http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,623: +SERVICE [/patrol_box_shooter/get_loggers] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,625: +SERVICE [/simple_ground_attack/pause] /simple_ground_attack http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,633: +SERVICE [/patrol_box_shooter/set_logger_level] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,634: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,637: +SUB [/network/recv_swarm_data] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,645: +SUB [/swarm_control/behavior_summary] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,650: +PUB [/swarm_control/behavior_status] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,653: +SUB [/swarm_control/ap_intent] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,662: +PUB [/network/send_swarm_behavior_data] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,669: +PUB [/rosout] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,672: +SERVICE [/smart_shooter/set] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,680: +SERVICE [/smart_shooter/run] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,686: +SERVICE [/evader/get_loggers] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,689: +SERVICE [/smart_shooter/pause] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,696: +SERVICE [/evader/set_logger_level] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,699: +SUB [/autopilot/status] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,703: +SUB [/network/recv_swarm_data] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,710: +PUB [/swarm_control/behavior_status] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,716: +SUB [/autopilot/status] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,720: +PUB [/network/send_swarm_behavior_data] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,723: +PUB [/safety/payload_waypoint] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,726: +SERVICE [/tactic_interface/set] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,734: +SERVICE [/tactic_interface/run] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,735: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,741: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,747: +SUB [/safety/payload_rate] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,750: +SERVICE [/tactic_interface/pause] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,751: +SUB [/autopilot/acs_pose] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,755: +SUB [/autopilot/status] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,763: +PUB [/safety/payload_waypoint] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,776: +SUB [/swarm_control/subswarm_id] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,788: +SUB [/safety/payload_attitude] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,794: +SUB [/swarm_control/swarm_state] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,805: +SUB [/swarm_control/subswarm_id] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,815: +SUB [/swarm_control/ap_intent] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,829: +SUB [/network/recv_swarm_data] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,832: +SUB [/network/send_swarm_behavior_data] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,836: +PUB [/swarm_control/behavior_status] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,842: +PUB [/network/send_swarm_behavior_data] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,844: +SUB [/swarm_control/ap_intent] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,844: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,844: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,855: +SERVICE [/swarm_landing_sequencer/set] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,860: +PUB [/rosout] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,861: +SUB [/network/recv_swarm_data] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,867: +SERVICE [/swarm_landing_sequencer/run] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,874: +PUB [/swarm_control/behavior_status] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,877: +SERVICE [/swarm_landing_sequencer/pause] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,880: +SERVICE [/constrained_shooter/get_loggers] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,886: +PUB [/network/send_swarm_behavior_data] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,894: +SERVICE [/constrained_shooter/set_logger_level] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,895: +SUB [/air_to_air/firing_reports] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,900: +SERVICE [/patrol_box_shooter/set] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,907: +SUB [/network/recv_swarm_data] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,909: +SERVICE [/patrol_box_shooter/run] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,914: +PUB [/swarm_control/behavior_status] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,919: +SERVICE [/patrol_box_shooter/pause] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,925: +PUB [/network/send_swarm_behavior_data] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,933: +SERVICE [/evader/set] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,940: +SERVICE [/evader/run] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,943: +SUB [/network/payload_intent] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,949: +SERVICE [/evader/pause] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,949: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,952: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,958: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,967: +SUB [/autopilot/status] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:24,973: +PUB [/safety/payload_waypoint] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,010: +SUB [/autopilot/acs_pose] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,019: +SUB [/swarm_control/subswarm_id] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,021: +PUB [/safety/payload_waypoint] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,023: +SUB [/autopilot/status] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,028: +SUB [/autopilot/status] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,030: +PUB [/safety/payload_waypoint] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,045: +SUB [/hit_tracker/hit_uavs] /evader http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,053: +SUB [/swarm_control/ap_intent] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,054: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,058: +SUB [/swarm_control/subswarm_id] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,062: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,068: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,083: +SUB [/network/recv_swarm_data] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,086: +SUB [/swarm_control/ap_intent] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,087: +PUB [/swarm_control/behavior_status] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,091: +PUB [/network/send_swarm_behavior_data] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,095: +SERVICE [/constrained_shooter/set] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,100: +SERVICE [/constrained_shooter/run] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,105: +SERVICE [/constrained_shooter/pause] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,111: +SUB [/network/recv_swarm_data] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,116: +PUB [/swarm_control/behavior_status] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,117: +PUB [/rosout] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,119: +PUB [/network/send_swarm_behavior_data] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,122: +SERVICE [/linear_formation/set] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,124: +SERVICE [/greedy_shooter/get_loggers] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,126: +SERVICE [/linear_formation/run] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,128: +SERVICE [/greedy_shooter/set_logger_level] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,130: +SERVICE [/linear_formation/pause] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,142: +SUB [/swarm_control/subswarm_id] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,155: +SUB [/swarm_control/ap_intent] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,163: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,165: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,168: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,175: +SUB [/network/recv_swarm_data] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,178: +PUB [/swarm_control/behavior_status] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,181: +PUB [/network/send_swarm_behavior_data] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,183: +SERVICE [/greedy_shooter/set] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,186: +SERVICE [/greedy_shooter/run] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,189: +SERVICE [/greedy_shooter/pause] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,273: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,347: +SUB [/autopilot/status] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,350: +PUB [/safety/payload_waypoint] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,366: +SUB [/swarm_control/subswarm_id] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,367: +PUB [/rosout] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,375: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,376: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,384: +SERVICE [/pn_interceptor/get_loggers] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,389: +SERVICE [/pn_interceptor/set_logger_level] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,391: +SUB [/swarm_control/ap_intent] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,409: +SUB [/network/recv_swarm_data] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,413: +SUB [/autopilot/status] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,416: +PUB [/swarm_control/behavior_status] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,418: +PUB [/safety/payload_waypoint] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,421: +PUB [/network/send_swarm_behavior_data] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,428: +SERVICE [/wingman/set] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,434: +SERVICE [/wingman/run] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,439: +SERVICE [/wingman/pause] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,441: +SUB [/swarm_control/subswarm_id] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,456: +SUB [/swarm_control/ap_intent] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,471: +SUB [/network/recv_swarm_data] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,474: +PUB [/swarm_control/behavior_status] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,477: +PUB [/network/send_swarm_behavior_data] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,477: publisherUpdate[/safety/payload_waypoint] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,480: +SERVICE [/pn_interceptor/set] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,481: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,483: +SERVICE [/pn_interceptor/run] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,485: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,487: +SERVICE [/pn_interceptor/pause] /pn_interceptor http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,523: +SUB [/swarm_control/subswarm_id] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,536: +SUB [/swarm_control/swarm_state] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,549: +SUB [/swarm_control/swarm_behavior] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,562: +SUB [/autopilot/status] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,565: +PUB [/swarm_tracker/swarm_uav_states] /swarm_tracker http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,573: +SUB [/swarm_control/subswarm_id] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,587: +SUB [/swarm_control/ap_intent] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,601: +SUB [/network/recv_swarm_data] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,604: +PUB [/swarm_control/behavior_status] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,607: +PUB [/network/send_swarm_behavior_data] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,609: +SERVICE [/patrol_box/set] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,612: +SERVICE [/patrol_box/run] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,616: +SERVICE [/patrol_box/pause] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,630: +SUB [/autopilot/acs_pose] /patrol_box http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,684: publisherUpdate[/network/send_swarm_behavior_data] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,810: +SUB [/autopilot/arm] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,824: +SUB [/autopilot/mode] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,837: +SUB [/autopilot/guided_goto] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,851: +SUB [/autopilot/waypoint_goto] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,892: +SUB [/autopilot/heartbeat_onboard] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,906: +SUB [/autopilot/heartbeat_ground] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,923: +SUB [/autopilot/mode_num] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,931: +SUB [/network/net_reset] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,935: +PUB [/hit_tracker/hit_uavs] /hit_tracker http://copter131:41924/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,939: +SUB [/autopilot/set_landing] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,952: +SUB [/autopilot/payload_waypoint] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,977: +SUB [/autopilot/reboot] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,988: publisherUpdate[/hit_tracker/hit_uavs] -> http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:25,998: +SUB [/autopilot/weather_update] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,011: +SUB [/autopilot/copter_takeoff] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,014: +SERVICE [/autopilot/cal_pressure] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,018: +SERVICE [/autopilot/cal_gyros] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,021: +SERVICE [/autopilot/demo_servos] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,024: +SERVICE [/autopilot/demo_motor] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,027: +SERVICE [/autopilot/version] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,033: +SERVICE [/autopilot/load_param] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,036: +SERVICE [/autopilot/load_fence] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,039: +SERVICE [/autopilot/load_rally] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,041: +SERVICE [/autopilot/load_wp] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,048: +SERVICE [/autopilot/fpr_param_get] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,051: +SERVICE [/autopilot/fpr_param_getlist] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,053: +SERVICE [/autopilot/fpr_param_set] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,057: +SERVICE [/autopilot/fpr_param_setlist] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,059: +SERVICE [/autopilot/fpr_fence_getall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,062: +SERVICE [/autopilot/fpr_fence_setall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,065: +SERVICE [/autopilot/fpr_rally_getall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,068: +SERVICE [/autopilot/fpr_rally_setall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,074: +SERVICE [/autopilot/slave_setup] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,079: +SERVICE [/autopilot/wp_getall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,082: +SERVICE [/autopilot/wp_getrange] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,084: +SERVICE [/autopilot/wp_getlast] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,087: +SERVICE [/autopilot/wp_setall] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,092: +SERVICE [/autopilot/ap_msg_queue_last_n] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,107: +PUB [/autopilot/acs_pose] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,114: +PUB [/autopilot/gps] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,121: +PUB [/autopilot/gps_odom] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,123: +PUB [/autopilot/waypoint_goto] /swarm_landing_sequencer http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,132: +PUB [/autopilot/imu] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,147: +SUB [/autopilot/acs_pose] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,159: +SUB [/swarm_tracker/swarm_uav_states] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,174: +SUB [/autopilot/acs_pose] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,176: +SUB [/hit_tracker/hit_uavs] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,188: +SUB [/swarm_control/behavior_status] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,191: publisherUpdate[/autopilot/acs_pose] -> http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,194: publisherUpdate[/autopilot/acs_pose] -> http://copter131:34998/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,195: publisherUpdate[/autopilot/acs_pose] -> http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,196: publisherUpdate[/autopilot/acs_pose] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,207: publisherUpdate[/autopilot/acs_pose] -> http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,211: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,209: publisherUpdate[/autopilot/acs_pose] -> http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,219: publisherUpdate[/autopilot/imu] -> http://copter131:59017/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,254: +SUB [/hit_tracker/hit_uavs] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,259: +SUB [/network/net_reset] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,273: +PUB [/air_to_air/firing_reports] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,279: +PUB [/air_to_air/firing_reports] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,284: +PUB [/patrol_box_shooter/send_swarm_behavior_data] /patrol_box_shooter http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,288: +PUB [/autopilot/waypoint_goto] /greedy_shooter http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,294: +SUB [/autopilot/status] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,306: +SUB [/autopilot/acs_pose] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,325: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,326: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,332: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,344: +SUB [/network/recv_swarm_data] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,349: +SUB [/autopilot/acs_pose] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,363: +PUB [/autopilot/waypoint_goto] /linear_formation http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,371: +SUB [/hit_tracker/hit_uavs] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,386: +PUB [/air_to_air/firing_reports] /smart_shooter http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,411: +SUB [/autopilot/acs_pose] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,418: +SUB [/network/net_reset] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,423: +SUB [/hit_tracker/hit_uavs] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,428: +PUB [/swarm_control/subswarm_id] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,432: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,433: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,435: +SUB [/autopilot/acs_pose] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,439: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,440: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,442: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,450: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,451: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,453: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,460: +PUB [/swarm_control/swarm_state] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,462: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,464: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,466: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,473: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,476: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,481: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,484: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,490: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,491: publisherUpdate[/swarm_control/subswarm_id] -> http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,495: publisherUpdate[/swarm_control/swarm_state] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,501: publisherUpdate[/swarm_control/swarm_state] -> http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,513: +PUB [/swarm_control/swarm_behavior] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,521: +SUB [/hit_tracker/hit_uavs] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,525: +PUB [/swarm_control/ap_intent] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,531: +PUB [/air_to_air/firing_reports] /constrained_shooter http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,535: +SUB [/network/net_reset] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,538: +PUB [/autopilot/waypoint_goto] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,544: +PUB [/air_to_air/firing_reports] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,546: +PUB [/swarm_control/behavior_summary] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,552: +PUB [/autopilot/mode_num] /swarm_control http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,555: +PUB [/autopilot/waypoint_goto] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,561: +PUB [/autopilot/status] /autopilot http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,563: +PUB [/network/swarm_sub_behavior] /tactic_interface http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,565: +PARAM [/subswarm_id] by /swarm_tracker
+[rosmaster.master][INFO] 2019-03-28 07:19:26,604: publisherUpdate[/swarm_control/swarm_behavior] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,604: publisherUpdate[/swarm_control/swarm_behavior] -> http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,608: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,609: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,612: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,614: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,614: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,617: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,619: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,621: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,623: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,624: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,629: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,632: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,633: publisherUpdate[/swarm_control/ap_intent] -> http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,638: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,641: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,641: publisherUpdate[/autopilot/status] -> http://copter131:38198/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,645: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,647: publisherUpdate[/autopilot/mode_num] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,651: publisherUpdate[/autopilot/status] -> http://copter131:41852/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,654: publisherUpdate[/swarm_control/behavior_summary] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,655: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,661: publisherUpdate[/autopilot/status] -> http://copter131:52823/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,665: publisherUpdate[/autopilot/status] -> http://copter131:45330/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,666: publisherUpdate[/autopilot/status] -> http://copter131:45678/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,671: publisherUpdate[/autopilot/status] -> http://copter131:41357/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,674: publisherUpdate[/autopilot/status] -> http://copter131:56973/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,677: publisherUpdate[/autopilot/status] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,680: publisherUpdate[/autopilot/status] -> http://copter131:39574/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,683: publisherUpdate[/autopilot/status] -> http://copter131:40328/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,688: publisherUpdate[/autopilot/status] -> http://copter131:45619/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,691: publisherUpdate[/autopilot/status] -> http://copter131:44616/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,696: publisherUpdate[/autopilot/status] -> http://copter131:41106/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,697: publisherUpdate[/autopilot/status] -> http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,699: publisherUpdate[/autopilot/status] -> http://copter131:41624/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,706: publisherUpdate[/autopilot/status] -> http://copter131:51053/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,710: publisherUpdate[/autopilot/status] -> http://copter131:46378/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,712: publisherUpdate[/network/swarm_sub_behavior] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,716: +SUB [/swarm_tracker/swarm_uav_states] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,731: +SERVICE [/safety/set_health_state] /safety http://copter131:45242/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,752: +SUB [/hit_tracker/hit_uavs] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,761: +PUB [/autopilot/waypoint_goto] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,767: +PUB [/air_to_air/firing_reports] /wingman http://copter131:52089/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,814: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:19:26,818: publisherUpdate[/air_to_air/firing_reports] -> http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:19:46,988: +PUB [/rosout] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:47,002: +SERVICE [/rostopic_6594_1553782786838/get_loggers] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:47,007: +SERVICE [/rostopic_6594_1553782786838/set_logger_level] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:47,062: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:19:47,069: +SUB [/tactic_interface/altitude] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:52,056: -SUB [/tactic_interface/altitude] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:52,056: -PUB [/rosout] /rostopic_6594_1553782786838 http://copter131:58714/
+[rosmaster.master][INFO] 2019-03-28 07:19:52,057: -SERVICE [/rostopic_6594_1553782786838/set_logger_level] /rostopic_6594_1553782786838 rosrpc://copter131:38337
+[rosmaster.master][INFO] 2019-03-28 07:19:52,057: -SERVICE [/rostopic_6594_1553782786838/get_loggers] /rostopic_6594_1553782786838 rosrpc://copter131:38337
+[rosmaster.master][INFO] 2019-03-28 07:19:52,078: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:20:23,773: +PARAM [/flight_ready] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:33,865: +PARAM [/flight_ready] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:38,466: +PARAM [/flight_ready] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:41,269: +PARAM [/ok_rally] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:41,272: +PARAM [/ok_wp] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:41,274: +PARAM [/ok_param] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:45,295: +PARAM [/ok_param] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:51,526: +PARAM [/ok_rally] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:52,596: +PARAM [/aircraft_type] by /swarm_control
+[rosmaster.master][INFO] 2019-03-28 07:20:53,159: +PARAM [/ok_wp] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:53,164: +PARAM [/swarm_team] by /network
+[rosmaster.master][INFO] 2019-03-28 07:20:53,169: +PUB [/autopilot/waypoint_goto] /network http://copter131:60362/
+[rosmaster.master][INFO] 2019-03-28 07:20:53,222: publisherUpdate[/autopilot/waypoint_goto] -> http://copter131:47807/
+[rosmaster.master][INFO] 2019-03-28 07:21:01,115: +PUB [/rosout] /rostopic_11268_1553782860966 http://copter131:57188/
+[rosmaster.master][INFO] 2019-03-28 07:21:01,127: +SERVICE [/rostopic_11268_1553782860966/get_loggers] /rostopic_11268_1553782860966 http://copter131:57188/
+[rosmaster.master][INFO] 2019-03-28 07:21:01,132: +SERVICE [/rostopic_11268_1553782860966/set_logger_level] /rostopic_11268_1553782860966 http://copter131:57188/
+[rosmaster.master][INFO] 2019-03-28 07:21:01,142: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:21:01,192: +SUB [/tactic_interface/altitude] /rostopic_11268_1553782860966 http://copter131:57188/
+[rosmaster.master][INFO] 2019-03-28 07:21:53,266: +PUB [/rosout] /rostopic_14607_1553782913117 http://copter131:36380/
+[rosmaster.master][INFO] 2019-03-28 07:21:53,267: publisherUpdate[/rosout] -> http://copter131:34339/
+[rosmaster.master][INFO] 2019-03-28 07:21:53,279: +SERVICE [/rostopic_14607_1553782913117/get_loggers] /rostopic_14607_1553782913117 http://copter131:36380/
+[rosmaster.master][INFO] 2019-03-28 07:21:53,285: +SERVICE [/rostopic_14607_1553782913117/set_logger_level] /rostopic_14607_1553782913117 http://copter131:36380/
+[rosmaster.master][INFO] 2019-03-28 07:21:53,341: +SUB [/tactic_interface/radiation] /rostopic_14607_1553782913117 http://copter131:36380/
+[rosmaster.master][INFO] 2019-03-28 07:22:45,125: +PARAM [/flight_ready] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:49,806: +PARAM [/flight_ready] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:52,374: +PARAM [/ok_rally] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:52,378: +PARAM [/ok_wp] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:52,381: +PARAM [/ok_param] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:56,411: +PARAM [/ok_param] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:57,040: +PARAM [/ok_rally] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:58,073: +PARAM [/ok_wp] by /network
+[rosmaster.master][INFO] 2019-03-28 07:22:58,077: +PARAM [/swarm_team] by /network

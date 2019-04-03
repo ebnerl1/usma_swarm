@@ -1,0 +1,26 @@
+[rospy.client][INFO] 2019-02-27 11:08:37,024: init_node, name[/radeyeNode_9474_1551294516978], pid[9474]
+[xmlrpc][INFO] 2019-02-27 11:08:37,025: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 11:08:37,026: Started XML-RPC server [http://copter131:43286/]
+[rospy.init][INFO] 2019-02-27 11:08:37,026: ROS Slave URI: [http://copter131:43286/]
+[rospy.impl.masterslave][INFO] 2019-02-27 11:08:37,026: _ready: http://copter131:43286/
+[xmlrpc][INFO] 2019-02-27 11:08:37,027: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 11:08:37,028: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 11:08:37,127: registered with master
+[rospy.rosout][INFO] 2019-02-27 11:08:37,127: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 11:08:37,135: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 11:08:37,145: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 11:08:37,254: topic[/autopilot/gps] adding connection to [http://copter131:56724/], count 0
+[rospy.internal][INFO] 2019-02-27 11:08:37,263: topic[/autopilot/gps_odom] adding connection to [http://copter131:56724/], count 0
+[rospy.internal][INFO] 2019-02-27 11:08:37,377: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2019-02-27 11:11:07,128: signal_shutdown [atexit]
+[rospy.internal][INFO] 2019-02-27 11:11:07,145: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2019-02-27 11:11:07,147: topic[/autopilot/gps_odom] removing connection to http://copter131:56724/
+[rospy.internal][INFO] 2019-02-27 11:11:07,148: topic[/autopilot/gps] removing connection to http://copter131:56724/
+[rospy.impl.masterslave][INFO] 2019-02-27 11:11:07,150: atexit
+[rospy.internal][WARNING] 2019-02-27 11:11:07,152: Unknown error initiating TCP/IP socket to copter131:45331 (http://copter131:56724/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+

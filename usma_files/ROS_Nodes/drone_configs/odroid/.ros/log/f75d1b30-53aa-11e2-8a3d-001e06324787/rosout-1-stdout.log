@@ -1,0 +1,3 @@
+logging to /home/odroid/.ros/log/f75d1b30-53aa-11e2-8a3d-001e06324787/rosout.log
+re-publishing aggregated messages to /rosout_agg
+subscribed to /rosout

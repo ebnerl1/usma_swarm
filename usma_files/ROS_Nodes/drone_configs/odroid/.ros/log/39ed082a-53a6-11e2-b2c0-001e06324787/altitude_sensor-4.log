@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2019-03-05 07:20:54,162: init_node, name[/altitude_sensor], pid[16586]
+[xmlrpc][INFO] 2019-03-05 07:20:54,163: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-05 07:20:54,164: Started XML-RPC server [http://copter131:60271/]
+[rospy.init][INFO] 2019-03-05 07:20:54,164: ROS Slave URI: [http://copter131:60271/]
+[rospy.impl.masterslave][INFO] 2019-03-05 07:20:54,165: _ready: http://copter131:60271/
+[xmlrpc][INFO] 2019-03-05 07:20:54,166: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-05 07:20:54,167: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-05 07:20:54,265: registered with master
+[rospy.rosout][INFO] 2019-03-05 07:20:54,265: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-05 07:20:54,273: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-05 07:20:54,282: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-05 07:20:54,498: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2019-03-05 07:33:10,113: signal_shutdown [atexit]
+[rospy.internal][INFO] 2019-03-05 07:33:10,128: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2019-03-05 07:33:10,129: atexit
+[rospy.client][INFO] 2019-03-05 07:33:34,771: init_node, name[/altitude_sensor], pid[10254]
+[xmlrpc][INFO] 2019-03-05 07:33:34,772: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-05 07:33:34,773: Started XML-RPC server [http://copter131:33422/]
+[rospy.init][INFO] 2019-03-05 07:33:34,773: ROS Slave URI: [http://copter131:33422/]
+[rospy.impl.masterslave][INFO] 2019-03-05 07:33:34,773: _ready: http://copter131:33422/
+[xmlrpc][INFO] 2019-03-05 07:33:34,775: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-05 07:33:34,776: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-05 07:33:34,874: registered with master
+[rospy.rosout][INFO] 2019-03-05 07:33:34,874: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-05 07:33:34,882: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-05 07:33:34,889: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-05 07:33:35,112: topic[/rosout] adding connection to [/rosout], count 0

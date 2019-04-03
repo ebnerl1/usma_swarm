@@ -1,0 +1,191 @@
+[rospy.client][INFO] 2012-12-31 16:00:21,428: init_node, name[/swarm_control], pid[2902]
+[xmlrpc][INFO] 2012-12-31 16:00:21,443: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:21,445: ROS Slave URI: [http://copter131:55040/]
+[xmlrpc][INFO] 2012-12-31 16:00:21,445: Started XML-RPC server [http://copter131:55040/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:21,446: _ready: http://copter131:55040/
+[xmlrpc][INFO] 2012-12-31 16:00:21,447: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:21,447: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:21,546: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:21,546: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:21,683: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:21,777: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:22,007: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2012-12-31 16:00:23,677: Behavior simple_ground_attack successfully registered with ID 16
+[rosout][INFO] 2012-12-31 16:00:24,090: Behavior patrol_box successfully registered with ID 12
+[rosout][INFO] 2012-12-31 16:00:24,122: Behavior evader successfully registered with ID 15
+[rosout][INFO] 2012-12-31 16:00:24,292: Behavior independent_transit successfully registered with ID 8
+[rosout][INFO] 2012-12-31 16:00:24,424: Behavior pn_interceptor successfully registered with ID 5
+[rospy.internal][INFO] 2019-03-05 09:34:11,914: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:47006/], count 0
+[rosout][INFO] 2019-03-05 09:34:11,927: Behavior swarm_landing_sequencer successfully registered with ID 98
+[rospy.internal][INFO] 2019-03-05 09:34:11,983: topic[/swarm_control/behavior_status] adding connection to [http://copter131:50152/], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:11,993: topic[/swarm_control/behavior_status] adding connection to [http://copter131:58482/], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:11,994: topic[/swarm_control/behavior_status] adding connection to [http://copter131:55066/], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,004: topic[/swarm_control/behavior_status] adding connection to [http://copter131:57595/], count 3
+[rospy.internal][INFO] 2019-03-05 09:34:12,010: topic[/swarm_control/behavior_status] adding connection to [http://copter131:35767/], count 4
+[rospy.internal][INFO] 2019-03-05 09:34:12,013: topic[/swarm_control/behavior_status] adding connection to [http://copter131:47171/], count 4
+[rospy.internal][INFO] 2019-03-05 09:34:12,014: topic[/swarm_control/behavior_status] adding connection to [http://copter131:48161/], count 4
+[rospy.internal][INFO] 2019-03-05 09:34:12,018: topic[/swarm_control/behavior_status] adding connection to [http://copter131:51629/], count 5
+[rosout][INFO] 2019-03-05 09:34:12,027: Behavior tactic_interface successfully registered with ID 14
+[rospy.internal][INFO] 2019-03-05 09:34:12,040: topic[/swarm_control/behavior_status] adding connection to [http://copter131:33249/], count 8
+[rospy.internal][INFO] 2019-03-05 09:34:12,040: topic[/swarm_control/behavior_status] adding connection to [http://copter131:57710/], count 8
+[rospy.internal][INFO] 2019-03-05 09:34:12,041: topic[/swarm_control/behavior_status] adding connection to [http://copter131:38258/], count 8
+[rospy.internal][INFO] 2019-03-05 09:34:12,049: topic[/swarm_control/behavior_status] adding connection to [http://copter131:58137/], count 9
+[rospy.internal][INFO] 2019-03-05 09:34:12,054: topic[/swarm_control/behavior_status] adding connection to [http://copter131:60633/], count 10
+[rosout][INFO] 2019-03-05 09:34:12,053: Behavior wingman successfully registered with ID 11
+[rosout][INFO] 2019-03-05 09:34:12,058: Behavior linear_formation successfully registered with ID 1
+[rospy.internal][INFO] 2019-03-05 09:34:12,080: topic[/autopilot/status] adding connection to [http://copter131:58472/], count 0
+[rosout][INFO] 2019-03-05 09:34:12,174: Behavior constrained_shooter successfully registered with ID 10
+[rosout][INFO] 2019-03-05 09:34:12,200: Behavior patrol_box_shooter successfully registered with ID 13
+[rosout][INFO] 2019-03-05 09:34:12,235: Behavior smart_shooter successfully registered with ID 9
+[rosout][INFO] 2019-03-05 09:34:12,240: Behavior greedy_shooter successfully registered with ID 4
+[rosout][INFO] 2019-03-05 09:34:12,257: Subswarm updated to 0
+[rosout][INFO] 2019-03-05 09:34:12,258: Swarm state updated to Preflight
+[rosout][INFO] 2019-03-05 09:34:12,258: Active swarm behavior updated to standby
+[rospy.internal][INFO] 2019-03-05 09:34:12,344: topic[/swarm_control/subswarm_id] adding connection to [/simple_ground_attack], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,350: topic[/swarm_control/subswarm_id] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-05 09:34:12,376: topic[/swarm_control/subswarm_id] adding connection to [/linear_formation], count 2
+[rospy.internal][INFO] 2019-03-05 09:34:12,392: topic[/swarm_control/subswarm_id] adding connection to [/wingman], count 3
+[rospy.internal][INFO] 2019-03-05 09:34:12,408: topic[/swarm_control/subswarm_id] adding connection to [/greedy_shooter], count 4
+[rospy.internal][INFO] 2019-03-05 09:34:12,419: topic[/swarm_control/subswarm_id] adding connection to [/evader], count 5
+[rospy.internal][INFO] 2019-03-05 09:34:12,436: topic[/swarm_control/subswarm_id] adding connection to [/patrol_box], count 6
+[rospy.internal][INFO] 2019-03-05 09:34:12,442: topic[/swarm_control/subswarm_id] adding connection to [/swarm_landing_sequencer], count 7
+[rospy.internal][INFO] 2019-03-05 09:34:12,445: topic[/swarm_control/subswarm_id] adding connection to [/constrained_shooter], count 8
+[rospy.internal][INFO] 2019-03-05 09:34:12,451: topic[/swarm_control/subswarm_id] adding connection to [/swarm_tracker], count 9
+[rospy.internal][INFO] 2019-03-05 09:34:12,457: topic[/swarm_control/subswarm_id] adding connection to [/smart_shooter], count 10
+[rospy.internal][INFO] 2019-03-05 09:34:12,462: topic[/swarm_control/subswarm_id] adding connection to [/independent_transit], count 11
+[rospy.internal][INFO] 2019-03-05 09:34:12,473: topic[/swarm_control/subswarm_id] adding connection to [/pn_interceptor], count 12
+[rospy.internal][INFO] 2019-03-05 09:34:12,483: topic[/swarm_control/swarm_behavior] adding connection to [/swarm_tracker], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,493: topic[/swarm_control/swarm_state] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,496: topic[/swarm_control/swarm_state] adding connection to [/swarm_tracker], count 1
+[rospy.internal][INFO] 2019-03-05 09:34:12,499: topic[/swarm_control/ap_intent] adding connection to [/linear_formation], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,500: topic[/swarm_control/swarm_behavior] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-05 09:34:12,502: topic[/swarm_control/ap_intent] adding connection to [/wingman], count 1
+[rospy.internal][INFO] 2019-03-05 09:34:12,504: topic[/swarm_control/ap_intent] adding connection to [/constrained_shooter], count 2
+[rospy.internal][INFO] 2019-03-05 09:34:12,507: topic[/swarm_control/ap_intent] adding connection to [/tactic_interface], count 3
+[rospy.internal][INFO] 2019-03-05 09:34:12,509: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,510: topic[/autopilot/mode_num] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,614: topic[/swarm_control/subswarm_id] adding connection to [/patrol_box_shooter], count 13
+[rospy.internal][INFO] 2019-03-05 09:34:12,653: topic[/swarm_control/ap_intent] adding connection to [/swarm_landing_sequencer], count 4
+[rospy.internal][INFO] 2019-03-05 09:34:12,660: topic[/swarm_control/subswarm_id] adding connection to [/tactic_interface], count 14
+[rospy.internal][INFO] 2019-03-05 09:34:12,699: topic[/swarm_control/ap_intent] adding connection to [/greedy_shooter], count 5
+[rospy.internal][INFO] 2019-03-05 09:34:13,436: topic[/swarm_control/ap_intent] adding connection to [/patrol_box], count 6
+[rospy.internal][INFO] 2019-03-05 09:34:13,437: topic[/swarm_control/ap_intent] adding connection to [/evader], count 7
+[rospy.internal][INFO] 2019-03-05 09:34:13,453: topic[/swarm_control/ap_intent] adding connection to [/patrol_box_shooter], count 8
+[rospy.internal][INFO] 2019-03-05 09:34:13,462: topic[/swarm_control/ap_intent] adding connection to [/simple_ground_attack], count 9
+[rospy.internal][INFO] 2019-03-05 09:34:13,467: topic[/swarm_control/ap_intent] adding connection to [/independent_transit], count 10
+[rospy.internal][INFO] 2019-03-05 09:34:13,470: topic[/swarm_control/ap_intent] adding connection to [/pn_interceptor], count 11
+[rospy.internal][INFO] 2019-03-05 09:34:13,473: topic[/swarm_control/behavior_summary] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:13,484: topic[/swarm_control/ap_intent] adding connection to [/smart_shooter], count 12
+[rosout][WARNING] 2019-03-05 09:34:13,516: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:34:13,522: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:34:15,525: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:34:15,526: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:34:19,535: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:34:19,536: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:34:27,553: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:34:27,555: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:34:43,582: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:34:43,585: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][INFO] 2019-03-05 09:35:00,668: Swarm state updated to Flight Ready
+[rosout][WARNING] 2019-03-05 09:35:15,630: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:35:15,632: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:36:19,707: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:36:19,709: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:38:27,819: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:38:27,821: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:42:43,956: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:42:43,958: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][INFO] 2019-03-05 09:49:29,360: Swarm state updated to Ingress
+[rosout][INFO] 2019-03-05 09:49:37,560: Swarm state updated to Staged
+[rosout][INFO] 2019-03-05 09:50:10,660: Swarm state updated to Swarm Ready
+[rosout][INFO] 2019-03-05 09:50:13,900: Subswarm updated to 1
+[rosout][INFO] 2019-03-05 09:50:23,472: Active swarm behavior updated to standby
+[rosout][INFO] 2019-03-05 09:50:24,486: Active swarm behavior updated to tactic_interface
+[rosout][INFO] 2019-03-05 09:50:24,488: tactic_interface behavior successfully activated
+[rosout][WARNING] 2019-03-05 09:51:16,073: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 09:51:16,075: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rosout][WARNING] 2019-03-05 09:57:33,312: Behavior 14 unexpected inactive report
+[rosout][INFO] 2019-03-05 09:57:33,362: Swarm state updated to State Error
+[rosout][INFO] 2019-03-05 09:57:33,467: Active swarm behavior updated to standby
+[rosout][INFO] 2019-03-05 09:57:33,606: Active swarm behavior updated to standby
+[rosout][INFO] 2019-03-05 09:57:33,609: Subswarm updated to 0
+[rosout][WARNING] 2019-03-05 09:57:33,611: Autopilot not in AUTO: disabling swarming
+[rosout][WARNING] 2019-03-05 10:08:20,193: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-05 10:08:20,195: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+

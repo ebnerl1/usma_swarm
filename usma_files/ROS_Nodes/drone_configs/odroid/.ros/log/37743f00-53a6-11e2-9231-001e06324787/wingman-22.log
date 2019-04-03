@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2019-03-19 08:21:08,829: init_node, name[/wingman], pid[3089]
+[xmlrpc][INFO] 2019-03-19 08:21:08,834: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-03-19 08:21:08,836: ROS Slave URI: [http://copter131:52057/]
+[xmlrpc][INFO] 2019-03-19 08:21:08,836: Started XML-RPC server [http://copter131:52057/]
+[rospy.impl.masterslave][INFO] 2019-03-19 08:21:08,836: _ready: http://copter131:52057/
+[xmlrpc][INFO] 2019-03-19 08:21:08,837: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-19 08:21:08,839: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-19 08:21:08,937: registered with master
+[rospy.rosout][INFO] 2019-03-19 08:21:08,937: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-19 08:21:08,962: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-19 08:21:08,984: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-19 08:21:09,257: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:09,847: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,465: topic[/autopilot/acs_pose] adding connection to [http://copter131:37283/], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,505: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,533: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:60057/], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,567: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,628: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,641: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,706: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:59928/], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:10,778: topic[/swarm_control/ap_intent] adding connection to [http://copter131:59928/], count 0
+[rospy.internal][INFO] 2019-03-19 08:21:11,007: topic[/autopilot/status] adding connection to [http://copter131:37283/], count 0
+[rosout][INFO] 2019-03-19 08:27:02,382: wingman activate request False returned False
+[rosout][INFO] 2019-03-19 08:27:16,923: wingman activate request False returned False
+[rosout][INFO] 2019-03-19 08:27:48,905: wingman activate request False returned False
+[rosout][INFO] 2019-03-19 08:28:04,015: wingman activate request False returned False
+[rosout][INFO] 2019-03-19 08:28:36,201: wingman activate request False returned False

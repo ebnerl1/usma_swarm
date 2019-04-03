@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2019-03-19 07:06:05,519: init_node, name[/evader], pid[3148]
+[xmlrpc][INFO] 2019-03-19 07:06:05,520: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-19 07:06:05,521: Started XML-RPC server [http://copter131:49677/]
+[rospy.init][INFO] 2019-03-19 07:06:05,521: ROS Slave URI: [http://copter131:49677/]
+[rospy.impl.masterslave][INFO] 2019-03-19 07:06:05,522: _ready: http://copter131:49677/
+[rospy.registration][INFO] 2019-03-19 07:06:05,524: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-03-19 07:06:05,524: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-03-19 07:06:05,622: registered with master
+[rospy.rosout][INFO] 2019-03-19 07:06:05,623: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-19 07:06:05,642: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-19 07:06:05,658: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-19 07:06:05,865: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:05,888: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:06,420: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:06,463: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:50399/], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:06,631: topic[/autopilot/acs_pose] adding connection to [http://copter131:51223/], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:07,010: topic[/autopilot/status] adding connection to [http://copter131:51223/], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:07,099: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:07,282: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:36181/], count 0
+[rospy.internal][INFO] 2019-03-19 07:06:08,385: topic[/swarm_control/ap_intent] adding connection to [http://copter131:36181/], count 0
+[rosout][INFO] 2019-03-19 07:20:26,479: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:20:54,186: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:22:20,611: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:22:34,290: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:45:35,809: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:46:33,971: evader activate request False returned False
+[rosout][INFO] 2019-03-19 07:46:54,065: evader activate request False returned False

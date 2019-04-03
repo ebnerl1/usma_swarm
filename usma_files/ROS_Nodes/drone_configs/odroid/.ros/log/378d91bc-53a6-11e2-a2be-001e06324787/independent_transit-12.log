@@ -1,0 +1,22 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,316: init_node, name[/independent_transit], pid[2864]
+[xmlrpc][INFO] 2012-12-31 16:00:17,337: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:17,339: Started XML-RPC server [http://copter131:49639/]
+[rospy.init][INFO] 2012-12-31 16:00:17,339: ROS Slave URI: [http://copter131:49639/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,340: _ready: http://copter131:49639/
+[xmlrpc][INFO] 2012-12-31 16:00:17,342: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:17,343: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:17,441: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,442: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 13:10:36,486: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 13:10:36,591: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 13:10:36,863: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:38,993: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,183: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,232: topic[/autopilot/status] adding connection to [http://copter131:36903/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,273: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,332: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:44193/], count 0
+[rospy.internal][INFO] 2019-02-27 13:10:39,403: topic[/swarm_control/ap_intent] adding connection to [http://copter131:44193/], count 0
+[rosout][INFO] 2019-02-27 13:11:20,045: independent_transit activate request False returned False
+[rosout][INFO] 2019-02-27 13:12:12,498: independent_transit activate request False returned False
+[rosout][INFO] 2019-02-27 13:16:09,352: independent_transit activate request False returned False
+[rosout][INFO] 2019-02-27 13:16:59,972: independent_transit activate request False returned False

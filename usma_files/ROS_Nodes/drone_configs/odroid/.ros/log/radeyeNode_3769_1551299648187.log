@@ -1,0 +1,29 @@
+[rospy.client][INFO] 2019-02-27 12:34:08,231: init_node, name[/radeyeNode_3769_1551299648187], pid[3769]
+[xmlrpc][INFO] 2019-02-27 12:34:08,232: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 12:34:08,233: Started XML-RPC server [http://copter131:42938/]
+[rospy.init][INFO] 2019-02-27 12:34:08,234: ROS Slave URI: [http://copter131:42938/]
+[rospy.impl.masterslave][INFO] 2019-02-27 12:34:08,234: _ready: http://copter131:42938/
+[xmlrpc][INFO] 2019-02-27 12:34:08,235: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 12:34:08,236: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 12:34:08,334: registered with master
+[rospy.rosout][INFO] 2019-02-27 12:34:08,335: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 12:34:08,342: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 12:34:08,348: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 12:34:08,409: topic[/autopilot/gps_odom] adding connection to [http://copter131:51261/], count 0
+[rospy.internal][INFO] 2019-02-27 12:34:08,440: topic[/autopilot/gps] adding connection to [http://copter131:51261/], count 0
+[rospy.internal][INFO] 2019-02-27 12:34:08,617: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2019-02-27 12:34:10,455: signal_shutdown [atexit]
+[rospy.internal][INFO] 2019-02-27 12:34:10,467: topic[/rosout] removing connection to /rosout
+[rospy.internal][INFO] 2019-02-27 12:34:10,470: topic[/autopilot/gps_odom] removing connection to http://copter131:51261/
+[rospy.internal][WARNING] 2019-02-27 12:34:10,474: Unknown error initiating TCP/IP socket to copter131:41997 (http://copter131:51261/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+
+[rospy.internal][INFO] 2019-02-27 12:34:10,477: topic[/autopilot/gps] removing connection to http://copter131:51261/
+[rospy.impl.masterslave][INFO] 2019-02-27 12:34:10,478: atexit
+[rospy.internal][WARNING] 2019-02-27 12:34:10,479: Unknown error initiating TCP/IP socket to copter131:41997 (http://copter131:51261/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 558, in connect
+    self.local_endpoint = self.socket.getsockname()
+AttributeError: 'NoneType' object has no attribute 'getsockname'
+

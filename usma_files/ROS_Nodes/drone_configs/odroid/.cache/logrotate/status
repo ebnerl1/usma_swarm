@@ -1,0 +1,12 @@
+logrotate state -- version 2
+"/home/odroid/.cache/upstart/update-notifier-release.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/dbus.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/gnome-keyring-ssh.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/logrotate.log" 2013-1-1-11:1:44
+"/home/odroid/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_Xorg.0.crash.log" 2014-8-8-4:53:3
+"/home/odroid/.cache/upstart/ssh-agent.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/update-notifier-crash-_var_crash__usr_bin_lxsession-logout.1001.crash.log" 2014-8-8-4:53:3
+"/home/odroid/.cache/upstart/upstart-event-bridge.log" 2015-2-13-4:36:23
+"/home/odroid/.cache/upstart/gnome-keyring-gpg.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/lxsession.log" 2013-1-1-10:31:12
+"/home/odroid/.cache/upstart/im-config.log" 2013-1-1-10:31:12

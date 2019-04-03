@@ -1,0 +1,78 @@
+[rospy.client][INFO] 2019-03-28 07:12:52,868: init_node, name[/swarm_control], pid[2886]
+[xmlrpc][INFO] 2019-03-28 07:12:52,902: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-28 07:12:52,909: Started XML-RPC server [http://copter131:36219/]
+[rospy.init][INFO] 2019-03-28 07:12:52,910: ROS Slave URI: [http://copter131:36219/]
+[rospy.impl.masterslave][INFO] 2019-03-28 07:12:52,909: _ready: http://copter131:36219/
+[rospy.registration][INFO] 2019-03-28 07:12:52,923: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-03-28 07:12:52,924: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-03-28 07:12:53,011: registered with master
+[rospy.rosout][INFO] 2019-03-28 07:12:53,012: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-28 07:12:53,434: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-28 07:12:53,540: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-28 07:12:53,767: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2019-03-28 07:12:55,164: Behavior patrol_box successfully registered with ID 12
+[rosout][INFO] 2019-03-28 07:12:55,199: Behavior simple_ground_attack successfully registered with ID 16
+[rosout][INFO] 2019-03-28 07:12:55,968: Behavior independent_transit successfully registered with ID 8
+[rosout][INFO] 2019-03-28 07:12:56,090: Behavior pn_interceptor successfully registered with ID 5
+[rosout][INFO] 2019-03-28 07:12:56,283: Behavior evader successfully registered with ID 15
+[rospy.internal][INFO] 2019-03-28 07:12:56,406: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:42489/], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,446: topic[/swarm_control/behavior_status] adding connection to [http://copter131:57095/], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,460: topic[/swarm_control/behavior_status] adding connection to [http://copter131:60660/], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,462: topic[/swarm_control/behavior_status] adding connection to [http://copter131:42409/], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,468: topic[/swarm_control/behavior_status] adding connection to [http://copter131:58390/], count 3
+[rospy.internal][INFO] 2019-03-28 07:12:56,470: topic[/swarm_control/behavior_status] adding connection to [http://copter131:48029/], count 3
+[rospy.internal][INFO] 2019-03-28 07:12:56,484: topic[/swarm_control/behavior_status] adding connection to [http://copter131:35247/], count 5
+[rospy.internal][INFO] 2019-03-28 07:12:56,488: topic[/swarm_control/behavior_status] adding connection to [http://copter131:41743/], count 6
+[rospy.internal][INFO] 2019-03-28 07:12:56,489: topic[/swarm_control/behavior_status] adding connection to [http://copter131:41632/], count 6
+[rospy.internal][INFO] 2019-03-28 07:12:56,495: topic[/swarm_control/behavior_status] adding connection to [http://copter131:38889/], count 7
+[rospy.internal][INFO] 2019-03-28 07:12:56,502: topic[/swarm_control/behavior_status] adding connection to [http://copter131:34162/], count 9
+[rospy.internal][INFO] 2019-03-28 07:12:56,509: topic[/swarm_control/behavior_status] adding connection to [http://copter131:44306/], count 10
+[rospy.internal][INFO] 2019-03-28 07:12:56,509: topic[/swarm_control/behavior_status] adding connection to [http://copter131:60190/], count 10
+[rospy.internal][INFO] 2019-03-28 07:12:56,517: topic[/swarm_control/behavior_status] adding connection to [http://copter131:42398/], count 12
+[rosout][INFO] 2019-03-28 07:12:56,524: Behavior linear_formation successfully registered with ID 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,645: topic[/autopilot/status] adding connection to [http://copter131:57137/], count 0
+[rosout][INFO] 2019-03-28 07:12:56,670: Behavior wingman successfully registered with ID 11
+[rospy.internal][INFO] 2019-03-28 07:12:56,712: topic[/swarm_control/subswarm_id] adding connection to [/patrol_box], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,727: topic[/swarm_control/subswarm_id] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,746: topic[/swarm_control/subswarm_id] adding connection to [/patrol_box_shooter], count 2
+[rospy.internal][INFO] 2019-03-28 07:12:56,753: topic[/swarm_control/subswarm_id] adding connection to [/tactic_interface], count 3
+[rospy.internal][INFO] 2019-03-28 07:12:56,775: topic[/swarm_control/subswarm_id] adding connection to [/swarm_tracker], count 4
+[rospy.internal][INFO] 2019-03-28 07:12:56,783: topic[/swarm_control/subswarm_id] adding connection to [/wingman], count 5
+[rospy.internal][INFO] 2019-03-28 07:12:56,793: topic[/swarm_control/subswarm_id] adding connection to [/simple_ground_attack], count 6
+[rospy.internal][INFO] 2019-03-28 07:12:56,808: topic[/swarm_control/subswarm_id] adding connection to [/linear_formation], count 7
+[rospy.internal][INFO] 2019-03-28 07:12:56,818: topic[/swarm_control/subswarm_id] adding connection to [/pn_interceptor], count 8
+[rospy.internal][INFO] 2019-03-28 07:12:56,827: topic[/swarm_control/ap_intent] adding connection to [/patrol_box], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,840: topic[/swarm_control/swarm_state] adding connection to [/swarm_tracker], count 0
+[rosout][INFO] 2019-03-28 07:12:56,847: Subswarm updated to 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,853: topic[/swarm_control/subswarm_id] adding connection to [/greedy_shooter], count 9
+[rosout][INFO] 2019-03-28 07:12:56,856: Swarm state updated to Preflight
+[rosout][INFO] 2019-03-28 07:12:56,864: Active swarm behavior updated to standby
+[rospy.internal][INFO] 2019-03-28 07:12:56,870: topic[/swarm_control/subswarm_id] adding connection to [/independent_transit], count 10
+[rospy.internal][INFO] 2019-03-28 07:12:56,874: topic[/swarm_control/subswarm_id] adding connection to [/constrained_shooter], count 11
+[rospy.internal][INFO] 2019-03-28 07:12:56,876: topic[/swarm_control/swarm_behavior] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,878: topic[/swarm_control/swarm_state] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,881: topic[/swarm_control/ap_intent] adding connection to [/simple_ground_attack], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:56,883: topic[/swarm_control/ap_intent] adding connection to [/tactic_interface], count 2
+[rospy.internal][INFO] 2019-03-28 07:12:56,885: topic[/swarm_control/ap_intent] adding connection to [/evader], count 3
+[rospy.internal][INFO] 2019-03-28 07:12:56,886: topic[/swarm_control/ap_intent] adding connection to [/linear_formation], count 4
+[rosout][INFO] 2019-03-28 07:12:56,938: Behavior greedy_shooter successfully registered with ID 4
+[rospy.internal][INFO] 2019-03-28 07:12:56,964: topic[/swarm_control/behavior_summary] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:56,991: topic[/autopilot/mode_num] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-28 07:12:57,013: topic[/swarm_control/swarm_behavior] adding connection to [/swarm_tracker], count 1
+[rospy.internal][INFO] 2019-03-28 07:12:57,014: topic[/swarm_control/ap_intent] adding connection to [/patrol_box_shooter], count 5
+[rospy.internal][INFO] 2019-03-28 07:12:57,118: topic[/swarm_control/ap_intent] adding connection to [/constrained_shooter], count 6
+[rospy.internal][INFO] 2019-03-28 07:12:57,579: topic[/swarm_control/subswarm_id] adding connection to [/smart_shooter], count 12
+[rospy.internal][INFO] 2019-03-28 07:12:57,582: topic[/swarm_control/ap_intent] adding connection to [/smart_shooter], count 7
+[rosout][INFO] 2019-03-28 07:12:57,585: Behavior swarm_landing_sequencer successfully registered with ID 98
+[rospy.internal][INFO] 2019-03-28 07:12:57,587: topic[/swarm_control/ap_intent] adding connection to [/swarm_landing_sequencer], count 8
+[rospy.internal][INFO] 2019-03-28 07:12:57,589: topic[/swarm_control/subswarm_id] adding connection to [/swarm_landing_sequencer], count 13
+[rosout][INFO] 2019-03-28 07:12:57,624: Behavior smart_shooter successfully registered with ID 9
+[rosout][INFO] 2019-03-28 07:12:57,653: Behavior constrained_shooter successfully registered with ID 10
+[rospy.internal][INFO] 2019-03-28 07:12:57,792: topic[/swarm_control/ap_intent] adding connection to [/greedy_shooter], count 9
+[rospy.internal][INFO] 2019-03-28 07:12:57,797: topic[/swarm_control/subswarm_id] adding connection to [/evader], count 14
+[rospy.internal][INFO] 2019-03-28 07:12:57,817: topic[/swarm_control/ap_intent] adding connection to [/independent_transit], count 10
+[rospy.internal][INFO] 2019-03-28 07:12:57,838: topic[/swarm_control/ap_intent] adding connection to [/pn_interceptor], count 11
+[rosout][INFO] 2019-03-28 07:12:57,843: Behavior patrol_box_shooter successfully registered with ID 13
+[rospy.internal][INFO] 2019-03-28 07:12:57,858: topic[/swarm_control/ap_intent] adding connection to [/wingman], count 12
+[rosout][INFO] 2019-03-28 07:12:57,872: Behavior tactic_interface successfully registered with ID 14
+[rospy.internal][INFO] 2019-03-28 07:12:57,876: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0

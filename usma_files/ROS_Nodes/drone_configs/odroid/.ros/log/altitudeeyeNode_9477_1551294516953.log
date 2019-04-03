@@ -1,0 +1,15 @@
+[rospy.client][INFO] 2019-02-27 11:08:37,000: init_node, name[/altitudeeyeNode_9477_1551294516953], pid[9477]
+[xmlrpc][INFO] 2019-02-27 11:08:37,001: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 11:08:37,002: Started XML-RPC server [http://copter131:57383/]
+[rospy.init][INFO] 2019-02-27 11:08:37,003: ROS Slave URI: [http://copter131:57383/]
+[rospy.impl.masterslave][INFO] 2019-02-27 11:08:37,003: _ready: http://copter131:57383/
+[xmlrpc][INFO] 2019-02-27 11:08:37,004: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 11:08:37,005: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 11:08:37,103: registered with master
+[rospy.rosout][INFO] 2019-02-27 11:08:37,104: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 11:08:37,118: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 11:08:37,123: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 11:08:37,380: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.core][INFO] 2019-02-27 11:09:24,242: signal_shutdown [atexit]
+[rospy.internal][INFO] 2019-02-27 11:09:24,252: topic[/rosout] removing connection to /rosout
+[rospy.impl.masterslave][INFO] 2019-02-27 11:09:24,254: atexit

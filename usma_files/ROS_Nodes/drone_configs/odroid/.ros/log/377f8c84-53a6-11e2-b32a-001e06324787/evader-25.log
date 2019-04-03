@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2019-03-07 07:11:59,481: init_node, name[/evader], pid[3264]
+[xmlrpc][INFO] 2019-03-07 07:11:59,483: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-07 07:11:59,484: Started XML-RPC server [http://copter131:50286/]
+[rospy.init][INFO] 2019-03-07 07:11:59,484: ROS Slave URI: [http://copter131:50286/]
+[rospy.impl.masterslave][INFO] 2019-03-07 07:11:59,484: _ready: http://copter131:50286/
+[xmlrpc][INFO] 2019-03-07 07:11:59,486: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-07 07:11:59,487: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-07 07:11:59,585: registered with master
+[rospy.rosout][INFO] 2019-03-07 07:11:59,586: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-07 07:11:59,603: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-07 07:11:59,635: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-07 07:11:59,833: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-07 07:11:59,888: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:00,340: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:55286/], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:00,971: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:01,266: topic[/autopilot/acs_pose] adding connection to [http://copter131:47350/], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:01,429: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:01,786: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:38744/], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:01,881: topic[/swarm_control/ap_intent] adding connection to [http://copter131:38744/], count 0
+[rospy.internal][INFO] 2019-03-07 07:12:02,146: topic[/autopilot/status] adding connection to [http://copter131:47350/], count 0

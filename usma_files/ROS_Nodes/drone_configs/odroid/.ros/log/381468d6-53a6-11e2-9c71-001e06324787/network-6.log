@@ -1,0 +1,87 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,061: init_node, name[/network], pid[2756]
+[xmlrpc][INFO] 2012-12-31 16:00:17,062: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:17,065: ROS Slave URI: [http://copter131:33195/]
+[xmlrpc][INFO] 2012-12-31 16:00:17,065: Started XML-RPC server [http://copter131:33195/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,065: _ready: http://copter131:33195/
+[xmlrpc][INFO] 2012-12-31 16:00:17,066: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:17,067: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:17,165: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,166: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:17,189: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,222: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,403: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,296: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:37006/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,297: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:49992/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,302: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:52233/], count 1
+[rospy.internal][INFO] 2019-03-27 06:23:28,304: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:45944/], count 2
+[rospy.internal][INFO] 2019-03-27 06:23:28,308: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:59818/], count 4
+[rospy.internal][INFO] 2019-03-27 06:23:28,327: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:48709/], count 5
+[rospy.internal][INFO] 2019-03-27 06:23:28,333: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:48709/], count 6
+[rospy.internal][INFO] 2019-03-27 06:23:28,334: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:48709/
+[rospy.internal][INFO] 2019-03-27 06:23:28,546: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:43376/], count 6
+[rospy.internal][INFO] 2019-03-27 06:23:28,623: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:47860/], count 7
+[rospy.internal][INFO] 2019-03-27 06:23:28,636: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:36778/], count 8
+[rospy.internal][INFO] 2019-03-27 06:23:28,669: topic[/autopilot/acs_pose] adding connection to [http://copter131:60153/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,787: topic[/air_to_air/firing_reports] adding connection to [http://copter131:36778/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,798: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:49208/], count 9
+[rospy.internal][INFO] 2019-03-27 06:23:28,915: topic[/network/swarm_sub_behavior] adding connection to [http://copter131:48709/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:28,917: topic[/air_to_air/firing_reports] adding connection to [http://copter131:48709/], count 1
+[rospy.internal][INFO] 2019-03-27 06:23:29,033: topic[/air_to_air/firing_reports] adding connection to [http://copter131:49208/], count 2
+[rospy.internal][INFO] 2019-03-27 06:23:29,164: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:29,167: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:40078/], count 10
+[rospy.internal][INFO] 2019-03-27 06:23:29,248: topic[/swarm_control/swarm_state] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:29,262: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:29,300: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:46387/], count 11
+[rospy.internal][INFO] 2019-03-27 06:23:29,304: topic[/swarm_control/behavior_summary] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:29,315: topic[/air_to_air/firing_reports] adding connection to [http://copter131:59818/], count 3
+[rospy.internal][INFO] 2019-03-27 06:23:29,434: topic[/autopilot/status] adding connection to [http://copter131:60153/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:29,936: topic[/air_to_air/firing_reports] adding connection to [http://copter131:43376/], count 4
+[rospy.internal][INFO] 2019-03-27 06:23:30,053: topic[/air_to_air/firing_reports] adding connection to [http://copter131:47860/], count 5
+[rospy.internal][INFO] 2019-03-27 06:23:31,063: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:41977/], count 12
+[rosout][INFO] 2019-03-27 06:31:29,590: NET FlightReady
+[rosout][INFO] 2019-03-27 06:31:31,846: NET MissionConfig
+[rosout][INFO] 2019-03-27 06:31:33,196: NET SlaveSetup
+[rospy.internal][INFO] 2019-03-27 06:31:43,880: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-03-27 06:32:28,131: NET Mode
+[rospy.internal][INFO] 2019-03-27 06:32:28,183: topic[/autopilot/mode_num] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-03-27 06:32:29,631: NET Arm
+[rospy.internal][INFO] 2019-03-27 06:32:29,650: topic[/autopilot/arm] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-03-27 06:32:37,906: NET Arm
+[rospy.internal][INFO] 2019-03-27 06:37:15,505: topic[/autopilot/heartbeat_ground] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-27 06:37:15,543: topic[/autopilot/heartbeat_ground] adding connection to [/autopilot], count 1
+[rosout][INFO] 2019-03-27 06:42:03,427: NET Mode
+[rosout][INFO] 2019-03-27 06:42:04,792: NET Arm
+[rosout][INFO] 2019-03-27 06:42:04,907: NET Arm
+[rosout][INFO] 2019-03-27 06:42:07,227: NET Mode
+[rosout][INFO] 2019-03-27 06:42:07,728: NET Mode
+[rosout][INFO] 2019-03-27 06:42:08,227: NET Mode
+[rosout][INFO] 2019-03-27 06:42:08,734: NET Takeoff
+[rospy.internal][INFO] 2019-03-27 06:42:08,763: topic[/autopilot/copter_takeoff] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-03-27 06:42:13,727: NET Mode
+[rosout][INFO] 2019-03-27 06:42:14,223: NET SwarmState
+[rosout][INFO] 2019-03-27 06:42:19,011: NET SwarmState
+[rosout][INFO] 2019-03-27 06:42:21,878: NET SwarmState
+[rosout][INFO] 2019-03-27 06:42:24,916: NET SetSubswarm
+[rosout][INFO] 2019-03-27 06:42:32,012: NET SetSubswarm
+[rosout][INFO] 2019-03-27 06:42:56,502: NET Arm
+[rosout][INFO] 2019-03-27 06:42:58,442: NET Mode
+[rosout][INFO] 2019-03-27 06:42:59,423: NET Arm
+[rosout][INFO] 2019-03-27 06:45:53,702: NET Mode
+[rosout][INFO] 2019-03-27 06:45:58,102: NET Mode
+[rosout][INFO] 2019-03-27 06:46:05,222: NET Mode
+[rosout][INFO] 2019-03-27 06:46:08,662: NET Mode
+[rosout][INFO] 2019-03-27 06:46:12,802: NET Mode
+[rosout][INFO] 2019-03-27 06:46:14,763: NET Arm
+[rosout][INFO] 2019-03-27 06:46:14,958: NET Arm
+[rosout][INFO] 2019-03-27 06:46:18,703: NET Mode
+[rosout][INFO] 2019-03-27 06:46:19,203: NET Mode
+[rosout][INFO] 2019-03-27 06:46:19,703: NET Mode
+[rosout][INFO] 2019-03-27 06:46:20,202: NET Takeoff
+[rosout][INFO] 2019-03-27 06:46:25,200: NET Mode
+[rosout][INFO] 2019-03-27 06:46:37,359: NET SwarmState
+[rosout][INFO] 2019-03-27 06:46:40,793: NET SetSubswarm
+[rosout][INFO] 2019-03-27 06:46:47,929: NET SwarmBehavior
+[rosout][INFO] 2019-03-27 06:47:05,301: NET SwarmBehavior
+[rosout][INFO] 2019-03-27 06:47:11,325: NET SwarmBehavior
+[rosout][INFO] 2019-03-27 06:47:18,846: NET SwarmBehavior
+[rosout][INFO] 2019-03-27 06:47:24,846: NET SwarmBehavior

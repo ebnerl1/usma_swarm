@@ -1,0 +1,30 @@
+[rospy.client][INFO] 2019-02-27 13:20:19,476: init_node, name[/swarm_landing_sequencer], pid[3007]
+[xmlrpc][INFO] 2019-02-27 13:20:19,478: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-02-27 13:20:19,480: ROS Slave URI: [http://copter131:51747/]
+[xmlrpc][INFO] 2019-02-27 13:20:19,480: Started XML-RPC server [http://copter131:51747/]
+[rospy.impl.masterslave][INFO] 2019-02-27 13:20:19,481: _ready: http://copter131:51747/
+[xmlrpc][INFO] 2019-02-27 13:20:19,481: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 13:20:19,483: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 13:20:19,581: registered with master
+[rospy.rosout][INFO] 2019-02-27 13:20:19,581: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 13:20:20,599: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 13:20:20,616: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 13:20:20,815: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:20,988: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:21,210: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:21,397: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:21,623: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:38106/], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:21,786: topic[/swarm_control/ap_intent] adding connection to [http://copter131:38106/], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:22,050: topic[/autopilot/status] adding connection to [http://copter131:60918/], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:22,453: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-02-27 13:20:56,200: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 13:21:33,664: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 13:27:42,179: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 13:27:46,923: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:00:31,636: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:00:42,749: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:17:48,015: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:18:28,237: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:21:48,928: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:22:29,126: swarm_landing_sequencer activate request False returned False
+[rosout][INFO] 2019-02-27 14:25:52,329: swarm_landing_sequencer activate request False returned False

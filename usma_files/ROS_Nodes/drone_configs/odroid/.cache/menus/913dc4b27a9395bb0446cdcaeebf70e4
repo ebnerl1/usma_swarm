@@ -1,0 +1,790 @@
+1.1
+applications.menu
+25
+D/home/odroid/.local/share/desktop-directories
+D/etc/xdg/lubuntu/desktop-directories
+D/usr/local/share/desktop-directories
+D/usr/share/desktop-directories
+D/usr/share/gdm/desktop-directories
+D/var/lib/menu-xdg/desktop-directories
+D/usr/share/Lubuntu/desktop-directories
+D/home/odroid/.local/share/applications
+D/etc/xdg/lubuntu/applications
+D/usr/local/share/applications
+D/usr/share/applications/screensavers
+D/usr/share/applications
+D/usr/share/gdm/applications
+D/var/lib/menu-xdg/applications
+D/usr/share/Lubuntu/applications
+D/etc/xdg/menus/applications-merged
+D/usr/share/upstart/xdg/menus/applications-merged
+D/etc/xdg/xdg-Lubuntu/menus/applications-merged
+D/etc/xdg/lubuntu/menus/applications-merged
+D/home/odroid/.config/menus/applications-merged
+F/home/odroid/.config/menus/lxde-applications.menu
+F/etc/xdg/menus/lxde-applications.menu
+F/usr/share/upstart/xdg/menus/lxde-applications.menu
+F/etc/xdg/xdg-Lubuntu/menus/lxde-applications.menu
+F/etc/xdg/lubuntu/menus/lxde-applications.menu
+Unity;
++Applications
+Applications
+
+
+
+-1
++Accessories
+Acessórios
+Acessórios da área de trabalho
+applications-accessories
+lxde-utility.directory
+3
+-yelp.desktop
+Ajuda
+Obter ajuda para o Unity
+help-browser
+
+11
+Ajuda
+yelp %u
+2
+34
+-gnome-disks.desktop
+Discos
+Gerencie unidades de disco e mídias
+gnome-disks
+
+11
+Discos
+gnome-disks
+2
+0
+-galculator.desktop
+Galculator
+Executa cálculos simples e científicos
+galculator
+
+11
+Galculator
+galculator
+2
+0
+-file-roller.desktop
+Gerenciador de arquivos compactados
+Crie e modifique um pacote
+file-roller
+
+11
+Gerenciador de arquivos compactados
+file-roller %U
+2
+-5
+-pcmanfm.desktop
+Gerenciador de Arquivos PCManFM
+Navegue pelo sistema de arquivos e gerencie arquivos e pastas
+system-file-manager
+
+11
+Gerenciador de Arquivos PCManFM
+pcmanfm %U
+2
+0
+-leafpad.desktop
+Leafpad
+Editor de texto simples
+leafpad
+
+11
+Leafpad
+leafpad %f
+0
+0
+-lxterminal.desktop
+LXTerminal
+Use a linha de comando
+lxterminal
+
+11
+LXTerminal
+lxterminal
+0
+0
+-gucharmap.desktop
+Mapa de caracteres
+Insira caracteres especiais nos documentos
+accessories-character-map
+
+11
+Mapa de caracteres
+gucharmap
+2
+0
+-medit.desktop
+Text Editor
+Text editor
+medit
+
+11
+Text Editor
+medit %F
+2
+0
+-gpicview.desktop
+Visualizador de imagens
+Visualize suas imagens de forma fácil
+gpicview
+
+11
+Visualizador de imagens
+gpicview %f
+2
+0
+-xarchiver.desktop
+Xarchiver
+Um gerenciador de pacotes baseado no GTK+2
+xarchiver
+
+11
+Xarchiver
+xarchiver %f
+2
+0
+-xpad.desktop
+Xpad
+Anotar para mais tarde
+xpad
+
+11
+Xpad
+xpad
+2
+0
+
++Development
+Desenvolvimento
+Ferramentas para desenvolvimento de software
+applications-development
+lxde-development.directory
+3
+-arduino.desktop
+Arduino IDE
+
+arduino
+
+11
+Arduino IDE
+arduino
+0
+0
+
++Electronics
+Eletrônica
+
+applications-electronics
+Electronics.directory
+3
+-arduino.desktop
+Arduino IDE
+
+arduino
+
+11
+Arduino IDE
+arduino
+0
+0
+
++Office
+Escritório
+Aplicativos de escritório
+applications-office
+lxde-office.directory
+3
+-abiword.desktop
+AbiWord
+AbiWord Processador de Texto
+abiword
+
+11
+AbiWord
+abiword %U
+2
+0
+-gnumeric.desktop
+Gnumeric
+Cálculo, análise e visualização de informações
+gnumeric
+
+11
+Planilha eletrônica Gnumeric
+gnumeric %U
+2
+0
+-evince.desktop
+Visualizador de documentos
+Visualize documentos de múltiplas páginas
+evince
+
+11
+Visualizador de documentos
+evince %U
+2
+0
+
++Graphics
+Gráficos
+Aplicativos gráficos
+applications-graphics
+lxde-graphics.directory
+3
+-simple-scan.desktop
+Digitalizador simples
+Digitalizar documentos
+scanner
+
+11
+Digitalizador simples
+simple-scan
+2
+0
+-mtpaint.desktop
+mtPaint graphic editor
+programa de pintura para criar pixel art e manipular fotos digitais
+mtpaint
+
+11
+mtPaint graphic editor
+mtpaint
+0
+0
+-evince.desktop
+Visualizador de documentos
+Visualize documentos de múltiplas páginas
+evince
+
+11
+Visualizador de documentos
+evince %U
+2
+0
+
++Internet
+Internet
+Programas para acesso à Internet tais como web e e-mail
+applications-internet
+lxde-network.directory
+3
+-pidgin.desktop
+Mensageiro da Internet Pidgin
+Bate-papos instantâneos.  Suporta AIM, Google Talk, Jabber/XMPP, MSN, Yahoo e outros
+pidgin
+
+11
+Mensageiro da Internet Pidgin
+pidgin
+2
+0
+-chromium-browser.desktop
+Navegador de Internet Chromium
+Acessar a internet
+chromium-browser
+
+11
+Navegador de Internet Chromium
+chromium-browser %U
+2
+0
+-firefox.desktop
+Navegador Web Firefox
+Navegue na Internet
+firefox
+
+11
+Navegador Web Firefox
+firefox %u
+2
+0
+-sylpheed.desktop
+Sylpheed
+E-Mail client
+sylpheed
+
+11
+Sylpheed
+sylpheed %u
+0
+0
+-transmission-gtk.desktop
+Transmission
+Download and share files over BitTorrent
+transmission
+
+11
+Cliente BitTorrent Transmission
+transmission-gtk %U
+2
+0
+
++Multimedia
+Multimídia
+Menu multimídia
+applications-multimedia
+lxde-audio-video.directory
+3
+-audacious.desktop
+Audacious
+Listen to music
+audacious
+
+11
+Audacious
+audacious %U
+0
+0
+-deadbeef.desktop
+Audio Player
+Escute músicas
+deadbeef
+
+11
+Audio Player
+deadbeef %F
+0
+0
+-pavucontrol.desktop
+Controle de volume do PulseAudio
+Ajuste o nível do volume
+multimedia-volume-control
+
+11
+Controle de volume do PulseAudio
+pavucontrol
+2
+0
+-gnome-mplayer.desktop
+GNOME MPlayer
+Reprodução de ficheiros de vídeo e áudio
+gnome-mplayer
+
+11
+GNOME MPlayer
+gnome-mplayer %U
+2
+0
+-guvcview.desktop
+guvcview
+A video viewer and capturer for the linux uvc driver
+/usr/share/pixmaps/guvcview/guvcview.png
+
+11
+Visualizador de vídeo GTK UVC
+guvcview
+2
+0
+-xbmc.desktop
+XBMC Media Center
+Manage and view your media 
+xbmc
+
+9
+XBMC Media Center
+xbmc
+0
+0
+-xfburn.desktop
+Xfburn
+Aplicativo de gravação de CD e DVD
+media-cdrom
+
+11
+Xfburn
+xfburn
+2
+0
+
+-
++Administration
+Sistema
+Configuração e monitoramento do sistema
+applications-system
+lxde-system-tools.directory
+3
+-update-manager.desktop
+Atualizador de programas
+Mostrar e instalar as atualizações disponíveis
+system-software-update
+
+11
+Atualizador de programas
+/usr/bin/update-manager
+0
+0
+-lubuntu-software-center.desktop
+Central de Programas do Lubuntu
+Permite escolher entre milhares de aplicativos disponíveis para o Lubuntu
+lubuntu-software-center
+
+11
+Central de Programas do Lubuntu
+lubuntu-software-center
+2
+0
+-gdebi.desktop
+GDebi Package Installer
+Install and view software packages
+gnome-mime-application-x-deb
+
+11
+GDebi Package Installer
+gdebi-gtk %f
+2
+-5
+-synaptic-kde.desktop
+Gerenciador de pacotes Synaptic
+Instalar, remover e atualizar pacotes de software
+synaptic
+
+11
+Gerenciador de pacotes Synaptic
+synaptic
+0
+4
+-lxtask.desktop
+Gerenciador de tarefas
+Gerencie processos em execução
+utilities-system-monitor
+
+11
+Gerenciador de tarefas
+lxtask
+2
+0
+-gparted.desktop
+GParted
+Crie, reorganize e exclua partições
+gparted
+
+11
+Editor de partições GParted
+gparted-pkexec
+2
+0
+-time.desktop
+Hora e data
+Altere a hora, a data e o fuso horário do sistema
+time-admin
+
+11
+Hora e data
+time-admin
+2
+0
+-system-config-printer.desktop
+Impressoras
+Configure impressoras
+printer
+
+11
+Impressoras
+system-config-printer
+2
+-7
+-hardinfo.desktop
+Informações e Testes do Sistema
+
+/usr/share/hardinfo/pixmaps/logo.png
+
+11
+Informações e Testes do Sistema
+hardinfo
+2
+0
+-gnome-system-monitor.desktop
+Monitor do sistema
+Veja os processos atuais e monitore o estado do sistema
+utilities-system-monitor
+
+11
+Monitor do sistema
+gnome-system-monitor
+2
+-5
+-gnome-system-monitor-kde.desktop
+Monitor do sistema GNOME
+Veja os processos atuais e monitore o estado do sistema
+utilities-system-monitor
+
+11
+Monitor do sistema GNOME
+gnome-system-monitor
+2
+4
+-network.desktop
+Rede
+Configurar dispositivos de rede e conexões
+preferences-system-network
+
+11
+Rede
+network-admin
+2
+0
+-synaptic.desktop
+Synaptic Package Manager
+Install, remove and upgrade software packages
+synaptic
+
+11
+Synaptic Package Manager
+synaptic-pkexec
+0
+-5
+-users.desktop
+Usuários e grupos
+Adicionar ou remover usuários e grupos
+config-users
+
+11
+Usuários e grupos
+users-admin
+2
+0
+-debian-uxterm.desktop
+UXTerm
+standard terminal emulator for the X window system
+xterm-color
+
+11
+UXTerm
+uxterm
+0
+0
+-debian-xterm.desktop
+XTerm
+standard terminal emulator for the X window system
+xterm-color
+
+11
+XTerm
+xterm
+0
+0
+
++DesktopSettings
+Preferências
+Preferências pessoais
+preferences-desktop
+lxde-settings.directory
+3
+-lxsession-default-apps.desktop
+Aplicações pré-definidas de LxSession
+Escolha as aplicações pré-definidas do LXDE
+xfwm4
+
+11
+Aplicações pré-definidas de LxSession
+lxsession-default-apps
+0
+-15
+-blueman-manager.desktop
+Bluetooth Manager
+Blueman Bluetooth Manager
+blueman
+
+11
+Bluetooth Manager
+blueman-manager
+2
+0
+-nm-connection-editor.desktop
+Conexões de rede
+Gerencie e altere suas configurações de conexão de rede
+preferences-system-network
+
+11
+Conexões de rede
+nm-connection-editor
+2
+-5
+-lxsession-edit.desktop
+Configurações da Sessão de Desktop
+Gerenciar aplicações carregadas na sessão desktop
+xfwm4
+
+11
+Configurações da Sessão de Desktop
+lxsession-edit
+0
+-15
+-light-locker-settings.desktop
+Configurações do Light Locker
+Configurar o bloqueio de sessão
+preferences-desktop-screensaver
+
+11
+Configurações do Light Locker
+/usr/bin/light-locker-settings
+2
+0
+-lxrandr.desktop
+Configurações do monitor
+Modifique a resolução da tela e configure monitores externos
+display
+
+11
+Configurações do monitor
+lxrandr
+0
+0
+-gnome-disks.desktop
+Discos
+Gerencie unidades de disco e mídias
+gnome-disks
+
+11
+Discos
+gnome-disks
+2
+0
+-software-properties-drivers.desktop
+Drivers adicionais
+Configure third-party and proprietary drivers
+jockey
+
+11
+Drivers adicionais
+/usr/bin/software-properties-gtk --open-tab=4
+0
+0
+-obconf.desktop
+Gerenciador de configurações do Openbox
+Configure as opções do Openbox
+obconf
+
+11
+Gerenciador de configurações do Openbox
+obconf %f
+2
+0
+-xfce4-power-manager-settings.desktop
+Gerenciador de energia
+Configurações para o Gerenciador de energia do Xfce
+xfpm-ac-adapter
+
+11
+Gerenciador de energia
+xfce4-power-manager-settings
+2
+-39
+-im-config.desktop
+Input Method
+Set Keyboard Input Method
+input-keyboard
+
+11
+Input Method
+im-config
+0
+0
+-ibus-setup.desktop
+Método de entrada de teclado
+Métodos de ajudes para entrada de teclado.
+ibus-setup
+
+11
+Método de entrada de teclado
+ibus-setup
+2
+-35
+-xfce4-notifyd-config.desktop
+Notificações
+Personalize como as notificações devem aparecer na sua tela
+xfce4-notifyd
+
+11
+Notificações
+xfce4-notifyd-config
+2
+8
+-openjdk-7-policytool.desktop
+OpenJDK Java 7 Policy Tool
+OpenJDK Java 7 Policy Tool
+openjdk-7
+
+11
+OpenJDK Java 7 Policy Tool
+/usr/bin/policytool
+0
+0
+-lxappearance.desktop
+Personalizar visual
+Personaliza o visual de sua área de trabalho e aplicativos
+preferences-desktop-theme
+
+11
+Personalizar visual
+lxappearance
+2
+-15
+-pcmanfm-desktop-pref.desktop
+Preferências da Área de Trabalho
+Altere os papéis de parede e o comportamento do gerenciador da área de trabalho
+user-desktop
+
+11
+Preferências da Área de Trabalho
+pcmanfm --desktop-pref
+2
+-15
+-software-properties-gnome.desktop
+Programas e atualizações
+Configurar as fontes de aplicativos e atualizações
+software-properties
+
+11
+Programas e atualizações
+software-properties-gtk
+0
+2
+-software-properties-gtk.desktop
+Programas e atualizações
+Configurar as fontes de aplicativos e atualizações
+software-properties
+
+11
+Programas e atualizações
+software-properties-gtk
+0
+-3
+-xscreensaver-properties.desktop
+Protetor de tela
+Modificar as propriedades do protetor de tela
+xscreensaver
+
+11
+Protetor de tela
+xscreensaver-demo
+0
+0
+-language-selector.desktop
+Suporte a idiomas
+Configure suporte a vários idiomas nativos no seu sistema
+preferences-desktop-locale
+
+11
+Suporte a idiomas
+/usr/bin/gnome-language-selector
+0
+-5
+-lxinput.desktop
+Teclado e mouse
+Configure o teclado, o mouse e outros dispositivos de entrada
+input-keyboard
+
+11
+Teclado e mouse
+lxinput
+2
+1
+
+

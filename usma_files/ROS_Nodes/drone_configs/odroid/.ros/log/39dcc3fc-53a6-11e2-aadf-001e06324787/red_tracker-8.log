@@ -1,0 +1,17 @@
+[rospy.client][INFO] 2012-12-31 16:00:21,048: init_node, name[/red_tracker], pid[2830]
+[xmlrpc][INFO] 2012-12-31 16:00:21,069: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:21,070: Started XML-RPC server [http://copter131:57179/]
+[rospy.init][INFO] 2012-12-31 16:00:21,071: ROS Slave URI: [http://copter131:57179/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:21,078: _ready: http://copter131:57179/
+[rospy.registration][INFO] 2012-12-31 16:00:21,095: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:21,095: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:21,179: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:21,180: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:21,308: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:21,444: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:21,580: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-05 09:34:12,356: topic[/autopilot/acs_pose] adding connection to [http://copter131:58472/], count 0
+[rospy.internal][INFO] 2019-03-05 09:50:22,223: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 0
+[rospy.internal][INFO] 2019-03-05 09:57:33,265: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 1
+[rospy.internal][INFO] 2019-03-05 09:57:33,266: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-03-05 09:57:33,300: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface

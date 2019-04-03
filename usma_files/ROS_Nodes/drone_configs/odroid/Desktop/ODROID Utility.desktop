@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[C]=gnome-monitor
+Name[C]=ODROID Utility
+Exec=lxterminal -T "ODROID Utility"  -e /usr/local/bin/root-utility.sh
+Name=ODROID Utility
+Icon=gnome-monitor
+StartupNotify=true

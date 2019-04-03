@@ -1,0 +1,80 @@
+** Message: utils.vala:30: config_path_directory: /home/odroid/.config/lxsession-default-apps
+** Message: desktop-files-backend.vala:171: test config_path: /home/odroid/.config/lxsession-default-apps/settings.conf
+** Message: desktop-files-backend.vala:237: Scanning folder: /usr/share/applications
+** Message: desktop-files-backend.vala:278: Start scanning
+
+** Message: desktop-files-backend.vala:257: Scanning folder: /usr/share/app-install/desktop
+** Message: desktop-files-backend.vala:278: Start scanning
+
+** Message: desktop-files-backend.vala:189: Signal finish scanning with mode: write
+** Message: desktop-files-backend.vala:333: Finishing scanning
+
+** Message: desktop-files-backend.vala:209: Signal finish scanning with mode: write
+** Message: desktop-files-backend.vala:333: Finishing scanning
+
+
+(lxsession-default-apps:1458): Gtk-WARNING **: Attempting to add a widget with type GtkVBox to a container of type LDefaultAppsMainWindows, but the widget is already inside a container of type GtkWindow, the GTK+ FAQ at http://library.gnome.org/devel/gtk-faq/stable/ explains how to reparent a widget.
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:87: Autostart conf file : /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:100: Autostart line : nm-applet
+
+(lxsession-default-apps:1458): Gtk-WARNING **: Attempting to add a widget with type GtkVBox to a container of type GtkAlignment, but the widget is already inside a container of type GtkAlignment, the GTK+ FAQ at http://library.gnome.org/devel/gtk-faq/stable/ explains how to reparent a widget.
+** Message: combobox.vala:428: Defaut = pcmanfm
+** Message: combobox.vala:488: Iter == 2
+** Message: combobox.vala:428: Defaut = pidgin
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = 
+** Message: combobox.vala:488: Iter == 0
+** Message: combobox.vala:428: Defaut = x-terminal-emulator
+** Message: combobox.vala:469: Iter == -1
+** Message: combobox.vala:428: Defaut = x-www-browser
+** Message: combobox.vala:469: Iter == -1
+** Message: combobox.vala:428: Defaut = sylpheed
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = evince
+** Message: combobox.vala:488: Iter == 2
+** Message: combobox.vala:428: Defaut = gnome-mplayer
+** Message: combobox.vala:488: Iter == 7
+** Message: combobox.vala:428: Defaut = audacious
+** Message: combobox.vala:488: Iter == 5
+** Message: combobox.vala:428: Defaut = 
+** Message: combobox.vala:488: Iter == 0
+** Message: combobox.vala:428: Defaut = leafpad
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = file-roller
+** Message: combobox.vala:488: Iter == 3
+** Message: combobox.vala:428: Defaut = gnumeric
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = transmission-gtk
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = abiword
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = xfburn
+** Message: combobox.vala:488: Iter == 1
+** Message: combobox.vala:428: Defaut = lxtask
+** Message: combobox.vala:488: Iter == 3
+** Message: combobox.vala:760: Defaut = no
+** Message: combobox.vala:797: Iter == 0
+** Message: combobox.vala:687:  Return value for no
+** Message: combobox.vala:760: Defaut = system
+
+(lxsession-default-apps:1458): GLib-GObject-WARNING **: invalid (NULL) pointer instance
+
+(lxsession-default-apps:1458): GLib-GObject-CRITICAL **: g_signal_connect_data: assertion 'G_TYPE_CHECK_INSTANCE (instance)' failed
+** Message: combobox.vala:760: Defaut = no
+** Message: combobox.vala:797: Iter == 0
+** Message: combobox.vala:760: Defaut = lubuntu
+** Message: combobox.vala:797: Iter == 1
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:196: read : nm-applet
+** Message: autostart.vala:197: line : nm-applet
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:72: Conf file for autostart: /home/odroid/.config/lxsession/Lubuntu/autostart
+** Message: autostart.vala:87: Autostart conf file : /home/odroid/.config/lxsession/Lubuntu/autostart
+
+(lxsession-default-apps:1458): Gtk-WARNING **: Attempting to add a widget with type GtkVBox to a container of type GtkAlignment, but the widget is already inside a container of type GtkAlignment, the GTK+ FAQ at http://library.gnome.org/devel/gtk-faq/stable/ explains how to reparent a widget.
+** Message: autostart.vala:137: try to remove : (null)

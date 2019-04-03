@@ -1,0 +1,29 @@
+[rospy.client][INFO] 2012-12-31 16:00:18,457: init_node, name[/linear_formation], pid[2966]
+[xmlrpc][INFO] 2019-02-27 11:51:24,469: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-02-27 11:51:24,472: ROS Slave URI: [http://copter131:43752/]
+[xmlrpc][INFO] 2019-02-27 11:51:24,472: Started XML-RPC server [http://copter131:43752/]
+[rospy.impl.masterslave][INFO] 2019-02-27 11:51:24,472: _ready: http://copter131:43752/
+[xmlrpc][INFO] 2019-02-27 11:51:24,485: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 11:51:24,493: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-02-27 11:51:24,572: registered with master
+[rospy.rosout][INFO] 2019-02-27 11:51:24,573: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 11:51:24,662: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 11:51:24,786: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 11:51:24,933: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:26,750: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:26,814: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:37636/], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:26,900: topic[/swarm_control/ap_intent] adding connection to [http://copter131:37636/], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:27,038: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:27,054: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:27,069: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 11:51:27,252: topic[/autopilot/status] adding connection to [http://copter131:36919/], count 0
+[rosout][INFO] 2019-02-27 11:54:23,582: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:54:46,951: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:55:45,331: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:55:55,896: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:56:57,241: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:57:58,552: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 11:59:23,117: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 12:08:41,089: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 12:11:36,530: linear_formation activate request False returned False
+[rosout][INFO] 2019-02-27 12:11:48,669: linear_formation activate request False returned False

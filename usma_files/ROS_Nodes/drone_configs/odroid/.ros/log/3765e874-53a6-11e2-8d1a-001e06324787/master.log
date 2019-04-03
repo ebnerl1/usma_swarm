@@ -1,0 +1,113 @@
+[rosmaster.main][INFO] 2012-12-31 16:00:14,333: initialization complete, waiting for shutdown
+[rosmaster.main][INFO] 2012-12-31 16:00:14,333: Starting ROS Master Node
+[xmlrpc][INFO] 2012-12-31 16:00:14,335: XML-RPC server binding to 0.0.0.0:11311
+[xmlrpc][INFO] 2012-12-31 16:00:14,336: Started XML-RPC server [http://copter131:11311/]
+[rosmaster.master][INFO] 2012-12-31 16:00:14,336: Master initialized: port[11311], uri[http://copter131:11311/]
+[xmlrpc][INFO] 2012-12-31 16:00:14,336: xml rpc node: starting XML-RPC server
+[rosmaster.master][INFO] 2012-12-31 16:00:14,423: +PARAM [/run_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,426: +PARAM [/roslaunch/uris/host_copter131__49843] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,543: +PARAM [/swarm_team] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,544: +PARAM [/rosdistro] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,544: +PARAM [/aircraft_name] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,544: +PARAM [/fetch_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,545: +PARAM [/dis_between_land_points] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,545: +PARAM [/network_port] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,545: +PARAM [/aircraft_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,545: +PARAM [/do_deconflict_land] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,546: +PARAM [/subswarm_id] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,546: +PARAM [/aircraft_type] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,546: +PARAM [/sensor_range] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,546: +PARAM [/rosversion] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,546: +PARAM [/runway_pt2_lat] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,547: +PARAM [/runway_pt2_lon] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,547: +PARAM [/flight_ready] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,547: +PARAM [/runway_pt1_lat] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,547: +PARAM [/network_device] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,548: +PARAM [/verify_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,548: +PARAM [/rosbag_enable] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,548: +PARAM [/runway_pt1_lon] by /roslaunch
+[rosmaster.master][INFO] 2012-12-31 16:00:14,648: +SERVICE [/rosout/get_loggers] /rosout http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:14,650: +SERVICE [/rosout/set_logger_level] /rosout http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:14,654: +PUB [/rosout_agg] /rosout http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:14,663: +SUB [/rosout] /rosout http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,628: +PUB [/rosout] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,637: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,675: +SERVICE [/radiation_sensor/get_loggers] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,700: +SERVICE [/radiation_sensor/set_logger_level] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,708: +PUB [/tactic_interface/radiation] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,762: -PUB [/tactic_interface/radiation] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,766: -PUB [/rosout] /radiation_sensor http://copter131:34672/
+[rosmaster.master][INFO] 2012-12-31 16:00:15,770: -SERVICE [/radiation_sensor/set_logger_level] /radiation_sensor rosrpc://copter131:43380
+[rosmaster.master][INFO] 2012-12-31 16:00:15,771: -SERVICE [/radiation_sensor/get_loggers] /radiation_sensor rosrpc://copter131:43380
+[rosmaster.master][INFO] 2012-12-31 16:00:15,838: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,015: +PUB [/rosout] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,039: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,064: +SERVICE [/safety/get_loggers] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,080: +SERVICE [/safety/set_logger_level] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,360: +PUB [/autopilot/heartbeat_onboard] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,385: +PUB [/safety/healthy] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,410: +PUB [/autopilot/payload_waypoint] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,430: +PUB [/autopilot/payload_rate] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,455: +PUB [/autopilot/payload_attitude] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,591: +PUB [/rosout] /network http://copter131:49184/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,610: +SUB [/autopilot/heartbeat_ground] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,648: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,687: +PUB [/rosout] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,714: +SERVICE [/network/get_loggers] /network http://copter131:49184/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,749: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,759: +PUB [/rosout] /autopilot http://copter131:35951/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,810: +SERVICE [/network/set_logger_level] /network http://copter131:49184/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,850: +SERVICE [/hit_tracker/get_loggers] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,853: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,915: +PUB [/rosout] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,935: +SERVICE [/hit_tracker/set_logger_level] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,938: +PARAM [/subswarm_id] by /unnamed
+[rosmaster.master][INFO] 2012-12-31 16:00:16,940: +SERVICE [/autopilot/get_loggers] /autopilot http://copter131:35951/
+[rosmaster.master][INFO] 2012-12-31 16:00:16,954: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,005: +SERVICE [/hit_tracker/reset] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,015: +SERVICE [/autopilot/set_logger_level] /autopilot http://copter131:35951/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,042: +SUB [/autopilot/acs_pose] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,066: +SERVICE [/radiation_sensor/get_loggers] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,130: +PUB [/rosout] /task_runner http://copter131:39649/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,140: +PUB [/rosout] /recv_pose_rate http://copter131:58963/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,155: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,159: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,181: +SERVICE [/radiation_sensor/set_logger_level] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,268: +PUB [/rosout] /swarm_tracker http://copter131:48503/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,295: +PUB [/tactic_interface/radiation] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,320: +SERVICE [/task_runner/get_loggers] /task_runner http://copter131:39649/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,328: +SERVICE [/recv_pose_rate/get_loggers] /recv_pose_rate http://copter131:58963/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,358: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,392: -PUB [/tactic_interface/radiation] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,393: -PUB [/rosout] /radiation_sensor http://copter131:48585/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,393: -SERVICE [/radiation_sensor/set_logger_level] /radiation_sensor rosrpc://copter131:42551
+[rosmaster.master][INFO] 2012-12-31 16:00:17,393: -SERVICE [/radiation_sensor/get_loggers] /radiation_sensor rosrpc://copter131:42551
+[rosmaster.master][INFO] 2012-12-31 16:00:17,428: +SERVICE [/task_runner/set_logger_level] /task_runner http://copter131:39649/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,450: +SERVICE [/recv_pose_rate/set_logger_level] /recv_pose_rate http://copter131:58963/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,460: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,475: +SERVICE [/swarm_tracker/get_loggers] /swarm_tracker http://copter131:48503/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,530: +SUB [/network/recv_swarm_data] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,551: +SERVICE [/swarm_tracker/set_logger_level] /swarm_tracker http://copter131:48503/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,609: +PUB [/rosout] /red_tracker http://copter131:36856/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,632: +SUB [/safety/payload_waypoint] /safety http://copter131:47322/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,663: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,675: +PUB [/rosout] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,765: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,835: +SERVICE [/red_tracker/get_loggers] /red_tracker http://copter131:36856/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,945: +SERVICE [/swarm_control/get_loggers] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:17,958: +SERVICE [/red_tracker/set_logger_level] /red_tracker http://copter131:36856/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,025: +SUB [/autopilot/status] /task_runner http://copter131:39649/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,055: +SERVICE [/swarm_control/set_logger_level] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,121: +SUB [/network/recv_pose] /recv_pose_rate http://copter131:58963/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,180: +SERVICE [/swarm_control/register_behavior] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,240: +PUB [/rosout] /simple_ground_attack http://copter131:57520/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,276: +SUB [/autopilot/acs_pose] /swarm_tracker http://copter131:48503/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,277: publisherUpdate[/rosout] -> http://copter131:43618/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,320: +SERVICE [/swarm_control/run_behavior] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,430: +SERVICE [/swarm_control/pause_behavior] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,455: +SUB [/network/net_reset] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,459: +SERVICE [/simple_ground_attack/get_loggers] /simple_ground_attack http://copter131:57520/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,538: +SERVICE [/swarm_control/set_subswarm] /swarm_control http://copter131:52885/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,553: +PUB [/hit_tracker/hit_uavs] /hit_tracker http://copter131:58407/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,571: +SERVICE [/simple_ground_attack/set_logger_level] /simple_ground_attack http://copter131:57520/
+[rosmaster.master][INFO] 2012-12-31 16:00:18,577: 

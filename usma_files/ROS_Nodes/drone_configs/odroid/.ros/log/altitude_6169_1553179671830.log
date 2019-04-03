@@ -1,0 +1,2296 @@
+[rospy.client][INFO] 2019-03-21 07:47:51,877: init_node, name[/altitude_6169_1553179671830], pid[6169]
+[xmlrpc][INFO] 2019-03-21 07:47:51,878: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-21 07:47:51,880: Started XML-RPC server [http://copter131:36850/]
+[rospy.init][INFO] 2019-03-21 07:47:51,880: ROS Slave URI: [http://copter131:36850/]
+[rospy.impl.masterslave][INFO] 2019-03-21 07:47:51,880: _ready: http://copter131:36850/
+[xmlrpc][INFO] 2019-03-21 07:47:51,881: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-21 07:47:51,883: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-21 07:47:51,981: registered with master
+[rospy.rosout][INFO] 2019-03-21 07:47:51,981: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-21 07:47:51,993: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-21 07:47:52,001: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-21 07:47:52,102: topic[/autopilot/imu] adding connection to [http://copter131:37060/], count 0
+[rosout][ERROR] 2019-03-21 07:47:52,476: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,477: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,512: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,626: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,742: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,807: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:52,922: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,037: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,452: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,487: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,505: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,619: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,734: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,848: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:53,915: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,029: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,444: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,483: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,500: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,615: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,732: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,796: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:54,915: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,029: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,444: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,480: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,513: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,627: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,742: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,807: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,923: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:55,989: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,455: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,490: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,494: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,609: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,723: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,841: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:56,908: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,025: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,490: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,508: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,622: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,737: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,801: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:57,917: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,032: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,449: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,488: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,499: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,616: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,733: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,797: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:58,912: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,028: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,443: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,515: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,629: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,693: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,810: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,927: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:47:59,991: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,457: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,491: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,524: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,638: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,703: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,817: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,933: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:00,997: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,516: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,630: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,696: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,813: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,928: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:01,993: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,461: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,481: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,499: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,618: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,732: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,846: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:02,912: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,029: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,444: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,482: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,498: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,613: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,730: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,844: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:03,909: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,025: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,492: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,529: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,592: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,708: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,827: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:04,942: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,007: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,477: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,481: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,500: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,615: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,729: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,844: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:05,908: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,023: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,438: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,474: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,508: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,624: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,739: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,802: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:06,918: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,033: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,448: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,515: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,629: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,744: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,809: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:07,926: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,040: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,455: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,489: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,499: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,612: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,727: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,842: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:08,907: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,024: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,541: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,606: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,722: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,836: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:09,900: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,015: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,480: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,514: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,631: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,695: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,810: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:10,925: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,040: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,455: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,489: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,525: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,639: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,703: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,818: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,932: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:11,997: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,462: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,498: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,513: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,631: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,745: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,810: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:12,926: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,041: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,456: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,475: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,508: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,626: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,741: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,805: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:13,923: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,040: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,505: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,515: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,632: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,748: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,814: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:14,932: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,047: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,513: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,516: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,633: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,748: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,813: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:15,930: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,045: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,460: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,481: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,514: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,629: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,747: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,811: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:16,928: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,045: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,510: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,629: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,744: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,809: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:17,923: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,041: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,456: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,490: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,527: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,641: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,755: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,821: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:18,937: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,052: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,468: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,481: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,515: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,629: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,744: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,811: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:19,926: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,042: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,507: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,527: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,642: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,756: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,821: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:20,937: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,051: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,467: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,484: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,501: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,615: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,730: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,794: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:21,912: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,031: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,498: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,613: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,731: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,846: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:22,910: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,026: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,491: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,510: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,625: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,742: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,806: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:23,924: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,038: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,503: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,618: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,736: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,850: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:24,917: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,033: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,498: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,515: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,632: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,746: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,812: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,928: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:25,994: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:26,512: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:26,628: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:26,743: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:26,808: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:26,924: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,043: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,460: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,496: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_coverter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,610: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,724: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,839: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:27,903: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,021: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,538: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,602: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,718: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,833: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:28,948: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,013: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,479: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,492: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,501: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,615: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,730: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,795: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:29,910: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,025: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,543: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,607: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,723: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,838: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:30,903: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rosout][ERROR] 2019-03-21 07:48:31,018: bad callback: <function callback at 0xb5cf7e30>
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/topics.py", line 688, in _invoke_callback
+    cb(msg)
+  File "altitude_eye_ROS.py", line 30, in callback
+    result = quat_converter(x,y,z,w)
+NameError: global name 'quat_coverter' is not defined
+
+[rospy.core][INFO] 2019-03-21 07:48:31,320: signal_shutdown [signal-2]
+[rospy.internal][INFO] 2019-03-21 07:48:31,336: topic[/autopilot/imu] removing connection to http://copter131:37060/
+[rospy.impl.masterslave][INFO] 2019-03-21 07:48:31,338: signal-2
+[rospy.core][INFO] 2019-03-21 07:48:31,956: signal_shutdown [atexit]

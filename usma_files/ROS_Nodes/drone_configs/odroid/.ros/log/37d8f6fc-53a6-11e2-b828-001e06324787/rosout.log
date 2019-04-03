@@ -1,0 +1,14 @@
+
+
+1356998415.394944375  Node Startup
+1356998417.524738073 INFO [MAVLinkBridge.py:277(_initialize) [topics: /rosout] MAVLinkBridge: Connecting to /dev/ttyACM99 ...
+1356998417.532700061 INFO [MAVLinkBridge.py:292(_initialize) [topics: /rosout] MAVLinkBridge: Waiting for autopilot heartbeat ...
+1356998418.089195966 INFO [MAVLinkBridge.py:332(_init_time) [topics: /rosout] MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+1356998419.428651094 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_start'
+1356998419.615895032 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_start' Task 'Tx Power' Time 0.2s: Succeeded
+1356998419.617732048 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_start'
+1356998420.468647956 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior independent_transit successfully registered with ID 8
+1356998420.977158069 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior evader successfully registered with ID 15
+1356998421.319533109 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior patrol_box successfully registered with ID 12
+1356998421.373800992 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior pn_interceptor successfully registered with ID 5
+1356998421.441443920 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior simple_ground_attack successfully registered with ID 16

@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,006: init_node, name[/red_tracker], pid[2819]
+[xmlrpc][INFO] 2012-12-31 16:00:17,025: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:17,026: Started XML-RPC server [http://copter131:60427/]
+[rospy.init][INFO] 2012-12-31 16:00:17,027: ROS Slave URI: [http://copter131:60427/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,028: _ready: http://copter131:60427/
+[rospy.registration][INFO] 2012-12-31 16:00:17,040: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:17,040: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:17,128: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,129: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:17,212: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,307: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,509: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 13:20:21,272: topic[/autopilot/acs_pose] adding connection to [http://copter131:60918/], count 0
+[rospy.internal][INFO] 2019-02-27 13:21:32,482: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 0
+[rospy.internal][INFO] 2019-02-27 13:27:42,362: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-02-27 14:00:41,555: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 1
+[rospy.internal][INFO] 2019-02-27 14:17:48,255: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-02-27 14:18:27,035: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 1
+[rospy.internal][INFO] 2019-02-27 14:21:49,051: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface
+[rospy.internal][INFO] 2019-02-27 14:22:27,963: topic[/red_tracker/red_uav_states] adding connection to [/tactic_interface], count 1
+[rospy.internal][INFO] 2019-02-27 14:25:52,466: topic[/red_tracker/red_uav_states] removing connection to /tactic_interface

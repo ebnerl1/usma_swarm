@@ -1,0 +1,23 @@
+
+
+1356998414.736369000  Node Startup
+1356998416.719019889 INFO [MAVLinkBridge.py:292(_initialize) [topics: /rosout] MAVLinkBridge: Waiting for autopilot heartbeat ...
+1356998417.376677989 INFO [MAVLinkBridge.py:332(_init_time) [topics: /rosout] MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+1356998419.877957105 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior independent_transit successfully registered with ID 8
+1356998419.987930059 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior pn_interceptor successfully registered with ID 5
+1356998420.369955062 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior patrol_box successfully registered with ID 12
+1356998420.851279020 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior simple_ground_attack successfully registered with ID 16
+1356998421.000123977 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior evader successfully registered with ID 15
+1356998421.488488912 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_start'
+1356998421.558877944 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_start' Task 'Tx Power' Time 0.1s: Succeeded
+1356998421.560012102 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_start'
+1553692950.304670095 INFO [MAVLinkBridge.py:364(_init_time) [topics: /rosout] Successfully synced local clock.
+1553692950.305819034 INFO [MAVLinkBridge.py:305(_initialize) [topics: /rosout] MAVLinkBridge initialized.
+1553692950.866677045 WARN [nodeable.py:223(log_warn) [topics: /swarm_control/swarm_state, /network/recv_swarm_ctl_state, /rosout, /autopilot/acs_pose, /autopilot/status, /swarm_tracker/swarm_uav_states, /swarm_control/swarm_behavior, /network/recv_pose, /swarm_control/subswarm_id] UAV 131 possible crash: no updates for 6.000000 secs
+1553692950.883485078 WARN [safety.py:151(__init__) [topics: /safety/healthy, /autopilot/payload_attitude, /autopilot/payload_rate, /rosout, /safety/payload_rate, /autopilot/payload_waypoint, /autopilot/heartbeat_onboard, /autopilot/acs_pose, /safety/payload_waypoint, /autopilot/heartbeat_ground, /safety/payload_attitude] establishing proxies for ROS /autopliot/ services
+1553692950.935142040 INFO [nodeable.py:215(log_info) [topics: /rosout, /network/recv_swarm_data, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /autopilot/status] Behavior swarm_landing_sequencer successfully registered with ID 98
+1553692950.958831071 INFO [nodeable.py:215(log_info) [topics: /swarm_control/swarm_state, /rosout, /network/recv_swarm_data, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /autopilot/status, /swarm_control/subswarm_id] Behavior linear_formation successfully registered with ID 1
+1553692950.963063001 INFO [nodeable.py:215(log_info) [topics: /swarm_control/swarm_state, /network/recv_swarm_ctl_state, /rosout, /autopilot/acs_pose, /autopilot/status, /swarm_tracker/swarm_uav_states, /swarm_control/swarm_behavior, /network/recv_pose, /swarm_control/subswarm_id] Received update to own UAV 131
+1553692951.038836002 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Subswarm updated to 0
+1553692951.041810035 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Swarm state updated to Preflight
+1553692951.044003009 INFO [nodeable.py:215(log_info) [topics: /a

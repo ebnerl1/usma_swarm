@@ -1,0 +1,437 @@
+[rospy.client][INFO] 2019-02-27 12:52:00,045: init_node, name[/tactic_interface], pid[2962]
+[xmlrpc][INFO] 2019-02-27 12:52:00,053: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-02-27 12:52:00,078: Started XML-RPC server [http://copter131:46771/]
+[rospy.impl.masterslave][INFO] 2019-02-27 12:52:00,078: _ready: http://copter131:46771/
+[rospy.init][INFO] 2019-02-27 12:52:00,079: ROS Slave URI: [http://copter131:46771/]
+[xmlrpc][INFO] 2019-02-27 12:52:00,093: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-02-27 12:52:00,094: Registering with master node http://localhost:11311
+[rospy.registration][INFO] 2019-02-27 12:52:00,094: Registering publisher topic [/safety/payload_waypoint] type [autopilot_bridge/LLA] with master
+[rospy.registration][INFO] 2019-02-27 12:52:00,224: registering subscriber topic [/autopilot/status] type [autopilot_bridge/Status] with master
+[rospy.init][INFO] 2019-02-27 12:52:00,382: registered with master
+[rospy.rosout][INFO] 2019-02-27 12:52:00,383: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-02-27 12:52:00,951: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-02-27 12:52:00,960: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-02-27 12:52:01,112: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:01,520: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:01,651: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:01,763: topic[/autopilot/status] adding connection to [http://copter131:47152/], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:01,962: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:45404/], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,054: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,119: topic[/network/swarm_sub_behavior] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,122: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,126: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,200: topic[/autopilot/acs_pose] adding connection to [http://copter131:47152/], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:02,324: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:41533/], count 0
+[rospy.internal][INFO] 2019-02-27 12:52:03,382: topic[/swarm_control/ap_intent] adding connection to [http://copter131:41533/], count 0
+[rosout][INFO] 2019-02-27 12:52:50,233: tactic_interface activate request False returned False
+[rospy.internal][INFO] 2019-02-27 12:54:11,157: topic[/red_tracker/red_uav_states] adding connection to [http://copter131:35438/], count 0
+[rospy.internal][INFO] 2019-02-27 12:54:11,659: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:35512/], count 0
+[rospy.internal][INFO] 2019-02-27 12:54:12,221: topic[/tactic_interface/altitude] adding connection to [http://copter131:40772/], count 0
+[rosout][INFO] 2019-02-27 12:54:12,340: tactic_interface ready state set to 'True'
+[rosout][INFO] 2019-02-27 12:54:12,342: tactic_interface set request returned True
+[rosout][INFO] 2019-02-27 12:54:12,466: tactic_interface activate request False returned False
+[rosout][INFO] 2019-02-27 12:54:13,489: activating behavior tactic_interface
+[rosout][INFO] 2019-02-27 12:54:13,490: tactic_interface activate request True returned True
+[rosout][WARNING] 2019-02-27 12:54:13,596: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:13,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:13,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:13,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:13,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,570: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:14,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:15,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:16,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:17,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:18,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,670: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:19,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:20,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:21,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:22,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:23,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:24,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,369: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,469: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,569: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,669: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,769: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,869: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:25,969: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:26,069: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:26,169: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][WARNING] 2019-02-27 12:54:26,269: tactic_interface, Timed Loop Error: global name 'msg' is not defined
+[rosout][INFO] 2019-02-27 12:54:26,359: deactivating behavior tactic_interface
+[rospy.internal][INFO] 2019-02-27 12:54:26,360: topic impl's ref count is zero, deleting topic /swarm_tracker/swarm_uav_states...
+[rospy.internal][INFO] 2019-02-27 12:54:26,360: topic[/swarm_tracker/swarm_uav_states] removing connection to http://copter131:35512/
+[rospy.internal][INFO] 2019-02-27 12:54:26,365: topic impl's ref count is zero, deleting topic /red_tracker/red_uav_states...
+[rospy.internal][INFO] 2019-02-27 12:54:26,365: topic[/red_tracker/red_uav_states] removing connection to http://copter131:35438/
+[rosout][INFO] 2019-02-27 12:54:26,370: tactic_interface ready state and active state set to 'False'
+[rosout][INFO] 2019-02-27 12:54:26,370: tactic_interface activate request False returned False
+[rospy.internal][INFO] 2019-02-27 12:58:54,477: topic[/red_tracker/red_uav_states] adding connection to [http://copter131:35438/], count 0
+[rospy.internal][INFO] 2019-02-27 12:58:54,978: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:35512/], count 0
+[rosout][INFO] 2019-02-27 12:58:55,616: tactic_interface ready state set to 'True'
+[rosout][INFO] 2019-02-27 12:58:55,618: tactic_interface set request returned True
+[rosout][INFO] 2019-02-27 12:58:55,725: tactic_interface activate request False returned False
+[rosout][INFO] 2019-02-27 12:58:56,756: activating behavior tactic_interface
+[rosout][INFO] 2019-02-27 12:58:56,757: tactic_interface activate request True returned True
+[rosout][INFO] 2019-02-27 12:58:56,801: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:56,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:56,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:57,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:58,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:58:59,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:00,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:01,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:02,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:03,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:04,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:05,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:06,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:07,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:08,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,569: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,669: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,769: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,869: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:09,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,069: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,169: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,369: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,469: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:10,569: The altitude global is: 0.270000
+[rosout][INFO] 2019-02-27 12:59:10,669: The altitude global is: 0.290000
+[rosout][INFO] 2019-02-27 12:59:10,769: The altitude global is: 0.210000
+[rosout][INFO] 2019-02-27 12:59:10,869: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:10,969: The altitude global is: 0.290000
+[rosout][INFO] 2019-02-27 12:59:11,069: The altitude global is: 0.590000
+[rosout][INFO] 2019-02-27 12:59:11,169: The altitude global is: 0.310000
+[rosout][INFO] 2019-02-27 12:59:11,269: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:11,369: The altitude global is: 0.340000
+[rosout][INFO] 2019-02-27 12:59:11,469: The altitude global is: 0.240000
+[rosout][INFO] 2019-02-27 12:59:11,569: The altitude global is: 0.260000
+[rosout][INFO] 2019-02-27 12:59:11,669: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:11,769: The altitude global is: 0.260000
+[rosout][INFO] 2019-02-27 12:59:11,869: The altitude global is: 0.290000
+[rosout][INFO] 2019-02-27 12:59:11,969: The altitude global is: 0.340000
+[rosout][INFO] 2019-02-27 12:59:12,069: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:12,169: The altitude global is: 0.320000
+[rosout][INFO] 2019-02-27 12:59:12,269: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:12,369: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:12,469: The altitude global is: 0.290000
+[rosout][INFO] 2019-02-27 12:59:12,569: The altitude global is: 0.280000
+[rosout][INFO] 2019-02-27 12:59:12,669: The altitude global is: 0.270000
+[rosout][INFO] 2019-02-27 12:59:12,769: The altitude global is: 0.210000
+[rosout][INFO] 2019-02-27 12:59:12,871: The altitude global is: 0.270000
+[rosout][INFO] 2019-02-27 12:59:12,969: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:13,069: The altitude global is: 0.440000
+[rosout][INFO] 2019-02-27 12:59:13,169: The altitude global is: 0.180000
+[rosout][INFO] 2019-02-27 12:59:13,269: The altitude global is: 0.000000
+[rosout][INFO] 2019-02-27 12:59:13,369: The altitude global is: 0.160000
+[rosout][INFO] 2019-02-27 12:59:13,469: The altitude global is: 0.340000
+[rosout][INFO] 2019-02-27 12:59:13,569: The altitude global is: 0.290000
+[rosout][INFO] 2019-02-27 12:59:13,669: The altitude global is: 0.250000
+[rosout][INFO] 2019-02-27 12:59:13,769: The altitude global is: 0.310000
+[rospy.internal][ERROR] 2019-02-27 12:59:13,853: Unable to initiate TCP/IP socket to copter131:57556 (http://copter131:40772/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 580, in _validate_header
+    raise TransportInitError("remote error reported: %s"%header['error'])
+TransportInitError: remote error reported: node shutting down
+
+[rosout][INFO] 2019-02-27 12:59:13,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:13,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,770: The altitude global is: 0.300000
+[rospy.internal][WARNING] 2019-02-27 12:59:14,858: Unknown error initiating TCP/IP socket to copter131:57556 (http://copter131:40772/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 555, in connect
+    self.socket.connect((dest_addr, dest_port))
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+error: [Errno 111] Connection refused
+
+[rospy.internal][INFO] 2019-02-27 12:59:14,860: topic[/tactic_interface/altitude] removing connection to http://copter131:40772/
+[rosout][INFO] 2019-02-27 12:59:14,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:14,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,769: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:15,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,769: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:16,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,769: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:17,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,769: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:18,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,369: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,469: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,569: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,669: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,769: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,869: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:19,969: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:20,069: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:20,169: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:20,269: The altitude global is: 0.300000
+[rosout][INFO] 2019-02-27 12:59:20,290: deactivating behavior tactic_interface
+[rospy.internal][INFO] 2019-02-27 12:59:20,291: topic impl's ref count is zero, deleting topic /swarm_tracker/swarm_uav_states...
+[rospy.internal][INFO] 2019-02-27 12:59:20,292: topic[/swarm_tracker/swarm_uav_states] removing connection to http://copter131:35512/
+[rospy.internal][INFO] 2019-02-27 12:59:20,297: topic impl's ref count is zero, deleting topic /red_tracker/red_uav_states...
+[rospy.internal][INFO] 2019-02-27 12:59:20,298: topic[/red_tracker/red_uav_states] removing connection to http://copter131:35438/
+[rosout][INFO] 2019-02-27 12:59:20,303: tactic_interface ready state and active state set to 'False'
+[rosout][INFO] 2019-02-27 12:59:20,304: tactic_interface activate request False returned False
+                                                                                               

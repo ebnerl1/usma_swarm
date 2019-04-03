@@ -1,0 +1,29 @@
+[rospy.client][INFO] 2019-03-21 05:53:11,983: init_node, name[/altitude_sensor], pid[27038]
+[xmlrpc][INFO] 2019-03-21 05:53:11,984: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-21 05:53:11,985: Started XML-RPC server [http://copter131:33599/]
+[rospy.init][INFO] 2019-03-21 05:53:11,985: ROS Slave URI: [http://copter131:33599/]
+[rospy.impl.masterslave][INFO] 2019-03-21 05:53:11,985: _ready: http://copter131:33599/
+[xmlrpc][INFO] 2019-03-21 05:53:11,986: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-21 05:53:11,988: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-21 05:53:12,086: registered with master
+[rospy.rosout][INFO] 2019-03-21 05:53:12,086: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-21 05:53:12,095: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-21 05:53:12,102: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-21 05:53:12,296: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.impl.masterslave][INFO] 2019-03-21 06:41:57,251: external shutdown request from [/rosnode]: user request
+[rospy.core][INFO] 2019-03-21 06:41:57,252: signal_shutdown [external shutdown request from [/rosnode]: [user request]]
+[rospy.internal][INFO] 2019-03-21 06:41:57,259: topic[/rosout] removing connection to /rosout
+[rospy.core][INFO] 2019-03-21 06:41:57,392: signal_shutdown [atexit]
+[rospy.client][INFO] 2019-03-21 06:41:57,906: init_node, name[/altitude_sensor], pid[30493]
+[xmlrpc][INFO] 2019-03-21 06:41:57,907: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-21 06:41:57,908: Started XML-RPC server [http://copter131:39555/]
+[rospy.init][INFO] 2019-03-21 06:41:57,908: ROS Slave URI: [http://copter131:39555/]
+[rospy.impl.masterslave][INFO] 2019-03-21 06:41:57,909: _ready: http://copter131:39555/
+[xmlrpc][INFO] 2019-03-21 06:41:57,910: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-21 06:41:57,911: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-21 06:41:58,009: registered with master
+[rospy.rosout][INFO] 2019-03-21 06:41:58,010: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-21 06:41:58,017: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-21 06:41:58,022: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-21 06:42:10,724: topic[/tactic_interface/altitude] adding connection to [/rostopic_31617_1553175730440], count 0
+[rospy.internal][INFO] 2019-03-21 06:42:15,142: topic[/tactic_interface/altitude] removing connection to /rostopic_31617_1553175730440

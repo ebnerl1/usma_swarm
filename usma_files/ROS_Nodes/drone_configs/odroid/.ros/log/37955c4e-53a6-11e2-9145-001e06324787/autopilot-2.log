@@ -1,0 +1,243 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,637: init_node, name[/autopilot], pid[2806]
+[xmlrpc][INFO] 2012-12-31 16:00:16,650: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:16,656: ROS Slave URI: [http://copter131:47502/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,656: Started XML-RPC server [http://copter131:47502/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,657: _ready: http://copter131:47502/
+[xmlrpc][INFO] 2012-12-31 16:00:16,668: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:16,675: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:16,757: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:16,757: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:16,838: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:16,953: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rosout][INFO] 2012-12-31 16:00:17,107: MAVLinkBridge: Connecting to /dev/ttyACM99 ...
+[rosout][INFO] 2012-12-31 16:00:17,123: MAVLinkBridge: Waiting for autopilot heartbeat ...
+[rospy.internal][INFO] 2012-12-31 16:00:17,130: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2012-12-31 16:00:17,950: MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+[rosout][INFO] 2019-02-28 06:31:13,164: Successfully synced local clock.
+[rosout][INFO] 2019-02-28 06:31:13,167: MAVLinkBridge initialized.
+[rospy.internal][INFO] 2019-02-28 06:31:16,261: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:37168/], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:16,289: topic[/autopilot/heartbeat_onboard] adding connection to [http://copter131:35578/], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:16,296: topic[/autopilot/heartbeat_ground] adding connection to [http://copter131:49800/], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:16,346: topic[/autopilot/payload_waypoint] adding connection to [http://copter131:35578/], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:16,509: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:45952/], count 1
+[rospy.internal][INFO] 2019-02-28 06:31:16,541: topic[/autopilot/acs_pose] adding connection to [/patrol_box_shooter], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:16,548: topic[/autopilot/acs_pose] adding connection to [/swarm_tracker], count 1
+[rospy.internal][INFO] 2019-02-28 06:31:16,557: topic[/autopilot/acs_pose] adding connection to [/network], count 2
+[rospy.internal][INFO] 2019-02-28 06:31:16,561: topic[/autopilot/acs_pose] adding connection to [/evader], count 3
+[rospy.internal][INFO] 2019-02-28 06:31:16,564: topic[/autopilot/acs_pose] adding connection to [/safety], count 4
+[rospy.internal][INFO] 2019-02-28 06:31:16,568: topic[/autopilot/acs_pose] adding connection to [/patrol_box], count 5
+[rospy.internal][INFO] 2019-02-28 06:31:16,570: topic[/autopilot/acs_pose] adding connection to [/red_tracker], count 6
+[rospy.internal][INFO] 2019-02-28 06:31:16,684: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:38243/], count 2
+[rospy.internal][INFO] 2019-02-28 06:31:16,719: topic[/autopilot/acs_pose] adding connection to [/smart_shooter], count 7
+[rospy.internal][INFO] 2019-02-28 06:31:16,723: topic[/autopilot/acs_pose] adding connection to [/greedy_shooter], count 8
+[rospy.internal][INFO] 2019-02-28 06:31:16,733: topic[/autopilot/acs_pose] adding connection to [/constrained_shooter], count 9
+[rospy.internal][INFO] 2019-02-28 06:31:16,866: topic[/autopilot/acs_pose] adding connection to [/wingman], count 10
+[rospy.internal][INFO] 2019-02-28 06:31:17,024: topic[/autopilot/acs_pose] adding connection to [/tactic_interface], count 11
+[rospy.internal][INFO] 2019-02-28 06:31:17,053: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:33015/], count 3
+[rospy.internal][INFO] 2019-02-28 06:31:17,055: topic[/autopilot/status] adding connection to [/tactic_interface], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:17,057: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:45614/], count 4
+[rospy.internal][INFO] 2019-02-28 06:31:17,061: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:33015/], count 4
+[rospy.internal][INFO] 2019-02-28 06:31:17,062: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][INFO] 2019-02-28 06:31:17,070: topic[/autopilot/status] adding connection to [/task_runner], count 1
+[rospy.internal][WARNING] 2019-02-28 06:31:17,071: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rospy.internal][ERROR] 2019-02-28 06:31:17,072: unable to create subscriber transport: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details..  Will try again in 0.5s
+[rospy.internal][INFO] 2019-02-28 06:31:17,073: topic[/autopilot/mode_num] adding connection to [http://copter131:33015/], count 0
+[rospy.internal][INFO] 2019-02-28 06:31:17,089: topic[/autopilot/status] adding connection to [/greedy_shooter], count 2
+[rospy.internal][INFO] 2019-02-28 06:31:17,099: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:34294/], count 5
+[rospy.internal][INFO] 2019-02-28 06:31:17,101: topic[/autopilot/status] adding connection to [/network], count 3
+[rospy.internal][INFO] 2019-02-28 06:31:17,113: topic[/autopilot/status] adding connection to [/linear_formation], count 4
+[rospy.internal][INFO] 2019-02-28 06:31:17,117: topic[/autopilot/status] adding connection to [/pn_interceptor], count 5
+[rospy.internal][INFO] 2019-02-28 06:31:17,124: topic[/autopilot/status] adding connection to [/evader], count 6
+[rospy.internal][INFO] 2019-02-28 06:31:17,131: topic[/autopilot/status] adding connection to [/swarm_landing_sequencer], count 7
+[rospy.internal][INFO] 2019-02-28 06:31:17,133: topic[/autopilot/status] adding connection to [/swarm_tracker], count 8
+[rospy.internal][INFO] 2019-02-28 06:31:17,134: topic[/autopilot/status] adding connection to [/simple_ground_attack], count 9
+[rospy.internal][INFO] 2019-02-28 06:31:17,135: topic[/autopilot/status] adding connection to [/smart_shooter], count 10
+[rospy.internal][INFO] 2019-02-28 06:31:17,136: topic[/autopilot/status] adding connection to [/swarm_control], count 11
+[rospy.internal][INFO] 2019-02-28 06:31:17,137: topic[/autopilot/status] adding connection to [/independent_transit], count 12
+[rospy.internal][INFO] 2019-02-28 06:31:17,139: topic[/autopilot/status] adding connection to [/wingman], count 13
+[rospy.internal][INFO] 2019-02-28 06:31:17,188: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:57766/], count 6
+[rospy.internal][INFO] 2019-02-28 06:31:17,327: topic[/autopilot/status] adding connection to [/patrol_box], count 14
+[rospy.internal][INFO] 2019-02-28 06:31:17,350: topic[/autopilot/status] adding connection to [/constrained_shooter], count 15
+[rospy.internal][INFO] 2019-02-28 06:31:17,359: topic[/autopilot/status] adding connection to [/patrol_box_shooter], count 16
+[rosout][INFO] 2019-02-28 06:31:17,368: ROS srv recvd: fpr_param_set
+[rospy.internal][WARNING] 2019-02-28 06:31:18,084: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:31:18,084: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:31:18,085: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 1.0s
+[rospy.internal][WARNING] 2019-02-28 06:31:20,091: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:31:20,091: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:31:20,091: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 2.0s
+[rospy.internal][WARNING] 2019-02-28 06:31:24,102: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:31:24,102: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:31:24,103: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 4.0s
+[rosout][INFO] 2019-02-28 06:31:27,667: MAVLink STATUSTEXT: EKF2 IMU1 is using GPS
+[rosout][INFO] 2019-02-28 06:31:29,878: MAVLink STATUSTEXT: EKF2 IMU0 is using GPS
+[rospy.internal][WARNING] 2019-02-28 06:31:32,114: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:31:32,116: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:31:32,117: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 8.0s
+[rosout][INFO] 2019-02-28 06:31:32,488: ROS srv recvd: slave_setup
+[rosout][INFO] 2019-02-28 06:31:37,619: ROS srv recvd: fpr_param_setlist
+[rosout][INFO] 2019-02-28 06:31:37,670: MAVLink STATUSTEXT: APM:Copter V3.5-dev (f3195c7e)
+[rosout][INFO] 2019-02-28 06:31:37,692: MAVLink STATUSTEXT: PX4: 3df5644c NuttX: be6ff61a
+[rosout][INFO] 2019-02-28 06:31:37,695: MAVLink STATUSTEXT: Frame: QUAD
+[rosout][INFO] 2019-02-28 06:31:37,698: MAVLink STATUSTEXT: PX4v2 003E0023 31355103 33333832
+[rosout][INFO] 2019-02-28 06:31:40,508: ROS srv recvd: slave_setup
+[rosout][WARNING] 2019-02-28 06:31:41,633: PARAM ALT_HOLD_RTL doesn't exist
+[rosout][INFO] 2019-02-28 06:31:41,651: ROS srv recvd: load_rally
+[rosout][INFO] 2019-02-28 06:31:41,664: ROS srv recvd: fpr_rally_setall
+[rosout][INFO] 2019-02-28 06:31:47,888: ROS srv recvd: load_wp
+[rosout][INFO] 2019-02-28 06:31:47,899: ROS srv recvd: wp_setall
+[rospy.internal][WARNING] 2019-02-28 06:31:48,143: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:31:48,144: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:31:48,144: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 16.0s
+[rosout][INFO] 2019-02-28 06:31:49,456: MAVLink STATUSTEXT: Flight plan received
+[rospy.internal][INFO] 2019-02-28 06:31:49,572: topic[/autopilot/waypoint_goto] adding connection to [http://copter131:49800/], count 7
+[rosout][INFO] 2019-02-28 06:31:49,576: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-28 06:31:49,888: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-02-28 06:31:50,389: topic[/autopilot/arm] adding connection to [http://copter131:49800/], count 0
+[rosout][INFO] 2019-02-28 06:31:50,393: ROS sub recvd: arm
+[rospy.internal][INFO] 2019-02-28 06:31:53,508: topic[/autopilot/mode_num] adding connection to [http://copter131:49800/], count 1
+[rosout][INFO] 2019-02-28 06:31:53,512: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:31:53,513: Sent mode STABILIZE (0) to autopilot 
+[rosout][INFO] 2019-02-28 06:31:53,513: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:31:58,079: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:31:58,086: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-28 06:31:58,091: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:31:58,547: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:31:58,553: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-28 06:31:58,557: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:31:59,063: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:31:59,066: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-28 06:31:59,067: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:31:59,579: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:31:59,583: Sent mode GUIDED (4) to autopilot 
+[rosout][INFO] 2019-02-28 06:31:59,587: ROS sub recvd: mode_num
+[rospy.internal][INFO] 2019-02-28 06:32:00,131: topic[/autopilot/copter_takeoff] adding connection to [http://copter131:49800/], count 0
+[rosout][INFO] 2019-02-28 06:32:00,137: ROS sub recvd: copter_takeoff
+[rosout][INFO] 2019-02-28 06:32:05,102: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:32:05,107: Sent mode AUTO (3) to autopilot 
+[rosout][INFO] 2019-02-28 06:32:05,110: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:32:08,457: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-28 06:32:09,061: ROS srv recvd: wp_getrange
+[rospy.internal][WARNING] 2019-02-28 06:32:20,186: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:32:20,187: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:32:20,188: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 32.0s
+[rospy.internal][WARNING] 2019-02-28 06:33:24,272: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:33:24,276: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:33:24,277: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 64.0s
+[rosout][INFO] 2019-02-28 06:34:41,103: ROS srv recvd: wp_getlast
+[rosout][INFO] 2019-02-28 06:34:42,361: ROS srv recvd: wp_getlast
+[rosout][INFO] 2019-02-28 06:34:42,654: ROS sub recvd: waypoint_goto
+[rosout][INFO] 2019-02-28 06:34:42,946: ROS srv recvd: wp_getrange
+[rospy.internal][INFO] 2019-02-28 06:34:44,205: topic[/autopilot/gps_odom] adding connection to [/radeyeNode_17756_1551364483969], count 0
+[rospy.internal][INFO] 2019-02-28 06:34:44,238: topic[/autopilot/gps] adding connection to [/radeyeNode_17756_1551364483969], count 0
+[rospy.internal][INFO] 2019-02-28 06:35:04,916: topic[/autopilot/gps] removing connection to /radeyeNode_17756_1551364483969
+[rospy.internal][INFO] 2019-02-28 06:35:04,917: topic[/autopilot/gps_odom] removing connection to /radeyeNode_17756_1551364483969
+[rosout][WARNING] 2019-02-28 06:35:05,414: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-02-28 06:35:05,423: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+
+[rospy.internal][WARNING] 2019-02-28 06:35:32,389: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:35:32,391: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:35:32,392: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 128.0s
+[rosout][INFO] 2019-02-28 06:36:38,946: Mode settings are for copter.
+[rosout][INFO] 2019-02-28 06:36:38,949: Sent mode STABILIZE (0) to autopilot 
+[rosout][INFO] 2019-02-28 06:36:38,950: ROS sub recvd: mode_num
+[rosout][INFO] 2019-02-28 06:36:40,736: ROS sub recvd: arm
+[rosout][INFO] 2019-02-28 06:36:40,954: ROS srv recvd: wp_getrange
+[rospy.internal][WARNING] 2019-02-28 06:39:48,508: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:39:48,512: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:39:48,513: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 256.0s
+[rospy.internal][WARNING] 2019-02-28 06:48:20,630: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 06:48:20,633: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 06:48:20,635: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 512.0s
+[rospy.internal][WARNING] 2019-02-28 07:05:24,746: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 07:05:24,747: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 07:05:24,748: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 1024.0s
+[rospy.internal][WARNING] 2019-02-28 07:39:32,858: Unknown error initiating TCP/IP socket to copter131:56947 (http://copter131:33015/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-28 07:39:32,860: topic[/autopilot/waypoint_goto] removing connection to http://copter131:33015/
+[rospy.internal][ERROR] 2019-02-28 07:39:32,862: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 2048.0s

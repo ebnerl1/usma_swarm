@@ -1,0 +1,21 @@
+[rospy.client][INFO] 2019-03-28 07:19:24,186: init_node, name[/constrained_shooter], pid[3090]
+[xmlrpc][INFO] 2019-03-28 07:19:24,188: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-28 07:19:24,189: Started XML-RPC server [http://copter131:45619/]
+[rospy.impl.masterslave][INFO] 2019-03-28 07:19:24,189: _ready: http://copter131:45619/
+[rospy.init][INFO] 2019-03-28 07:19:24,190: ROS Slave URI: [http://copter131:45619/]
+[xmlrpc][INFO] 2019-03-28 07:19:24,192: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-28 07:19:24,194: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-28 07:19:24,290: registered with master
+[rospy.rosout][INFO] 2019-03-28 07:19:24,291: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-28 07:19:24,862: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-28 07:19:24,872: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-28 07:19:25,107: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:25,161: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:25,207: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,241: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,460: topic[/autopilot/acs_pose] adding connection to [http://copter131:47807/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,504: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:46378/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,534: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:41924/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,650: topic[/swarm_control/ap_intent] adding connection to [http://copter131:46378/], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,676: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-28 07:19:26,762: topic[/autopilot/status] adding connection to [http://copter131:47807/], count 0

@@ -1,0 +1,33 @@
+
+
+1356998414.665730125  Node Startup
+1356998416.959053039 INFO [MAVLinkBridge.py:292(_initialize) [topics: /rosout] MAVLinkBridge: Waiting for autopilot heartbeat ...
+1356998417.386337041 INFO [MAVLinkBridge.py:332(_init_time) [topics: /rosout] MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+1551974091.295763969 INFO [MAVLinkBridge.py:364(_init_time) [topics: /rosout] Successfully synced local clock.
+1551974091.297935009 INFO [MAVLinkBridge.py:305(_initialize) [topics: /rosout] MAVLinkBridge initialized.
+1551974093.837874889 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_start'
+1551974093.810969114 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior simple_ground_attack successfully registered with ID 16
+1551974093.908170938 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_start' Task 'Tx Power' Time 0.1s: Succeeded
+1551974093.909151077 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_start'
+1551974094.117257118 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior patrol_box successfully registered with ID 12
+1551974094.153506040 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior evader successfully registered with ID 15
+1551974094.625102043 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior pn_interceptor successfully registered with ID 5
+1551974094.876156091 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior smart_shooter successfully registered with ID 9
+1551974094.892657995 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior linear_formation successfully registered with ID 1
+1551974095.010224103 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior swarm_landing_sequencer successfully registered with ID 98
+1551974095.091730117 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior greedy_shooter successfully registered with ID 4
+1551974095.105372905 WARN [safety.py:151(__init__) [topics: /safety/healthy, /autopilot/payload_attitude, /autopilot/payload_rate, /rosout, /safety/payload_rate, /autopilot/payload_waypoint, /autopilot/heartbeat_onboard, /autopilot/acs_pose, /safety/payload_waypoint, /autopilot/heartbeat_ground, /safety/payload_attitude] establishing proxies for ROS /autopliot/ services
+1551974095.246299028 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior constrained_shooter successfully registered with ID 10
+1551974095.265037059 INFO [nodeable.py:215(log_info) [topics: /autopilot/status, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior patrol_box_shooter successfully registered with ID 13
+1551974095.374589920 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Subswarm updated to 0
+1551974095.375276088 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Swarm state updated to Preflight
+1551974095.375824928 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Active swarm behavior updated to standby
+1551974095.425261020 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Behavior wingman successfully registered with ID 11
+1551974095.490966081 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_status'
+1551974095.554896116 INFO [MAVLinkBridge.py:206(callback_wrapper) [topics: /autopilot/waypoint_goto, /autopilot/weather_update, /autopilot/copter_takeoff, /autopilot/guided_goto, /autopilot/payload_waypoint, /rosout, /autopilot/heartbeat_onboard, /autopilot/gps_odom, /autopilot/mode, /autopilot/mode_num, /autopilot/gps, /autopilot/reboot, /autopilot/heartbeat_ground, /autopilot/status, /autopilot/acs_pose, /autopilot/imu, /autopilot/arm, /autopilot/set_landing] ROS srv recvd: fpr_param_set
+1551974095.665997982 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Behavior independent_transit successfully registered with ID 8
+1551974095.759201049 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_status' Task 'AP Set ID' Time 0.3s: Succeeded
+1551974095.759913921 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_status'
+1551974095.760472059 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_arm'
+1551974095.761028051 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_arm'
+1551974095.824031114 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Behavior tactic_interface successfully registered with ID 14

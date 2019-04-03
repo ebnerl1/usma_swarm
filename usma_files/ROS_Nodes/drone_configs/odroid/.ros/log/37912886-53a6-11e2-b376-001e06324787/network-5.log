@@ -1,0 +1,188 @@
+[rospy.client][INFO] 2012-12-31 16:00:16,178: init_node, name[/network], pid[2809]
+[xmlrpc][INFO] 2012-12-31 16:00:16,184: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:16,185: Started XML-RPC server [http://copter131:38774/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:16,186: _ready: http://copter131:38774/
+[rospy.init][INFO] 2012-12-31 16:00:16,194: ROS Slave URI: [http://copter131:38774/]
+[xmlrpc][INFO] 2012-12-31 16:00:16,196: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:16,225: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:16,295: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:16,295: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:16,318: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:16,337: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:16,584: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:52,379: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:43902/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:52,380: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:33831/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:52,387: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:58374/], count 2
+[rospy.internal][INFO] 2019-02-27 12:15:52,585: topic[/autopilot/heartbeat_ground] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:52,724: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:54446/], count 3
+[rospy.internal][INFO] 2019-02-27 12:15:52,729: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:56411/], count 4
+[rospy.internal][INFO] 2019-02-27 12:15:52,748: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:42396/], count 5
+[rospy.internal][INFO] 2019-02-27 12:15:52,749: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:42396/], count 6
+[rospy.internal][INFO] 2019-02-27 12:15:52,750: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][WARNING] 2019-02-27 12:15:52,756: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 556, in connect
+    self.write_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 605, in write_header
+    sock.setblocking(1)
+  File "/usr/lib/python2.7/socket.py", line 224, in meth
+    return getattr(self._sock,name)(*args)
+  File "/usr/lib/python2.7/socket.py", line 170, in _dummy
+    raise error(EBADF, 'Bad file descriptor')
+error: [Errno 9] Bad file descriptor
+
+[rospy.internal][ERROR] 2019-02-27 12:15:52,756: unable to create subscriber transport: [Errno 9] Bad file descriptor.  Will try again in 0.5s
+[rospy.internal][INFO] 2019-02-27 12:15:52,814: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:53761/], count 6
+[rospy.internal][INFO] 2019-02-27 12:15:52,849: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:51743/], count 7
+[rospy.internal][INFO] 2019-02-27 12:15:53,071: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:50742/], count 8
+[rospy.internal][INFO] 2019-02-27 12:15:53,073: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:39610/], count 9
+[rospy.internal][INFO] 2019-02-27 12:15:53,182: topic[/autopilot/heartbeat_ground] adding connection to [/autopilot], count 1
+[rospy.internal][INFO] 2019-02-27 12:15:53,241: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:46086/], count 10
+[rospy.internal][INFO] 2019-02-27 12:15:53,460: topic[/autopilot/acs_pose] adding connection to [http://copter131:51261/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:53,466: topic[/air_to_air/firing_reports] adding connection to [http://copter131:42396/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:53,684: topic[/air_to_air/firing_reports] adding connection to [http://copter131:53761/], count 1
+[rospy.internal][INFO] 2019-02-27 12:15:53,687: topic[/air_to_air/firing_reports] adding connection to [http://copter131:51743/], count 2
+[rospy.internal][WARNING] 2019-02-27 12:15:53,763: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:15:53,764: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:15:53,764: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 1.0s
+[rospy.internal][INFO] 2019-02-27 12:15:53,801: topic[/air_to_air/firing_reports] adding connection to [http://copter131:46086/], count 3
+[rospy.internal][INFO] 2019-02-27 12:15:53,924: topic[/air_to_air/firing_reports] adding connection to [http://copter131:54446/], count 4
+[rospy.internal][INFO] 2019-02-27 12:15:53,925: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:37532/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:54,000: topic[/swarm_control/swarm_behavior] adding connection to [http://copter131:37532/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:54,018: topic[/swarm_control/swarm_state] adding connection to [http://copter131:37532/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:54,059: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:40178/], count 11
+[rospy.internal][INFO] 2019-02-27 12:15:54,093: topic[/autopilot/status] adding connection to [http://copter131:51261/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:54,260: topic[/network/send_swarm_behavior_data] adding connection to [http://copter131:43579/], count 12
+[rospy.internal][INFO] 2019-02-27 12:15:54,376: topic[/network/swarm_sub_behavior] adding connection to [http://copter131:43579/], count 0
+[rospy.internal][INFO] 2019-02-27 12:15:54,380: topic[/air_to_air/firing_reports] adding connection to [http://copter131:43579/], count 5
+[rospy.internal][INFO] 2019-02-27 12:15:55,026: topic[/swarm_control/behavior_summary] adding connection to [http://copter131:37532/], count 0
+[rospy.internal][WARNING] 2019-02-27 12:15:55,769: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:15:55,770: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:15:55,770: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 2.0s
+[rospy.internal][WARNING] 2019-02-27 12:15:59,776: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:15:59,777: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:15:59,777: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 4.0s
+[rospy.internal][INFO] 2019-02-27 12:16:03,526: topic[/network/recv_swarm_ctl_state] adding connection to [/swarm_tracker], count 0
+[rospy.internal][INFO] 2019-02-27 12:16:04,491: topic[/network/recv_pose] adding connection to [/swarm_tracker], count 0
+[rospy.internal][INFO] 2019-02-27 12:16:04,523: topic[/network/recv_pose] adding connection to [/recv_pose_rate], count 1
+[rospy.internal][WARNING] 2019-02-27 12:16:07,788: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:16:07,789: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:16:07,789: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 8.0s
+[rosout][INFO] 2019-02-27 12:16:10,393: NET Arm
+[rospy.internal][INFO] 2019-02-27 12:16:10,411: topic[/autopilot/arm] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-02-27 12:16:22,169: NET SlaveSetup
+[rospy.internal][WARNING] 2019-02-27 12:16:23,812: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:16:23,813: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:16:23,814: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 16.0s
+[rosout][INFO] 2019-02-27 12:16:43,781: NET Arm
+[rospy.internal][WARNING] 2019-02-27 12:16:55,853: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:16:55,854: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:16:55,855: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 32.0s
+[rosout][INFO] 2019-02-27 12:17:19,946: NET FlightReady
+[rosout][INFO] 2019-02-27 12:17:25,460: NET Arm
+[rosout][INFO] 2019-02-27 12:17:31,408: NET Mode
+[rospy.internal][INFO] 2019-02-27 12:17:31,502: topic[/autopilot/mode_num] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-02-27 12:17:31,901: NET Mode
+[rosout][INFO] 2019-02-27 12:17:37,420: NET Mode
+[rosout][INFO] 2019-02-27 12:17:51,595: NET SwarmState
+[rosout][INFO] 2019-02-27 12:17:58,978: NET SetSubswarm
+[rospy.internal][WARNING] 2019-02-27 12:17:59,927: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:17:59,928: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:17:59,930: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 64.0s
+[rosout][INFO] 2019-02-27 12:18:04,649: NET Arm
+[rosout][INFO] 2019-02-27 12:18:28,049: NET Mode
+[rosout][INFO] 2019-02-27 12:18:32,149: NET Arm
+[rosout][INFO] 2019-02-27 12:18:41,749: NET Mode
+[rosout][INFO] 2019-02-27 12:18:42,250: NET Mode
+[rosout][INFO] 2019-02-27 12:18:42,754: NET Takeoff
+[rospy.internal][INFO] 2019-02-27 12:18:42,871: topic[/autopilot/copter_takeoff] adding connection to [/autopilot], count 0
+[rosout][INFO] 2019-02-27 12:18:47,749: NET Mode
+[rosout][INFO] 2019-02-27 12:18:57,003: NET SwarmState
+[rosout][INFO] 2019-02-27 12:18:59,379: NET SetSubswarm
+[rosout][INFO] 2019-02-27 12:19:14,433: NET SwarmBehavior
+[rosout][INFO] 2019-02-27 12:19:30,917: NET SuspendSwarmBehavior
+[rospy.internal][WARNING] 2019-02-27 12:20:08,040: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:20:08,041: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:20:08,042: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 128.0s
+[rospy.internal][WARNING] 2019-02-27 12:24:24,152: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:24:24,154: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:24:24,155: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 256.0s
+[rosout][INFO] 2019-02-27 12:26:09,586: NET SwarmBehavior
+[rosout][INFO] 2019-02-27 12:32:35,554: NET Arm
+[rosout][INFO] 2019-02-27 12:32:36,875: NET Arm
+[rosout][INFO] 2019-02-27 12:32:51,731: NET Mode
+[rosout][INFO] 2019-02-27 12:32:53,959: NET FlightReady
+[rosout][INFO] 2019-02-27 12:32:55,938: NET FlightReady
+[rospy.internal][WARNING] 2019-02-27 12:32:56,261: Unknown error initiating TCP/IP socket to copter131:38593 (http://copter131:42396/): Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 557, in connect
+    self.read_header()
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 618, in read_header
+    self._validate_header(read_ros_handshake_header(sock, self.read_buff, self.protocol.buff_size))
+AttributeError: 'NoneType' object has no attribute 'buff_size'
+
+[rospy.internal][INFO] 2019-02-27 12:32:56,262: topic[/network/send_swarm_behavior_data] removing connection to http://copter131:42396/
+[rospy.internal][ERROR] 2019-02-27 12:32:56,263: unable to create subscriber transport: 'NoneType' object has no attribute 'buff_size'.  Will try again in 512.0s
+[rosout][INFO] 2019-02-27 12:32:57,893: NET Mode
+[rosout][INFO] 2019-02-27 12:33:38,174: NET Arm
+[rosout][INFO] 2019-02-27 12:33:40,234: NET Mode
+[rosout][INFO] 2019-02-27 12:33:44,094: NET Mode
+[rosout][INFO] 2019-02-27 12:33:44,594: NET Mode
+[rosout][INFO] 2019-02-27 12:33:45,094: NET Takeoff
+[rosout][INFO] 2019-02-27 12:33:50,094: NET Mode
+[rosout][INFO] 2019-02-27 12:33:51,666: NET SwarmState
+[rosout][INFO] 2019-02-27 12:33:54,893: NET SetSubswarm
+[rosout][INFO] 2019-02-27 12:34:07,785: NET SwarmBehavior
+[rosout][INFO] 2019-02-27 12:38:18,695: NET SuspendSwarmBehavior

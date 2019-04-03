@@ -1,0 +1,27 @@
+[rospy.client][INFO] 2019-03-27 06:23:27,786: init_node, name[/evader], pid[3139]
+[xmlrpc][INFO] 2019-03-27 06:23:27,787: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-27 06:23:27,788: Started XML-RPC server [http://copter131:41977/]
+[rospy.init][INFO] 2019-03-27 06:23:27,788: ROS Slave URI: [http://copter131:41977/]
+[rospy.impl.masterslave][INFO] 2019-03-27 06:23:27,788: _ready: http://copter131:41977/
+[xmlrpc][INFO] 2019-03-27 06:23:27,790: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-27 06:23:27,791: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-27 06:23:27,889: registered with master
+[rospy.rosout][INFO] 2019-03-27 06:23:27,889: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-27 06:23:30,897: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-27 06:23:30,900: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-27 06:23:30,968: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:30,969: topic[/autopilot/status] adding connection to [http://copter131:60153/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:30,982: topic[/swarm_control/ap_intent] adding connection to [http://copter131:34613/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,028: topic[/autopilot/acs_pose] adding connection to [http://copter131:60153/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,054: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,064: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:49934/], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,066: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,075: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-27 06:23:31,130: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2019-03-27 06:42:14,212: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:42:14,352: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:42:19,001: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:42:21,869: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:42:59,438: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:46:37,350: evader activate request False returned False
+[rosout][INFO] 2019-03-27 06:47:04,258: evader activate request False returned False

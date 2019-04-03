@@ -1,0 +1,20 @@
+[rospy.client][INFO] 2012-12-31 16:00:22,170: init_node, name[/simple_ground_attack], pid[2975]
+[xmlrpc][INFO] 2012-12-31 16:00:22,171: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:22,185: Started XML-RPC server [http://copter131:57524/]
+[rospy.init][INFO] 2012-12-31 16:00:22,185: ROS Slave URI: [http://copter131:57524/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:22,185: _ready: http://copter131:57524/
+[rospy.registration][INFO] 2012-12-31 16:00:22,192: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:22,199: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:22,286: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:22,287: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:22,384: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:22,492: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:22,610: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:23,385: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:23,505: topic[/safety/payload_rate] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:25,317: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-05 07:13:18,197: topic[/autopilot/waypoint_goto] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-05 07:13:19,104: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:36745/], count 0
+[rospy.internal][INFO] 2019-03-05 07:13:19,276: topic[/autopilot/status] adding connection to [http://copter131:34594/], count 0
+[rospy.internal][INFO] 2019-03-05 07:13:19,621: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-05 07:13:20,165: topic[/swarm_control/ap_intent] adding connection to [http://copter131:36745/], count 0

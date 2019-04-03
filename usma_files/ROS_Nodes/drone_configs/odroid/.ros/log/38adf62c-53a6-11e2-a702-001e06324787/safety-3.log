@@ -1,0 +1,32 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,906: init_node, name[/safety], pid[2814]
+[xmlrpc][INFO] 2012-12-31 16:00:17,919: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2012-12-31 16:00:17,935: Started XML-RPC server [http://copter131:56981/]
+[rospy.init][INFO] 2012-12-31 16:00:17,936: ROS Slave URI: [http://copter131:56981/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,936: _ready: http://copter131:56981/
+[rospy.registration][INFO] 2012-12-31 16:00:17,952: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2012-12-31 16:00:17,952: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2012-12-31 16:00:18,037: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:18,038: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:18,070: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:18,088: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:18,370: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:20,889: topic[/safety/payload_rate] adding connection to [http://copter131:58382/], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:20,931: topic[/safety/payload_waypoint] adding connection to [http://copter131:58382/], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:21,052: topic[/safety/payload_waypoint] adding connection to [http://copter131:48432/], count 1
+[rospy.internal][INFO] 2012-12-31 16:00:21,178: topic[/safety/payload_waypoint] adding connection to [http://copter131:36143/], count 2
+[rospy.internal][INFO] 2012-12-31 16:00:21,260: topic[/safety/payload_waypoint] adding connection to [http://copter131:48765/], count 3
+[rospy.internal][INFO] 2012-12-31 16:00:21,371: topic[/safety/payload_waypoint] adding connection to [http://copter131:54772/], count 4
+[rospy.internal][INFO] 2012-12-31 16:00:21,439: topic[/safety/payload_waypoint] adding connection to [http://copter131:39759/], count 5
+[rospy.internal][INFO] 2012-12-31 16:00:21,661: topic[/safety/payload_waypoint] adding connection to [http://copter131:35585/], count 6
+[rospy.internal][INFO] 2012-12-31 16:00:21,662: topic[/safety/payload_waypoint] adding connection to [http://copter131:41852/], count 7
+[rospy.internal][INFO] 2012-12-31 16:00:22,035: topic[/safety/payload_waypoint] adding connection to [http://copter131:37518/], count 8
+[rospy.internal][INFO] 2012-12-31 16:00:22,035: topic[/safety/payload_waypoint] adding connection to [http://copter131:44766/], count 8
+[rospy.internal][INFO] 2012-12-31 16:00:22,036: topic[/safety/payload_waypoint] adding connection to [http://copter131:34730/], count 8
+[rospy.internal][INFO] 2012-12-31 16:00:22,038: topic[/safety/payload_waypoint] adding connection to [http://copter131:39577/], count 9
+[rospy.internal][INFO] 2012-12-31 16:00:22,846: topic[/autopilot/heartbeat_ground] adding connection to [http://copter131:38521/], count 0
+[rospy.internal][INFO] 2012-12-31 16:00:22,966: topic[/safety/payload_waypoint] adding connection to [http://copter131:45595/], count 12
+[rospy.internal][INFO] 2019-03-05 08:20:40,224: topic[/autopilot/heartbeat_onboard] adding connection to [/autopilot], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,270: topic[/autopilot/payload_waypoint] adding connection to [/autopilot], count 0
+[rosout][WARNING] 2019-03-05 08:20:40,606: establishing proxies for ROS /autopliot/ services
+[rospy.internal][INFO] 2019-03-05 08:20:40,708: topic[/swarm_tracker/swarm_uav_states] adding connection to [http://copter131:52023/], count 0
+[rospy.internal][INFO] 2019-03-05 08:20:40,827: topic[/autopilot/acs_pose] adding connection to [http://copter131:53923/], count 0

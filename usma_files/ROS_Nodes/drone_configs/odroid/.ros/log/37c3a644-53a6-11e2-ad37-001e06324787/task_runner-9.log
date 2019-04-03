@@ -1,0 +1,34 @@
+[rospy.client][INFO] 2012-12-31 16:00:17,013: init_node, name[/task_runner], pid[2835]
+[xmlrpc][INFO] 2012-12-31 16:00:17,015: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:17,017: ROS Slave URI: [http://copter131:41462/]
+[xmlrpc][INFO] 2012-12-31 16:00:17,017: Started XML-RPC server [http://copter131:41462/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:17,017: _ready: http://copter131:41462/
+[xmlrpc][INFO] 2012-12-31 16:00:17,020: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:17,022: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:17,117: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:17,118: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:17,194: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:17,282: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:17,509: topic[/rosout] adding connection to [/rosout], count 0
+[rosout][INFO] 2019-02-27 11:51:25,126: Task Runner: Starting Event 'on_start'
+[rosout][INFO] 2019-02-27 11:51:25,351: Task Runner: Event 'on_start' Task 'Tx Power' Time 0.2s: Succeeded
+[rosout][INFO] 2019-02-27 11:51:25,353: Task Runner: Completed Event 'on_start'
+[rospy.internal][INFO] 2019-02-27 11:51:27,229: topic[/autopilot/status] adding connection to [http://copter131:36919/], count 0
+[rosout][INFO] 2019-02-27 11:51:27,611: Task Runner: Starting Event 'on_status'
+[rosout][INFO] 2019-02-27 11:51:27,827: Task Runner: Event 'on_status' Task 'AP Set ID' Time 0.2s: Succeeded
+[rosout][INFO] 2019-02-27 11:51:27,827: Task Runner: Completed Event 'on_status'
+[rosout][INFO] 2019-02-27 11:53:12,364: Task Runner: Starting Event 'on_ready'
+[rosout][INFO] 2019-02-27 11:53:12,365: Task Runner: Completed Event 'on_ready'
+[rosout][INFO] 2019-02-27 11:53:15,751: Task Runner: Starting Event 'on_arm'
+[rosout][INFO] 2019-02-27 11:53:15,809: Task Runner: Event 'on_arm' Task 'Tx Power' Time 0.1s: Succeeded
+[rosout][INFO] 2019-02-27 11:53:15,812: Task Runner: Completed Event 'on_arm'
+[rosout][INFO] 2019-02-27 11:53:45,341: Task Runner: Starting Event 'on_disarm'
+[rosout][INFO] 2019-02-27 11:53:45,343: Task Runner: Completed Event 'on_disarm'
+[rosout][INFO] 2019-02-27 11:53:54,478: Task Runner: Starting Event 'on_arm'
+[rosout][INFO] 2019-02-27 11:53:54,530: Task Runner: Event 'on_arm' Task 'Tx Power' Time 0.1s: Succeeded
+[rosout][INFO] 2019-02-27 11:53:54,532: Task Runner: Completed Event 'on_arm'
+[rosout][INFO] 2019-02-27 11:59:25,060: Task Runner: Starting Event 'on_disarm'
+[rosout][INFO] 2019-02-27 11:59:25,062: Task Runner: Completed Event 'on_disarm'
+[rosout][INFO] 2019-02-27 12:08:14,065: Task Runner: Starting Event 'on_arm'
+[rosout][INFO] 2019-02-27 12:08:14,117: Task Runner: Event 'on_arm' Task 'Tx Power' Time 0.0s: Succeeded
+[rosout][INFO] 2019-02-27 12:08:14,119: Task Runner: Completed Event 'on_arm'

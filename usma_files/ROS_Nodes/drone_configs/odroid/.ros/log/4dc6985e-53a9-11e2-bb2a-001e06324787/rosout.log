@@ -1,0 +1,34 @@
+
+
+1356999740.629301084  Node Startup
+1356999742.781119108 INFO [MAVLinkBridge.py:277(_initialize) [topics: /rosout] MAVLinkBridge: Connecting to /dev/ttyACM99 ...
+1356999742.794909954 INFO [MAVLinkBridge.py:292(_initialize) [topics: /rosout] MAVLinkBridge: Waiting for autopilot heartbeat ...
+1356999743.318768024 INFO [MAVLinkBridge.py:332(_init_time) [topics: /rosout] MAVLinkBridge: Waiting for usable SYSTEM_TIME ...
+1551800108.491817951 INFO [MAVLinkBridge.py:364(_init_time) [topics: /rosout] Successfully synced local clock.
+1551800108.493784904 INFO [MAVLinkBridge.py:305(_initialize) [topics: /rosout] MAVLinkBridge initialized.
+1551800109.926683902 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_start'
+1551800110.044790029 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_start' Task 'Tx Power' Time 0.1s: Succeeded
+1551800110.046540021 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_start'
+1551800110.399475097 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior independent_transit successfully registered with ID 8
+1551800110.417758941 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior pn_interceptor successfully registered with ID 5
+1551800110.629988908 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior patrol_box successfully registered with ID 12
+1551800110.714987993 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior evader successfully registered with ID 15
+1551800111.192116975 INFO [nodeable.py:215(log_info) [topics: /rosout] Behavior swarm_landing_sequencer successfully registered with ID 98
+1551800111.209830999 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /rosout] Behavior linear_formation successfully registered with ID 1
+1551800111.415707111 WARN [safety.py:151(__init__) [topics: /safety/healthy, /autopilot/payload_attitude, /autopilot/payload_rate, /rosout, /safety/payload_rate, /autopilot/payload_waypoint, /autopilot/heartbeat_onboard, /autopilot/acs_pose, /safety/payload_waypoint, /autopilot/heartbeat_ground, /safety/payload_attitude] establishing proxies for ROS /autopliot/ services
+1551800111.397469043 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior constrained_shooter successfully registered with ID 10
+1551800111.480871915 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior smart_shooter successfully registered with ID 9
+1551800111.535031080 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior tactic_interface successfully registered with ID 14
+1551800111.538321018 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior greedy_shooter successfully registered with ID 4
+1551800111.641588926 INFO [task_runner.py:126(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Starting Event 'on_status'
+1551800111.670325040 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior wingman successfully registered with ID 11
+1551800111.678847074 INFO [MAVLinkBridge.py:206(callback_wrapper) [topics: /autopilot/waypoint_goto, /autopilot/weather_update, /autopilot/copter_takeoff, /autopilot/guided_goto, /autopilot/payload_waypoint, /rosout, /autopilot/heartbeat_onboard, /autopilot/gps_odom, /autopilot/mode, /autopilot/mode_num, /autopilot/gps, /autopilot/reboot, /autopilot/heartbeat_ground, /autopilot/status, /autopilot/acs_pose, /autopilot/imu, /autopilot/arm, /autopilot/set_landing] ROS srv recvd: fpr_param_set
+1551800111.751806020 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior patrol_box_shooter successfully registered with ID 13
+1551800111.823236942 INFO [nodeable.py:215(log_info) [topics: /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /rosout] Behavior simple_ground_attack successfully registered with ID 16
+1551800111.883816957 INFO [task_runner.py:119(_log) [topics: /autopilot/status, /rosout] Task Runner: Event 'on_status' Task 'AP Set ID' Time 0.2s: Succeeded
+1551800111.885459899 INFO [task_runner.py:137(_do_event) [topics: /autopilot/status, /rosout] Task Runner: Completed Event 'on_status'
+1551800112.429063081 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Subswarm updated to 0
+1551800112.429686069 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Swarm state updated to Preflight
+1551800112.430164098 INFO [nodeable.py:215(log_info) [topics: /autopilot/waypoint_goto, /swarm_control/swarm_state, /swarm_control/behavior_summary, /rosout, /network/recv_swarm_data, /autopilot/mode_num, /swarm_tracker/swarm_uav_states, /swarm_control/behavior_status, /network/net_reset, /swarm_control/swarm_behavior, /autopilot/status, /swarm_control/subswarm_id, /swarm_control/ap_intent] Active swarm behavior updated to standby
+1551800133.654668092 INFO [MAVLinkBridge.py:377(_handle_statustext) [topics: /autopilot/waypoint_goto, /autopilot/weather_update, /autopilot/copter_takeoff, /autopilot/guided_goto, /autopilot/payload_waypoint, /rosout, /autopilot/heartbeat_onboard, /autopilot/gps_odom, /autopilot/mode, /autopilot/mode_num, /autopilot/gps, /autopilot/reboot, /autopilot/heartbeat_ground, /autopilot/status, /autopilot/acs_pose, /autopilot/imu, /autopilot/arm, /autopilot/set_landing] MAVLink STATUSTEXT: EKF2 IMU0 is using GPS
+1551800133.660542011 INFO [MAVLinkBridge.py:377(_handle_statustext) [topics: /autopilot/waypoint_goto, /autopilot/weather_update, /autopilot/copter_takeoff, /autopilot/guided_goto, /autopilot/payload_waypoint, /rosout, /autopilot/heartbeat_onboard, /autopilot/gps_odom, /autopilot/mode, /autopilot/mode_num, /autopilot/gps, /autopilot/reboot, /autopilot/heartbeat_ground, /autopilot/status, /autopilot/acs_pose, /autopilot/imu, /autopilot/arm, /autopilot/set_landing] MAVLink STATUSTEXT: EKF2 IMU1 is using GPS

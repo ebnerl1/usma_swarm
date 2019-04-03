@@ -1,0 +1,32 @@
+[rospy.client][INFO] 2019-03-19 08:13:33,854: init_node, name[/constrained_shooter], pid[3056]
+[xmlrpc][INFO] 2019-03-19 08:13:33,859: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2019-03-19 08:13:33,861: ROS Slave URI: [http://copter131:60597/]
+[xmlrpc][INFO] 2019-03-19 08:13:33,861: Started XML-RPC server [http://copter131:60597/]
+[rospy.impl.masterslave][INFO] 2019-03-19 08:13:33,862: _ready: http://copter131:60597/
+[xmlrpc][INFO] 2019-03-19 08:13:33,865: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2019-03-19 08:13:33,867: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2019-03-19 08:13:33,962: registered with master
+[rospy.rosout][INFO] 2019-03-19 08:13:33,962: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-19 08:13:34,022: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-19 08:13:34,041: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-19 08:13:34,331: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,391: topic[/safety/payload_waypoint] adding connection to [/safety], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,398: topic[/autopilot/status] adding connection to [http://copter131:36775/], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,872: topic[/network/send_swarm_behavior_data] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,896: topic[/autopilot/acs_pose] adding connection to [http://copter131:36775/], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,923: topic[/swarm_control/subswarm_id] adding connection to [http://copter131:53282/], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,934: topic[/swarm_control/behavior_status] adding connection to [/swarm_control], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,983: topic[/swarm_control/ap_intent] adding connection to [http://copter131:53282/], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:35,995: topic[/hit_tracker/hit_uavs] adding connection to [http://copter131:39396/], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:36,044: topic[/air_to_air/firing_reports] adding connection to [/network], count 0
+[rospy.internal][INFO] 2019-03-19 08:13:36,059: topic[/air_to_air/firing_reports] adding connection to [/network], count 1
+[rospy.internal][INFO] 2019-03-19 08:13:36,060: topic[/air_to_air/firing_reports] removing connection to /network
+[rosout][WARNING] 2019-03-19 08:13:37,067: Inbound TCP/IP connection failed: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+[rospy.internal][ERROR] 2019-03-19 08:13:37,070: Inbound TCP/IP connection failed:
+Traceback (most recent call last):
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rospy/impl/tcpros_base.py", line 321, in _tcp_server_callback
+    header = read_ros_handshake_header(sock, StringIO(), buff_size)
+  File "/opt/ros/indigo/lib/python2.7/dist-packages/rosgraph/network.py", line 362, in read_ros_handshake_header
+    raise ROSHandshakeException("connection from sender terminated before handshake header received. %s bytes were received. Please check sender for additional details."%b.tell())
+ROSHandshakeException: connection from sender terminated before handshake header received. 0 bytes were received. Please check sender for additional details.
+

@@ -1,0 +1,13 @@
+[rospy.client][INFO] 2019-03-05 09:52:57,134: init_node, name[/rostopic_10585_1551808377091], pid[10585]
+[xmlrpc][INFO] 2019-03-05 09:52:57,135: XML-RPC server binding to 0.0.0.0:0
+[xmlrpc][INFO] 2019-03-05 09:52:57,136: Started XML-RPC server [http://copter131:49769/]
+[rospy.init][INFO] 2019-03-05 09:52:57,137: ROS Slave URI: [http://copter131:49769/]
+[rospy.impl.masterslave][INFO] 2019-03-05 09:52:57,137: _ready: http://copter131:49769/
+[rospy.registration][INFO] 2019-03-05 09:52:57,138: Registering with master node http://localhost:11311
+[xmlrpc][INFO] 2019-03-05 09:52:57,138: xml rpc node: starting XML-RPC server
+[rospy.init][INFO] 2019-03-05 09:52:57,237: registered with master
+[rospy.rosout][INFO] 2019-03-05 09:52:57,238: initializing /rosout core topic
+[rospy.rosout][INFO] 2019-03-05 09:52:57,244: connected to core topic /rosout
+[rospy.simtime][INFO] 2019-03-05 09:52:57,252: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2019-03-05 09:52:57,359: topic[/tactic_interface/radiation] adding connection to [http://copter131:47311/], count 0
+[rospy.internal][INFO] 2019-03-05 09:52:57,512: topic[/rosout] adding connection to [/rosout], count 0

@@ -1,0 +1,14 @@
+[rospy.client][INFO] 2012-12-31 16:00:15,386: init_node, name[/altitude_sensor], pid[2807]
+[xmlrpc][INFO] 2012-12-31 16:00:15,388: XML-RPC server binding to 0.0.0.0:0
+[rospy.init][INFO] 2012-12-31 16:00:15,390: ROS Slave URI: [http://copter131:47094/]
+[xmlrpc][INFO] 2012-12-31 16:00:15,390: Started XML-RPC server [http://copter131:47094/]
+[rospy.impl.masterslave][INFO] 2012-12-31 16:00:15,391: _ready: http://copter131:47094/
+[xmlrpc][INFO] 2012-12-31 16:00:15,392: xml rpc node: starting XML-RPC server
+[rospy.registration][INFO] 2012-12-31 16:00:15,395: Registering with master node http://localhost:11311
+[rospy.init][INFO] 2012-12-31 16:00:15,491: registered with master
+[rospy.rosout][INFO] 2012-12-31 16:00:15,491: initializing /rosout core topic
+[rospy.rosout][INFO] 2012-12-31 16:00:15,515: connected to core topic /rosout
+[rospy.simtime][INFO] 2012-12-31 16:00:15,528: /use_sim_time is not set, will not subscribe to simulated time [/clock] topic
+[rospy.internal][INFO] 2012-12-31 16:00:15,791: topic[/rosout] adding connection to [/rosout], count 0
+[rospy.internal][INFO] 2019-03-21 06:46:36,783: topic[/tactic_interface/altitude] adding connection to [/rostopic_7128_1553175996500], count 0
+[rospy.internal][INFO] 2019-03-21 06:46:38,482: topic[/tactic_interface/altitude] removing connection to /rostopic_7128_1553175996500
