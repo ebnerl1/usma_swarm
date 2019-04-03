@@ -11,6 +11,7 @@ import rasterio
 import numpy as np
 import os
 import math
+sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
 
 procname.setprocname("serverSide")
