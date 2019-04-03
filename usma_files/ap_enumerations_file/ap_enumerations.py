@@ -5,7 +5,7 @@ import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
 <<<<<<< HEAD
-SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
 =======
 SITL_LOCATION = 1   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL, 4 = SRNL
 >>>>>>> 0e7a9eb0615f61a03675aa2d5ce4aac19533f993

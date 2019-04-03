@@ -11,6 +11,7 @@ import rasterio
 import numpy as np
 import os
 import math
+import map_around_central_point as hotspot_grid
 
 procname.setprocname("serverSide")
 
@@ -129,32 +130,43 @@ def listen():
                     
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
-                    print("Finished WP: " + str(newdata[2]))
+                    #print("Finished WP: " + str(newdata[2]))
                     if (newdata[2] < 10000):                  
                       finishedwp.add(newdata[2])
                     print("Finished WP Set: " + str(finishedwp))
                     print("# of Finished: " + str(len(finishedwp))) + "/" + str(newdata[4])
                     print("At Index: " + str(newdata[3]) + "/" + str(newdata[1]))
+                    print("Lanes completed: " + str(newdata[10]) + "/" + str(newdata[11]))
                     
+                    lat = float(newdata[5])
+                    lon = float(newdata[6])
+                    rawcounts = float(newdata[7])
+                    maxCounts = 0
+                    hotspot_loc = [0,0]
+                    if rawcounts >= maxCounts:
+                        maxCounts = rawcounts
+                        hotspot_loc = [lat,lon]
+
                     #sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
+                      print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
                       quit()
                     #sendbackmsg = [newdata[4],newdata[3]]
                     connection.sendall(str(finishedwp))
+
                     # Heatmap Portion----------------------------------------------------------------
                     
                     droneID = newdata[0]
-                    lat = float(newdata[5])
-                    lon = float(newdata[6])
-                    rawcounts = float(newdata[7])
                     absalt = float(newdata[8])
                     radtype = str(newdata[9])
+
                     print("droneID: " + str(droneID))
                     print("rawcounts: " + str(rawcounts))
                     print("radtype: " + str(radtype))
                     print("absalt: " + str(absalt))
+
               
                     if online:
                         mapalt = float(elevationOnline(lat, lon))
