@@ -23,7 +23,7 @@ def sendCommand(cmd):
 
 if __name__ == "__main__":
     rospy.init_node('radeyeNode', anonymous=True)
-    pub = rospy.Publisher('/radiation', PointStamped, queue_size = 1)
+    pub = rospy.Publisher('/tactic_interface/radiation', PointStamped, queue_size = 1)
     msg = PointStamped()
     
     # Establish a serial port connection IAW specification on page 2-1
@@ -68,12 +68,16 @@ if __name__ == "__main__":
                 out += byte
 
         out=out.split(' ')
-        if out[6] == "PRDER":
-            msg.point.x = float(out[3])
-            msg.point.y = 1  #for PRDER
+        #print(len(out), out)
+        if len(out) >= 7:
+            if out[6] == "PRDER":
+                msg.point.x = float(out[3])
+                msg.point.y = 1  #for PRDER
+            else:
+                msg.point.x = float(out[1])
+                msg.point.y = 0 #for GN+
         else:
-            msg.point.x = float(out[1])
-            msg.point.y = 0 #for GN+
+            print("msg to short it is less then 7 bytes")
 
         msg.header.stamp = rospy.Time.now()
         pub.publish(msg)
