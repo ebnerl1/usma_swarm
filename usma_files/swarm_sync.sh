@@ -10,7 +10,7 @@
 # A smaller list for testing
 
 #declare -a arr=("192.168.11.111" "192.168.11.113" "192.168.11.115" "192.168.11.120" "192.168.11.121" "192.168.11.122" "192.168.11.123" "192.168.11.125") 
-declare -a arr=("192.168.11.132" "192.168.11.131" "192.168.11.114" "192.168.11.110")
+declare -a arr=("192.168.11.131")
 
 # Below is the previous commit of the master branch before the EOY pull request 
 #declare -a arr=("192.168.11.125") 

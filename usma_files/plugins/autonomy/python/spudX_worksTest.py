@@ -336,7 +336,7 @@ class GreedyGoto(ss.Tactic):
                 #str(self._subswarm_wp_assignment)
 
                 #messageArray = [self._id, [0,0,0,0,0], self._loc, self._wp_id_list.index(self._loc), [0,0,0,0], lat, lon, counts, alt]
-                messageArray = [self._id, len(self._wp_id_list), self._loc, self._wp_id_list.index(self._loc), len(self._enumList), lat, lon, counts, alt, radtype] 
+                messageArray = [self._id, len(self._wp_id_list), self._loc, self._wp_id_list.index(self._loc), len(self._enumList), lat, lon, counts, self._altitude, radtype] 
                 message = str(messageArray)
                 print("UAV ID: " + str(self._id))
                 print("Sending Message to Base Station...")
