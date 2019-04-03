@@ -152,6 +152,7 @@ def listen():
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
                       print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
+                      hotspot_grid.grab_hotspot(hotspot_loc[0],hotspot_loc[1])
                       quit()
                     #sendbackmsg = [newdata[4],newdata[3]]
                     connection.sendall(str(finishedwp))
