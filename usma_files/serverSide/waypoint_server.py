@@ -16,6 +16,7 @@ import map_around_central_point as hotspot_grid
 
 procname.setprocname("serverSide")
 
+
 ######################## VARIABLES ########################
 
 outfile = "parsed_data.js" # Output file as a .geojson
@@ -27,6 +28,7 @@ online = False
 elevationFile = 'srtm_14_04.tif'
 log = []
 heatmapdata = []
+hotspot_loc = [0,0]
 
 #create a list of waypoints that has been visited
 finishedwp = set([])
@@ -143,7 +145,6 @@ def listen():
                     lon = float(newdata[6])
                     rawcounts = float(newdata[7])
                     maxCounts = 0
-                    hotspot_loc = [0,0]
                     if rawcounts >= maxCounts:
                         maxCounts = rawcounts
                         hotspot_loc = [lat,lon]
@@ -153,7 +154,7 @@ def listen():
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
                       print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
-                      hotspot_grid.grab_hotspot(hotspot_loc[0],hotspot_loc[1])
+                      hotspot_grid.createGrid(hotspot_loc[0], hotspot_loc[1])
                       quit()
                     #sendbackmsg = [newdata[4],newdata[3]]
                     connection.sendall(str(finishedwp))
@@ -163,11 +164,13 @@ def listen():
                     droneID = newdata[0]
                     absalt = float(newdata[8])
                     radtype = str(newdata[9])
+                    alt = str(newdata[12])
 
                     print("droneID: " + str(droneID))
                     print("rawcounts: " + str(rawcounts))
                     print("radtype: " + str(radtype))
                     print("absalt: " + str(absalt))
+                    print("gpsalt: " + str(alt))
 
               
                     if online:
@@ -206,9 +209,8 @@ def listen():
             connection.close()
         
 if __name__ == "__main__":
-    hotspot_loc = [0,0]
-    hotspot_grid.createGrid(hotspot_loc[0], hotspot_loc[1])
     try:
         listen()
     except KeyboardInterrupt:
         pass
+    hotspot_grid.createGrid(hotspot_loc[0],hotspot_loc[1])

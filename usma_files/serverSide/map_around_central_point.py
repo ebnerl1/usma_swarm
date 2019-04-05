@@ -58,8 +58,8 @@ def createGrid(lat,lon):
         #f.write("WP_LOC_Range11[" + str(index) + "] = " + "(" + str(point[0]) + ", " + str(point[1]) + ")" +"\n")
         #index += 1
     #f.close() 
-    with open('~/scrimmage/usma/plugins/autonomy/python/hotspot_grid.py', 'w') as output:
-        output.write("WP_LOC_Range11[" + str(index) + "] = " + "(" + str(point[0]) + ", " + str(point[1]) + ")" +"\n")
+    with open('../../../scrimmage/usma/plugins/autonomy/python/hotspot_grid.py', 'w') as output:
+        output.write("WP_LOC_Range11 = dict()\n")
         for point in WP_List:
             output.write("WP_LOC_Range11[" + str(index) + "] = " + "(" + str(point[0]) + ", " + str(point[1]) + ")" +"\n")
             index += 1
