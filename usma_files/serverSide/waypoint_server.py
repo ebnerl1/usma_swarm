@@ -200,7 +200,8 @@ def listen():
 
                 else:
                     break
-                
+        except socket.error:
+            pass        
         finally:
             connection.close()
         

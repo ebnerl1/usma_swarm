@@ -50,6 +50,11 @@ This backbone of this file is a socket server. As explained in the Projects Day 
 - Sends working set of completed survey points back to quads
 - Saves a timestamped archive of the data upon closing the connection
 
+TO INSTALL DEPENDENCIES:
+
+pip install procname
+sudo apt-get install python-rasterio
+
 TO RUN:
 
 `python waypoint_server.py` or `./runServerSide`
