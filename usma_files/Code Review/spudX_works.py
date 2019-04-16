@@ -10,11 +10,9 @@
 # 4- Each UAS then assigns itself its own set of waypoints
 # 5- Each UAS is sequenced to navigate through its bundle of waypoints
 #
-# Andrew Kopeikin
+# Ashley Rivera & Conner Russell
 # USMA
-# 27 Jan 2018
-
-#please dont break me
+# Last updated: 15 APR 2019
 
 import numpy as np
 import math
@@ -30,7 +28,7 @@ import socket
 import sys
 import subprocess
 from os.path import expanduser
-from geometry_msgs.msg import PointStamped#BB
+from geometry_msgs.msg import PointStamped
 import rospy
 import map_around_central_point as hotspot_grid
 
@@ -45,14 +43,12 @@ SERVER_FLAG = 1
 GROUND_TEST = 1
 grid = 0
 
-#If GPS Simulator used, expand distance since quad won't move
+# If GPS Simulator used, expand distance since quad won't move
 if (GROUND_TEST == 1):
     DIST2WP_QUAD = 1000000
     DIST_START_DESCENT = 1000000
     BUFFER = 200000
     TIME_AT_WP = 1
-
-#insert map around central point function here
 
 class GreedyGoto(ss.Tactic):
 
@@ -65,7 +61,6 @@ class GreedyGoto(ss.Tactic):
         self._fov_height = enums.VFOV_DEF
         self._own_pose = apbrg.Geodometry()
         self._blues = dict()
-        #self._reds = dict()
         self._shot = set()
         self._safe_waypoint = np.array([0, 0, 0])
         self._last_ap_wp = np.array([0, 0, 0])
@@ -80,9 +75,7 @@ class GreedyGoto(ss.Tactic):
             self._enumList = usma_enums.WP_LOC_Range11
         self._name = 'GreedyGoto'
         self._radType = 0
-        #self._location = int(params['location'])
-        #self._desired_lat = float(self._enumList[self._location][0])
-        #self._desired_lon = float(self._enumList[self._location][1])
+
         # Initialize Variables for Waypoint Assignment
         self._subswarm_id = 0
         self._id_in_subswarm = []
@@ -106,8 +99,8 @@ class GreedyGoto(ss.Tactic):
         self._time_at_wp = 0
         self._time_start = 0
         self._at_wp = False
-        self._base_alt = int(params['Base Altitude']) #sam g new
-        self._alt_change = int(params['Altitude Change']) #sam g new
+        self._base_alt = int(params['Base Altitude']) 
+        self._alt_change = int(params['Altitude Change']) 
 
         self._altitude = 0.0
         self._radiation = 0.0
@@ -117,13 +110,14 @@ class GreedyGoto(ss.Tactic):
         rospy.Subscriber('/tactic_interface/altitude', PointStamped, self.altitude_cb)
         rospy.Subscriber('/tactic_interface/radiation', PointStamped, self.radeye_cb)
 
-    def radeye_cb(self, msg):#BB
+    def radeye_cb(self, msg):
     	self._radiation = msg.point.x
         self._radType = msg.point.y
 
-    def altitude_cb(self, msg):#BB
+    # Sends data to .ros/logs on odroid
+    def altitude_cb(self, msg):
         self._altitude = msg.point.x
-        self._parent.log_info("The altitude issss: %f" %msg.point.x)
+        self._parent.log_info("The altitude is: %f" %msg.point.x)
 
 
     def step_autonomy(self, t, dt):
@@ -141,19 +135,16 @@ class GreedyGoto(ss.Tactic):
               server_address = ('192.168.11.202',10000)
             else: 
               server_address = ('127.0.0.1',10000)
-            #server_address = ('192.168.11.202',10000) 
-            #connect the socket to the port where the server is listening
-            #server_address = ('127.0.0.1',10000)
+
             print >>sys.stderr, '---connecting to %s port %s---' % server_address
             sock.connect(server_address)
             try:
-
+                # Initialize data sent to server
                 messageArray = [self._id, 100000, 100000, 99999, 100000, self._desired_lat, self._desired_lon, 0, self._desired_alt, "PRDER", 100000, 0, 0]
-                #messageArray = [self._id, 100000, 100000, 99999, 100000, 99.99, 99.99, 0, self._desired_alt, "PRDER", 100000, 0, 0]
                 message = str(messageArray)
                 sock.sendall(message)
 
-                #look for response
+                # Look for response from server
                 num_symbols = 4096
                 delta = 4096
                 while delta == num_symbols:
@@ -181,7 +172,6 @@ class GreedyGoto(ss.Tactic):
                     self._subswarm_id = blue.subswarm_id
                     break
             print "subswarm_id: ", self._subswarm_id
-            print(finishedset)
 
             # Build a list of all vehicle IDs within your subswarm
             blue_in_subswarm = dict()
@@ -200,7 +190,7 @@ class GreedyGoto(ss.Tactic):
 
             # Divide # of waypoints by # of vehicles and create empty bundle of wpts for each
             num_in_subwarm = len(self._id_in_subswarm)
-            for i in range(0, num_in_subwarm):
+            for i in range(num_in_subwarm):
                 self._subswarm_num_to_assign[i] = (len(self._enumList)-len(finishedset))/(num_in_subwarm)
                 if i < ((len(self._enumList)-len(finishedset)) % num_in_subwarm):
                     self._subswarm_num_to_assign[i] = self._subswarm_num_to_assign[i] + 1
@@ -208,13 +198,13 @@ class GreedyGoto(ss.Tactic):
 
 
             # Perform sequencial greedy wpt assignment.  Loop over each UAS in subswarm.
-            for i in range(0, num_in_subwarm):
+            for i in range(num_in_subwarm):
                 # Set the start location to current UAS position
                 temp_lat = blue_in_subswarm[i].state.pose.pose.position.lat
                 temp_lon = blue_in_subswarm[i].state.pose.pose.position.lon
                 assignment_list = []
                 # Loop over each element of the waypoint bundle
-                for j in range(0, self._subswarm_num_to_assign[i]):
+                for j in range(self._subswarm_num_to_assign[i]):
                     min_dist = 99999 #initialize as large number
                     new_wp_assigned = False
                     # Loop over each waypoint defined in the mission
@@ -256,19 +246,16 @@ class GreedyGoto(ss.Tactic):
         # deconfliction:
         self._wp = np.array([self._desired_lat, self._desired_lon,
                              self._desired_alt])
-        #self._wp = np.array([self._desired_lat, self._desired_lon,
-                             #self._last_ap_wp[2]])
 
         pos = self._own_pose.pose.pose.position
         dist = gps.gps_distance(pos.lat, pos.lon, self._desired_lat, self._desired_lon)
 
         # Detect whether UAS has arrived at WP (within threshold distance), track time at WP
-        # Zephyrs (type 2) loitersocket.error: [Errno 104] Connection reset by peer around point, so set threshold distance > loiter radius
         # Set threshold distance for Quads (type 1), much smaller
 
-        SURVEY_ALT = self._base_alt + (self._alt_change * self._id_in_subswarm.index(self._id)) #redefine SURVEY_ALT within the loop to stack behavior
+        SURVEY_ALT = self._base_alt + (self._alt_change * self._id_in_subswarm.index(self._id)) 
 
-        if (self._vehicle_type == 2 and dist < DIST2WP_ZEPH) or (self._vehicle_type == 1 and dist < DIST2WP_QUAD):
+        if (self._vehicle_type == 1 and dist < DIST2WP_QUAD):
             if self._at_wp == False:
                 if (pos.rel_alt > SURVEY_ALT - BUFFER) and (pos.rel_alt < SURVEY_ALT + BUFFER):
                     self._time_start = timeit.default_timer()
@@ -285,30 +272,16 @@ class GreedyGoto(ss.Tactic):
         # After X time has elapsed at WP, move onto next WP in your bundle
         if self._time_at_wp > TIME_AT_WP:
 
-          ############################# HEATMAP VARS ##############################
-            # Legacy code to be stripped out
-            #def getcounts():
-                
-            #    with open(self.radeyeDir + 'radfile.csv', 'r') as radfile:
-            #        firstline = radfile.readline().split(',')
-            #        print(firstline)
-            #        return((firstline[0],firstline[1])) 
+
             lat = pos.lat
             lon = pos.lon
             alt = pos.alt
             if (self._radType == 1): radtype = "PRDER"
             else: radtype = "GN+"
-            #counts, radtype = getcounts()
-            #print(counts)
-            #print(radtype)
-            #########################################################################
+
             #create a TCP/IP socket
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            #192.168.11.202
-            #connect the socket to the port where the server is listening
-            #server_address = ('192.168.11.202',10000)
-            #server_address = ('127.0.0.1', 10000)
-            #serverflag = 0
+
             if (SERVER_FLAG == 1):
               server_address = ('192.168.11.202',10000)
             else: 
@@ -316,17 +289,12 @@ class GreedyGoto(ss.Tactic):
             print >>sys.stderr, '---connecting to %s port %s---' % server_address
             sock.connect(server_address)
             try:
-                #send data
-                #str(self._subswarm_wp_assignment)
 
-                #messageArray = [self._id, [0,0,0,0,0], self._loc, self._wp_id_list.index(self._loc), [0,0,0,0], lat, lon, counts, alt]
                 messageArray = [self._id, len(self._wp_id_list), self._loc, self._wp_id_list.index(self._loc), len(self._enumList), lat, lon, self._radiation, self._altitude, radtype, 0, 0, alt]
-                #messageArray = [self._id, len(self._wp_id_list), self._totalList_id, self._wp_id_list_id, len(self._totalList), lat, lon, self._radiation, self._altitude, radtype, self._lane_id, 0, alt] 
                 message = str(messageArray)
                 print("UAV ID: " + str(self._id))
                 print("Sending Message to Base Station...")
                 sock.sendall(message)
-
 
                 #look for response 4194304
                 amount_received = 0
@@ -335,8 +303,6 @@ class GreedyGoto(ss.Tactic):
                 while delta == num_symbols:
                     data = sock.recv(num_symbols)
                     delta = len(data)
-                    #print >>sys.stderr,'Received: %s' % data
-
 
             finally:
                 print >>sys.stderr, '---closing socket---'

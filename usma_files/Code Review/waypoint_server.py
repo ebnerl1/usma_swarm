@@ -1,3 +1,11 @@
+# Facilitates communication between quads and server
+# Must run killServerSide.sh between behaviors and
+# to clear out the data held by server
+#
+# Ashley Rivera & Conner Russell
+# USMA
+# Last updated: 15 APR 2019
+
 import socket
 import sys
 import subprocess
@@ -11,7 +19,6 @@ import rasterio
 import numpy as np
 import os
 import math
-#sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
 import hotspot as hp
 
@@ -33,7 +40,7 @@ hotspot_loc = [0,0]
 load_hotspot = [0,0]
 serverflag = 1
 
-#create a list of waypoints that has been visited
+# Create a list of waypoints that has been visited
 finishedwp = set([])
 wpfile = "wp_data.txt"
 
@@ -47,7 +54,6 @@ def elevationOnline(lat, lng):
         results = json.load(request).get('results')
         if 0 < len(results):
             elevation = results[0].get('elevation')
-            # ELEVATION
             return elevation
         else:
             print ('HTTP GET Request failed.')
@@ -96,26 +102,25 @@ def writeArchive(log):
         for i in log:
             outfwriter.writerow(i)
 
+# Listen from incoming data from SRNL/spudX
 def listen():
     global finishedwp
     global log
     global heatmapdata
     global radcap
-    #create a TCP/IP socket
+
+    # Create a TCP/IP socket
     sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-    #bind the socket to the port. SENSOR STATION IS 203!!
-    #192.168.11.202
+    # Bind the socket to the port
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
         server_address = ('127.0.0.1',10000)
 
-    #server_address = ('192.168.11.202',10000)
     print >>sys.stderr, 'Starting up on %s port %s...' % server_address
     sock.bind(server_address)
 
-    #Listen for incoming connections. You can increase this but you must also allow threading.
     sock.listen(10)
     active_connections = 0
     savedata = None
@@ -126,17 +131,13 @@ def listen():
         try:
             while True:
                 data=connection.recv(4096)
-                #print("Connected!")
-                #newdata = eval(data)
                 if (len(data) > 1):
                 
                     timeNow = str(datetime.now())
                     newdata = eval(data)
-                    #print("New Data: ", newdata)
                     
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
-                    #print("Finished WP: " + str(newdata[2]))
                     if (newdata[2] < 10000):                  
                       finishedwp.add(newdata[2])
                     print("Finished WP Set: " + str(finishedwp))
@@ -152,20 +153,21 @@ def listen():
                         maxCounts = rawcounts
                         hotspot_loc = [lat,lon]
 
-                    #sendall argument must be string or buffer, not a list
+                    # Sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
                       print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
                       data_sent = [str(finishedwp),str(hotspot_loc[0]),str(hotspot_loc[1])]
                       connection.sendall(str(data_sent))
+
                       with open('hotspot.py', 'w') as output:
                         output.write("hotspot = " + str(hotspot_loc))
                       quit()
-                    #sendbackmsg = [newdata[4],newdata[3]]
-                    garbage = [str(finishedwp),str(load_hotspot[0]),str(load_hotspot[1])]
-                    print(garbage)
-                    connection.sendall(str(garbage))
+
+                    extra = [str(finishedwp),str(load_hotspot[0]),str(load_hotspot[1])]
+                    print(extra)
+                    connection.sendall(str(extra))
 
                     # Heatmap Portion----------------------------------------------------------------
                     
@@ -180,12 +182,11 @@ def listen():
                     print("absalt: " + str(absalt))
                     print("gpsalt: " + str(alt))
 
-              
                     if online:
                         mapalt = float(elevationOnline(lat, lon))
                     else:
                         mapalt = float(elevationOffline(lat,lon))
-                    #mapalt = 98.98
+
                     convcounts = countsconvert(rawcounts, absalt, mapalt, radtype) 
                     print("convcounts: " + str(convcounts))
                     log.append([timeNow, droneID, radtype, lat, lon, absalt, mapalt, rawcounts, convcounts])
@@ -218,11 +219,9 @@ def listen():
             connection.close()
         
 if __name__ == "__main__":
+    # Loads hotspot for spudX after we kill server in initial pass
     load_hotspot = hp.hotspot
-    print "hotspot location from python file: ", load_hotspot         
     try:
         listen()
     except KeyboardInterrupt:
         pass
-    #hotspot_grid.createGrid(hotspot_loc[0],hotspot_loc[1])
-    
