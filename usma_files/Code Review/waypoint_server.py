@@ -39,6 +39,7 @@ heatmapdata = []
 hotspot_loc = [0,0]
 load_hotspot = [0,0]
 serverflag = 1
+# could add a server address variable
 
 # Create a list of waypoints that has been visited
 finishedwp = set([])
@@ -52,13 +53,13 @@ def elevationOnline(lat, lng):
     request = urllib.urlopen(url+"?locations="+str(lat)+","+str(lng)+"&key="+apikey)
     try:
         results = json.load(request).get('results')
-        if 0 < len(results):
+        if 0 < len(results): #if results is better than if 0 < len(results)
             elevation = results[0].get('elevation')
             return elevation
         else:
             print ('HTTP GET Request failed.')
     except ValueError:
-        print ('JSON decode failed: '+str(request))
+        print ('JSON decode failed: '+str(request)) #'blah',request
 
 def elevationOffline(lat, lng):
     print "running offline"
@@ -89,7 +90,7 @@ def countsconvert(rawcounts, absalt, mapalt, radtype):
     if heightaboveground < 0:
         print("Net height is negative")
         heightaboveground = 0
-    conv = (newcounts * ((heightaboveground)**2) * 4 * math.pi) / rval
+    conv = (newcounts * ((heightaboveground)**2) * 4 * math.pi) / rval #none of these parentheses are required
     return conv
         
 def writeArchive(log):
@@ -102,7 +103,7 @@ def writeArchive(log):
         for i in log:
             outfwriter.writerow(i)
 
-# Listen from incoming data from SRNL/spudX
+# Listen incoming data from SRNL/spudX
 def listen():
     global finishedwp
     global log
@@ -113,7 +114,7 @@ def listen():
     sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
     # Bind the socket to the port
-    if (serverflag == 1):
+    if (serverflag == 1): #these set of lines should be its own function
         server_address = ('192.168.11.202',10000)
     else: 
         server_address = ('127.0.0.1',10000)
@@ -172,7 +173,7 @@ def listen():
                     # Heatmap Portion----------------------------------------------------------------
                     
                     droneID = newdata[0]
-                    absalt = float(newdata[8])
+                    absalt = float(newdata[8]) #magic numbers...could replace with meaningful variables
                     radtype = str(newdata[9])
                     alt = str(newdata[12])
 

@@ -91,6 +91,7 @@ def writeArchive(log):
     script_dir = os.path.dirname(__file__)
     absolute_path = os.path.join(script_dir, archive_path)
 
+    #with open("logFile.csv",'w') as outf:
     with open(archive_path, 'w') as outf:
         outfwriter = csv.writer(outf)
         for i in log:

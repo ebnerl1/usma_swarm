@@ -1,4 +1,4 @@
-# Performs a sequencial greedy waypoint (WP) assignment:
+# Performs a sequential greedy waypoint (WP) assignment:
 # 1- Determine which UAVs are in your subswarm
 # 2- Split up number of wpts to be assigned among subswarm
 # 3- Each UAS individually plans for all UAS in the subswarm in sequence follows:
@@ -140,7 +140,7 @@ class GreedyGoto(ss.Tactic):
             sock.connect(server_address)
             try:
                 # Initialize data sent to server
-                messageArray = [self._id, 100000, 100000, 99999, 100000, self._desired_lat, self._desired_lon, 0, self._desired_alt, "PRDER", 100000, 0, 0]
+                messageArray = [self._id, 100000, 100000, 99999, 100000, self._desired_lat, self._desired_lon, 0, self._desired_alt, "PRDER", 100000, 0, 0] #too long of a list
                 message = str(messageArray)
                 sock.sendall(message)
 
@@ -210,7 +210,7 @@ class GreedyGoto(ss.Tactic):
                     # Loop over each waypoint defined in the mission
                     for k in range(0, len(self._enumList)):
                         # Skip to next if that waypoint is already assigned
-                        if self._wp_assigned[k] == False :
+                        if self._wp_assigned[k] == False : #you could use not instead of ==
                             # Set the end location to that waypoint
                             temp2_lat = float(self._enumList[k][0])
                             temp2_lon = float(self._enumList[k][1])
