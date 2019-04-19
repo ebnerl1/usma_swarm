@@ -6,10 +6,10 @@ import csv
 import math 
 
 #Grab initial lat and set up
-i = 0
-start_lat = '0'
-def conver(path):
 
+def convert(path):
+    i = 0
+    start_lat = '0'
     with open(path) as csv_file:
 
         csv_reader = csv.reader(csv_file, delimiter = ',')
@@ -73,5 +73,5 @@ def conver(path):
        
         csv_file.close()
 
-    kml.save("/home/osrf/Dropbox/forAtak.kml")
+    kml.save("/home/user1/Dropbox/forAtak.kml")
     print("KML file updated in DropBox. Ready for viewing in ATAK.")

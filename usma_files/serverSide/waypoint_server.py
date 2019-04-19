@@ -98,7 +98,7 @@ def writeArchive(log):
         for i in log:
             outfwriter.writerow(i)
 
-    with open(static_path, 'f') as outf:
+    with open(static_path, 'w') as outf:
         outfwriter = csv.writer(outf)
         for i in log:
             outfwriter.writerow(i)
