@@ -11,10 +11,12 @@ import rasterio
 import numpy as np
 import os
 import math
-sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
+#sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
+import hotspot as hp
 
 procname.setprocname("serverSide")
+
 
 ######################## VARIABLES ########################
 
@@ -27,6 +29,9 @@ online = False
 elevationFile = 'srtm_14_04.tif'
 log = []
 heatmapdata = []
+hotspot_loc = [0,0]
+load_hotspot = [0,0]
+serverflag = 1
 
 #create a list of waypoints that has been visited
 finishedwp = set([])
@@ -50,6 +55,7 @@ def elevationOnline(lat, lng):
         print ('JSON decode failed: '+str(request))
 
 def elevationOffline(lat, lng):
+    print "running offline"
     global elevationFile
     coords = [(lat,lng)]
     elevation = 0
@@ -85,6 +91,7 @@ def writeArchive(log):
     script_dir = os.path.dirname(__file__)
     absolute_path = os.path.join(script_dir, archive_path)
 
+    #with open("logFile.csv",'w') as outf:
     with open(archive_path, 'w') as outf:
         outfwriter = csv.writer(outf)
         for i in log:
@@ -100,7 +107,6 @@ def listen():
 
     #bind the socket to the port. SENSOR STATION IS 203!!
     #192.168.11.202
-    serverflag = 1
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
@@ -143,7 +149,6 @@ def listen():
                     lon = float(newdata[6])
                     rawcounts = float(newdata[7])
                     maxCounts = 0
-                    hotspot_loc = [0,0]
                     if rawcounts >= maxCounts:
                         maxCounts = rawcounts
                         hotspot_loc = [lat,lon]
@@ -153,27 +158,35 @@ def listen():
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
                       print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
-                      hotspot_grid.grab_hotspot(hotspot_loc[0],hotspot_loc[1])
+                      data_sent = [str(finishedwp),str(hotspot_loc[0]),str(hotspot_loc[1])]
+                      connection.sendall(str(data_sent))
+                      with open('hotspot.py', 'w') as output:
+                        output.write("hotspot = " + str(hotspot_loc))
                       quit()
                     #sendbackmsg = [newdata[4],newdata[3]]
-                    connection.sendall(str(finishedwp))
+                    garbage = [str(finishedwp),str(load_hotspot[0]),str(load_hotspot[1])]
+                    print(garbage)
+                    connection.sendall(str(garbage))
 
                     # Heatmap Portion----------------------------------------------------------------
                     
                     droneID = newdata[0]
                     absalt = float(newdata[8])
                     radtype = str(newdata[9])
+                    alt = str(newdata[12])
 
                     print("droneID: " + str(droneID))
                     print("rawcounts: " + str(rawcounts))
                     print("radtype: " + str(radtype))
                     print("absalt: " + str(absalt))
+                    print("gpsalt: " + str(alt))
 
               
                     if online:
                         mapalt = float(elevationOnline(lat, lon))
                     else:
                         mapalt = float(elevationOffline(lat,lon))
+                    #mapalt = 98.98
                     convcounts = countsconvert(rawcounts, absalt, mapalt, radtype) 
                     print("convcounts: " + str(convcounts))
                     log.append([timeNow, droneID, radtype, lat, lon, absalt, mapalt, rawcounts, convcounts])
@@ -200,12 +213,17 @@ def listen():
 
                 else:
                     break
-                
+        except socket.error:
+            pass        
         finally:
             connection.close()
         
 if __name__ == "__main__":
+    load_hotspot = hp.hotspot
+    print "hotspot location from python file: ", load_hotspot         
     try:
         listen()
     except KeyboardInterrupt:
         pass
+    #hotspot_grid.createGrid(hotspot_loc[0],hotspot_loc[1])
+    
