@@ -11,6 +11,7 @@ import rasterio
 import numpy as np
 import os
 import math
+import csv_to_kml
 #sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
 import hotspot as hp
@@ -21,6 +22,7 @@ procname.setprocname("serverSide")
 ######################## VARIABLES ########################
 
 outfile = "parsed_data.js" # Output file as a .geojson
+static_path = "convertThis"+ ".csv"
 archive_path = "archive/archive_" + str(datetime.now()) + ".csv"
 radcap = 1 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
@@ -31,7 +33,7 @@ log = []
 heatmapdata = []
 hotspot_loc = [0,0]
 load_hotspot = [0,0]
-serverflag = 1
+serverflag = 0
 
 #create a list of waypoints that has been visited
 finishedwp = set([])
@@ -93,6 +95,11 @@ def writeArchive(log):
 
     #with open("logFile.csv",'w') as outf:
     with open(archive_path, 'w') as outf:
+        outfwriter = csv.writer(outf)
+        for i in log:
+            outfwriter.writerow(i)
+
+    with open(static_path, 'f') as outf:
         outfwriter = csv.writer(outf)
         for i in log:
             outfwriter.writerow(i)
@@ -205,11 +212,13 @@ def listen():
                             else:
                                 outf.write('\n')
                         outf.write('];')
-                            
+                    
                     writeArchive(log)
+                    csv_to_kml(static_path)
 
                     with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
+                    
 
                 else:
                     break
