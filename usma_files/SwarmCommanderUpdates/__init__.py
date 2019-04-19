@@ -15,7 +15,7 @@ from SwarmCommander.modules.sc_qt_gui.dashboardDialogWrapper import DashboardDia
 import ap_lib.ap_enumerations as enums
 import sys
 
-SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL
+SITL_LOCATION = 4   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL, 4 = SRNL
 
 class SC_QtGUIModule(sc_module.SCModule):
     def __init__(self, sc_state):
@@ -41,14 +41,14 @@ class SC_QtGUIModule(sc_module.SCModule):
         self.__updaterFrequent.start();
 
         #zoom to default location:
-        if SITL_LOCATION == 3: 
+        if SITL_LOCATION == 4: 
+            self.mapWidget.zoomTo(16, 33.274562, -81.577593)
+        elif SITL_LOCATION == 3: 
             self.mapWidget.zoomTo(16, 43.872280, -112.726646)
         elif SITL_LOCATION == 2: 
             self.mapWidget.zoomTo(16, 41.390717, -73.953278)
         elif SITL_LOCATION == 1: 
             self.mapWidget.zoomTo(16, 41.360461, -74.032838)
-        elif SITL_LOCATION == 4: 
-            self.mapWidget.zoomTo(16, 33.274562, -81.577593)
         else:
             self.mapWidget.zoomTo(16, 35.716888, -120.7646408)
 
