@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# Written by Hayden Trainor, Ben Baumgartner. 10April2019
 
 import simplekml
 import csv
@@ -7,8 +8,9 @@ import math
 #Grab initial lat and set up
 i = 0
 start_lat = '0'
+def conver(path):
 
-with open('convertThis.csv') as csv_file:
+    with open(path) as csv_file:
 
     csv_reader = csv.reader(csv_file, delimiter = ',')
     for row in csv_reader:
@@ -22,24 +24,22 @@ with open('convertThis.csv') as csv_file:
             start_lat = row_info[2]
         i = i +1
 
-    
     csv_file.close()
 
-dist_width = 5
-dist_height = 5
-start_lat = float(start_lat)
-start_lat_radians = math.cos((start_lat*3.14)/180)
-degree_lon = start_lat_radians * 111321.5432
-width = (1/degree_lon) * dist_width
-height = (1/111321.5432) * dist_height
+    dist_width = 2
+    dist_height = 2
+    start_lat = float(start_lat)
+    start_lat_radians = math.cos((start_lat*3.14)/180)
+    degree_lon = start_lat_radians * 111321.5432
+    width = (1/degree_lon) * dist_width
+    height = (1/111321.5432) * dist_height
 
-#KML set up
+    #KML set up
 
-kml = simplekml.Kml()
+    kml = simplekml.Kml()
+    i = 0
 
-i = 0
-
-with open('convertThis.csv') as csv_file:
+    with open(path) as csv_file:
 
     csv_reader = csv.reader(csv_file, delimiter = ',')
     
@@ -59,10 +59,8 @@ with open('convertThis.csv') as csv_file:
         bottom_right_y = (lat- height/2)
         top_right_x = (lon + width/2)
         top_right_y = (lat + height/2)
-        
 
         pol = kml.newpolygon(name = row_info[0], outerboundaryis = ([(top_left_x,top_left_y), (top_right_x,top_right_y), (bottom_right_x,bottom_right_y), (bottom_left_x,bottom_left_y),(top_left_x,top_left_y)]))
-
 
         if (rad_info < 20):
             pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.green)
@@ -73,13 +71,7 @@ with open('convertThis.csv') as csv_file:
         else:
             pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.red)
        
-    
     csv_file.close()
 
-kml.save("/home/osrf/Dropbox/forAtak.kml")
-
-            
-    
-
-
-   
+    kml.save("/home/osrf/Dropbox/forAtak.kml")
+    print("KML file updated in DropBox. Ready for viewing in ATAK.")

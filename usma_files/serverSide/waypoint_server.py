@@ -18,11 +18,10 @@ import hotspot as hp
 
 procname.setprocname("serverSide")
 
-
 ######################## VARIABLES ########################
 
 outfile = "parsed_data.js" # Output file as a .geojson
-static_path = "convertThis"+ ".csv"
+static_path = "convertThis" + ".csv"
 archive_path = "archive/archive_" + str(datetime.now()) + ".csv"
 radcap = 1 # Highest amount of radiation to scale color gradient
 interval = 5 # Time in seconds in between scans
@@ -188,7 +187,6 @@ def listen():
                     print("absalt: " + str(absalt))
                     print("gpsalt: " + str(alt))
 
-              
                     if online:
                         mapalt = float(elevationOnline(lat, lon))
                     else:
@@ -214,12 +212,11 @@ def listen():
                         outf.write('];')
                     
                     writeArchive(log)
-                    csv_to_kml(static_path)
+                    csv_to_kml.convert(static_path)
 
                     with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
                     
-
                 else:
                     break
         except socket.error:
@@ -235,4 +232,3 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         pass
     #hotspot_grid.createGrid(hotspot_loc[0],hotspot_loc[1])
-    
