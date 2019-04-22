@@ -11,7 +11,7 @@ import rasterio
 import numpy as np
 import os
 import math
-import csv_to_kml
+#import csv_to_kml
 #sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
 import hotspot as hp
@@ -212,7 +212,7 @@ def listen():
                         outf.write('];')
                     
                     writeArchive(log)
-                    csv_to_kml.convert(static_path)
+                    #csv_to_kml.convert(static_path)
 
                     with open(wpfile, 'a') as outf:
                         outf.write(str(finishedwp) + '\n')
