@@ -158,6 +158,8 @@ def listen():
                     if rawcounts >= maxCounts:
                         maxCounts = rawcounts
                         hotspot_loc = [lat,lon]
+                        with open('hotspot.py', 'w') as output:
+                            output.write("hotspot = " + str(hotspot_loc))
 
                     #sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
