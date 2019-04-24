@@ -1,1 +1,2 @@
 SUBSYSTEM=="tty", ATTRS{idProduct}=="ea60", ATTRS{idVendor}=="10c4", SYMLINK+="radeye", ACTION=="add", GROUP="dialout", MODE="0660"
+SUBSYSTEM=="tty", ATTRS{idProduct}=="2303", ATTRS{idVendor}=="067b", SYMLINK+="radeye", ACTION=="add", GROUP="dialout", MODE="0660"
