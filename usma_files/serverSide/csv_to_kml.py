@@ -4,7 +4,7 @@
 import simplekml
 import csv
 import math
-import datetime 
+import time 
 
 #Grab initial lat and set up
 
@@ -78,8 +78,8 @@ def convert(dropbox_path):
         csv_file.close()
 
     kml.save("/home/user1/Dropbox/forAtak.kml")
-    archive_path = "/home/user1/usma_swarm/usma_files/archive/Atak_" + str(datetime.now()) + ".kml"
-    f = open(archive_path,"w+")
-    kml.save(archive_path)
-    f.close()
+    archive_path = "/home/user1/usma_swarm/usma_files/archive/Atak_" + time.strftime("%Y%m%d_%H%M%S") + ".kml"
+    with open(archive_path, 'a') as f:
+        f.write('')   
+    kml.save(archive_path)  
     print("KML file updated in DropBox. Ready for viewing in ATAK. A copy of this kml is also archived.")
