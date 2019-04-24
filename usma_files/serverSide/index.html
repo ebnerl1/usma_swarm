@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
- <meta http-equiv="refresh" content="16; URL=file:///home/osrf/usma_swarm/usma_files/serverSide/index.html"
+ <meta http-equiv="refresh" content="16; URL=file:///home/user1/usma_swarm/usma_files/serverSide/index.html"
 <head>
     <title>SWARMS Heatmap</title>
 		<link rel="stylesheet" charset="utf-8" href="leaflet_src/leaflet.css" />
@@ -26,9 +26,9 @@
 <script src="parsed_data.js"></script>
 <script>
 
-var map = L.map('map').setView([41.390717,-73.953278], 18);
+var map = L.map('map').setView([33.275375,-81.576891], 18);
 
-L.tileLayer('rivercourts/{z}/{x}/{y}.jpg', {maxZoom: 18}).addTo(map);
+L.tileLayer('SRNL/{z}/{x}/{y}.jpg', {maxZoom: 19}).addTo(map);
 
 points = points.map(function (p) { return [p[0], p[1]]; });
 

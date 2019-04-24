@@ -32,7 +32,7 @@ log = []
 heatmapdata = []
 hotspot_loc = [0,0]
 load_hotspot = [0,0]
-serverflag = 0
+serverflag = 1
 
 #create a list of waypoints that has been visited
 finishedwp = set([])
@@ -70,10 +70,10 @@ def countsconvert(rawcounts, absalt, mapalt, radtype):
     rval = 0
     newcounts = 0
     if radtype == "PRDER":
-        background = 15.6
+        background = 23
         rval = 0.66
     else:
-        background = 9.6
+        background = 16
         rval = 0.52
     newcounts = rawcounts - background
     if newcounts < 0:
@@ -154,10 +154,21 @@ def listen():
                     lat = float(newdata[5])
                     lon = float(newdata[6])
                     rawcounts = float(newdata[7])
+                    absalt = float(newdata[8])
+                    radtype = str(newdata[9])
+
+                    if online:
+                        mapalt = float(elevationOnline(lat, lon))
+                    else:
+                        mapalt = float(elevationOffline(lat,lon))
+
                     maxCounts = 0
-                    if rawcounts >= maxCounts:
-                        maxCounts = rawcounts
+                    convcounts = countsconvert(rawcounts, absalt, mapalt, radtype)
+                    if convcounts >= maxCounts:
+                        maxCounts = convcounts
                         hotspot_loc = [lat,lon]
+                        with open('hotspot.py', 'w') as output:
+                            output.write("hotspot = " + str(hotspot_loc))
 
                     #sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
@@ -177,8 +188,6 @@ def listen():
                     # Heatmap Portion----------------------------------------------------------------
                     
                     droneID = newdata[0]
-                    absalt = float(newdata[8])
-                    radtype = str(newdata[9])
                     alt = str(newdata[12])
 
                     print("droneID: " + str(droneID))
@@ -187,12 +196,6 @@ def listen():
                     print("absalt: " + str(absalt))
                     print("gpsalt: " + str(alt))
 
-                    if online:
-                        mapalt = float(elevationOnline(lat, lon))
-                    else:
-                        mapalt = float(elevationOffline(lat,lon))
-                    #mapalt = 98.98
-                    convcounts = countsconvert(rawcounts, absalt, mapalt, radtype) 
                     print("convcounts: " + str(convcounts))
                     log.append([timeNow, droneID, radtype, lat, lon, absalt, mapalt, rawcounts, convcounts])
                     heatmapdata.append([lat, lon, convcounts])
