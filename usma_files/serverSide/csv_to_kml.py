@@ -3,14 +3,15 @@
 
 import simplekml
 import csv
-import math 
+import math
+import datetime 
 
 #Grab initial lat and set up
 
-def convert(path):
+def convert(dropbox_path):
     i = 0
     start_lat = '0'
-    with open(path) as csv_file:
+    with open(dropbox_path) as csv_file:
 
         csv_reader = csv.reader(csv_file, delimiter = ',')
         for row in csv_reader:
@@ -26,7 +27,7 @@ def convert(path):
 
         csv_file.close()
 
-    dist_width = 2
+    dist_width = 1
     dist_height = 2
     start_lat = float(start_lat)
     start_lat_radians = math.cos((start_lat*3.14)/180)
@@ -39,7 +40,7 @@ def convert(path):
     kml = simplekml.Kml()
     i = 0
 
-    with open(path) as csv_file:
+    with open(dropbox_path) as csv_file:
 
         csv_reader = csv.reader(csv_file, delimiter = ',')
     
@@ -63,9 +64,12 @@ def convert(path):
             pol = kml.newpolygon(name = row_info[0], outerboundaryis = ([(top_left_x,top_left_y), (top_right_x,top_right_y), (bottom_right_x,bottom_right_y), (bottom_left_x,bottom_left_y),(top_left_x,top_left_y)]))
 
             if (rad_info < 20):
+                pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.blue)
+
+            elif (100 >= rad_info > 20):
                 pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.green)
 
-            elif (70 >= rad_info > 20):
+            elif (500 >= rad_info > 100):
                 pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.yellow)
 
             else:
@@ -74,4 +78,5 @@ def convert(path):
         csv_file.close()
 
     kml.save("/home/user1/Dropbox/forAtak.kml")
-    print("KML file updated in DropBox. Ready for viewing in ATAK.")
+    kml.save("/home/user1/usma_swarm/usma_files/archive/Atak_" + str(datetime.now()) + ".kml")
+    print("KML file updated in DropBox. Ready for viewing in ATAK. A copy of this kml is also archived.")
