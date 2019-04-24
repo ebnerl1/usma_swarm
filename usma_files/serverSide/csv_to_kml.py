@@ -78,5 +78,8 @@ def convert(dropbox_path):
         csv_file.close()
 
     kml.save("/home/user1/Dropbox/forAtak.kml")
-    kml.save("/home/user1/usma_swarm/usma_files/archive/Atak_" + str(datetime.now()) + ".kml")
+    archive_path = "/home/user1/usma_swarm/usma_files/archive/Atak_" + str(datetime.now()) + ".kml"
+    f = open(archive_path,"w+")
+    kml.save(archive_path)
+    f.close()
     print("KML file updated in DropBox. Ready for viewing in ATAK. A copy of this kml is also archived.")
