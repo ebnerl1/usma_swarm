@@ -27,7 +27,7 @@ def convert(dropbox_path):
 
         csv_file.close()
 
-    dist_width = 1
+    dist_width = 0.5
     dist_height = 2
     start_lat = float(start_lat)
     start_lat_radians = math.cos((start_lat*3.14)/180)
@@ -63,13 +63,13 @@ def convert(dropbox_path):
 
             pol = kml.newpolygon(name = row_info[0], outerboundaryis = ([(top_left_x,top_left_y), (top_right_x,top_right_y), (bottom_right_x,bottom_right_y), (bottom_left_x,bottom_left_y),(top_left_x,top_left_y)]))
 
-            if (rad_info < 20):
+            if (rad_info < 30):
                 pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.blue)
 
-            elif (100 >= rad_info > 20):
+            elif (100 >= rad_info > 30):
                 pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.green)
 
-            elif (500 >= rad_info > 100):
+            elif (400 >= rad_info > 100):
                 pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.yellow)
 
             else:
@@ -78,8 +78,8 @@ def convert(dropbox_path):
         csv_file.close()
 
     kml.save("/home/user1/Dropbox/forAtak.kml")
-    archive_path = "/home/user1/usma_swarm/usma_files/archive/Atak_" + time.strftime("%Y%m%d_%H%M%S") + ".kml"
-    with open(archive_path, 'a') as f:
-        f.write('')   
-    kml.save(archive_path)  
+#    archive_path = "/home/user1/usma_swarm/usma_files/archive/Atak_" + time.strftime("%Y%m%d_%H%M%S") + ".kml"
+#    with open(archive_path, 'a') as f:
+#        f.write('')   
+#    kml.save(archive_path)  
     print("KML file updated in DropBox. Ready for viewing in ATAK. A copy of this kml is also archived.")
