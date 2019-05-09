@@ -1,3 +1,11 @@
+# Facilitates communication between quads and server
+# Must run killServerSide.sh between behaviors and
+# to clear out the data held by server
+#
+# Ashley Rivera & Conner Russell
+# USMA
+# Last updated: 9 MAY 2019
+
 import socket
 import sys
 import subprocess
@@ -12,7 +20,6 @@ import numpy as np
 import os
 import math
 import csv_to_kml
-#sys.path.insert(0, '~/scrimmage/usma/plugins/autonomy/python')
 import map_around_central_point as hotspot_grid
 import hotspot as hp
 
@@ -40,6 +47,7 @@ wpfile = "wp_data.txt"
 
 ###########################################################
 
+# May not need this function
 def elevationOnline(lat, lng):
     apikey = "AIzaSyDvuEAYeb9xoSun0PHXVkM7oxl_sRZD2H4"
     url = "https://maps.googleapis.com/maps/api/elevation/json"
@@ -48,13 +56,13 @@ def elevationOnline(lat, lng):
         results = json.load(request).get('results')
         if 0 < len(results):
             elevation = results[0].get('elevation')
-            # ELEVATION
             return elevation
         else:
             print ('HTTP GET Request failed.')
     except ValueError:
         print ('JSON decode failed: '+str(request))
 
+# May not need this function
 def elevationOffline(lat, lng):
     print "running offline"
     global elevationFile
@@ -64,7 +72,9 @@ def elevationOffline(lat, lng):
         for val in src.sample(coords):
             elevation = val
         return elevation[0]
-        
+
+# Converts raw data into an adapted radiation reading based on 
+# raw counts, background data, altitude, and some constants        
 def countsconvert(rawcounts, absalt, mapalt, radtype):
     background = 0
     rval = 0
@@ -111,14 +121,11 @@ def listen():
     #create a TCP/IP socket
     sock = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-    #bind the socket to the port. SENSOR STATION IS 203!!
-    #192.168.11.202
     if (serverflag == 1):
         server_address = ('192.168.11.202',10000)
     else: 
         server_address = ('127.0.0.1',10000)
 
-    #server_address = ('192.168.11.202',10000)
     print >>sys.stderr, 'Starting up on %s port %s...' % server_address
     sock.bind(server_address)
 
@@ -133,13 +140,10 @@ def listen():
         try:
             while True:
                 data=connection.recv(4096)
-                #print("Connected!")
-                #newdata = eval(data)
                 if (len(data) > 1):
                 
                     timeNow = str(datetime.now())
                     newdata = eval(data)
-                    #print("New Data: ", newdata)
                     
                     print >>sys.stderr, 'Connection from UAS#%s on Port %s' % (newdata[0],client_address[1])
                     print("Working WP List: " + str(newdata[1]))
@@ -164,23 +168,26 @@ def listen():
 
                     maxCounts = 0
                     convcounts = countsconvert(rawcounts, absalt, mapalt, radtype)
+                    # Check to see if the current reading has is the max so far
                     if convcounts >= maxCounts:
                         maxCounts = convcounts
                         hotspot_loc = [lat,lon]
                         with open('hotspot.py', 'w') as output:
                             output.write("hotspot = " + str(hotspot_loc))
 
-                    #sendall argument must be string or buffer, not a list
+                    # sendall argument must be string or buffer, not a list
                     print("Sending back a message...")
                     if ((len(finishedwp)) == newdata[4]):
                       print("FINISHED!")
                       print("maxCounts: " + str(maxCounts) + " at coordinate " + str(hotspot_loc))
                       data_sent = [str(finishedwp),str(hotspot_loc[0]),str(hotspot_loc[1])]
                       connection.sendall(str(data_sent))
+                      # Writes the hotspot to the file we grab it from
+                      # in the next behavior
                       with open('hotspot.py', 'w') as output:
                         output.write("hotspot = " + str(hotspot_loc))
                       quit()
-                    #sendbackmsg = [newdata[4],newdata[3]]
+                    # garbage is the data that is not needed but must be sent
                     garbage = [str(finishedwp),str(load_hotspot[0]),str(load_hotspot[1])]
                     print(garbage)
                     connection.sendall(str(garbage))
@@ -228,10 +235,11 @@ def listen():
             connection.close()
         
 if __name__ == "__main__":
+    # Sends hotspot to swarm when we restart waypoint server for
+    # detailed pass behavior
     load_hotspot = hp.hotspot
     print "hotspot location from python file: ", load_hotspot         
     try:
         listen()
     except KeyboardInterrupt:
         pass
-    #hotspot_grid.createGrid(hotspot_loc[0],hotspot_loc[1])
