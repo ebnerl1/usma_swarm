@@ -1,0 +1,104 @@
+ZEPHYR CODE README (AY19 Algorithm -- Lines 150 to 230) 
+
+Code: zeph_brady.py
+Supporting File: zeph_unified_Br.py 
+
+    All Files: Home>Scrimmage>usma>plugins>Autonomy>python
+
+Purpose of Algorithm: Create surveillance deployment schedule for the zephyr swarm maximizing high priority points covered. 
+
+-------------------------------------------------------------------------------------------
+
+Code Explanation: 
+
+1. Determine maximum number of waypoints a zephyr will be assigned (Compensates for an uneven number of waypoints) --> Lines 135 to 147 
+    a. Maximum difference between zephyrs should be 1 
+
+2. Algorithm begins assigning waypoints from input file (See below) 
+    Note: Format of bundles: { _, _, _, ...} 
+        Each zephyr receives its only bundle of points 
+        Algorithm fills each of the spaces (time intervals) with waypoints based on priority 
+
+    a. Begins with first time interval for the first zephyr (Line 155) 
+        i = time interval   = 0, 1, ...
+        j = zephyr          = 0, 1, ...
+    b. Determines the waypoint to assign to that time interval (Line 180)
+        k = waypoint        = 0, 1, ...
+        Will check every point in the input file
+        Only keeps highest priority, unassigned waypoint in the interval slot 
+    c. Assigns the waypoint to that zephyr's bundle (Line 196)
+    d. Moves onto the next zephyr (i = 0, j = 1)
+        Assigns all zephyrs 1 waypoint before moving onto the next time interval IOT distribute high priority Points 
+    e. Once all zephyrs have 1 waypoint, moves onto the next time interval (i = 1, j = 0, 1, ...)
+
+3. Bundles are assigned to the zephyrs (Line 218) 
+
+4. Swarm executes behavior (Line 232...)
+
+
+Additional Notes:
+    Line 171: Compensates for uneven bundle sizes; continues until all bundles are filled
+     
+-------------------------------------------------------------------------------------------
+
+INPUTS: zeph_unified_Br.py
+
+1. Keep Line 3 the same 
+    (Can add addition lines for new locations to have multiple locations ready for pre-flight; 
+    didn't do that this year)
+
+2. Update Line 8: 
+    a. WP_LOC_S1[#] refers to each of the waypoints that are distributed to the swarm 
+    b. (x, y, z) 
+        x = latitude 
+        y = longitude 
+        z = priority (Higher # = Higher priority) 
+
+
+OUTPUT: Each zephyr receives a bundle of points. Should be...
+    - Unique for each zephyr 
+    - Include all waypoints listed in zeph_unified_Br.py file between all the vectors 
+    - Listed highest to lowest priority waypoints 
+    - Format: {WP#, WP#, ...}
+
+-------------------------------------------------------------------------------------------
+
+HOW TO RUN: 
+
+1. Sitl start-up 
+
+    In Terminal #1: 
+    1. multi-sitl-start.bash -B -LRange11 1 
+                                 ^Location ^Number of Vehicles 
+    2. fti.py -d sitl_bridge_1 -z 
+
+    In Terminal #2: 
+    3. swarm_commander.py
+        a. network device sitl_bridge_1 
+
+2. FTI (Pop-Up from Terminal #1)
+
+    1. Select vehicle
+    2. Toggle flight ready 
+    3. Send configuration 
+    4. Arm All 
+    5. Auto (Should launch vehicle)
+
+3. vArduPlane (sim_vehicle)
+
+    Open Range 11 Map:
+    1. 'module load map'  
+        If loading a new vehicle, load geo fence:
+        a. fence load /home/user1/blessed/fence
+
+4. Swarm Commander 
+
+    1. Select vehicle(s)
+    2. Push selected UAVs from staged to swarm ready 
+    3. Assign to subswarm (Add 1, then click) --> Should change SS_ID to 1
+    4. Specify Behavior Parameters (*Pulling from zeph_unified_Br.py)
+        a. WP_LOC_S1: 1
+        b. Time at waypoint inputed in seconds (Want 2 minutes of observation --> Input 120) 
+
+5. Zephyrs should execute behavior...
+
