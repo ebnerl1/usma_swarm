@@ -2,6 +2,7 @@
 
 #^^Adding the shebang above to make the script executable
 #Remember to do chmod +x <filename>
+#Original Author: Conner Russell '19
 
 import csv
 
@@ -36,6 +37,7 @@ def main():
     except IOError:
         print ("Cannot open ", launchfile[1])
 
+    #Pulls info from launch.csv
     #Store/Rename Framework Long/Lat Point
     x0 = float(launchfile[3])
     y0 = float(launchfile[5])
@@ -53,7 +55,7 @@ def main():
     bx1 = float(launchfile[25])
     by1 = float(launchfile[27])
 
-    #Create the points 
+    #Create the points by breaking up a line between p0 and p1 
     xs=np.linspace(x0,x1,number_of_drones)
     ys=np.linspace(y0,y1,number_of_drones)
 
@@ -63,7 +65,7 @@ def main():
     bxs=np.linspace(bx0,bx1,number_of_drones)
     bys=np.linspace(by0,by1,number_of_drones)
 
-    #print them for error checking
+    #Print them for error checking
     #for i in range(len(xs)):
     #    print (xs[i],ys[i])
 

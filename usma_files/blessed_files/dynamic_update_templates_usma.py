@@ -3,6 +3,13 @@
 #This script is for creating templates in the $HOME/blessed folder from
 #the standard mission / fence / parameter / rally files in acs-env/data/missions
 
+# This script is 99% the same as update_templates_usma.py except it
+# takes in a wp file in as an argument and pushes that to the home
+# blessed folder  -CR
+
+
+# Original author: Conner Russell 
+
 import os, sys, shutil
 
 #standard variables

@@ -1,4 +1,8 @@
 #!/usr/bin/python
+# This python script reads information via serial communication from the radiation sensor. 
+# The information is read. From this information, the type of sensor can be acertained.  The radiation
+# value and the sensor type are sent to the ROS topic /tactic_interface/radiation.
+
 import serial
 import rospy
 import time

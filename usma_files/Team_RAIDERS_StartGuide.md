@@ -47,8 +47,9 @@ This page explains how to pull and push information from Github to keep common s
     * zeph_red.wp (Outdated, not necessary for normal execution)
 4. Copy, paste, & replace those 6 files into /usma_swam/usma_files/blessed_files
 5. Open & Edit launch.csv
-    * Edit start & end lat/long of launch line
-    * Change # of drones being launched
+    * Edit start & end lat/long of launch line (X0, X1, Y0, Y1) and landing line
+        (LAX, LAY, LBX, LBY)
+    * Change # of drones being launched (NUM_DRONES)
 6. Run wpDuplicate.py to create unique wp files
     * `./wpDuplicate.py launch.csv`
     * This will create new & unique wp files for each drone in the current directory
@@ -56,10 +57,11 @@ This page explains how to pull and push information from Github to keep common s
         * `./clean_waypoints.sh`
 7. Navigate back to the usma_files directory
     * `cd ..`
-8. Update swarm_sync.sh line 12 with correct array of drone IP addresses
+8. -Optional- Update swarm_sync.sh line 12 with correct array of drone IP addresses
     * Before running, ensure that the wifi adapter is properly set up (see step 1 of Configure GCS Laptop Connections)
 9. Run swarm_sync.sh script in terminator
     * `./swarm_sync.sh`
+    * The script will prompt you for tail numbers
     * This will create new files in the /home/user1/blessed directory, then sync those files to each of the drones odroid folders
 10. Check each odroid folder to ensure proper syncing of individual files
     * Open up another terminator window
@@ -74,6 +76,79 @@ This page explains how to pull and push information from Github to keep common s
         * If need be, check actual loaded wp list
             * `module load misseditor`
 11. Drones are ready to **launch**! Navigate to the FTI interface to begin launch
+
+### Flying and Operating the Swarm
+1. Opening up the Flight Tech Interface (If not already opened from last section)
+    * Open up a terminal window
+    * `fti.py -d wlx00c0ca904414 -z`
+2. Open Swarm Commander
+    * Open up a new terminal window
+    * `swarmcommander.py`
+    * Wait for it to open and change to a gray colored terminal
+    * Type `network device wlx00c0ca904414` to sync it to the wifi adapter
+3. Open up the Health Monitor (Optional, but recommender when flying large groups)
+    * Open up yet another terminal window
+    * Type `acs_health_mon.py`
+4. Load the necessary parameters onto the quadrotors
+    * Navigate to FTI
+    * Adjust stack altitude
+    * Click `Send config`
+    * In MAVPROXY window:
+        * Sync WP File
+            * `wp list`
+        * Sync Fence
+            * `fence load /home/osrf/blessed/fence`
+        * Sync Rally Points
+            * `rally list`
+        * Open map for visual check
+            * `module load map`
+        * If need be, check actual loaded wp list
+            * `module load misseditor`
+5. Launching Quads
+    * Click on the quad you want to launch in FTI
+    * Click manual
+    * ARM Throttle
+    * Click auto
+    * Profit as the sprit of Team RAIDERS carries the quads into the air
+
+### But computer, how does Team RAIDERS' swarm work?
+#### Well, allow me my fellow computerer
+1. Once all quads are in the air, initiate the `Initial Pass` behavior
+2. At the end of the behavior, the wpServer will update a dictionary in hotspot.py with the lat/long
+    of the location of highest radiation counts
+3. At this point, restart the server and run the `Detailed Pass` behavior
+4. The detailed pass behavior will update the heatmap on the GCS
+5. Talk to Mr. Prat about pushing the heatmap to the remote ATAK server
+
+### Pushing necessary ROS files to Quadrotors
+#### Use-case: Quadrotor is not synced with latest ROS files
+1. Ensure you can establish an SSH connection to the quad
+2. Run `quad_setup.sh` in a terminal, add the quadrotors tail number
+3. Profit as the quad is being updated
+4. IMPORTANT NEW ROS FILES
+    * In /serverSide
+        * csv_to_kml.py
+    * In /ROS_Nodes
+        * rad_eye2_ROS.py
+        * master.launch
+        * altitude_eye_ROS.py
+
+### Starting up a simulation the easy way
+#### Use-case: You want to test out behaviors and dont want to manually type all the code to start a sim
+1. Open up `run_sim.sh` in a text editor (Visual Studio Code is the best lets be real)
+2. Update the necessary parameters described in the code
+3. Navigate back to a terminal window
+4. Type `./run_sim.sh` and let it run
+
+### NEW NEW NEW Zephyr Parameters
+#### Use-case: The Zephyrs were adjusted to fly at SRNL and work much better
+* New Zephyr Parameters for SRNL Testing
+* LIM_ROLL_CD= 5000cdeg (Original= 4500cdeg)
+* ARSPD_FBW_MAX= 20 m/s (Original= 25 m/s)
+* ARSPD_FBW_MIN= 13 m/s (Original= 15 m/s)
+* TECS_LAND_ARSPD= 14 m/s (Original= 16 m/s)
+* THR_MAX= 80% (Original= 100%)
+* TRIM_ARSD_CM= 1600 cm/s (Original= 1800 cm/s)
 
 ### Manually Update AP_ENUMERATIONS and LOCATIONS files
 #### Use-case: swarm_sync.sh fails to run/new behavior needs loading after initial mission configuration

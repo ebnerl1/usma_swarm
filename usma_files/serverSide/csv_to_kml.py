@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # Written by Hayden Trainor, Ben Baumgartner. 10April2019
+# This python script creates a kml out of the output csv.  It creates a box around lat/lon coordinates.  
+# A radiation values is assigned to these boxes. Red is the highest intensity, and blue is the lowest intensity. 
 
 import simplekml
 import csv

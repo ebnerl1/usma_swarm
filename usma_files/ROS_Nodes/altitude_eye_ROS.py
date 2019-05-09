@@ -1,4 +1,12 @@
 #!/usr/bin/python
+# This code takes in serial information from the SF11 Laser Rangefinder.
+# It publishes this information to the ROS topic /tactic_interface/altitude.
+# The ROS node polls the attitude sensors on the quadcopter to get roll, pitch, and 
+# yaw angles in Quaternion.  The quat_converter function then converts this to
+# standard angles.  Trigonometric identities are in the algorithm to get the 
+# adjusted height.  The adjusted height is published to the topic with a time stamp.
+
+
 import serial
 import rospy
 import numpy

@@ -1,5 +1,10 @@
 <!-- This is the main launch file for all autonomy-payload instance -->
 
+<!-- This is the launch file for each quadcopter.  This file has to be inserted into
+the file path: /acs_ros_ws/src/autonomy-payload/ap_master/launch. the quad_setup.sh script
+will push this information to a desired quad through a ssh link.  This launch file starts 
+the sensors and all of the other ROS nodes on the quadcopters.  -->
+
 <!-- Note: args 'id' and 'name' are mandatory -->
 
 <launch>
