@@ -3,23 +3,33 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
 
 ### Create ODROID Image Copy from Existing SASC Vehicle (using ODROID DiskImager)
 1. Download Win32DiskImager for Odroid from `https://forum.odroid.com/viewtopic.php?t=947`.
-2. Acquire known working SASC configured vehicle
+
+2. Acquire known working SASC configured vehicle
+
   * Can check functionality in SASC Flight Tech Interface (see SASC documentation)
   * Note that vehicle's tail # (the copied image will also be initially configured to that #)
-3. Carefully remove EMMC (or SD) card from ODROID
-4. Connect EMMC card to laptop
+
+3. Carefully remove EMMC (or SD) card from ODROID
+
+4. Connect EMMC card to laptop
+
   * Insert EMMC card into EMMC to mirco-SD card adapter  
   * Insert that micro-SD card adapter into a micro-SD to USB adapter
   * Insert the USB adapter into a USB port on the computer
   * NOTE: Do not use a micro-SD to SD card adapter, this must go through USB
-5. Use DiskImager tool to "READ" the image file (.img) and download it to the computer  
-6. Copy the image to a new EMMC or SD card  
+
+5. Use DiskImager tool to "READ" the image file (.img) and download it to the computer
+
+6. Copy the image to a new EMMC or SD card
+
   * Remove the copied EMMC card from the laptop  
   * Insert the new EMMC card into the laptop using the same steps as above  
   * In DiskImager: select the image file (.img) to write to card
   * In DiskImager: carefully select the USB device to which you will write the image
   * In DiskImager: click "WRITE", and then "VERIFY"
-7. Check functionality of new EMMC card by plugging it into ODROID of copied vehicle  
+
+7. Check functionality of new EMMC card by plugging it into ODROID of copied vehicle
+
   * Functionality should be identical in SASC Flight Tech Interface with original card  
   
 ### Configure new ODROID vehicle ID and Team Number
