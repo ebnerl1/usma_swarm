@@ -2,8 +2,7 @@
 This page explains how to copy over the image from an existing SASC ODROID, install it on a new eMMC card for use on another ODROID, and then configure the vehicle ID numbers. NOTE: this only works as is with older RED v3 EMMC Cards and with SD cards.  It does not work with the newer v4 ORANGE EMMC. 
 
 ### Create ODROID Image Copy from Existing SASC Vehicle (using ODROID DiskImager)
-
-1. Download Win32DiskImager for Odroid from `https://forum.odroid.com/viewtopic.php?t=947`
+1. Download Win32DiskImager for Odroid from `https://forum.odroid.com/viewtopic.php?t=947`.
 2. Acquire known working SASC configured vehicle
   * Can check functionality in SASC Flight Tech Interface (see SASC documentation)
   * Note that vehicle's tail # (the copied image will also be initially configured to that #)
