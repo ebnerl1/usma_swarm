@@ -1,4 +1,23 @@
-## Updating the Pixhawk on the SASC Zephyr II UASs
+# Updating Pixhawk Firmware on SASC Vehicles
+The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 implementation.  The 2nd section is older and pertains to the original SASC implementation.
+
+### Flashing New Pixhawk 2 (Cube) for Tarot 650 Quad Implementation (TODO: clean this up)
+1. Detailed instructions from NPS available at `/ACS/ardupilot/build.md`
+
+2. Make sure you have `px4-v3` firmware build
+
+  * `cd ~/ACS/ardupilot/build` and ensure `px-v3` is there.  
+  * If not get it from NPS Gitlab (TODO: update to DI2E): `git clone --recursive git@gitlab.nps.edu:sasc/ardupilot.git` 
+
+3. Ensure `test.py` file will not cause problems
+
+  * `cd ~/scrimmage/usma/plugins/autonomy/python`   
+  * `gedit test.py`, ensure all lines are commented, save (TODO: fix this)
+  
+4. Keep building this
+
+
+### Updating the Pixhawk on the SASC Zephyr II UASs
 
 1.	Note the “tail” number of the UAS: ____(A)____ (e.g. 10)
 2.	Open up the “hatch” of the Zephyr and gently lift the Pixhawk out of the 3D printed carriage so that the micro B USB port is accessible.
