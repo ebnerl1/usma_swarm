@@ -14,8 +14,20 @@ The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 im
   * `cd ~/scrimmage/usma/plugins/autonomy/python`   
   * `gedit test.py`, ensure all lines are commented, save (TODO: fix this)
   
-4. Keep building this
+4. Build the firmware (v3 is for the Pixhawk 2)
 
+  * `./waf configure --board px4-v3`   
+  * `./waf copter`
+
+5. Load the Firmware using Q-Ground Control
+
+  * Ensure you have QGC version v3.5.3 or later
+  * Plug in the Pixhawk into the computer using micro USB
+  * Open QGC, click on the Gears Icon (top left), then select "Firmware"
+  * Unplug then replug in the Pixhawk into the computer (per QGC instruction)
+  * Click "Ardupilot Flight Stack", "Advanced Settings", "Custom Firmware", select file from `/ACS/ardupilot/built/px4-v3/bin/arducopterv3.hex`
+  * In Parameters set "serial2_baud" to "1,500,000"
+  
 
 ### Updating the Pixhawk on the SASC Zephyr II UASs
 
