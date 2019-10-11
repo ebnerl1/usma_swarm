@@ -28,6 +28,27 @@ The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 im
   * Click "Ardupilot Flight Stack", "Advanced Settings", "Custom Firmware", select file from `/ACS/ardupilot/built/px4-v3/bin/arducopterv3.hex`
   * In Parameters set "serial2_baud" to "1,500,000"
   
+### Configure Pixhawk for Quad Operations after new Flash
+1. Connect the vehicle to QGC
+
+2. Calibrate the following:
+
+  * Accelerometers: Vehicle Setup > Sensors > Accelerometers - Follow prompt  
+  * Compass: Vehicle Setup > Sensors > Compass - Follow prompt
+  * Radio: Vehicle Setup > Radio > Calibrate - Follow prompt
+
+3. Update the Flight Modes at Vehicle Setup > Flight Modes to:
+
+  * Flight Mode 1: Stabilize
+  * Flight Mode 4: Loiter  
+  * Flight Mode 5: Auto
+
+4. Update the Power Monitor (to read voltage) at Vehicle Setup > Power to:
+
+  * Battery monitor: Analog Voltage Only
+  * Battery capacity: 6000 mAh 
+  * Minimum arming voltage: 0
+  * Power sensor: Power Module 90A
 
 ### Updating the Pixhawk on the SASC Zephyr II UASs
 
