@@ -26,22 +26,41 @@ Note: this is not needed if you have the Pixhawk Firmwares already built as we d
 1. Install mono
 
   * Instructions available at `www.mono-project.com/download/stable`
-  * `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
-  * `sudo apt install apt-transport-https ca-certificates`
-  * `echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
-  * `sudo apt update`
-  * `sudo apt install mono-devel`
+  * Installation commands:
+     - `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
+     - `sudo apt install apt-transport-https ca-certificates`
+     - `echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
+     - `sudo apt update`
+     - `sudo apt install mono-devel`
 
-2. Install mono
+2. Download MissionPlanner Windows Executable
 
-  * Instructions available at `www.mono-project.com/download/stable`
+  * Available at `http://firmware.ardupilot.org/Tools/MissionPlanner/`
+
+
+### Flash Firmware onto Pixhawk
+1. Connect computer to internet (needed for basic firmware install).
+2. Run MissionPlanner.  If on linux, commands:
+
+  * `cd MissionPlanner-1.3.53`
+  * `sudo mono MissionPlanner.exe`
+
+3. Install Basic Firmware First:
+  * In MP, select Initial Setup > Install Firmware > ArduCopter Quad
+     - APM 2+? > NO
+     - PX4/PIXHAWK/PIXRACER? > YES
+     - PIXRACER? > NO
+     - CUBE? > YES (if working with Pixhawk 2 Cube)
+  * Follow MP Prompts - should result in Pixhawks making "happy sounds"
   
-  
-  * Click "Ardupilot Flight Stack", "Advanced Settings", "Custom Firmware", select file from `/ACS/ardupilot/built/px4-v3/bin/arducopterv3.hex`
-  * In Parameters set "serial2_baud" to "1,500,000"
+4. Install SASC Firmware:
+  * In MP, select Initial Setup > Install Firmware 
+  * Load custom firmware
+  * Select: `usma_swarm\usma_files\PX4_Params\Pixhawk_Firmwares\arducopter_px4_v2_livefly.px4`
+  * Follow MP Prompts - should result in Pixhawks making "happy sounds"
   
 ### Configure Pixhawk for Quad Operations after new Flash
-1. Connect the vehicle to QGC
+1. Connect fully built vehicle to QGC (may not connect if Pixhawk alone)
 
 2. Calibrate the following:
 
@@ -61,6 +80,8 @@ Note: this is not needed if you have the Pixhawk Firmwares already built as we d
   * Battery capacity: 6000 mAh 
   * Minimum arming voltage: 0
   * Power sensor: Power Module 90A
+
+5. In Parameters set "serial2_baud" to "1,500,000"
 
 ### Updating the Pixhawk on the SASC Zephyr II UASs
 
