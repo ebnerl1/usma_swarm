@@ -1,12 +1,14 @@
 # Updating Pixhawk Firmware on SASC Vehicles
 The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 implementation.  The 2nd section is older and pertains to the original SASC implementation.
 
-### Flashing New Pixhawk 2 (Cube) for Tarot 650 Quad Implementation (TODO: clean this up)
+### Build New Pixhawk firmware (can be used for Tarot 650 Quad Implementation) (TODO Test this)
+Note: this is not needed if you have the Pixhawk Firmwares already built as we do in `usma_swarm/usma_files/PX4_params`
+
 1. Detailed instructions from NPS available at `/ACS/ardupilot/build.md`
 
-2. Make sure you have `px4-v3` firmware build
+2. Make sure you have `px4-v2` firmware build
 
-  * `cd ~/ACS/ardupilot/build` and ensure `px-v3` is there.  
+  * `cd ~/ACS/ardupilot/build` and ensure `px-v2` is there.  
   * If not get it from NPS Gitlab (TODO: update to DI2E): `git clone --recursive git@gitlab.nps.edu:sasc/ardupilot.git` 
 
 3. Ensure `test.py` file will not cause problems
@@ -14,17 +16,27 @@ The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 im
   * `cd ~/scrimmage/usma/plugins/autonomy/python`   
   * `gedit test.py`, ensure all lines are commented, save (TODO: fix this)
   
-4. Build the firmware (v3 is for the Pixhawk 2)
+4. Build the firmware (Note: unsure what v3 does, use v2)
 
-  * `./waf configure --board px4-v3`   
+  * `./waf configure --board px4-v2`   
   * `./waf copter`
 
-5. Load the Firmware using Q-Ground Control
 
-  * Ensure you have QGC version v3.5.3 or later
-  * Plug in the Pixhawk into the computer using micro USB
-  * Open QGC, click on the Gears Icon (top left), then select "Firmware"
-  * Unplug then replug in the Pixhawk into the computer (per QGC instruction)
+### Install Necessary Tools to Load Firmware onto Pixhawk
+1. Install mono
+
+  * Instructions available at `www.mono-project.com/download/stable`
+  * `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
+  * `sudo apt install apt-transport-https ca-certificates`
+  * `echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
+  * `sudo apt update`
+  * `sudo apt install mono-devel`
+
+2. Install mono
+
+  * Instructions available at `www.mono-project.com/download/stable`
+  
+  
   * Click "Ardupilot Flight Stack", "Advanced Settings", "Custom Firmware", select file from `/ACS/ardupilot/built/px4-v3/bin/arducopterv3.hex`
   * In Parameters set "serial2_baud" to "1,500,000"
   
