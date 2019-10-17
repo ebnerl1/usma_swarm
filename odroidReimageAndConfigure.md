@@ -74,8 +74,8 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
 2. Go into master.launch file and change 2 parameters
   * `cd /acs_ros_ws/src/autonomy-payload/ap_master/launch`
   * `vim master.launch`
-  * Go to line 26, change the /dev/ttyXXX to `"/dev/ttyUSB*"`
-  * Go to line 63, change the baudrate to `1500000`
+  * Go to line 26, change the `/dev/ttyACM*` to `"/dev/ttyUSB*"`
+  * Go to line 63, change the baudrate from `115200` to `1500000`
   * Save and Exit: Hit `Esc`, and `:x`
 
 ### Create ODROID Image Copy from Existing SASC Vehicle (OLDER METHOD using DD command)
