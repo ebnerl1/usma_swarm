@@ -57,6 +57,10 @@ This page explains how to pull and push information from Github to keep common s
 3. Copy BLESSED folder to ODROID ROOT
   * `scp -r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
 4. Copy PYTHON behaviors to ODROID behavior directory
+  * Make sure scrimmage/usma up to date
+     - `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E, NPS Gitlab)
+     - `cd ~/scrimmage/usma`
+     - `git pull`
   * `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
 5. Copy AP_ENUMERATIONS to proper ODROID directory
   * `scp /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@192.168.11.X:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
