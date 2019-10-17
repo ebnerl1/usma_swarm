@@ -1,12 +1,14 @@
 # Updating Pixhawk Firmware on SASC Vehicles
 The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 implementation.  The 2nd section is older and pertains to the original SASC implementation.
 
-### Flashing New Pixhawk 2 (Cube) for Tarot 650 Quad Implementation (TODO: clean this up)
+### Build New Pixhawk firmware (can be used for Tarot 650 Quad Implementation) (TODO Test this)
+Note: this is not needed if you have the Pixhawk Firmwares already built as we do in `usma_swarm/usma_files/PX4_params`
+
 1. Detailed instructions from NPS available at `/ACS/ardupilot/build.md`
 
-2. Make sure you have `px4-v3` firmware build
+2. Make sure you have `px4-v2` firmware build
 
-  * `cd ~/ACS/ardupilot/build` and ensure `px-v3` is there.  
+  * `cd ~/ACS/ardupilot/build` and ensure `px-v2` is there.  
   * If not get it from NPS Gitlab (TODO: update to DI2E): `git clone --recursive git@gitlab.nps.edu:sasc/ardupilot.git` 
 
 3. Ensure `test.py` file will not cause problems
@@ -14,20 +16,72 @@ The first section describes how to flash Pixhawk 2 firmware for the TAROT 650 im
   * `cd ~/scrimmage/usma/plugins/autonomy/python`   
   * `gedit test.py`, ensure all lines are commented, save (TODO: fix this)
   
-4. Build the firmware (v3 is for the Pixhawk 2)
+4. Build the firmware (Note: unsure what v3 does, use v2)
 
-  * `./waf configure --board px4-v3`   
+  * `./waf configure --board px4-v2`   
   * `./waf copter`
 
-5. Load the Firmware using Q-Ground Control
 
-  * Ensure you have QGC version v3.5.3 or later
-  * Plug in the Pixhawk into the computer using micro USB
-  * Open QGC, click on the Gears Icon (top left), then select "Firmware"
-  * Unplug then replug in the Pixhawk into the computer (per QGC instruction)
-  * Click "Ardupilot Flight Stack", "Advanced Settings", "Custom Firmware", select file from `/ACS/ardupilot/built/px4-v3/bin/arducopterv3.hex`
-  * In Parameters set "serial2_baud" to "1,500,000"
+### Install Necessary Tools to Load Firmware onto Pixhawk
+1. Install mono
+
+  * Instructions available at `www.mono-project.com/download/stable`
+  * Installation commands:
+     - `sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF`
+     - `sudo apt install apt-transport-https ca-certificates`
+     - `echo "deb https://download.mono-project.com/repo/ubuntu stable-xenial main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list`
+     - `sudo apt update`
+     - `sudo apt install mono-devel`
+
+2. Download MissionPlanner Windows Executable
+
+  * Available at `http://firmware.ardupilot.org/Tools/MissionPlanner/`
+
+
+### Flash Firmware onto Pixhawk
+1. Connect computer to internet (needed for basic firmware install).
+2. Run MissionPlanner.  If on linux, commands:
+
+  * `cd MissionPlanner-1.3.53`
+  * `sudo mono MissionPlanner.exe`
+
+3. Install Basic Firmware First:
+  * In MP, select Initial Setup > Install Firmware > ArduCopter Quad
+     - APM 2+? > NO
+     - PX4/PIXHAWK/PIXRACER? > YES
+     - PIXRACER? > NO
+     - CUBE? > YES (if working with Pixhawk 2 Cube)
+  * Follow MP Prompts - should result in Pixhawks making "happy sounds"
   
+4. Install SASC Firmware:
+  * In MP, select Initial Setup > Install Firmware 
+  * Load custom firmware
+  * Select: `usma_swarm\usma_files\PX4_Params\Pixhawk_Firmwares\arducopter_px4_v2_livefly.px4`
+  * Follow MP Prompts - should result in Pixhawks making "happy sounds"
+  
+### Configure Pixhawk for Quad Operations after new Flash
+1. Connect fully built vehicle to QGC (may not connect if Pixhawk alone)
+
+2. Calibrate the following:
+
+  * Accelerometers: Vehicle Setup > Sensors > Accelerometers - Follow prompt  
+  * Compass: Vehicle Setup > Sensors > Compass - Follow prompt
+  * Radio: Vehicle Setup > Radio > Calibrate - Follow prompt
+
+3. Update the Flight Modes at Vehicle Setup > Flight Modes to:
+
+  * Flight Mode 1: Stabilize
+  * Flight Mode 4: Loiter  
+  * Flight Mode 5: Auto
+
+4. Update the Power Monitor (to read voltage) at Vehicle Setup > Power to:
+
+  * Battery monitor: Analog Voltage Only
+  * Battery capacity: 6000 mAh 
+  * Minimum arming voltage: 0
+  * Power sensor: Power Module 90A
+
+5. In Parameters set "serial2_baud" to "1,500,000"
 
 ### Updating the Pixhawk on the SASC Zephyr II UASs
 
