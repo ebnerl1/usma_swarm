@@ -78,6 +78,20 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
   * Go to line 63, change the baudrate from `115200` to `1500000`
   * Save and Exit: Hit `Esc`, and `:x`
 
+### Expanding the Partition Size on the ODROID to take use of the SD/EMMC card size
+1. Connect the EMMC card or SD card via USB to a laptop
+  
+2. Follow the following commands
+  * Verify designation of the drive: `df -h` (usually is /dev/sdb)
+  * `sudo parted`
+  * `select /dev/sdb`
+  * `print` to confirm the drive size
+  * `resizepart`
+  * `2` (to select the correct partition to resize in sdb)
+  * `yes` 
+  * `10000` for 10GB
+  * `print` to confirm the new drive size
+
 ### Create ODROID Image Copy from Existing SASC Vehicle (OLDER METHOD using DD command)
 
 Note: this only works with RED EMMC cards (not orange EMMC, and not SD cards)
