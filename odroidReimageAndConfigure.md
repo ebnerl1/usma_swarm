@@ -66,6 +66,31 @@ This page explains how to copy over the image from an existing SASC ODROID, inst
 
 8. Label the new tail number on the aircraft
 
+### Configuring ODROID Master.Launch File to work with USB FTDI (used on Tarot 650)
+1. Connect to the UAS via secure shell (SSH)
+  * `ssh odroid@192.168.11.X` (X = tail number, ex: `ssh odroid@192.168.11.112`)
+  * When prompted for password enter `odroid`
+  
+2. Go into master.launch file and change 2 parameters
+  * `cd /acs_ros_ws/src/autonomy-payload/ap_master/launch`
+  * `vim master.launch`
+  * Go to line 26, change the `/dev/ttyACM*` to `"/dev/ttyUSB*"`
+  * Go to line 63, change the baudrate from `115200` to `1500000`
+  * Save and Exit: Hit `Esc`, and `:x`
+
+### Expanding the Partition Size on the ODROID to take use of the SD/EMMC card size
+1. Connect the EMMC card or SD card via USB to a laptop
+  
+2. Follow the following commands
+  * Verify designation of the drive: `df -h` (usually is /dev/sdb)
+  * `sudo parted`
+  * `select /dev/sdb`
+  * `print` to confirm the drive size
+  * `resizepart`
+  * `2` (to select the correct partition to resize in sdb)
+  * `yes` 
+  * `10000` for 10GB
+  * `print` to confirm the new drive size
 
 ### Create ODROID Image Copy from Existing SASC Vehicle (OLDER METHOD using DD command)
 
