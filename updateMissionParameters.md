@@ -11,12 +11,6 @@ This page explains how to pull and push information from Github to keep common s
   * `git add -A`
   * `git commit –m “comments”` (include comments for addition)
   * `git push`
-  
-NOTE: If Pull & Push from DI2E need to run the following commands before first pull
-  * `ssh-add ~/.ssh/swarms_id_rsa`
-  * `cd ~/usma_swarm/usma_files`
-  * `git pull`
-
 
 ### Create New "Blessed Files" with mission waypoints, geofence, and rally points
 1. On laptop, navigate to /home/user1/usma_swam/usma_files/blessed_files
@@ -64,7 +58,7 @@ NOTE: If Pull & Push from DI2E need to run the following commands before first p
   * `scp -r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
 4. Copy PYTHON behaviors to ODROID behavior directory
   * Make sure scrimmage/usma up to date
-     - `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E, NPS Gitlab)
+     - `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E and not NPS Gitlab)
      - `cd ~/scrimmage/usma`
      - `git pull`
   * `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
