@@ -11,6 +11,7 @@ This page explains how to pull and push information from Github to keep common s
   * `git add -A`
   * `git commit –m “comments”` (include comments for addition)
   * `git push`
+  
 NOTE: If Pull & Push from DI2E need to run the following commands before first pull
   * `ssh-add ~/.ssh/swarms_id_rsa`
   * `cd ~/usma_swarm/usma_files`
