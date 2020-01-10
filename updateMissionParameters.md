@@ -13,8 +13,9 @@ This page explains how to pull and push information from Github to keep common s
   * `git push`
 NOTE: If Pull & Push from DI2E need to run the following commands before first pull
   * `ssh-add ~/.ssh/swarms_id_rsa`
-  * Enter password
-  * Then can `git pull`
+  * `cd ~/usma_swarm/usma_files`
+  * `git pull`
+
 
 ### Create New "Blessed Files" with mission waypoints, geofence, and rally points
 1. On laptop, navigate to /home/user1/usma_swam/usma_files/blessed_files
