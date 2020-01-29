@@ -9,7 +9,7 @@ cd
 
 echo "Creating drones"
 
-multi-sitl-start.bash -B -LRiverCourt -vArduCopter 1
+multi-sitl-start.bash -B -LRiverCourt -vArduCopter 2
 
 clear
 
@@ -28,7 +28,9 @@ echo "    2) Toggle flight ready"
 echo "    3) Armed"
 echo "    4) Auto"
 
-gnome-terminal -x bash -c "echo network device sitl_bridge_1 | swarm_commander.py; exit; exec bash"
+gnome-terminal -x bash -c "swarm_commander.py; exit; exec bash"
+
+# echo network device sitl_bridge_1 | 
 
 #gnome-terminal -e "bash -c '~/usma_swarm/usma_files/serverSide/runServerSide.sh;$SHELL'"
 # Line above can be uncommented to launch the wpServer at the same time
@@ -39,6 +41,9 @@ read varname
 echo "Destroying Drones"
 
 multi-sitl-cleanup.bash
+
+rm -rf -d ~/scrimmage/usma/plugins/autonomy/python/*.pyc
+rm -rf -d ~/scrimmage/usma/plugins/autonomy/python/Collections/*.pyc
 
 clear
 
