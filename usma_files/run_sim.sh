@@ -44,6 +44,7 @@ multi-sitl-cleanup.bash
 
 rm -rf -d ~/scrimmage/usma/plugins/autonomy/python/*.pyc
 rm -rf -d ~/scrimmage/usma/plugins/autonomy/python/Collections/*.pyc
+rm -rf -d ~/scrimmage/usma/plugins/autonomy/python/usma_msg/*.pyc
 
 clear
 
