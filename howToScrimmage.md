@@ -5,7 +5,7 @@
 # How to run SCRIMMAGE
 
 1. `cd scrimmage/scrimmage`
-2. `scrimmage ../usma/missions/greedy_goto.xml` (Or replace greedy_goto.xml with the mission you want to run)
+2. `scrimmage ../usma/missions/greedy_goto.xml` (or replace `greedy_goto.xml` with the mission you want to run)
 
 
 # SCRIMMAGE Commands
