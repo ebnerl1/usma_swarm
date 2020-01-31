@@ -9,6 +9,7 @@ from WrathServerModel import Server
 # 1: Start Analysis: droneId
 # 2: Road Analyzed: (start, end)
 # 3: Object Found (location, picture, size?)
+# 4: do we need a 4th message?
 class MessageType(enum.IntEnum):
     Heartbeat = 0
     StartAnalysis = 1
