@@ -9,7 +9,7 @@ from WrathServerModel import Server
 # 1: Starting Initial Pass: No Data
 # 2: Sending Radiation Data: TODO: data
 # 3: Finished Initial Pass: No Data
-# 4: Update Contour Line: (lat, lon)
+# 4: Update Contour Line: (lat, lon), time
 #
 # Server Messages:
 # 0: Heartbeat: No Data
@@ -56,12 +56,19 @@ class RadDetectionServer(Server.Server):
 
         elif messageType == MessageType.FinishInitPass:
             self.dronesFinished += 1
+            print "MODEL: Drone Finished Init Pass"
             if (self.dronesFinished == self.numDronesInSwarm):
                 print "MODEL: State Change: Lane Generation!"
                 print "MODEL: Sending points: ", self.simulationData
                 self.state = 2
                 if self.IS_SIMULATION:
-                    self.broadcast(str([1, self.simulationData]))
+                    self.connectionLock.acquire()
+                    time = 0
+                    for connection in self.connections:
+                        connection.send(str([1, self.simulationData, time]))
+                        time += 5
+                    self.connectionLock.release()
+#                    self.broadcast(str([1, self.simulationData]))
                 else:
                     # Broadcast real data
                     pass 
