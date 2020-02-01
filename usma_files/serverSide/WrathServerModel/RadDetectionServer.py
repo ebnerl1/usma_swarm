@@ -71,7 +71,7 @@ class RadDetectionServer(Server.Server):
 #                    self.broadcast(str([1, self.simulationData]))
                 else:
                     # Broadcast real data
-                    pass 
+                    pass
 
         elif messageType == MessageType.UpdateContour:
             print "MODEL: Update Contour Line: ", data[1]
