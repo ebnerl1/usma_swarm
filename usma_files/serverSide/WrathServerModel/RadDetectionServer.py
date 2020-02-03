@@ -10,6 +10,7 @@ from WrathServerModel import Server
 # 2: Sending Radiation Data: TODO: data
 # 3: Finished Initial Pass: No Data
 # 4: Update Contour Line: (lat, lon), time
+# 5: Lane Update: Start, Center, End
 #
 # Server Messages:
 # 0: Heartbeat: No Data
@@ -22,6 +23,7 @@ class MessageType(enum.IntEnum):
     RadiationData = 2
     FinishInitPass = 3
     UpdateContour = 4
+    LaneUpdate = 5
 
 
 class RadDetectionServer(Server.Server):
@@ -75,6 +77,9 @@ class RadDetectionServer(Server.Server):
 
         elif messageType == MessageType.UpdateContour:
             print "MODEL: Update Contour Line: ", data[1]
+
+        elif messageType == MessageType.LaneUpdate:
+            print "MODEL: New Lane: ", data[1], data[2], data[3]
         
         return [0]
 
