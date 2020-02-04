@@ -57,7 +57,7 @@ class Server(object):
 	def broadcast(self, msg):
 		self.connectionLock.acquire()
 		for connection in self.connections:
-			connection.send(msg)
+			connection.sendall(str(msg))
 		self.connectionLock.release()
 
 
