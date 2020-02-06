@@ -83,6 +83,9 @@ Note: this is not needed if you have the Pixhawk Firmwares already built as we d
 
 5. In Parameters set "serial2_baud" to "1,500,000"
 
+6. Make sure ODROID master.launch parameters are up to date for USB FTDI
+  * See instructions in: https://github.com/westpoint-robotics/usma_swarm/blob/master/odroidReimageAndConfigure.md
+
 ### Updating the Pixhawk on the SASC Zephyr II UASs
 
 1.	Note the “tail” number of the UAS: ____(A)____ (e.g. 10)

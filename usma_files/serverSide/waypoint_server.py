@@ -39,7 +39,7 @@ log = []
 heatmapdata = []
 hotspot_loc = [0,0]
 load_hotspot = [0,0]
-serverflag = 1
+serverflag = 0
 
 #create a list of waypoints that has been visited
 finishedwp = set([])

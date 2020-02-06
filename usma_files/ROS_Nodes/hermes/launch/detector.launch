@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- <arg name="plot_it" default="true" /> -->
+
+  <!-- <node name="bpiem_detector" pkg="bpiem_ros" type="general_bpi.py"> -->
+  <!-- <node name="bpiem_detector" pkg="labr_daq" type="emorpho_daq.py" output="screen"> -->
+    <!-- <rosparam command="load" file="$(find labr_daq)/launch/lm2_params.yaml"/> -->
+  <!-- </node> -->
+
+<node name='HeRMES_DAQ' pkg="hermes_daq" type="acquire.py" output="screen">
+    </node>
+
+<!-- <node name='plotter' pkg="hermes_daq" type="acquire.py" output="screen">
+    </node> -->
+
+  <!-- <node pkg="bpiem_ros" type="plotthings.py" name="plotter" if="$(arg plot_it)" output="screen">
+  </node> -->
+</launch>
