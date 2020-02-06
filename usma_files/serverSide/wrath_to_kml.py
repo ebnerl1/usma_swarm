@@ -11,8 +11,9 @@ kml = None
 
 #building kml
 def generate():
-	global kml
-	kml = simplekml.Kml()
+    global kml
+    kml = simplekml.Kml()
+    kml.networklinkcontrol.minrefreshperiod = 1
 
 def addPoint(point):
 	pnt = kml.newpoint()
