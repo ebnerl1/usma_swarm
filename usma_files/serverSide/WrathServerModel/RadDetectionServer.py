@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import enum
-
+from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
 
 # Client Messages:
@@ -25,12 +25,21 @@ class MessageType(enum.IntEnum):
     UpdateContour = 4
     LaneUpdate = 5
 
-
 class RadDetectionServer(Server.Server):
 
     def __init__(self, simulationData = None):
         super(RadDetectionServer, self).__init__()
         self.state = 1
+        self.bounds = [
+            (41.39105, -73.95342),
+            (41.39197, -73.95297),
+            (41.39080, -73.95253),
+            (41.39172, -73.95208)
+        ]
+        rearrangedBounds = [self.bounds[2], self.bounds[0], self.bounds[1], self.bounds[3]]
+        self.contourLine = ContourLine.fill(rearrangedBounds, simulationData)
+        print [v.coord for v in self.contourLine.graph.vertices]
+        print self.contourLine.graph
         self.numDronesInSwarm = 0
         self.dronesFinished = 0
         if simulationData != None:
@@ -38,6 +47,7 @@ class RadDetectionServer(Server.Server):
             self.simulationData = simulationData
         else:
             self.IS_SIMULATION = False
+   
 
 
     def handleMessageData(self, data):
@@ -74,9 +84,11 @@ class RadDetectionServer(Server.Server):
                 else:
                     # Broadcast real data
                     pass
-
         elif messageType == MessageType.UpdateContour:
+            self.contourLine.updateContour(data[1])
+            print self.contourLine.graph
             print "MODEL: Update Contour Line: ", data[1]
+            print "MODEL: Error Calculated: ", data[2]
 
         elif messageType == MessageType.LaneUpdate:
             print "MODEL: New Lane: ", data[1], data[2], data[3]
