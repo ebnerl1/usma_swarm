@@ -3,6 +3,7 @@
 import enum
 from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
+from WrathServerModel import wrath_to_kml as kml
 
 # Client Messages:
 # 0: Heartbeat: No Data
@@ -38,6 +39,9 @@ class RadDetectionServer(Server.Server):
         ]
         rearrangedBounds = [self.bounds[2], self.bounds[0], self.bounds[1], self.bounds[3]]
         self.contourLine = ContourLine.fill(rearrangedBounds, simulationData)
+        kml.generate()
+        kml.addGraph(self.contourLine.graph)
+        kml.save("wrath_rad")
         print [v.coord for v in self.contourLine.graph.vertices]
         print self.contourLine.graph
         self.numDronesInSwarm = 0
@@ -51,7 +55,12 @@ class RadDetectionServer(Server.Server):
 
 
     def handleMessageData(self, data):
-        messageType = data[0]
+        try:
+            messageType = data[0]
+        except:
+            print "Exception!!! ", data
+            return [0]
+            
 
         if messageType == MessageType.Heartbeat:
             pass            
@@ -86,6 +95,9 @@ class RadDetectionServer(Server.Server):
                     pass
         elif messageType == MessageType.UpdateContour:
             self.contourLine.updateContour(data[1])
+            kml.generate()
+            kml.addGraph(self.contourLine.graph)
+            kml.save("wrath_rad")
             print self.contourLine.graph
             print "MODEL: Update Contour Line: ", data[1]
             print "MODEL: Error Calculated: ", data[2]

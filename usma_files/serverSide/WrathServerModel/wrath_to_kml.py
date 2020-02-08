@@ -27,10 +27,12 @@ def addLine(start,end):
 
 def addGraph(graph):
 	for vertex in graph.vertices:
-		addPoint(vertex.coord)
+		addPoint((vertex.coord[1], vertex.coord[0]))
 	for edge in graph.getEdges():
-		addLine(edge.start.coord, edge.end.coord)
+		start = (edge.start.coord[1], edge.start.coord[0])
+		end = (edge.end.coord[1], edge.end.coord[0])
+		addLine(start, end)
 
 # need to save it to a destination for viewing
-def save():
-	kml.save("/home/user1/usma_swarm/usma_files/serverSide/archive/wrath_heatmap.kml")
+def save(name):
+	kml.save("/home/user1/usma_swarm/usma_files/serverSide/archive/" + name + ".kml")

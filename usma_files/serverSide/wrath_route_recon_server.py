@@ -2,7 +2,10 @@
 
 from WrathServerModel import RouteReconServer
 
+IS_SIMULATION = False
+
 Server = RouteReconServer.RouteReconServer()
 
 print "-----SIMULATION-----"
-Server.start("127.0.0.1", 10000)
+ipAddress = "127.0.0.1" if (IS_SIMULATION) else "192.168.11.202"
+Server.start(ipAddress, 10000)

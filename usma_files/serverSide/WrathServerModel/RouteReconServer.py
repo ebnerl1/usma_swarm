@@ -6,17 +6,18 @@ import enum
 
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
+from WrathServerModel import wrath_to_kml as kml
 
 vertices = [
-    (41.39077, -73.95298),
+    (41.39094, -73.95294),
     (41.39127, -73.95320),
     (41.39189, -73.95297),
     (41.39169, -73.95299),
     (41.39180, -73.95262),
     (41.39169, -73.95229),
     (41.39153, -73.95261),
-    (41.39133, -73.95223),
-    (41.39103, -73.95252)
+    (41.39139, -73.95240),
+    (41.39107, -73.95263)
 ]
 
 edges = [
@@ -56,6 +57,11 @@ class RouteReconServer(Server.Server):
         self.dronePositions = list()
         self.roadNetwork = Graph.fill(vertices, edges, True)
         self.analyzedRoads = set() # Should this be a subgraph
+        kml.generate()
+        for v in vertices:
+            point = (v[1], v[0])
+            kml.addPoint(point)
+        kml.save("route_recon")
 
     
     def handleMessageData(self, data):
@@ -88,6 +94,18 @@ class RouteReconServer(Server.Server):
                 i += 1
             print "MODEL: Analyzed Road:", startIndex, endIndex
             self.analyzedRoads.add((startIndex, endIndex))
+            
+            kml.generate()
+            for v in vertices:
+                point = (v[1], v[0])
+                kml.addPoint(point)
+            for road in self.analyzedRoads:
+                start = vertices[road[0]]
+                start = (start[1], start[0])
+                end = vertices[road[1]]
+                end = (end[1], end[0])
+                kml.addLine(start, end)
+            kml.save("route_recon")
 
 
         elif messageType == MessageType.ObjectFound:

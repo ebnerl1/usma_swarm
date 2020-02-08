@@ -67,7 +67,10 @@ class Server(object):
 				data=connection.recv(4096)
 				if (len(data) <= 1):
 					break
-				parsedData = eval(data)
+				try:
+					parsedData = eval(data)
+				except:
+					print "WTF!!! This message system blows!", data
 
 				returnMessage = self.handleMessageData(parsedData)
 

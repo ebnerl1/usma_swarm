@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+    <Document id="feat_127">
+        <Placemark id="feat_128">
+            <Point id="geom_117">
+                <coordinates>-73.95298,41.39077,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_129">
+            <Point id="geom_118">
+                <coordinates>-73.9532,41.39127,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_130">
+            <Point id="geom_119">
+                <coordinates>-73.95297,41.39189,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_131">
+            <Point id="geom_120">
+                <coordinates>-73.95299,41.39169,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_132">
+            <Point id="geom_121">
+                <coordinates>-73.95262,41.3918,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_133">
+            <Point id="geom_122">
+                <coordinates>-73.95229,41.39169,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_134">
+            <Point id="geom_123">
+                <coordinates>-73.95261,41.39153,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_135">
+            <Point id="geom_124">
+                <coordinates>-73.95223,41.39133,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_136">
+            <Point id="geom_125">
+                <coordinates>-73.95252,41.39103,0.0</coordinates>
+            </Point>
+        </Placemark>
+        <Placemark id="feat_137">
+            <LineString id="geom_126">
+                <coordinates>-73.9532,41.39127,0.0 -73.95297,41.39189,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_138">
+            <LineString id="geom_127">
+                <coordinates>-73.95229,41.39169,0.0 -73.95262,41.3918,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_139">
+            <LineString id="geom_128">
+                <coordinates>-73.95261,41.39153,0.0 -73.95223,41.39133,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_140">
+            <LineString id="geom_129">
+                <coordinates>-73.95252,41.39103,0.0 -73.95223,41.39133,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_141">
+            <LineString id="geom_130">
+                <coordinates>-73.95229,41.39169,0.0 -73.95261,41.39153,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_142">
+            <LineString id="geom_131">
+                <coordinates>-73.95299,41.39169,0.0 -73.9532,41.39127,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_143">
+            <LineString id="geom_132">
+                <coordinates>-73.95223,41.39133,0.0 -73.95229,41.39169,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_144">
+            <LineString id="geom_133">
+                <coordinates>-73.95262,41.3918,0.0 -73.95299,41.39169,0.0</coordinates>
+            </LineString>
+        </Placemark>
+        <Placemark id="feat_145">
+            <LineString id="geom_134">
+                <coordinates>-73.9532,41.39127,0.0 -73.95298,41.39077,0.0</coordinates>
+            </LineString>
+        </Placemark>
+    </Document>
+    <NetworkLinkControl>
+        <minRefreshPeriod>1</minRefreshPeriod>
+    </NetworkLinkControl>
+</kml>
