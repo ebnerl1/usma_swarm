@@ -37,8 +37,8 @@ class RadDetectionServer(Server.Server):
                                      self.onReceiveStartInitPass)
         self.registerMessageCallback(msgs.FinishInitPassMessage.id,
                                      self.onReceiveFinishInitPass)
-        self.registerMessageCallback(msgs.UpdateContourLineMessage.id,
-                                     self.onReceiveUpdateContour)
+        self.registerMessageCallback(msgs.RadLocationMessage.id,
+                                     self.onReceiveRadLocation)
         self.registerMessageCallback(msgs.LaneUpdateMessage.id,
                                      self.onReceiveLaneUpdate)
 
@@ -63,7 +63,7 @@ class RadDetectionServer(Server.Server):
                 self.broadcast(messageParser)
     
 
-    def onReceiveUpdateContour(self, message):
+    def onReceiveRadLocation(self, message):
         self.contourLine.updateContour(message.location)
         kml.generate()
         kml.addGraph(self.contourLine.graph)

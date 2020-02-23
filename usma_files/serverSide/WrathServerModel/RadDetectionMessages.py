@@ -1,9 +1,83 @@
-import ctypes
+#!/usr/bin/env python
+
 import struct
+import ctypes
+
+class SparsityMessage(object):
+
+    id = 11
+    fmt = "!l2f"
+
+    def __init__(self):
+        self.location = (0, 0)
+
+    
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id,
+            self.location[0], self.location[1])
+
+    
+    def unpack(self, bytes):
+        id, self.location = struct.unpack_from(type(self).fmt, bytes, 0)
+
+
+class RadLocationMessage(object):
+
+    id = 12
+    fmt = "!l3f"
+
+    def __init__(self):
+        self.location = (0, 0)
+        self.error = 0.0
+
+    
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id,
+            self.location[0], self.location[1], self.error)
+
+    
+    def unpack(self, bytes):
+        id, a, b, self.error = struct.unpack_from(type(self).fmt, bytes, 0)
+        self.location = (a,b)
+
+
+class LockLaneGenMessage(object):
+
+    id = 13
+    fmt = "!ll"
+
+    def __init__(self):
+        self.id = -1
+
+
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id, self.id)
+
+
+    def unpack(self, bytes):
+        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)[0]
+
+
+class UnlockLaneGenMessage(object):
+
+    id = 14
+    fmt = "!ll"
+
+    def __init__(self):
+        self.id = -1
+
+
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id, self.id)
+
+
+    def unpack(self, bytes):
+        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)[0]
+
 
 class StartInitPassMessage(object):
 
-    id = 11
+    id = 15
     fmt = "!ll"
 
     def __init__(self):
@@ -18,7 +92,7 @@ class StartInitPassMessage(object):
 
 class FinishInitPassMessage(object):
 
-    id = 12
+    id = 16
     fmt = "!ll"
 
     def __init__(self):
@@ -31,26 +105,9 @@ class FinishInitPassMessage(object):
         id, self.id = struct.unpack(type(self).fmt, bytes)
 
 
-class UpdateContourLineMessage(object):
-
-    id = 13
-    fmt = "!l3f"
-
-    def __init__(self):
-        self.location = (-1, -1)
-        self.error = -1
-
-    def pack(self):
-        return struct.pack(type(self).fmt, type(self).id, self.location[0], self.location[1], self.error)
-    
-    def unpack(self, bytes):
-        id, a, b, self.error = struct.unpack(type(self).fmt, bytes)
-        self.location = (a, b)
-
-
 class LaneUpdateMessage(object):
 
-    id = 14
+    id = 17
     fmt = "!l6f"
 
     def __init__(self):
@@ -72,7 +129,7 @@ class LaneUpdateMessage(object):
 
 class StartLaneGenerationMessage(object):
 
-    id = 15
+    id = 18
     fmt = "!ll"
     lanefmt = "!2f"
 

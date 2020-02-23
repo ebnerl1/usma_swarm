@@ -9,9 +9,12 @@ msgList = [
     rrmsgs.RoadAnalyzedMessage,
     rrmsgs.InitGraphMessage,
 
+    rdmsgs.SparsityMessage,
+    rdmsgs.RadLocationMessage,
+    rdmsgs.LockLaneGenMessage,
+    rdmsgs.UnlockLaneGenMessage,
     rdmsgs.StartInitPassMessage,
     rdmsgs.FinishInitPassMessage,
-    rdmsgs.UpdateContourLineMessage,
     rdmsgs.LaneUpdateMessage,
     rdmsgs.StartLaneGenerationMessage
 ]
