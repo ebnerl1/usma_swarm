@@ -1,9 +1,30 @@
+#!/usr/bin/env python
+
 import struct
 import ctypes
 
-class StartBehaviorMessage(object):
+class LocationMessage(object):
 
     id = 1
+    fmt = "!ll2f"
+
+    def __init__(self):
+        self.id = -1
+        self.location = (-1, -1)
+
+    
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id, self.id, self.location[0], self.location[1])
+
+
+    def unpack(self, bytes):
+        id, self.id, a, b = struct.unpack_from(type(self).fmt, bytes, 0)
+        self.location = (a, b)
+
+
+class StartBehaviorMessage(object):
+
+    id = 2
     fmt = "!l2l2f"
 
     def __init__(self):
@@ -24,7 +45,7 @@ class StartBehaviorMessage(object):
 
 class RoadAnalyzedMessage(object):
 
-    id = 2
+    id = 3
     fmt = "!l4f"
 
     def __init__(self):
@@ -45,7 +66,7 @@ class RoadAnalyzedMessage(object):
 
 class InitGraphMessage(object):
 
-    id = 3
+    id = 4
     fmt = "!l3l"
     vertexfmt = "!2f"
     edgefmt = "!2l"

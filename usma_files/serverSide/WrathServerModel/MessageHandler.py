@@ -4,9 +4,11 @@ import RouteReconMessages as rrmsgs
 import RadDetectionMessages as rdmsgs
 
 msgList = [
+    rrmsgs.LocationMessage,
     rrmsgs.StartBehaviorMessage,
     rrmsgs.RoadAnalyzedMessage,
     rrmsgs.InitGraphMessage,
+
     rdmsgs.StartInitPassMessage,
     rdmsgs.FinishInitPassMessage,
     rdmsgs.UpdateContourLineMessage,
