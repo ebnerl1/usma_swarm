@@ -4,6 +4,8 @@ import enum
 from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
 from WrathServerModel import wrath_to_kml as kml
+from WrathServerModel import RadDetectionMessages
+import struct
 
 # Client Messages:
 # 0: Heartbeat: No Data
@@ -50,32 +52,34 @@ class RadDetectionServer(Server.Server):
             self.IS_SIMULATION = True
             self.simulationData = simulationData
         else:
-            self.IS_SIMULATION = False
-   
+            self.IS_SIMULATION = False   
 
 
     def handleMessageData(self, data):
-        try:
-            messageType = data[0]
-        except:
-            print "Exception!!! ", data
-            return [0]
+        data = "".join(data)
+        id = struct.unpack("!l", data[:4])[0]
+        data = data[4:]
             
+        # Start init pass
+        if id == 1:
+            parser = RadDetectionMessages.StartInitPassMessage()
+            parser.unpack(data)
 
-        if messageType == MessageType.Heartbeat:
-            pass            
-
-        elif messageType == MessageType.StartInitPass:
             if self.state == 0:
                 print "MODEL: State Change: Initial Pass!"
                 self.state = 1
             self.numDronesInSwarm += 1
 
-        elif messageType == MessageType.RadiationData:
+        # rad data
+        elif id == 2:
             # TODO: Please implement this!
             pass
 
-        elif messageType == MessageType.FinishInitPass:
+        # finished init pass
+        elif id == 3:
+            parser = RadDetectionMessages.FinishInitPassMessage()
+            parser.unpack(data)
+
             self.dronesFinished += 1
             print "MODEL: Drone Finished Init Pass"
             if (self.dronesFinished == self.numDronesInSwarm):
@@ -83,29 +87,34 @@ class RadDetectionServer(Server.Server):
                 print "MODEL: Sending points: ", self.simulationData
                 self.state = 2
                 if self.IS_SIMULATION:
-                    self.connectionLock.acquire()
-                    time = 0
-                    for connection in self.connections:
-                        connection.send(str([1, self.simulationData, time]))
-                        time += 5
-                    self.connectionLock.release()
-#                    self.broadcast(str([1, self.simulationData]))
+                    messageParser = RadDetectionMessages.StartLaneGenerationMessage()
+                    messageParser.contourPoints = self.simulationData
+                    data = struct.pack("!l", 6) + messageParser.pack()            
+                    self.broadcast(data)
+
                 else:
                     # Broadcast real data
                     pass
-        elif messageType == MessageType.UpdateContour:
-            self.contourLine.updateContour(data[1])
+        
+        # update contour line
+        elif id == 4:
+            parser = RadDetectionMessages.UpdateContourLineMessage()
+            parser.unpack(data)
+
+            self.contourLine.updateContour(parser.location)
             kml.generate()
             kml.addGraph(self.contourLine.graph)
             kml.save("wrath_rad")
             print self.contourLine.graph
-            print "MODEL: Update Contour Line: ", data[1]
-            print "MODEL: Error Calculated: ", data[2]
+            print "MODEL: Update Contour Line: ", parser.location
+            print "MODEL: Error Calculated: ", parser.error
 
-        elif messageType == MessageType.LaneUpdate:
-            print "MODEL: New Lane: ", data[1], data[2], data[3]
-        
-        return [0]
+        # lane update
+        elif id == 5:
+            parser = RadDetectionMessages.LaneUpdateMessage()
+            parser.unpack(data)
+
+            print "MODEL: New Lane: ", parser.start, parser.center, parser.end
 
         
 
