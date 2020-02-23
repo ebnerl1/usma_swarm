@@ -13,7 +13,7 @@ scrimmagePath="/home/user1/scrimmage/usma/plugins/autonomy/python/"
 
 recompiledFiles=(
     "Networking/Client.py"
-    "usma_msg/MessageHandler.py"
+    "Networking/MessageHandler.py"
     "usma_msg/RouteReconMessages.py"
     "usma_msg/RadiationMessages.py"
 )

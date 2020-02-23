@@ -9,6 +9,8 @@ import subprocess
 import procname
 import time
 
+from MessageHandler import MessageHandler
+
 class Server(object):
 	
 	def __init__(self, timeout = -1):
@@ -17,6 +19,10 @@ class Server(object):
 		self.connections = list()
 		self.socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 		self.dataList = list()
+		self.messageHandler = MessageHandler()
+		
+		self.byteFmt = "!l"
+		self.byteLen = struct.calcsize(self.byteFmt)
 
 	def start(self, ipAddress, port):
 		try:
@@ -57,12 +63,13 @@ class Server(object):
 
 	
 	def broadcast(self, msg):
-		msgLength = struct.pack("!l", len(msg) + 4)
-		msg = msgLength + msg
+		data = msg.pack()
+		msgLength = struct.pack(self.byteFmt, len(data) + self.byteLen)
+		data = msgLength + data
 
 		self.connectionLock.acquire()
-		for connection in self.connections:			
-			connection.sendall(msg)
+		for connection in self.connections:
+			connection.sendall(data)
 		self.connectionLock.release()
 
 
@@ -89,20 +96,18 @@ class Server(object):
 		numBytes = self.parseNumBytes()[0]
 
 		while len(self.dataList) >= numBytes and numBytes != -1:
-			self.handleMessageData(self.dataList[4:numBytes])
+			self.messageHandler.processMessage("".join(self.dataList[self.byteLen:numBytes]))
 			self.dataList = self.dataList[numBytes:]
 			numBytes = self.parseNumBytes()
 
 
 	def parseNumBytes(self):
-		if len(self.dataList) < 4:
+		if len(self.dataList) < self.byteLen:
 			return -1
 
-		return struct.unpack("!l", "".join(self.dataList[:4]))
+		return struct.unpack(self.byteFmt, "".join(self.dataList[:self.byteLen]))
 
-	
-	# This message must be defined!
-	def handleMessageData(self, data):
-		pass
 
+	def registerMessageCallback(self, id, callback):
+		self.messageHandler.registerCallback(id, callback)
 

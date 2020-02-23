@@ -4,29 +4,8 @@ import enum
 from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
 from WrathServerModel import wrath_to_kml as kml
-from WrathServerModel import RadDetectionMessages
+from WrathServerModel import RadDetectionMessages as msgs
 import struct
-
-# Client Messages:
-# 0: Heartbeat: No Data
-# 1: Starting Initial Pass: No Data
-# 2: Sending Radiation Data: TODO: data
-# 3: Finished Initial Pass: No Data
-# 4: Update Contour Line: (lat, lon), time
-# 5: Lane Update: Start, Center, End
-#
-# Server Messages:
-# 0: Heartbeat: No Data
-# 1: Begin Lane Generation: list((lat, lon))
-#
-# TODO: get this out of this class?
-class MessageType(enum.IntEnum):
-    Heartbeat = 0
-    StartInitPass = 1
-    RadiationData = 2
-    FinishInitPass = 3
-    UpdateContour = 4
-    LaneUpdate = 5
 
 class RadDetectionServer(Server.Server):
 
@@ -53,68 +32,47 @@ class RadDetectionServer(Server.Server):
             self.simulationData = simulationData
         else:
             self.IS_SIMULATION = False   
-
-
-    def handleMessageData(self, data):
-        data = "".join(data)
-        id = struct.unpack("!l", data[:4])[0]
-        data = data[4:]
-            
-        # Start init pass
-        if id == 1:
-            parser = RadDetectionMessages.StartInitPassMessage()
-            parser.unpack(data)
-
-            if self.state == 0:
-                print "MODEL: State Change: Initial Pass!"
-                self.state = 1
-            self.numDronesInSwarm += 1
-
-        # rad data
-        elif id == 2:
-            # TODO: Please implement this!
-            pass
-
-        # finished init pass
-        elif id == 3:
-            parser = RadDetectionMessages.FinishInitPassMessage()
-            parser.unpack(data)
-
-            self.dronesFinished += 1
-            print "MODEL: Drone Finished Init Pass"
-            if (self.dronesFinished == self.numDronesInSwarm):
-                print "MODEL: State Change: Lane Generation!"
-                print "MODEL: Sending points: ", self.simulationData
-                self.state = 2
-                if self.IS_SIMULATION:
-                    messageParser = RadDetectionMessages.StartLaneGenerationMessage()
-                    messageParser.contourPoints = self.simulationData
-                    data = struct.pack("!l", 6) + messageParser.pack()            
-                    self.broadcast(data)
-
-                else:
-                    # Broadcast real data
-                    pass
         
-        # update contour line
-        elif id == 4:
-            parser = RadDetectionMessages.UpdateContourLineMessage()
-            parser.unpack(data)
+        self.registerMessageCallback(msgs.StartInitPassMessage.id,
+                                     self.onReceiveStartInitPass)
+        self.registerMessageCallback(msgs.FinishInitPassMessage.id,
+                                     self.onReceiveFinishInitPass)
+        self.registerMessageCallback(msgs.UpdateContourLineMessage.id,
+                                     self.onReceiveUpdateContour)
+        self.registerMessageCallback(msgs.LaneUpdateMessage.id,
+                                     self.onReceiveLaneUpdate)
 
-            self.contourLine.updateContour(parser.location)
-            kml.generate()
-            kml.addGraph(self.contourLine.graph)
-            kml.save("wrath_rad")
-            print self.contourLine.graph
-            print "MODEL: Update Contour Line: ", parser.location
-            print "MODEL: Error Calculated: ", parser.error
 
-        # lane update
-        elif id == 5:
-            parser = RadDetectionMessages.LaneUpdateMessage()
-            parser.unpack(data)
+    def onReceiveStartInitPass(self, message):
+        if self.state == 0:
+            print "MODEL: State Change: Initial Pass!"
+            self.state = 1
+        self.numDronesInSwarm += 1
+    
 
-            print "MODEL: New Lane: ", parser.start, parser.center, parser.end
+    def onReceiveFinishInitPass(self, message):
+        self.dronesFinished += 1
+        print "MODEL: Drone Finished Init Pass"
+        if (self.dronesFinished == self.numDronesInSwarm):
+            print "MODEL: State Change: Lane Generation!"
+            print "MODEL: Sending points: ", self.simulationData
+            self.state = 2
+            if self.IS_SIMULATION:
+                messageParser = msgs.StartLaneGenerationMessage()
+                messageParser.contourPoints = self.simulationData
+                self.broadcast(messageParser)
+    
 
-        
+    def onReceiveUpdateContour(self, message):
+        self.contourLine.updateContour(message.location)
+        kml.generate()
+        kml.addGraph(self.contourLine.graph)
+        kml.save("wrath_rad")
+        print self.contourLine.graph
+        print "MODEL: Update Contour Line: ", message.location
+        print "MODEL: Error Calculated: ", message.error
+    
+
+    def onReceiveLaneUpdate(self, message):
+        print "MODEL: New Lane: ", message.start, message.center, message.end       
 

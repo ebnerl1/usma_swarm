@@ -3,7 +3,6 @@
 import ap_lib.gps_utils as gps
 
 import enum
-import struct
 
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
@@ -44,68 +43,59 @@ class RouteReconServer(Server.Server):
         self.dronePositions = list()
         self.roadNetwork = Graph.fill(vertices, edges, True)
         self.analyzedRoads = set() # Should this be a subgraph
+
+        self.registerMessageCallback(msgs.StartBehaviorMessage.id, 
+                                     self.onReceiveStartBehavior)
+        self.registerMessageCallback(msgs.RoadAnalyzedMessage.id, 
+                                     self.onReceiveRoadAnalyzed)
+
         kml.generate()
         for v in vertices:
             point = (v[1], v[0])
             kml.addPoint(point)
         kml.save("route_recon")
 
+
+    def onReceiveStartBehavior(self, message):
+        print ("MODEL: Drone Starting Behavior")
+        if self.numDrones == -1:
+            self.numDrones = message.numDrones
+            self.dronePositions = [-1 for i in range(self.numDrones)]
+        self.curDrones += 1
+        self.dronePositions[message.id] = message.location
+        if self.curDrones == self.numDrones:
+            message = msgs.InitGraphMessage()
+            message.vertices = vertices
+            message.edges = edges
+            message.dronePositions = self.dronePositions
+            self.broadcast(message)
     
-    def handleMessageData(self, data):
-        data = "".join(data)
-        id = struct.unpack("!l", data[:4])[0]
-        data = data[4:]
 
-        # start behavior
-        if (id == 1):
-            print ("MODEL: Drone Starting Behavior")
-            parser = msgs.StartBehaviorMessage()
-            parser.unpack(data)
-
-            if self.numDrones == -1:
-                self.numDrones = parser.numDrones
-                self.dronePositions = [-1 for i in range(self.numDrones)]
-            self.curDrones += 1
-            self.dronePositions[parser.id] = parser.location
-            if self.curDrones == self.numDrones:
-                parser = msgs.InitGraphMessage()
-                parser.vertices = vertices
-                parser.edges = edges
-                parser.dronePositions = self.dronePositions
-                data = struct.pack("!l", 3) + parser.pack()
-                self.broadcast(data)
-
-        # road analyzed
-        elif (id == 2):
-            parser = msgs.RoadAnalyzedMessage()
-            parser.unpack(data)
-
-            start, end = (parser.start, parser.end)
-            startIndex = -1
-            endIndex = -1
-            i = 0
-            for v in vertices:
-                startDist = gps.gps_distance(start[0], start[1], v[0], v[1])
-                if startDist < 5:
-                    startIndex = i
-                endDist = gps.gps_distance(end[0], end[1], v[0], v[1])
-                if endDist < 5:
-                    endIndex = i
-                i += 1
-            print "MODEL: Analyzed Road:", startIndex, endIndex
-            self.analyzedRoads.add((startIndex, endIndex))
-            
-            kml.generate()
-            for v in vertices:
-                point = (v[1], v[0])
-                kml.addPoint(point)
-            for road in self.analyzedRoads:
-                start = vertices[road[0]]
-                start = (start[1], start[0])
-                end = vertices[road[1]]
-                end = (end[1], end[0])
-                kml.addLine(start, end)
-            kml.save("route_recon")
-
-        # TODO: Handle object found message
+    def onReceiveRoadAnalyzed(self, message):
+        start, end = (message.start, message.end)
+        startIndex = -1
+        endIndex = -1
+        i = 0
+        for v in vertices:
+            startDist = gps.gps_distance(start[0], start[1], v[0], v[1])
+            if startDist < 5:
+                startIndex = i
+            endDist = gps.gps_distance(end[0], end[1], v[0], v[1])
+            if endDist < 5:
+                endIndex = i
+            i += 1
+        print "MODEL: Analyzed Road:", startIndex, endIndex
+        self.analyzedRoads.add((startIndex, endIndex))
+    
+        kml.generate()
+        for v in vertices:
+            point = (v[1], v[0])
+            kml.addPoint(point)
+        for road in self.analyzedRoads:
+            start = vertices[road[0]]
+            start = (start[1], start[0])
+            end = vertices[road[1]]
+            end = (end[1], end[0])
+            kml.addLine(start, end)
+        kml.save("route_recon")
 

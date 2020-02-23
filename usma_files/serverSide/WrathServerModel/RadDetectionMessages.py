@@ -3,51 +3,55 @@ import struct
 
 class StartInitPassMessage(object):
 
-    fmt = "!l"
+    id = 11
+    fmt = "!ll"
 
     def __init__(self):
         self.id = -1
 
     def pack(self):
-        return struct.pack(type(self).fmt, self.id)
+        return struct.pack(type(self).fmt, type(self).id, self.id)
 
     def unpack(self, bytes):
-        self.id = struct.unpack(type(self).fmt, bytes)
+        id, self.id = struct.unpack(type(self).fmt, bytes)
 
 
 class FinishInitPassMessage(object):
 
-    fmt = "!l"
+    id = 12
+    fmt = "!ll"
 
     def __init__(self):
         self.id = -1
     
     def pack(self):
-        return struct.pack(type(self).fmt, self.id)
+        return struct.pack(type(self).fmt, type(self).id, self.id)
 
     def unpack(self, bytes):
-        self.id = struct.unpack(type(self).fmt, bytes)
+        id, self.id = struct.unpack(type(self).fmt, bytes)
 
 
 class UpdateContourLineMessage(object):
 
-    fmt = "!3f"
+    id = 13
+    fmt = "!l3f"
 
     def __init__(self):
         self.location = (-1, -1)
         self.error = -1
 
     def pack(self):
-        return struct.pack(type(self).fmt, self.location[0], self.location[1], self.error)
+        return struct.pack(type(self).fmt, type(self).id, self.location[0], self.location[1], self.error)
     
     def unpack(self, bytes):
-        a, b, self.error = struct.unpack(type(self).fmt, bytes)
+        id, a, b, self.error = struct.unpack(type(self).fmt, bytes)
         self.location = (a, b)
 
 
 class LaneUpdateMessage(object):
 
-    fmt = "!6f"
+    id = 14
+    fmt = "!l6f"
 
     def __init__(self):
         self.start = (-1, -1)
@@ -55,12 +59,12 @@ class LaneUpdateMessage(object):
         self.end = (-1, -1)
     
     def pack(self):
-        return struct.pack(type(self).fmt, self.start[0], self.start[1].
+        return struct.pack(type(self).fmt, type(self).id, self.start[0], self.start[1].
                            self.center[0], self.center[1],
                            self.end[0], self.end[1])
     
     def unpack(self, bytes):
-        a, b, c, d, e, f = struct.unpack(type(self).fmt, bytes)
+        id, a, b, c, d, e, f = struct.unpack(type(self).fmt, bytes)
         self.start = (a, b)
         self.center = (c, d)
         self.end = (e, f)
@@ -68,7 +72,8 @@ class LaneUpdateMessage(object):
 
 class StartLaneGenerationMessage(object):
 
-    fmt = "!l"
+    id = 15
+    fmt = "!ll"
     lanefmt = "!2f"
 
     def __init__(self):
@@ -80,7 +85,7 @@ class StartLaneGenerationMessage(object):
         length = baseSize + len(self.contourPoints) * pointSize
 
         buff = ctypes.create_string_buffer(length)
-        struct.pack_into(type(self).fmt, buff, 0, len(self.contourPoints))
+        struct.pack_into(type(self).fmt, buff, 0, type(self).id, len(self.contourPoints))
 
         offset = baseSize
         for i in range(len(self.contourPoints)):
@@ -90,7 +95,7 @@ class StartLaneGenerationMessage(object):
         return "".join(buff)
     
     def unpack(self, bytes):
-        length = struct.unpack_from(type(self).fmt, bytes, 0)[0]
+        id, length = struct.unpack_from(type(self).fmt, bytes, 0)
 
         baseSize = struct.calcsize(type(self).fmt)
         pointSize = struct.calcsize(type(self).lanefmt)

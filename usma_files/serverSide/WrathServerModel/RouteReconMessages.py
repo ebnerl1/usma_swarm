@@ -3,7 +3,8 @@ import ctypes
 
 class StartBehaviorMessage(object):
 
-    fmt = "!2l2f"
+    id = 1
+    fmt = "!l2l2f"
 
     def __init__(self):
         self.numDrones = -1
@@ -12,17 +13,19 @@ class StartBehaviorMessage(object):
 
 
     def pack(self):
-        return struct.pack(type(self).fmt, self.numDrones, self.id, self.location[0], self.location[1])
+        return struct.pack(type(self).fmt, type(self).id, 
+            self.numDrones, self.id, self.location[0], self.location[1])
 
     
     def unpack(self, bytes):
-        self.numDrones, self.id, a, b = struct.unpack(type(self).fmt, bytes)
+        id, self.numDrones, self.id, a, b = struct.unpack(type(self).fmt, bytes)
         self.location = (a, b)
 
 
 class RoadAnalyzedMessage(object):
 
-    fmt = "!4f"
+    id = 2
+    fmt = "!l4f"
 
     def __init__(self):
         self.start = (-1, -1)
@@ -30,21 +33,23 @@ class RoadAnalyzedMessage(object):
     
 
     def pack(self):
-        return struct.pack(type(self).fmt, self.start[0], self.start[1], self.end[0], self.end[1])
+        return struct.pack(type(self).fmt, type(self).id, 
+            self.start[0], self.start[1], self.end[0], self.end[1])
     
 
     def unpack(self, bytes):
-        a, b, c, d = struct.unpack(type(self).fmt, bytes)
+        id, a, b, c, d = struct.unpack(type(self).fmt, bytes)
         self.start = (a, b)
         self.end = (c, d)
 
 
 class InitGraphMessage(object):
 
-    fmt = "3l"
-    vertexfmt = "2f"
-    edgefmt = "2l"
-    posfmt = "2f"
+    id = 3
+    fmt = "!l3l"
+    vertexfmt = "!2f"
+    edgefmt = "!2l"
+    posfmt = "!2f"
 
     def __init__(self):
         self.vertices = list()
@@ -65,7 +70,8 @@ class InitGraphMessage(object):
         length = vlen * vfmtSize + elen * efmtSize + plen * pfmtSize + fmtSize
         buff = ctypes.create_string_buffer(length)
 
-        struct.pack_into(type(self).fmt, buff, 0, vlen, elen, plen)
+        struct.pack_into(type(self).fmt, buff, 0, type(self).id, 
+                         vlen, elen, plen)
 
         offset = fmtSize
         for i in range(vlen):
@@ -90,7 +96,7 @@ class InitGraphMessage(object):
 
 
     def unpack(self, bytes):
-        vlen, elen, plen = struct.unpack_from(type(self).fmt, bytes, 0)
+        id, vlen, elen, plen = struct.unpack_from(type(self).fmt, bytes, 0)
 
         fmtSize = struct.calcsize(type(self).fmt)
         vfmtSize = struct.calcsize(type(self).vertexfmt)
