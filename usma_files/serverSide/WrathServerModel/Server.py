@@ -3,6 +3,7 @@
 import socket
 import thread
 from threading import Lock
+import struct
 import sys
 import subprocess
 import procname
@@ -15,6 +16,7 @@ class Server(object):
 		self.connectionLock = Lock()
 		self.connections = list()
 		self.socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+		self.dataList = list()
 
 	def start(self, ipAddress, port):
 		try:
@@ -55,9 +57,12 @@ class Server(object):
 
 	
 	def broadcast(self, msg):
+		msgLength = struct.pack("!l", len(msg) + 4)
+		msg = msgLength + msg
+
 		self.connectionLock.acquire()
-		for connection in self.connections:
-			connection.sendall(str(msg))
+		for connection in self.connections:			
+			connection.sendall(msg)
 		self.connectionLock.release()
 
 
@@ -65,16 +70,11 @@ class Server(object):
 		try:
 			while True:
 				data=connection.recv(4096)
-				if (len(data) <= 1):
+				if (len(data) == 0):
 					break
-				try:
-					parsedData = eval(data)
-				except:
-					print "WTF!!! This message system blows!", data
 
-				returnMessage = self.handleMessageData(parsedData)
-
-				connection.sendall(str(returnMessage))
+				self.dataList.extend(data)
+				self.checkCompleteMessage()
 		except socket.error:
 			pass
 		finally:
@@ -84,9 +84,25 @@ class Server(object):
 			self.connections.remove(connection)
 			self.connectionLock.release()
 
+
+	def checkCompleteMessage(self):
+		numBytes = self.parseNumBytes()[0]
+
+		while len(self.dataList) >= numBytes and numBytes != -1:
+			self.handleMessageData(self.dataList[4:numBytes])
+			self.dataList = self.dataList[numBytes:]
+			numBytes = self.parseNumBytes()
+
+
+	def parseNumBytes(self):
+		if len(self.dataList) < 4:
+			return -1
+
+		return struct.unpack("!l", "".join(self.dataList[:4]))
+
 	
 	# This message must be defined!
-	def handleMessageData(self, parsedData):
+	def handleMessageData(self, data):
 		pass
 
 

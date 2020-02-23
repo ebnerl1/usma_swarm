@@ -3,10 +3,12 @@
 import ap_lib.gps_utils as gps
 
 import enum
+import struct
 
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
 from WrathServerModel import wrath_to_kml as kml
+from WrathServerModel import RouteReconMessages as msgs
 
 vertices = [
     (41.39094, -73.95294),
@@ -33,21 +35,6 @@ edges = [
     (7, 8)
 ]
 
-# Client Messages:
-# 0: Heartbeat
-# 1: Start Behavior: numDrones, id, location
-# 2: Road Analyzed: (start, end)
-# 3: Object Found (location, picture, size?)
-#
-# Server Message:
-# 0: Heartbeat
-# 1: Init Graph
-class MessageType(enum.IntEnum):
-    Heartbeat = 0
-    StartBehavior = 1
-    RoadAnalyzed = 2
-    ObjectFound = 3
-
 class RouteReconServer(Server.Server):
 
     def __init__(self):
@@ -65,22 +52,35 @@ class RouteReconServer(Server.Server):
 
     
     def handleMessageData(self, data):
-        messageType = data[0]
+        data = "".join(data)
+        id = struct.unpack("!l", data[:4])[0]
+        data = data[4:]
 
-        if messageType == MessageType.Heartbeat:
-            pass
+        # start behavior
+        if (id == 1):
+            print ("MODEL: Drone Starting Behavior")
+            parser = msgs.StartBehaviorMessage()
+            parser.unpack(data)
 
-        elif messageType == MessageType.StartBehavior:
             if self.numDrones == -1:
-                self.numDrones = data[1]
+                self.numDrones = parser.numDrones
                 self.dronePositions = [-1 for i in range(self.numDrones)]
             self.curDrones += 1
-            self.dronePositions[data[2]] = data[3]
+            self.dronePositions[parser.id] = parser.location
             if self.curDrones == self.numDrones:
-                self.broadcast([1, vertices, edges, self.dronePositions])
+                parser = msgs.InitGraphMessage()
+                parser.vertices = vertices
+                parser.edges = edges
+                parser.dronePositions = self.dronePositions
+                data = struct.pack("!l", 3) + parser.pack()
+                self.broadcast(data)
 
-        elif  messageType == MessageType.RoadAnalyzed:
-            start, end = data[1]
+        # road analyzed
+        elif (id == 2):
+            parser = msgs.RoadAnalyzedMessage()
+            parser.unpack(data)
+
+            start, end = (parser.start, parser.end)
             startIndex = -1
             endIndex = -1
             i = 0
@@ -107,10 +107,5 @@ class RouteReconServer(Server.Server):
                 kml.addLine(start, end)
             kml.save("route_recon")
 
-
-        elif messageType == MessageType.ObjectFound:
-            # TODO: Handle object found message
-            pass
-        
-        return [0]
+        # TODO: Handle object found message
 
