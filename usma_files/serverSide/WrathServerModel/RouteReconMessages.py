@@ -143,3 +143,20 @@ class InitGraphMessage(object):
             lat, lon = struct.unpack_from(type(self).posfmt, bytes, offset)
             self.dronePositions.append((lat, lon))
             offset += pfmtSize
+
+
+class DetectedObjectMessage(object):
+
+    id = 5
+    fmt = "!lf"
+
+    def __init__(self):
+        self.name = ""
+        self.probability = -1
+
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id, self.probability) + self.name
+    
+    def unpack(self, bytes):
+        id, self.probability = struct.unpack_from(type(self).fmt, bytes)
+        self.name = str( bytes[struct.calcsize(type(self).fmt):] )

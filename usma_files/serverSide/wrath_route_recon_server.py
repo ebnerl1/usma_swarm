@@ -2,7 +2,7 @@
 
 from WrathServerModel import RouteReconServer
 
-IS_SIMULATION = True
+IS_SIMULATION = False
 
 Server = RouteReconServer.RouteReconServer()
 

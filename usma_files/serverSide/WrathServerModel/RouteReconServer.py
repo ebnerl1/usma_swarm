@@ -48,6 +48,8 @@ class RouteReconServer(Server.Server):
                                      self.onReceiveStartBehavior)
         self.registerMessageCallback(msgs.RoadAnalyzedMessage.id, 
                                      self.onReceiveRoadAnalyzed)
+        self.registerMessageCallback(msgs.DetectedObjectMessage.id, 
+                                     self.onDetectObject)
 
         kml.generate()
         for v in vertices:
@@ -98,4 +100,7 @@ class RouteReconServer(Server.Server):
             end = (end[1], end[0])
             kml.addLine(start, end)
         kml.save("route_recon")
+
+    def onDetectObject(self, msg):
+        print "DETECTED OBJ:", msg.name, msg.probability
 

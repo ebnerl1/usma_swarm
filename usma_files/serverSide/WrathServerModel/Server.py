@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+# gregory.zogby@westpoint.edu 
+
 import socket
 import thread
 from threading import Lock

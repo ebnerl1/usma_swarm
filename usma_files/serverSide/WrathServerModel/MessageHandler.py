@@ -8,6 +8,7 @@ msgList = [
     rrmsgs.StartBehaviorMessage,
     rrmsgs.RoadAnalyzedMessage,
     rrmsgs.InitGraphMessage,
+    rrmsgs.DetectedObjectMessage,
 
     rdmsgs.SparsityMessage,
     rdmsgs.RadLocationMessage,
