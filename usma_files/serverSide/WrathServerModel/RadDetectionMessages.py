@@ -18,7 +18,8 @@ class SparsityMessage(object):
 
     
     def unpack(self, bytes):
-        id, self.location = struct.unpack_from(type(self).fmt, bytes, 0)
+        id, a, b = struct.unpack_from(type(self).fmt, bytes, 0)
+        self.location = (a, b)
 
 
 class RadLocationMessage(object):
@@ -55,7 +56,7 @@ class LockLaneGenMessage(object):
 
 
     def unpack(self, bytes):
-        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)[0]
+        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)
 
 
 class UnlockLaneGenMessage(object):
@@ -72,7 +73,7 @@ class UnlockLaneGenMessage(object):
 
 
     def unpack(self, bytes):
-        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)[0]
+        id, self.id = struct.unpack_from(type(self).fmt, bytes, 0)
 
 
 class StartInitPassMessage(object):
@@ -116,7 +117,7 @@ class LaneUpdateMessage(object):
         self.end = (-1, -1)
     
     def pack(self):
-        return struct.pack(type(self).fmt, type(self).id, self.start[0], self.start[1].
+        return struct.pack(type(self).fmt, type(self).id, self.start[0], self.start[1],
                            self.center[0], self.center[1],
                            self.end[0], self.end[1])
     

@@ -17,6 +17,8 @@ recompiledFiles=(
     "Networking/SwarmCommunications.py"
     "usma_msg/RouteReconMessages.py"
     "usma_msg/RadiationMessages.py"
+    "Collections/RadLaneGenerator.py"
+    "Collections/ContourLine.py"
 )
 
 pythonScript="
