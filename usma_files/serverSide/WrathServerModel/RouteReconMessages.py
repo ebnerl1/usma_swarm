@@ -158,5 +158,21 @@ class DetectedObjectMessage(object):
         return struct.pack(type(self).fmt, type(self).id, self.probability) + self.name
     
     def unpack(self, bytes):
-        id, self.probability = struct.unpack_from(type(self).fmt, bytes)
+        id, self.probability = struct.unpack(type(self).fmt, bytes)
         self.name = str( bytes[struct.calcsize(type(self).fmt):] )
+
+
+class LogMessage(object):
+
+    id = 6
+    fmt = "!l"
+
+    def __init__(self):
+        self.msg = ""
+
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id) + self.msg
+    
+    def unpack(self, bytes):
+        id = struct.unpack(type(self).fmt, bytes[:struct.calcsize(type(self).fmt)])[0]
+        self.msg = str( bytes[struct.calcsize(type(self).fmt):] )

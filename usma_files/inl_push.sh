@@ -37,3 +37,4 @@ for i in "${arr[@]}"
          fi
             
     done
+    

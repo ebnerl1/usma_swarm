@@ -8,13 +8,18 @@
 
 
 import serial
+from serial.tools import list_ports
 import rospy
 import numpy
 
 from geometry_msgs.msg import PointStamped
 from sensor_msgs.msg import Imu
 
-port = serial.Serial("/dev/rangefinder", baudrate=115200)
+
+for t in list_ports.comports():
+    if t[2] == 'USB VID:PID=0403:6015 SNR=DO01SK36':
+        port = serial.Serial(t[0], baudrate=115200)
+
 
 reading = 0.00
 roll = 0.00
@@ -63,6 +68,7 @@ def talker():
                 reading = data_raw
                 reading = float(reading)
                 adjusted_height = reading * numpy.cos(roll) * numpy.cos(pitch)
+                print adjusted_height
                 
 
 

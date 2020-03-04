@@ -2,7 +2,7 @@
 
 <!-- This is the launch file for each quadcopter.  This file has to be inserted into
 the file path: /acs_ros_ws/src/autonomy-payload/ap_master/launch. the quad_setup.sh script
-will push this information to a desired quad through a ssh link.  This launch file starts 
+will push this information to a desired quad through a ssh link.  This launch file starts
 the sensors and all of the other ROS nodes on the quadcopters.  -->
 
 <!-- Note: args 'id' and 'name' are mandatory -->
@@ -18,13 +18,13 @@ the sensors and all of the other ROS nodes on the quadcopters.  -->
   <arg name="do_bag" default="0" />       <!-- Enable rosbagging -->
   <arg name="do_fetch" default="0" />     <!-- Enable param/fence/rally/wp fetch fm server -->
   <arg name="do_verify" default="0" />    <!-- Enable param/fence/rally/wp verification -->
-  <arg name="ap_dev" default="/dev/ttyACM*" />  <!-- Device string -->
+  <arg name="ap_dev" default="/dev/ttyUSB*" />  <!-- Device string -->
   <arg name="net_dev" default="wlan0" />  <!-- Network device -->
   <arg name="net_port" default="5554" />  <!-- Network port -->
 
   <arg name="do_decon_land" default="1" /> <!-- Whether or not to attempt to deconflict landing points (and rally points) between aircraft -->
   <arg name="land_dis" default="2.0"/> <!-- distance between landing (and rally) points when deconflicting (in meters)-->
-      
+
   <!-- Derived (conditional) arguments -->
   <arg name="gps_arg" default="--gps-time-hack" if="$(arg gps)" />
   <arg name="gps_arg" default="" unless="$(arg gps)" />
@@ -55,14 +55,15 @@ the sensors and all of the other ROS nodes on the quadcopters.  -->
 
   <!-- Core Nodes -->
 
-  <node name="autopilot" pkg="autopilot_bridge" type="mavbridge.py" output="screen" args="--device $(arg ap_dev) --baudrate 115200 --serial-relief 1024 -m acs -m file -m fpr -m slave -m wp -m ap_msg_queue $(arg gps_arg)" />
+  <node name="autopilot" pkg="autopilot_bridge" type="mavbridge.py" output="screen" args="--device $(arg ap_dev) --baudrate 1500000 --serial-relief 1024 -m acs -m file -m fpr -m slave -m wp -m ap_msg_queue $(arg gps_arg)" />
   <node name="safety" pkg="ap_safety_monitor" type="safety.py" output="screen" >
     <remap from="safety/heartbeat" to="autopilot/heartbeat_onboard" />
     <remap from="safety/gnd_heartbeat" to="autopilot/heartbeat_ground" />
     <remap from="safety/ap_pose" to="autopilot/acs_pose" />
   </node>
-  <node name="altitude_sensor" pkg="ap_safety_monitor" type="altitude_eye_ROS.py" respawn="true"/>
-  <node name="radiation_sensor" pkg="ap_safety_monitor" type="rad_eye2_ROS.py" respawn="true"/>
+  <!-- <node name="altitude_sensor" pkg="ap_safety_monitor" type="altitude_eye_ROS.py" respawn="true"/> -->
+  <!-- <node name="radiation_sensor" pkg="ap_safety_monitor" type="rad_eye2_ROS.py" respawn="true"/> -->
+  <!-- <node name="HeRMES_DAQ" pkg="ap_safety_monitor" type="aquireStdMsg.py" respawn="true"/> -->
   <node name="network" pkg="ap_network_bridge" type="network.py" output="screen" args="--device $(arg net_dev)" >
     <remap from="network/recv_heart_ground" to="autopilot/heartbeat_ground" />
     <remap from="network/recv_arm" to="autopilot/arm" />
@@ -157,10 +158,11 @@ the sensors and all of the other ROS nodes on the quadcopters.  -->
     <remap from="tactic_interface/wp_getlast" to="autopilot/wp_getlast" />
     <remap from="tactic_interface/hit_uavs" to="hit_tracker/hit_uavs" />
     <remap from="tactic_interface/waypoint_goto" to="autopilot/waypoint_goto" />
-    <remap from="tactic_interface/firing_reports" to="air_to_air/firing_reports" />    
+    <remap from="tactic_interface/firing_reports" to="air_to_air/firing_reports" />
   </node>
 
   <!-- TODO(tfoote) how to replace this gracefully? -->
   <include file="$(find autonomy_itar)/launch/itar.launch" />
 
 </launch>
+

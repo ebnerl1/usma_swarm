@@ -9,6 +9,7 @@ msgList = [
     rrmsgs.RoadAnalyzedMessage,
     rrmsgs.InitGraphMessage,
     rrmsgs.DetectedObjectMessage,
+    rrmsgs.LogMessage,
 
     rdmsgs.SparsityMessage,
     rdmsgs.RadLocationMessage,
@@ -17,7 +18,8 @@ msgList = [
     rdmsgs.StartInitPassMessage,
     rdmsgs.FinishInitPassMessage,
     rdmsgs.LaneUpdateMessage,
-    rdmsgs.StartLaneGenerationMessage
+    rdmsgs.StartLaneGenerationMessage,
+    rdmsgs.RadiationMessage
 ]
 
 idToMessage = { msg.id: msg for msg in msgList }

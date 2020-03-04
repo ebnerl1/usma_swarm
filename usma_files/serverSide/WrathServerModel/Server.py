@@ -10,6 +10,7 @@ import sys
 import subprocess
 import procname
 import time
+import logging
 
 from MessageHandler import MessageHandler
 
@@ -35,7 +36,7 @@ class Server(object):
 
 	def close(self):
 		for connection in self.connections:
-			print "SERVER: Closing Connection"
+			logging.info("SERVER: Closing Connection")
 			connection.close()
 		if (self.socket != None):
 			self.socket.close()
@@ -44,10 +45,10 @@ class Server(object):
 	def listen(self, ipAddress, port):
 		self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-		print "SERVER: Starting server on %s:%s" % (ipAddress, port)
+		logging.info("SERVER: Starting server on %s:%s" % (ipAddress, port))
 		self.socket.bind((ipAddress, port))
 
-		print "SERVER: Waiting for a connection..."
+		logging.info("SERVER: Waiting for a connection...")
 		self.socket.listen(10)
 		
 		while True:
@@ -57,7 +58,7 @@ class Server(object):
 			self.connectionLock.acquire()
 			self.connections.append(connection)
 			self.connectionLock.release()
-			print "SERVER: Num Connections: ", len(self.connections)
+			logging.info("SERVER: Num Connections: " + str(len(self.connections)))
 
 			if (self.timeout > -1):
 				connection.settimeout(self.timeout)
@@ -87,7 +88,7 @@ class Server(object):
 		except socket.error:
 			pass
 		finally:
-			print "SERVER: Closing Connection"
+			logging.info("SERVER: Closing Connection")
 			connection.close()
 			self.connectionLock.acquire()
 			self.connections.remove(connection)

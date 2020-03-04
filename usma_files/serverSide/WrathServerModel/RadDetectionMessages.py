@@ -165,3 +165,21 @@ class StartLaneGenerationMessage(object):
             lat, lon = struct.unpack_from(type(self).lanefmt, bytes, offset)
             self.contourPoints.append((lat, lon))
             offset += pointSize
+
+
+class RadiationMessage(object):
+
+    id = 19
+    fmt = "!l3f"
+
+    def __init__(self):
+        self.time = 0.0
+        self.count = 0.0
+        self.spectrum = 0.0
+
+    def pack(self):
+        return struct.pack(type(self).fmt, type(self).id, self.time, self.count,
+                           self.spectrum)
+    
+    def unpack(self, bytes):
+        id, self.time, self.count, self.spectrum = struct.unpack(type(self).fmt, bytes)

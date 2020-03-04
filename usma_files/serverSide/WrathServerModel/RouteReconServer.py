@@ -4,6 +4,10 @@ import ap_lib.gps_utils as gps
 
 import enum
 
+import logging
+import datetime
+import sys
+
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
 from WrathServerModel import wrath_to_kml as kml
@@ -50,6 +54,8 @@ class RouteReconServer(Server.Server):
                                      self.onReceiveRoadAnalyzed)
         self.registerMessageCallback(msgs.DetectedObjectMessage.id, 
                                      self.onDetectObject)
+        self.registerMessageCallback(msgs.LogMessage.id, 
+                                     self.onReceiveLog)
 
         kml.generate()
         for v in vertices:
@@ -57,9 +63,15 @@ class RouteReconServer(Server.Server):
             kml.addPoint(point)
         kml.save("route_recon")
 
+        name = datetime.datetime.now().strftime("%y:%m:%d:%H:%M")
+        logging.basicConfig(filename="logs/routeRecon - " + name, level=logging.INFO, 
+            format="%(levelname)s:%(message)s")
+        logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+        logging.info("Route Recon Starting")
+
 
     def onReceiveStartBehavior(self, message):
-        print ("MODEL: Drone Starting Behavior")
+        logging.info("MODEL: Drone Starting Behavior")
         if self.numDrones == -1:
             self.numDrones = message.numDrones
             self.dronePositions = [-1 for i in range(self.numDrones)]
@@ -86,7 +98,7 @@ class RouteReconServer(Server.Server):
             if endDist < 5:
                 endIndex = i
             i += 1
-        print "MODEL: Analyzed Road:", startIndex, endIndex
+        logging.info("MODEL: Analyzed Road: " + str(startIndex) + " " + str(endIndex))
         self.analyzedRoads.add((startIndex, endIndex))
     
         kml.generate()
@@ -102,5 +114,9 @@ class RouteReconServer(Server.Server):
         kml.save("route_recon")
 
     def onDetectObject(self, msg):
-        print "DETECTED OBJ:", msg.name, msg.probability
+        logging.info("DETECTED OBJ: " + str(msg.name) + " " + str(msg.probability))
+
+    
+    def onReceiveLog(self, msg):
+        logging.info(msg.msg)
 

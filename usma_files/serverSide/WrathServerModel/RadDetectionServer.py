@@ -1,11 +1,19 @@
 #!/usr/bin/python
 
 import enum
+import logging
+import datetime
+import sys
+import time
+
 from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
 from WrathServerModel import wrath_to_kml as kml
 from WrathServerModel import RadDetectionMessages as msgs
+from WrathServerModel import RouteReconMessages as rrmsgs
 import struct
+
+altitudeTime = time.time()
 
 class RadDetectionServer(Server.Server):
 
@@ -23,8 +31,15 @@ class RadDetectionServer(Server.Server):
         kml.generate()
         kml.addGraph(self.contourLine.graph)
         kml.save("wrath_rad")
-        print [v.coord for v in self.contourLine.graph.vertices]
-        print self.contourLine.graph
+
+        name = datetime.datetime.now().strftime("%y:%m:%d:%H:%M")
+        logging.basicConfig(filename="logs/radDetection - " + name, level=logging.INFO, 
+            format="%(levelname)s:%(message)s")
+        logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+        logging.info("Rad Detection Starting")
+
+        logging.info(str([v.coord for v in self.contourLine.graph.vertices]))
+        logging.info(str(self.contourLine.graph))
         self.numDronesInSwarm = 0
         self.dronesFinished = 0
         if simulationData != None:
@@ -41,21 +56,25 @@ class RadDetectionServer(Server.Server):
                                      self.onReceiveRadLocation)
         self.registerMessageCallback(msgs.LaneUpdateMessage.id,
                                      self.onReceiveLaneUpdate)
+        self.registerMessageCallback(msgs.RadiationMessage.id,
+                                     self.onReceiveRadiation)
+        self.registerMessageCallback(rrmsgs.LogMessage.id,
+                                     self.onReceiveLog)
 
 
     def onReceiveStartInitPass(self, message):
         if self.state == 0:
-            print "MODEL: State Change: Initial Pass!"
+            logging.info("MODEL: State Change: Initial Pass!")
             self.state = 1
         self.numDronesInSwarm += 1
     
 
     def onReceiveFinishInitPass(self, message):
         self.dronesFinished += 1
-        print "MODEL: Drone Finished Init Pass"
+        logging.info("MODEL: Drone Finished Init Pass")
         if (self.dronesFinished == self.numDronesInSwarm):
-            print "MODEL: State Change: Lane Generation!"
-            print "MODEL: Sending points: ", self.simulationData
+            logging.info("MODEL: State Change: Lane Generation!")
+            logging.info("MODEL: Sending points: " + str(self.simulationData))
             self.state = 2
             if self.IS_SIMULATION:
                 messageParser = msgs.StartLaneGenerationMessage()
@@ -68,11 +87,23 @@ class RadDetectionServer(Server.Server):
         kml.generate()
         kml.addGraph(self.contourLine.graph)
         kml.save("wrath_rad")
-        print self.contourLine.graph
-        print "MODEL: Update Contour Line: ", message.location
-        print "MODEL: Error Calculated: ", message.error
+        logging.info(str(self.contourLine.graph))
+        logging.info("MODEL: Update Contour Line: " + str(message.location))
+        logging.info("MODEL: Error Calculated: " + str(message.error))
     
 
     def onReceiveLaneUpdate(self, message):
-        print "MODEL: New Lane: ", message.start, message.center, message.end       
+        logging.info("MODEL: New Lane: " + str(message.start) + " " + str(message.center) + " " + str(message.end))
 
+
+    def onReceiveRadiation(self, message):
+        logging.info("Received Rad!: " + str(message.time) + " " + str(message.count))
+
+
+    def onReceiveLog(self, message):
+        # if ("altitude" in message.msg.lower()):
+        #     print time.time()
+        #     if (time.time() - altitudeTime < 1):
+        #         return
+        #     altitudeTime = time.time()        
+        logging.info(message.msg)
