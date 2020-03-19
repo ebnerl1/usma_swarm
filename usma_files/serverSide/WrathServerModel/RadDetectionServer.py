@@ -67,7 +67,7 @@ class RadDetectionServer(Server.Server):
             logging.info("MODEL: State Change: Initial Pass!")
             self.state = 1
         self.numDronesInSwarm += 1
-    
+
 
     def onReceiveFinishInitPass(self, message):
         self.dronesFinished += 1
@@ -80,7 +80,7 @@ class RadDetectionServer(Server.Server):
                 messageParser = msgs.StartLaneGenerationMessage()
                 messageParser.contourPoints = self.simulationData
                 self.broadcast(messageParser)
-    
+
 
     def onReceiveRadLocation(self, message):
         self.contourLine.updateContour(message.location)
@@ -101,9 +101,12 @@ class RadDetectionServer(Server.Server):
 
 
     def onReceiveLog(self, message):
-        # if ("altitude" in message.msg.lower()):
-        #     print time.time()
-        #     if (time.time() - altitudeTime < 1):
-        #         return
-        #     altitudeTime = time.time()        
+        global altitudeTime
+        if ("altitude" in message.msg.lower()):
+            # print "happening!!!!"
+            # print time.time()
+            if (time.time() - altitudeTime < 1):
+                # print "Next point!!!"
+                return
+            altitudeTime = time.time()        
         logging.info(message.msg)

@@ -2,7 +2,7 @@
 
 from WrathServerModel.RadDetectionServer import RadDetectionServer as Server
 
-IS_SIMULATION = False
+IS_SIMULATION = True 
 
 simulationData = [(41.39126646, -73.95287588),
 				  (41.39155737, -73.95258772)]

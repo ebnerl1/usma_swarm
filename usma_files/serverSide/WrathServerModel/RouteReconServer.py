@@ -52,7 +52,7 @@ class RouteReconServer(Server.Server):
                                      self.onReceiveStartBehavior)
         self.registerMessageCallback(msgs.RoadAnalyzedMessage.id, 
                                      self.onReceiveRoadAnalyzed)
-        self.registerMessageCallback(msgs.DetectedObjectMessage.id, 
+        self.registerMessageCallback(msgs.DetectedObjectMessage.id,
                                      self.onDetectObject)
         self.registerMessageCallback(msgs.LogMessage.id, 
                                      self.onReceiveLog)
@@ -114,6 +114,7 @@ class RouteReconServer(Server.Server):
         kml.save("route_recon")
 
     def onDetectObject(self, msg):
+        print "!!!!!!!!!!!!!!??????????????"
         logging.info("DETECTED OBJ: " + str(msg.name) + " " + str(msg.probability))
 
     
