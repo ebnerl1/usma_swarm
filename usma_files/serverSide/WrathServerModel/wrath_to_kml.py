@@ -49,6 +49,38 @@ def addImage(point,alt,image):
 	# need to create turn image into a url location to grab
 	#photo.icon.href= image
 	photo.viewvolume = simplekml.ViewVolume(-25,25,-15,15,1)
+
+def addHeat(point,rad_info): #point is a tuple of (lat,long)
+	pol = kml.newpolygon()
+	width = 0.5 # change these parameters for styling
+	height = 2 # change these paramaters for styling
+	lon = point[1]
+	lat = point [0]
+	#Code below is a snippet pulled from AY19 team for creating polygon
+	top_left_x = (lon - width/2)
+	top_left_y = (lat + height/2)
+	bottom_left_x = (lon - width/2)
+	bottom_left_y = (lat - height/2)
+	bottom_right_x = (lon + width/2)
+	bottom_right_y = (lat- height/2)
+	top_right_x = (lon + width/2)
+	top_right_y = (lat + height/2)
+	pol.outerboundaryis = [(top_left_x,top_left_y), (top_right_x,top_right_y),
+	 (bottom_right_x,bottom_right_y), (bottom_left_x,bottom_left_y),(top_left_x,top_left_y)]
+
+	if (rad_info < 30):
+		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.blue)
+
+	elif (100 >= rad_info > 30):
+		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.green)
+
+	elif (400 >= rad_info > 100):
+		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.yellow)
+
+	else:
+		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.red)
+       
+
  
 
 # need to save it to a destination for viewing
