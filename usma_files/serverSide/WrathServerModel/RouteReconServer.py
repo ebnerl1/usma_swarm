@@ -4,9 +4,14 @@ import ap_lib.gps_utils as gps
 
 import enum
 
+import logging
+import datetime
+import sys
+
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
 from WrathServerModel import wrath_to_kml as kml
+from WrathServerModel import RouteReconMessages as msgs
 
 vertices = [
     (41.39094, -73.95294),
@@ -33,21 +38,6 @@ edges = [
     (7, 8)
 ]
 
-# Client Messages:
-# 0: Heartbeat
-# 1: Start Behavior: numDrones, id, location
-# 2: Road Analyzed: (start, end)
-# 3: Object Found (location, picture, size?)
-#
-# Server Message:
-# 0: Heartbeat
-# 1: Init Graph
-class MessageType(enum.IntEnum):
-    Heartbeat = 0
-    StartBehavior = 1
-    RoadAnalyzed = 2
-    ObjectFound = 3
-
 class RouteReconServer(Server.Server):
 
     def __init__(self):
@@ -57,60 +47,77 @@ class RouteReconServer(Server.Server):
         self.dronePositions = list()
         self.roadNetwork = Graph.fill(vertices, edges, True)
         self.analyzedRoads = set() # Should this be a subgraph
+
+        self.registerMessageCallback(msgs.StartBehaviorMessage.id, 
+                                     self.onReceiveStartBehavior)
+        self.registerMessageCallback(msgs.RoadAnalyzedMessage.id, 
+                                     self.onReceiveRoadAnalyzed)
+        self.registerMessageCallback(msgs.DetectedObjectMessage.id,
+                                     self.onDetectObject)
+        self.registerMessageCallback(msgs.LogMessage.id, 
+                                     self.onReceiveLog)
+
         kml.generate()
         for v in vertices:
             point = (v[1], v[0])
             kml.addPoint(point)
         kml.save("route_recon")
 
+        name = datetime.datetime.now().strftime("%y:%m:%d:%H:%M")
+        logging.basicConfig(filename="logs/routeRecon - " + name, level=logging.INFO, 
+            format="%(levelname)s:%(message)s")
+        logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
+        logging.info("Route Recon Starting")
+
+
+    def onReceiveStartBehavior(self, message):
+        logging.info("MODEL: Drone Starting Behavior")
+        if self.numDrones == -1:
+            self.numDrones = message.numDrones
+            self.dronePositions = [-1 for i in range(self.numDrones)]
+        self.curDrones += 1
+        self.dronePositions[message.id] = message.location
+        if self.curDrones == self.numDrones:
+            message = msgs.InitGraphMessage()
+            message.vertices = vertices
+            message.edges = edges
+            message.dronePositions = self.dronePositions
+            self.broadcast(message)
     
-    def handleMessageData(self, data):
-        messageType = data[0]
 
-        if messageType == MessageType.Heartbeat:
-            pass
+    def onReceiveRoadAnalyzed(self, message):
+        start, end = (message.start, message.end)
+        startIndex = -1
+        endIndex = -1
+        i = 0
+        for v in vertices:
+            startDist = gps.gps_distance(start[0], start[1], v[0], v[1])
+            if startDist < 5:
+                startIndex = i
+            endDist = gps.gps_distance(end[0], end[1], v[0], v[1])
+            if endDist < 5:
+                endIndex = i
+            i += 1
+        logging.info("MODEL: Analyzed Road: " + str(startIndex) + " " + str(endIndex))
+        self.analyzedRoads.add((startIndex, endIndex))
+    
+        kml.generate()
+        for v in vertices:
+            point = (v[1], v[0])
+            kml.addPoint(point)
+        for road in self.analyzedRoads:
+            start = vertices[road[0]]
+            start = (start[1], start[0])
+            end = vertices[road[1]]
+            end = (end[1], end[0])
+            kml.addLine(start, end)
+        kml.save("route_recon")
 
-        elif messageType == MessageType.StartBehavior:
-            if self.numDrones == -1:
-                self.numDrones = data[1]
-                self.dronePositions = [-1 for i in range(self.numDrones)]
-            self.curDrones += 1
-            self.dronePositions[data[2]] = data[3]
-            if self.curDrones == self.numDrones:
-                self.broadcast([1, vertices, edges, self.dronePositions])
+    def onDetectObject(self, msg):
+        print "!!!!!!!!!!!!!!??????????????"
+        logging.info("DETECTED OBJ: " + str(msg.name) + " " + str(msg.probability))
 
-        elif  messageType == MessageType.RoadAnalyzed:
-            start, end = data[1]
-            startIndex = -1
-            endIndex = -1
-            i = 0
-            for v in vertices:
-                startDist = gps.gps_distance(start[0], start[1], v[0], v[1])
-                if startDist < 5:
-                    startIndex = i
-                endDist = gps.gps_distance(end[0], end[1], v[0], v[1])
-                if endDist < 5:
-                    endIndex = i
-                i += 1
-            print "MODEL: Analyzed Road:", startIndex, endIndex
-            self.analyzedRoads.add((startIndex, endIndex))
-            
-            kml.generate()
-            for v in vertices:
-                point = (v[1], v[0])
-                kml.addPoint(point)
-            for road in self.analyzedRoads:
-                start = vertices[road[0]]
-                start = (start[1], start[0])
-                end = vertices[road[1]]
-                end = (end[1], end[0])
-                kml.addLine(start, end)
-            kml.save("route_recon")
-
-
-        elif messageType == MessageType.ObjectFound:
-            # TODO: Handle object found message
-            pass
-        
-        return [0]
+    
+    def onReceiveLog(self, msg):
+        logging.info(msg.msg)
 

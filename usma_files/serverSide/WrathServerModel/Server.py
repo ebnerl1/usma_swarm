@@ -1,12 +1,18 @@
 #!/usr/bin/python
 
+# gregory.zogby@westpoint.edu 
+
 import socket
 import thread
 from threading import Lock
+import struct
 import sys
 import subprocess
 import procname
 import time
+import logging
+
+from MessageHandler import MessageHandler
 
 class Server(object):
 	
@@ -15,6 +21,11 @@ class Server(object):
 		self.connectionLock = Lock()
 		self.connections = list()
 		self.socket = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
+		self.dataList = list()
+		self.messageHandler = MessageHandler()
+		
+		self.byteFmt = "!l"
+		self.byteLen = struct.calcsize(self.byteFmt)
 
 	def start(self, ipAddress, port):
 		try:
@@ -25,7 +36,7 @@ class Server(object):
 
 	def close(self):
 		for connection in self.connections:
-			print "SERVER: Closing Connection"
+			logging.info("SERVER: Closing Connection")
 			connection.close()
 		if (self.socket != None):
 			self.socket.close()
@@ -34,10 +45,10 @@ class Server(object):
 	def listen(self, ipAddress, port):
 		self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-		print "SERVER: Starting server on %s:%s" % (ipAddress, port)
+		logging.info("SERVER: Starting server on %s:%s" % (ipAddress, port))
 		self.socket.bind((ipAddress, port))
 
-		print "SERVER: Waiting for a connection..."
+		logging.info("SERVER: Waiting for a connection...")
 		self.socket.listen(10)
 		
 		while True:
@@ -47,7 +58,7 @@ class Server(object):
 			self.connectionLock.acquire()
 			self.connections.append(connection)
 			self.connectionLock.release()
-			print "SERVER: Num Connections: ", len(self.connections)
+			logging.info("SERVER: Num Connections: " + str(len(self.connections)))
 
 			if (self.timeout > -1):
 				connection.settimeout(self.timeout)
@@ -55,9 +66,13 @@ class Server(object):
 
 	
 	def broadcast(self, msg):
+		data = msg.pack()
+		msgLength = struct.pack(self.byteFmt, len(data) + self.byteLen)
+		data = msgLength + data
+
 		self.connectionLock.acquire()
 		for connection in self.connections:
-			connection.sendall(str(msg))
+			connection.sendall(data)
 		self.connectionLock.release()
 
 
@@ -65,28 +80,37 @@ class Server(object):
 		try:
 			while True:
 				data=connection.recv(4096)
-				if (len(data) <= 1):
+				if (len(data) == 0):
 					break
-				try:
-					parsedData = eval(data)
-				except:
-					print "WTF!!! This message system blows!", data
 
-				returnMessage = self.handleMessageData(parsedData)
-
-				connection.sendall(str(returnMessage))
+				self.dataList.extend(data)
+				self.checkCompleteMessage()
 		except socket.error:
 			pass
 		finally:
-			print "SERVER: Closing Connection"
+			logging.info("SERVER: Closing Connection")
 			connection.close()
 			self.connectionLock.acquire()
 			self.connections.remove(connection)
 			self.connectionLock.release()
 
-	
-	# This message must be defined!
-	def handleMessageData(self, parsedData):
-		pass
 
+	def checkCompleteMessage(self):
+		numBytes = self.parseNumBytes()[0]
+
+		while len(self.dataList) >= numBytes and numBytes != -1:
+			self.messageHandler.processMessage("".join(self.dataList[self.byteLen:numBytes]))
+			self.dataList = self.dataList[numBytes:]
+			numBytes = self.parseNumBytes()
+
+
+	def parseNumBytes(self):
+		if len(self.dataList) < self.byteLen:
+			return -1
+
+		return struct.unpack(self.byteFmt, "".join(self.dataList[:self.byteLen]))
+
+
+	def registerMessageCallback(self, id, callback):
+		self.messageHandler.registerCallback(id, callback)
 
