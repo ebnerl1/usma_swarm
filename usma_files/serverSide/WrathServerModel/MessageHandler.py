@@ -35,6 +35,9 @@ class MessageHandler(object):
     
 
     def processMessage(self, data):
+        if len(data) < struct.calcsize("!l"):
+            print "Error: Invalid size message from drone!\nData Received:", data
+
         messageId = struct.unpack("!l", data[:struct.calcsize("!l")])[0]
 
         if messageId in self.messageCallbacks:

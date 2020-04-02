@@ -84,7 +84,6 @@ class ContourLine(object):
         startIndex = self.graph.nVertices - 2
         self.startVertex = self.graph.getVertex(startIndex)
 
-
     def findClosestPointOnEdge(self, point, edge):
         segment = LineSegment.LineSegment(edge.start.coord, edge.end.coord)
         normal = segment.getNormal()
@@ -97,6 +96,10 @@ class ContourLine(object):
             else:
                 return edge.end.coord
         return intersection
+
+    def getIntersectingEdges(self, point, dir):
+        segments = [(LineSegment.LineSegment(edge.start.coord, edge.end.coord), edge) for edge in self.graph.getEdges()]
+        return [e for (s, e) in segments if s.isIntersectingWithLine(point, dir)]
 
 
     def getClosestEdge(self, point):
@@ -113,8 +116,16 @@ class ContourLine(object):
         return distances[0][1]
 
 
-    def calculateError(self, point):
-        edge = self.getClosestEdge(point)
+    def calculateError(self, point, dir):
+        print "Calculate Error"
+        intersectingEdges = self.getIntersectingEdges(point, dir)
+        print len(intersectingEdges)
+        print intersectingEdges[0]
+        distances = [(getDist(self.findClosestPointOnEdge(point, e), point), e) for e in intersectingEdges]
+        print len(distances)
+        print distances[0]
+        heapq.heapify(distances)
+        edge = distances[0][1]
 
         # find nearest point
         segment = LineSegment.LineSegment(edge.start.coord, edge.end.coord)
@@ -126,9 +137,13 @@ class ContourLine(object):
 
         return getDist(intersection, point)
 
-
-    def updateContour(self, newPoint):
-        edge = self.getClosestEdge(newPoint)
+    def updateContour(self, newPoint, dir):
+        print "Update Contour"
+        intersectingEdges = self.getIntersectingEdges(newPoint, dir)
+        print len(intersectingEdges)
+        distances = [(getDist(self.findClosestPointOnEdge(newPoint, e), newPoint), e) for e in intersectingEdges]
+        heapq.heapify(distances)
+        edge = distances[0][1]
 
         # Add vertex
         newVertex = Vertex.Vertex(newPoint)

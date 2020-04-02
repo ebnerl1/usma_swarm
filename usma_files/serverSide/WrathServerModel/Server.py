@@ -5,6 +5,7 @@
 import socket
 import thread
 from threading import Lock
+from threading import Timer
 import struct
 import sys
 import subprocess
@@ -13,6 +14,10 @@ import time
 import logging
 
 from MessageHandler import MessageHandler
+
+class HeartbeatMessage(object):
+    def pack(self):
+        return struct.pack("!l", -1)
 
 class Server(object):
 	
@@ -44,6 +49,7 @@ class Server(object):
 
 	def listen(self, ipAddress, port):
 		self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+		self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, 1)
 
 		logging.info("SERVER: Starting server on %s:%s" % (ipAddress, port))
 		self.socket.bind((ipAddress, port))
@@ -51,6 +57,8 @@ class Server(object):
 		logging.info("SERVER: Waiting for a connection...")
 		self.socket.listen(10)
 		
+		# Timer(0.5, self.sendHeartbeat).start()
+
 		while True:
 			connection, addr = self.socket.accept()
 
@@ -62,6 +70,7 @@ class Server(object):
 
 			if (self.timeout > -1):
 				connection.settimeout(self.timeout)
+
 			thread.start_new_thread(self.handleNewClient, (connection, addr))
 
 	
@@ -96,19 +105,29 @@ class Server(object):
 
 
 	def checkCompleteMessage(self):
-		numBytes = self.parseNumBytes()[0]
+		numBytes = self.parseNumBytes()
 
-		while len(self.dataList) >= numBytes and numBytes != -1:
-			self.messageHandler.processMessage("".join(self.dataList[self.byteLen:numBytes]))
-			self.dataList = self.dataList[numBytes:]
-			numBytes = self.parseNumBytes()
+		while len(self.dataList) >= numBytes + self.byteLen and numBytes != -1:
+			logging.info("SERVER: Received Message " + str(numBytes) + " " + str(struct.unpack_from("!l", "".join(self.dataList[self.byteLen:self.byteLen*2]))))
+			try:
+				string = "".join(self.dataList[self.byteLen:numBytes])
+				self.dataList = self.dataList[numBytes:]
+				self.messageHandler.processMessage(string)
+				numBytes = self.parseNumBytes()
+			except struct.error:
+				logging.error("Num Bytes: " + str(numBytes) + " Message: " + "".join(self.dataList[self.byteLen:numBytes]))
 
 
 	def parseNumBytes(self):
 		if len(self.dataList) < self.byteLen:
 			return -1
 
-		return struct.unpack(self.byteFmt, "".join(self.dataList[:self.byteLen]))
+		return struct.unpack(self.byteFmt, "".join(self.dataList[:self.byteLen]))[0]
+
+
+	def sendHeartbeat(self):
+		self.broadcast(HeartbeatMessage())
+		# Timer(0.5, self.sendHeartbeat).start()
 
 
 	def registerMessageCallback(self, id, callback):

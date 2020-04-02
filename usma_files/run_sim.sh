@@ -19,6 +19,7 @@ recompiledFiles=(
     "usma_msg/RadiationMessages.py"
     "Collections/RadLaneGenerator.py"
     "Collections/ContourLine.py"
+    "Model/RadiationModel.py"
 )
 
 pythonScript="

@@ -20,6 +20,14 @@ class LineSegment(object):
         slope = self.getSlope()
         return (slope[1], -slope[0])
 
+    def isIntersectingWithLine(self, point, dir):
+        norm = (dir[1], -dir[0])
+        line1 = (self.items[0][0] - point[0], self.items[0][1] - point[1])
+        line2 = (self.items[1][0] - point[0], self.items[1][1] - point[1])
+        dot1 = line1[0] * norm[0] + line1[1] * norm[1]
+        dot2 = line2[0] * norm[0] + line2[1] * norm[1]
+        return dot1 * dot2 < 0
+
     def findIntersection(self, otherSegment):
         xdiff = (self[0][0] - self[1][0], otherSegment[0][0] - otherSegment[1][0])
         ydiff = (self[0][1] - self[1][1], otherSegment[0][1] - otherSegment[1][1])

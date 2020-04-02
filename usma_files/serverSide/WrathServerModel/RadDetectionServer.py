@@ -19,6 +19,10 @@ class RadDetectionServer(Server.Server):
 
     def __init__(self, simulationData = None):
         super(RadDetectionServer, self).__init__()
+
+        # This is only for testing
+        self.lanes = list()
+
         self.state = 1
         self.bounds = [
             (41.39105, -73.95342),
@@ -83,7 +87,7 @@ class RadDetectionServer(Server.Server):
 
 
     def onReceiveRadLocation(self, message):
-        self.contourLine.updateContour(message.location)
+        self.contourLine.updateContour(message.location, message.direction)
         kml.generate()
         kml.addGraph(self.contourLine.graph)
         kml.save("wrath_rad")
@@ -94,10 +98,24 @@ class RadDetectionServer(Server.Server):
 
     def onReceiveLaneUpdate(self, message):
         logging.info("MODEL: New Lane: " + str(message.start) + " " + str(message.center) + " " + str(message.end))
+        
+        # Test Code
+        self.lanes.append((self.contourLine.graph.copy(), message.start, message.end))
+        
+        kml.generate()
+        for i in range(len(self.lanes)):
+            contour = self.lanes[i][0]
+            start = self.lanes[i][1]
+            end = self.lanes[i][2]
+            kml.addPoint((start[1], start[0]), "Lane: " + str(i) + " Start")
+            kml.addPoint((end[1], end[0]), "Lane: " + str(i) + " End")
+            kml.addGraph(contour)
+        kml.save("lane_testing")
 
 
     def onReceiveRadiation(self, message):
-        logging.info("Received Rad!: " + str(message.time) + " " + str(message.count))
+        pass
+        #logging.info("Received Rad!: " + str(message.time) + " " + str(message.count))
 
 
     def onReceiveLog(self, message):

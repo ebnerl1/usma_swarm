@@ -17,12 +17,15 @@ def generate():
     kml = simplekml.Kml()
     kml.networklinkcontrol.minrefreshperiod = 1
 
-def addPoint(point):
-	pnt = kml.newpoint()
+def addFolder(name = ""):
+	return kml.newfolder(name=name)
+
+def addPoint(point, name = ""):
+	pnt = kml.newpoint(name=name)
  	pnt.coords = [point]
 
-def addLine(start,end, color = 3):
-	ls = kml.newlinestring()
+def addLine(start,end, kml, color = 3, name = ""):
+	ls = kml.newlinestring(name=name)
 	ls.coords = [start,end]
 	if color == 0:
 		ls.style.linestyle.color = simplekml.Color.red #if vehicle is detected along path, road is not traversable
@@ -32,13 +35,15 @@ def addLine(start,end, color = 3):
 		ls.style.linestyle.color = simplekml.Color.white # default for Route Detection, if the road has not yet been traversed. 
 		# also used for the creation of Contour lines for radiation swarming algorithm.
 
-def addGraph(graph, color = 3):
+def addGraph(graph, color = 3, name = ""):
+	folder = addFolder(name)
 	for vertex in graph.vertices:
-		addPoint((vertex.coord[1], vertex.coord[0]))
+		point = folder.newpoint()
+		point.coords = [(vertex.coord[1], vertex.coord[0])]
 	for edge in graph.getEdges():
 		start = (edge.start.coord[1], edge.start.coord[0])
 		end = (edge.end.coord[1], edge.end.coord[0])
-		addLine(start, end, color)
+		addLine(start, end, folder color)
 
 def addImage(point,alt,image):
 	photo = kml.newphotooverlay()
@@ -80,8 +85,6 @@ def addHeat(point,rad_info): #point is a tuple of (lat,long)
 	else:
 		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.red)
        
-
- 
 
 # need to save it to a destination for viewing
 def save(name):

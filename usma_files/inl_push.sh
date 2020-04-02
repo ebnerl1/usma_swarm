@@ -9,7 +9,7 @@
 
 # A smaller list for testing
 
-declare -a arr=("192.168.11.147") 
+declare -a arr=("192.168.11.144") 
 #declare -a arr=("192.168.11.111")
 
 # Below is the previous commit of the master branch before the EOY pull request 
@@ -37,4 +37,3 @@ for i in "${arr[@]}"
          fi
             
     done
-    

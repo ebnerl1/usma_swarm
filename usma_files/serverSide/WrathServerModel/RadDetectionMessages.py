@@ -25,21 +25,24 @@ class SparsityMessage(object):
 class RadLocationMessage(object):
 
     id = 12
-    fmt = "!l3f"
+    fmt = "!l5f"
 
     def __init__(self):
         self.location = (0, 0)
+        self.direction = (0, 0)
         self.error = 0.0
 
     
     def pack(self):
         return struct.pack(type(self).fmt, type(self).id,
-            self.location[0], self.location[1], self.error)
+            self.location[0], self.location[1], self.direction[0],
+            self.direction[1], self.error)
 
     
     def unpack(self, bytes):
-        id, a, b, self.error = struct.unpack_from(type(self).fmt, bytes, 0)
+        id, a, b, c, d, self.error = struct.unpack_from(type(self).fmt, bytes, 0)
         self.location = (a,b)
+        self.direction = (c, d)
 
 
 class LockLaneGenMessage(object):
