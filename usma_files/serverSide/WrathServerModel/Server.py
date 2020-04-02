@@ -1,7 +1,5 @@
 #!/usr/bin/python
 
-# gregory.zogby@westpoint.edu 
-
 import socket
 import thread
 from threading import Lock
@@ -108,7 +106,7 @@ class Server(object):
 		numBytes = self.parseNumBytes()
 
 		while len(self.dataList) >= numBytes + self.byteLen and numBytes != -1:
-			logging.info("SERVER: Received Message " + str(numBytes) + " " + str(struct.unpack_from("!l", "".join(self.dataList[self.byteLen:self.byteLen*2]))))
+			# logging.info("SERVER: Received Message " + str(numBytes) + " " + str(struct.unpack_from("!l", "".join(self.dataList[self.byteLen:self.byteLen*2]))))
 			try:
 				string = "".join(self.dataList[self.byteLen:numBytes])
 				self.dataList = self.dataList[numBytes:]

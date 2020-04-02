@@ -43,7 +43,7 @@ def addGraph(graph, color = 3, name = ""):
 	for edge in graph.getEdges():
 		start = (edge.start.coord[1], edge.start.coord[0])
 		end = (edge.end.coord[1], edge.end.coord[0])
-		addLine(start, end, folder color)
+		addLine(start, end, folder, color)
 
 def addImage(point,alt,image):
 	photo = kml.newphotooverlay()

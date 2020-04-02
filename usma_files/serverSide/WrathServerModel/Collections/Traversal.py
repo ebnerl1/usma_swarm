@@ -61,9 +61,7 @@ def traverseEulerianPath(eulerianGraph, start):
   path = [start]
   curVertex = start
 
-  iterations = 0
-  while (eulerianGraph.nEdges > 0 and iterations < 15):
-    iterations += 1
+  while (eulerianGraph.nEdges > 0):
     for (newVertex, edge) in eulerianGraph.getNeighbors(curVertex):
       eulerianGraph.removeEdge(edge)
       numSubgraphs = len(list(filter(lambda lst: len(lst) > 1, eulerianGraph.findSubgraphs())))
