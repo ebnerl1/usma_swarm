@@ -4,7 +4,7 @@ import ap_lib.gps_utils as gps
 import math
 
 # Contains enumerations and constants for use throughout the ACS Python architecture
-SITL_LOCATION = 2   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL, 4 = SRNL
+SITL_LOCATION = 5   # 0 = McMillan, 1 = USMA/Range11, 2 = USMA/RiverCts, 3 = INL, 4 = SRNL, 5 = NYC
 
 # Enumeration for autopilot modes
 RTL = 0
@@ -270,6 +270,14 @@ elif SITL_LOCATION == 4:
     BATTLE_CUBE_ORIENT = 55.32   # Battle cube orientation (clockwise degrees)
     BATTLE_CUBE_MIN_ALT = 267         # Battle cube floor (meters MSL)
     BATTLE_CUBE_MAX_ALT = 500         # Battle cube ceiling (meters MSL)
+elif SITL_LOCATION == 5:
+    BATTLE_CUBE_SW_LAT = 40.783361	  # Latitude of the battle cube SW corner
+    BATTLE_CUBE_SW_LON = -73.995466   # Longitude of the battle cube SW corner
+    BATTLE_CUBE_LENGTH = 10000          # N/S dimension (meters) of the battle cube
+    BATTLE_CUBE_WIDTH = 10000           # E/W dimension (meters) of the battle cube
+    BATTLE_CUBE_ORIENT = 30   # Battle cube orientation (clockwise degrees)
+    BATTLE_CUBE_MIN_ALT = -10         # Battle cube floor (meters MSL)
+    BATTLE_CUBE_MAX_ALT = 5000         # Battle cube ceiling (meters MSL)
 else:
     BATTLE_CUBE_SW_LAT = 35.720680    # Latitude of the battle cube SW corner
     BATTLE_CUBE_SW_LON = -120.771775  # Longitude of the battle cube SW corner
@@ -303,6 +311,12 @@ elif SITL_LOCATION == 3:
     RED_STAGE_SW_LON = BATTLE_CUBE_SW_LON
     STAGE_CUBE_WIDTH = BATTLE_CUBE_WIDTH
 elif SITL_LOCATION == 4:
+    BLUE_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
+    BLUE_STAGE_SW_LON = BATTLE_CUBE_SW_LON
+    RED_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
+    RED_STAGE_SW_LON = BATTLE_CUBE_SW_LON
+    STAGE_CUBE_WIDTH = BATTLE_CUBE_WIDTH
+elif SITL_LOCATION == 5:
     BLUE_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
     BLUE_STAGE_SW_LON = BATTLE_CUBE_SW_LON
     RED_STAGE_SW_LAT = BATTLE_CUBE_SW_LAT
@@ -399,6 +413,9 @@ elif SITL_LOCATION == 3:
 elif SITL_LOCATION == 4:
     GOAL_POSITS['blue'] = ( 33.275375, -81.576891, 267.0 )
     GOAL_POSITS['red'] = ( 33.275375, -81.576891, 267.0 )
+elif SITL_LOCATION == 5:
+    GOAL_POSITS['blue'] = ( 40.800000, -73.971000, 267.0 )
+    GOAL_POSITS['red'] = ( 40.800000, -73.971000, 267.0 )
 else:
     GOAL_POSITS['blue'] = ( 35.722783, -120.769350, 279.5 )
     GOAL_POSITS['red'] = ( 35.721602, -120.766319, 281.9 )
