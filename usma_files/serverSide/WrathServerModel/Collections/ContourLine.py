@@ -38,6 +38,8 @@ class ContourLine(object):
         self.startVertex = None
         self.graph = None
         
+        self.dataFunc = None
+
         self.totalDist = 0.0 # total distance over all line segments (m)
 
 
@@ -119,11 +121,9 @@ class ContourLine(object):
     def calculateError(self, point, dir):
         print "Calculate Error"
         intersectingEdges = self.getIntersectingEdges(point, dir)
-        print len(intersectingEdges)
-        print intersectingEdges[0]
+        # print intersectingEdges[0]
         distances = [(getDist(self.findClosestPointOnEdge(point, e), point), e) for e in intersectingEdges]
-        print len(distances)
-        print distances[0]
+        # print distances[0]
         heapq.heapify(distances)
         edge = distances[0][1]
 
@@ -140,7 +140,7 @@ class ContourLine(object):
     def updateContour(self, newPoint, dir):
         print "Update Contour"
         intersectingEdges = self.getIntersectingEdges(newPoint, dir)
-        print len(intersectingEdges)
+        # print len(intersectingEdges)
         distances = [(getDist(self.findClosestPointOnEdge(newPoint, e), newPoint), e) for e in intersectingEdges]
         heapq.heapify(distances)
         edge = distances[0][1]
@@ -237,6 +237,13 @@ class ContourLine(object):
 
         # Traverse the path
         path = Traversal.traverseEulerianPath(self.graph.copy(), self.startVertex)
+
+        length = 0
+        startVertex = path[0]
+        for v in path[1:]:
+            edge = self.graph.getEdge(startVertex.id, v.id)
+            length += edge.distance
+            startVertex = v
         
         pathEdges = list()
         lastVertex = path[0]
@@ -274,5 +281,4 @@ class ContourLine(object):
                     break
         if (len(locations) < numSteps):
             locations.append(lastPoint)
-        return locations
-            
+        return locations            

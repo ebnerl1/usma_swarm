@@ -30,11 +30,16 @@ class RadDetectionServer(Server.Server):
             (41.39080, -73.95253),
             (41.39172, -73.95208)
         ]
-        rearrangedBounds = [self.bounds[2], self.bounds[0], self.bounds[1], self.bounds[3]]
-        self.contourLine = ContourLine.fill(rearrangedBounds, simulationData)
-        kml.generate()
-        kml.addGraph(self.contourLine.graph)
-        kml.save("wrath_rad")
+
+        self.contourPoints = [list(), list(), list()]
+
+        self.rearrangedBounds = [self.bounds[2], self.bounds[0], self.bounds[1], self.bounds[3]]
+        self.contourLines = list()
+        # ContourLine.fill(rearrangedBounds, simulationData)
+
+        # kml.generate()
+        # kml.addGraph(self.contourLine.graph)
+        # kml.save("wrath_rad")
 
         name = datetime.datetime.now().strftime("%y:%m:%d:%H:%M")
         logging.basicConfig(filename="logs/radDetection - " + name, level=logging.INFO, 
@@ -42,15 +47,15 @@ class RadDetectionServer(Server.Server):
         logging.getLogger().addHandler(logging.StreamHandler(sys.stdout))
         logging.info("Rad Detection Starting")
 
-        logging.info(str([v.coord for v in self.contourLine.graph.vertices]))
-        logging.info(str(self.contourLine.graph))
+        # logging.info(str([v.coord for v in self.contourLine.graph.vertices]))
+        # logging.info(str(self.contourLine.graph))
         self.numDronesInSwarm = 0
         self.dronesFinished = 0
-        if simulationData != None:
-            self.IS_SIMULATION = True
-            self.simulationData = simulationData
-        else:
-            self.IS_SIMULATION = False   
+        # if simulationData != None:
+        #     self.IS_SIMULATION = True
+        #     self.simulationData = simulationData
+        # else:
+        #     self.IS_SIMULATION = False   
         
         self.registerMessageCallback(msgs.StartInitPassMessage.id,
                                      self.onReceiveStartInitPass)
@@ -76,22 +81,30 @@ class RadDetectionServer(Server.Server):
     def onReceiveFinishInitPass(self, message):
         self.dronesFinished += 1
         logging.info("MODEL: Drone Finished Init Pass")
+
+        self.contourPoints[0].append(message.loc1)
+        self.contourPoints[1].append(message.max)
+        self.contourPoints[2].append(message.loc2)
+
         if (self.dronesFinished == self.numDronesInSwarm):
             logging.info("MODEL: State Change: Lane Generation!")
-            logging.info("MODEL: Sending points: " + str(self.simulationData))
+            # logging.info("MODEL: Sending points: " + str(self.simulationData))
             self.state = 2
-            if self.IS_SIMULATION:
-                messageParser = msgs.StartLaneGenerationMessage()
-                messageParser.contourPoints = self.simulationData
-                self.broadcast(messageParser)
+
+            self.contourLines = [ContourLine.fill(self.rearrangedBounds, data) for data in self.contourPoints]
+
+            messageParser = msgs.StartLaneGenerationMessage()
+            messageParser.contourPoints = self.contourPoints
+            self.broadcast(messageParser)
 
 
     def onReceiveRadLocation(self, message):
-        self.contourLine.updateContour(message.location, message.direction)
+        self.contourLines[message.contourIndex].updateContour(message.location, message.direction)
         kml.generate()
-        kml.addGraph(self.contourLine.graph)
+        for contourLine in self.contourLines:
+            kml.addGraph(contourLine.graph)
         kml.save("wrath_rad")
-        logging.info(str(self.contourLine.graph))
+        # logging.info(str(self.contourLine.graph))
         logging.info("MODEL: Update Contour Line: " + str(message.location))
         logging.info("MODEL: Error Calculated: " + str(message.error))
     
@@ -100,7 +113,7 @@ class RadDetectionServer(Server.Server):
         logging.info("MODEL: New Lane: " + str(message.start) + " " + str(message.center) + " " + str(message.end))
         
         # Test Code
-        self.lanes.append((self.contourLine.graph.copy(), message.start, message.end))
+        self.lanes.append((self.contourLines[0].graph.copy(), message.start, message.end))
         
         kml.generate()
         for i in range(len(self.lanes)):
@@ -115,6 +128,7 @@ class RadDetectionServer(Server.Server):
 
     def onReceiveRadiation(self, message):
         pass
+        # TODO: do something with kml 
         #logging.info("Received Rad!: " + str(message.time) + " " + str(message.count))
 
 
