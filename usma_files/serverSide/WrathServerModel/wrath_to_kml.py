@@ -4,6 +4,7 @@ import simplekml
 import math
 import time
 import gmaps
+#import gmplot 
 #create kml
 # add point, line segment
 # save 
@@ -11,6 +12,11 @@ import gmaps
 from Collections import Graph
 
 kml = None
+fig = gmaps.figure() #gmap is the work around for blending the heatmap
+# fig is a different file than the kml
+
+#ignore line below
+#gmap = gmplot.GoogleMapPlotter.from_geocode("Central Park, New York, NY") #this is the location for simulation
 
 #building kml
 def generate():
@@ -85,16 +91,21 @@ def addHeat(point,rad_info): #point is a tuple of (lat,long)
 
 	else:
 		pol.style.polystyle.color = simplekml.Color.changealphaint(100, simplekml.Color.red)
-       
-"""
-(# This is the gmap implementation
-# gmaps.configure(api_key='AI...') # Fill in with your API key
-def generateHeat(point,count):
-	fig = gmaps.figure() 
-	fig.add_layer(gmaps.heatmap_layer(point, weights=count))
-	fig
 
-"""
+#def blendHeat(point):
+
+
+# This is the gmap implementation
+# gmaps.configure(api_key='WRATH') # Fill in with your API key
+
+def blendHeat(point,count): #point is a tuple (lat,lon)
+	#fig = gmaps.figure() 
+	fig.add_layer(gmaps.heatmap_layer(point, weights=count))
+	#fig
+
 # need to save it to a destination for viewing
 def save(name):
 	kml.save("/home/user1/usma_swarm/usma_files/serverSide/archive/" + name + ".kml")
+
+def show(): #shows the current heatmap different than kml saved should be able to add layers though.
+	fig
