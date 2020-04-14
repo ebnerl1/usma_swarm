@@ -30,6 +30,7 @@ def addFolder(name = ""):
 def addPoint(point, name = ""):
 	pnt = kml.newpoint(name=name)
  	pnt.coords = [point]
+ 	pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
 
 def addLine(start,end, kml, color = 3, name = ""):
 	ls = kml.newlinestring(name=name)
