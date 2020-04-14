@@ -96,7 +96,7 @@ def addHeat(point,rad_info): #point is a tuple of (lat,long)
 
 
 # This is the gmap implementation
-# gmaps.configure(api_key='WRATH') # Fill in with your API key
+gmaps.configure(api_key='AIzaSyDCIInp2RvfMuzcktjNNeIWhjoygB1zzoc') # Fill in with your API key
 
 def blendHeat(point,count): #point is a tuple (lat,lon)
 	#fig = gmaps.figure() 
