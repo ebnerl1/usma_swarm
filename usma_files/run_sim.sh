@@ -32,7 +32,7 @@ cd
 
 echo "Creating drones"
 
-multi-sitl-start.bash -B -LRiverCourt -vArduCopter 2
+multi-sitl-start.bash -B -LCentralPark -vArduCopter 2
 
 clear
 
@@ -71,7 +71,7 @@ do
 
     multi-sitl-cleanup.bash
 
-    multi-sitl-start.bash -B -LRiverCourt -vArduCopter 2
+    multi-sitl-start.bash -B -LCentralPark -vArduCopter 2
 
     clear
 

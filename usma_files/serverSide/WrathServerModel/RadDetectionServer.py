@@ -25,11 +25,17 @@ class RadDetectionServer(Server.Server):
 
         self.state = 1
         self.bounds = [
-            (41.39105, -73.95342),
-            (41.39197, -73.95297),
-            (41.39080, -73.95253),
-            (41.39172, -73.95208)
+            (40.79256, -73.96360),
+            (40.80034, -73.95801),
+            (40.78887, -73.95529),
+            (40.79675, -73.94969)
         ]
+        # [
+        #     (41.39105, -73.95342),
+        #     (41.39197, -73.95297),
+        #     (41.39080, -73.95253),
+        #     (41.39172, -73.95208)
+        # ]
 
         self.contourPoints = [list(), list(), list()]
 
@@ -91,6 +97,9 @@ class RadDetectionServer(Server.Server):
             # logging.info("MODEL: Sending points: " + str(self.simulationData))
             self.state = 2
 
+            print len(self.contourPoints)
+            for i in self.contourPoints:
+                print i
             self.contourLines = [ContourLine.fill(self.rearrangedBounds, data) for data in self.contourPoints]
 
             messageParser = msgs.StartLaneGenerationMessage()

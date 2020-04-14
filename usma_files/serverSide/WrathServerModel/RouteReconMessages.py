@@ -148,18 +148,17 @@ class InitGraphMessage(object):
 class DetectedObjectMessage(object):
 
     id = 5
-    fmt = "!lf"
+    fmt = "!l2f"
 
     def __init__(self):
-        self.name = ""
-        self.probability = -1
+        self.location = (-1, -1)
 
     def pack(self):
-        return struct.pack(type(self).fmt, type(self).id, self.probability) + self.name
+        return struct.pack(type(self).fmt, type(self).id, self.location[0], self.location[1])
     
     def unpack(self, bytes):
-        id, self.probability = struct.unpack(type(self).fmt, bytes)
-        self.name = str( bytes[struct.calcsize(type(self).fmt):] )
+        id, a, b = struct.unpack_from(type(self).fmt, bytes)
+        self.location = (a, b)
 
 
 class LogMessage(object):
