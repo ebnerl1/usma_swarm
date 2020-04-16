@@ -48,6 +48,7 @@ def addGraph(graph, color = 3, name = ""):
 	for vertex in graph.vertices:
 		point = folder.newpoint()
 		point.coords = [(vertex.coord[1], vertex.coord[0])]
+		point.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
 	for edge in graph.getEdges():
 		start = (edge.start.coord[1], edge.start.coord[0])
 		end = (edge.end.coord[1], edge.end.coord[0])
