@@ -3,7 +3,7 @@
 import simplekml
 import math
 import time
-import gmaps
+#import gmaps
 #import gmplot 
 #create kml
 # add point, line segment
@@ -12,11 +12,15 @@ import gmaps
 from Collections import Graph
 
 kml = None
-fig = gmaps.figure() #gmap is the work around for blending the heatmap
+#fig = None #gmaps.figure() #gmap is the work around for blending the heatmap
 # fig is a different file than the kml
 
 #ignore line below
 #gmap = gmplot.GoogleMapPlotter.from_geocode("Central Park, New York, NY") #this is the location for simulation
+
+#def gen():
+#	global fig
+#	fig = gmaps.figure()
 
 #building kml
 def generate():
@@ -29,8 +33,8 @@ def addFolder(name = ""):
 
 def addPoint(point, name = ""):
 	pnt = kml.newpoint(name=name)
- 	pnt.coords = [point]
- 	pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
+	pnt.coords = [point]
+	pnt.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
 
 def addLine(start,end, kml, color = 3, name = ""):
 	ls = kml.newlinestring(name=name)
@@ -66,8 +70,10 @@ def addImage(point,alt,image):
 
 def addHeat(point,rad_info): #point is a tuple of (lat,long)
 	pol = kml.newpolygon()
-	width = 0.5 # change these parameters for styling
-	height = 2 # change these paramaters for styling
+	start_lat_radians = math.cos((lat*3.14)/180) #would need to change lat to a set value.
+	degree_lon = start_lat_radians * 111321.5432
+	width = (1/degree_lon)*0.5 # change these parameters for styling
+	height = (1/111321.5432)*2 # change these paramaters for styling
 	lon = point[1]
 	lat = point [0]
 	#Code below is a snippet pulled from AY19 team for creating polygon
@@ -98,16 +104,16 @@ def addHeat(point,rad_info): #point is a tuple of (lat,long)
 
 
 # This is the gmap implementation
-gmaps.configure(api_key='AIzaSyDCIInp2RvfMuzcktjNNeIWhjoygB1zzoc') # Fill in with your API key
+#gmaps.configure(api_key='AIzaSyDCIInp2RvfMuzcktjNNeIWhjoygB1zzoc') # Fill in with your API key
 
-def blendHeat(point,count): #point is a tuple (lat,lon)
+#def blendHeat(point,count): #point is a tuple (lat,lon)
 	#fig = gmaps.figure() 
-	fig.add_layer(gmaps.heatmap_layer(point, weights=count))
+#	fig.add_layer(gmaps.heatmap_layer(point, weights=count))
 	#fig
 
 # need to save it to a destination for viewing
 def save(name):
 	kml.save("/home/user1/usma_swarm/usma_files/serverSide/archive/" + name + ".kml")
 
-def show(): #shows the current heatmap different than kml saved should be able to add layers though.
-	fig
+#def show(): #shows the current heatmap different than kml saved should be able to add layers though.
+#	fig
