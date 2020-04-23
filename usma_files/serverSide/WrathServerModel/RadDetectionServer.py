@@ -8,7 +8,7 @@ import time
 
 from WrathServerModel.Collections import ContourLine 
 from WrathServerModel import Server
-from WrathServerModel import wrath_to_kml as kml
+from WrathServerModel.KML import wrath_to_kml as kml
 from WrathServerModel import RadDetectionMessages as msgs
 from WrathServerModel import RouteReconMessages as rrmsgs
 import struct
@@ -30,12 +30,11 @@ class RadDetectionServer(Server.Server):
             (40.78887, -73.95529),
             (40.79675, -73.94969)
         ]
-        # [
-        #     (41.39105, -73.95342),
-        #     (41.39197, -73.95297),
-        #     (41.39080, -73.95253),
-        #     (41.39172, -73.95208)
-        # ]
+
+        self.kml = kml.WrathKML()
+        self.kml.save("wrath_rad")
+
+        self.radPoints = list()
 
         self.contourPoints = [list(), list(), list()]
 
@@ -62,7 +61,7 @@ class RadDetectionServer(Server.Server):
         #     self.simulationData = simulationData
         # else:
         #     self.IS_SIMULATION = False   
-        
+
         self.registerMessageCallback(msgs.StartInitPassMessage.id,
                                      self.onReceiveStartInitPass)
         self.registerMessageCallback(msgs.FinishInitPassMessage.id,
@@ -102,6 +101,12 @@ class RadDetectionServer(Server.Server):
                 print i
             self.contourLines = [ContourLine.fill(self.rearrangedBounds, data) for data in self.contourPoints]
 
+            self.kml.clear()
+            names = ["left", "max", "right"]
+            for contourLine, name in zip(self.contourLines, names):
+                self.kml.addGraph(contourLine.graph, 3, name)
+            self.kml.save("wrath_rad")
+
             messageParser = msgs.StartLaneGenerationMessage()
             messageParser.contourPoints = self.contourPoints
             self.broadcast(messageParser)
@@ -109,10 +114,14 @@ class RadDetectionServer(Server.Server):
 
     def onReceiveRadLocation(self, message):
         self.contourLines[message.contourIndex].updateContour(message.location, message.direction)
-        kml.generate()
-        for contourLine in self.contourLines:
-            kml.addGraph(contourLine.graph)
-        kml.save("wrath_rad")
+        # kml.generate()
+        self.kml.clear()
+        names = ["left", "max", "right"]
+        for contourLine, name in zip(self.contourLines, names):
+            self.kml.addGraph(contourLine.graph, 3, name)
+            # kml.addGraph(contourLine.graph)
+        # kml.save("wrath_rad")
+        self.kml.save("wrath_rad")
         # logging.info(str(self.contourLine.graph))
         logging.info("MODEL: Update Contour Line: " + str(message.location))
         logging.info("MODEL: Error Calculated: " + str(message.error))
@@ -124,21 +133,22 @@ class RadDetectionServer(Server.Server):
         # Test Code
         self.lanes.append((self.contourLines[0].graph.copy(), message.start, message.end))
         
-        kml.generate()
+        # kml.generate()
         for i in range(len(self.lanes)):
             contour = self.lanes[i][0]
             start = self.lanes[i][1]
             end = self.lanes[i][2]
-            kml.addPoint((start[1], start[0]), "Lane: " + str(i) + " Start")
-            kml.addPoint((end[1], end[0]), "Lane: " + str(i) + " End")
-            kml.addGraph(contour)
-        kml.save("lane_testing")
+            # kml.addPoint((start[1], start[0]), "Lane: " + str(i) + " Start")
+            # kml.addPoint((end[1], end[0]), "Lane: " + str(i) + " End")
+            # kml.addGraph(contour)
+        # kml.save("lane_testing")
+        # kml.saveHeatmap("test")
 
 
     def onReceiveRadiation(self, message):
-        pass
-        # TODO: do something with kml 
-        #logging.info("Received Rad!: " + str(message.time) + " " + str(message.count))
+        self.radPoints.append((message.location, message.count))
+        # kml.addHeatMapPoint(message.location, message.count)
+        self.kml.addHeatMapPoint(message.location, message.count)
 
 
     def onReceiveLog(self, message):

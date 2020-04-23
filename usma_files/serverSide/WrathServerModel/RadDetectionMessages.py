@@ -192,13 +192,13 @@ class RadiationMessage(object):
     fmt = "!l3f"
 
     def __init__(self):
-        self.time = 0.0
         self.count = 0.0
-        self.spectrum = 0.0
+        self.location = (0.0, 0.0)
 
     def pack(self):
-        return struct.pack(type(self).fmt, type(self).id, self.time, self.count,
-                           self.spectrum)
+        return struct.pack(type(self).fmt, type(self).id, self.count, self.location[0],
+                           self.location[1])
     
     def unpack(self, bytes):
-        id, self.time, self.count, self.spectrum = struct.unpack(type(self).fmt, bytes)
+        id, self.count, a, b = struct.unpack(type(self).fmt, bytes)
+        self.location = (a, b)
