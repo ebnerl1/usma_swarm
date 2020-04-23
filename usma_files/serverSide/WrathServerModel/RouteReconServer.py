@@ -10,7 +10,7 @@ import sys
 
 from WrathServerModel import Server
 from WrathServerModel.Collections import Graph
-from WrathServerModel import wrath_to_kml as kml
+from WrathServerModel.KML import wrath_to_kml as kml
 from WrathServerModel import RouteReconMessages as msgs
 
 # vertices = [
@@ -130,9 +130,9 @@ class RouteReconServer(Server.Server):
         self.registerMessageCallback(msgs.LogMessage.id, 
                                      self.onReceiveLog)
 
-        kml.generate()
-        kml.addGraph(self.unanalyzedRoads, 2)
-        kml.save("route_recon")
+        self.kml = kml.WrathKML()
+        self.kml.addGraph(self.unanalyzedRoads, 2)
+        self.kml.saveWithoutHeatmap("route_recon")
 
         name = datetime.datetime.now().strftime("%y:%m:%d:%H:%M")
         logging.basicConfig(filename="logs/routeRecon - " + name, level=logging.INFO, 
@@ -184,14 +184,15 @@ class RouteReconServer(Server.Server):
         for road in toRemove:
             self.analyzedRoads.remove(road)
 
-        kml.generate()
-        kml.addGraph(Graph.fill(vertices, list(self.analyzedRoads), True), 1, "Analyzed Roads")
-        kml.addGraph(Graph.fill(vertices, list(self.obstructedRoads), True), 0, "Obstructed Roads")
-        kml.addGraph(self.unanalyzedRoads, 2, "Unanalyzed Roads")
+        self.kml.clear()
+        self.kml.addGraph(Graph.fill(vertices, list(self.analyzedRoads), True), 1, "Analyzed Roads")
+        self.kml.addGraph(Graph.fill(vertices, list(self.obstructedRoads), True), 0, "Obstructed Roads")
+        self.kml.addGraph(self.unanalyzedRoads, 2, "Unanalyzed Roads")
+        
         for i in range(len(self.foundVehicles)):
             l = self.foundVehicles[i]
-            kml.addPoint((l[1], l[0]), "Vehicle: " + str(i + 1))
-        kml.save("route_recon")
+            self.kml.addPoint((l[1], l[0]), self.kml.kml, "Vehicle: " + str(i + 1))
+        self.kml.saveWithoutHeatmap("route_recon")
 
 
     def onDetectObject(self, msg):

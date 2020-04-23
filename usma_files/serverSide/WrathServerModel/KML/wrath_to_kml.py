@@ -91,6 +91,8 @@ class WrathKML():
 		ground.latlonbox.west = self.bounds[1]
 		ground.latlonbox.rotation = 0.0
 
+	def saveWithoutHeatmap(self, name):
+		self.kml.save(self.outPath + name + ".kml")
 
 	def save(self, name):
 		self.addHeatmap(name)
