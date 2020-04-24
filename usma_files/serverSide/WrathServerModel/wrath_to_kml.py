@@ -39,6 +39,7 @@ def addPoint(point, name = ""):
 def addLine(start,end, kml, color = 3, name = ""):
 	ls = kml.newlinestring(name=name)
 	ls.coords = [start,end]
+	ls.style.iconstyle.icon.href = 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png'
 	if color == 0:
 		ls.style.linestyle.color = simplekml.Color.red #if vehicle is detected along path, road is not traversable
 	elif color == 1:
