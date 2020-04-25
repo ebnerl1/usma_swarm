@@ -1,151 +1,1858 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
-    <Document id="feat_1442">
-        <Folder id="feat_1443">
+    <Document id="feat_38078">
+        <Folder id="feat_38079">
+            <Style id="stylesel_36516">
+                <IconStyle id="substyle_36516">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20316">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36517">
+                <IconStyle id="substyle_36517">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20317">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36518">
+                <IconStyle id="substyle_36518">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20318">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36519">
+                <IconStyle id="substyle_36519">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20319">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36520">
+                <IconStyle id="substyle_36520">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20320">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36521">
+                <IconStyle id="substyle_36521">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20321">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36522">
+                <IconStyle id="substyle_36522">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20322">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36523">
+                <IconStyle id="substyle_36523">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20323">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36524">
+                <IconStyle id="substyle_36524">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20324">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36525">
+                <IconStyle id="substyle_36525">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20325">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36526">
+                <IconStyle id="substyle_36526">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20326">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36527">
+                <IconStyle id="substyle_36527">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20327">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36528">
+                <IconStyle id="substyle_36528">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20328">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36529">
+                <IconStyle id="substyle_36529">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20329">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36530">
+                <IconStyle id="substyle_36530">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20330">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36531">
+                <IconStyle id="substyle_36531">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20331">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36532">
+                <IconStyle id="substyle_36532">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20332">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36533">
+                <IconStyle id="substyle_36533">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20333">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36534">
+                <IconStyle id="substyle_36534">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20334">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36535">
+                <IconStyle id="substyle_36535">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20335">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36536">
+                <IconStyle id="substyle_36536">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20336">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36537">
+                <IconStyle id="substyle_36537">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20337">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36538">
+                <IconStyle id="substyle_36538">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20338">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36539">
+                <LineStyle id="substyle_36539">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36540">
+                <LineStyle id="substyle_36540">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36541">
+                <LineStyle id="substyle_36541">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36542">
+                <LineStyle id="substyle_36542">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36543">
+                <LineStyle id="substyle_36543">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36544">
+                <LineStyle id="substyle_36544">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36545">
+                <LineStyle id="substyle_36545">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36546">
+                <LineStyle id="substyle_36546">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36547">
+                <LineStyle id="substyle_36547">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36548">
+                <LineStyle id="substyle_36548">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36549">
+                <LineStyle id="substyle_36549">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36550">
+                <LineStyle id="substyle_36550">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36551">
+                <LineStyle id="substyle_36551">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36552">
+                <LineStyle id="substyle_36552">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36553">
+                <LineStyle id="substyle_36553">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36554">
+                <LineStyle id="substyle_36554">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36555">
+                <LineStyle id="substyle_36555">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36556">
+                <LineStyle id="substyle_36556">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36557">
+                <LineStyle id="substyle_36557">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36558">
+                <LineStyle id="substyle_36558">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36559">
+                <LineStyle id="substyle_36559">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36560">
+                <LineStyle id="substyle_36560">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
             <name/>
-            <Placemark id="feat_1444">
-                <Point id="geom_1329">
-                    <coordinates>-73.95287588,41.39126646,0.0</coordinates>
+            <Placemark id="feat_38080">
+                <styleUrl>#stylesel_36516</styleUrl>
+                <Point id="geom_36516">
+                    <coordinates>-73.9624786377,40.7941131592,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1445">
-                <Point id="geom_1330">
-                    <coordinates>-73.95258772,41.39155737,0.0</coordinates>
+            <Placemark id="feat_38081">
+                <styleUrl>#stylesel_36517</styleUrl>
+                <Point id="geom_36517">
+                    <coordinates>-73.9613571167,40.7956695557,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1446">
-                <Point id="geom_1331">
-                    <coordinates>-73.9531620629,41.3909775457,0.0</coordinates>
+            <Placemark id="feat_38082">
+                <styleUrl>#stylesel_36518</styleUrl>
+                <Point id="geom_36518">
+                    <coordinates>-73.9519805908,40.7936210632,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1447">
-                <Point id="geom_1332">
-                    <coordinates>-73.9523511743,41.3917961729,0.0</coordinates>
+            <Placemark id="feat_38083">
+                <styleUrl>#stylesel_36519</styleUrl>
+                <Point id="geom_36519">
+                    <coordinates>-73.9534454346,40.7963180542,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1448">
-                <Point id="geom_1333">
-                    <coordinates>-73.9528198242,41.3914871216,0.0</coordinates>
+            <Placemark id="feat_38084">
+                <styleUrl>#stylesel_36520</styleUrl>
+                <Point id="geom_36520">
+                    <coordinates>-73.9624838651,40.7941134042,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1449">
-                <Point id="geom_1334">
-                    <coordinates>-73.9530792236,41.3912162781,0.0</coordinates>
+            <Placemark id="feat_38085">
+                <styleUrl>#stylesel_36521</styleUrl>
+                <Point id="geom_36521">
+                    <coordinates>-73.9519157692,40.7936180247,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1450">
-                <Point id="geom_1335">
-                    <coordinates>-73.9527893066,41.3915100098,0.0</coordinates>
+            <Placemark id="feat_38086">
+                <styleUrl>#stylesel_36522</styleUrl>
+                <Point id="geom_36522">
+                    <coordinates>-73.9576873779,40.7961044312,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1451">
-                <Point id="geom_1336">
-                    <coordinates>-73.9532699585,41.3911056519,0.0</coordinates>
+            <Placemark id="feat_38087">
+                <styleUrl>#stylesel_36523</styleUrl>
+                <Point id="geom_36523">
+                    <coordinates>-73.9559326172,40.796245575,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1452">
-                <Point id="geom_1337">
-                    <coordinates>-73.9524078369,41.3915328979,0.0</coordinates>
+            <Placemark id="feat_38088">
+                <styleUrl>#stylesel_36524</styleUrl>
+                <Point id="geom_36524">
+                    <coordinates>-73.959815979,40.7959861755,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1453">
-                <Point id="geom_1338">
-                    <coordinates>-73.9530105591,41.3910484314,0.0</coordinates>
+            <Placemark id="feat_38089">
+                <styleUrl>#stylesel_36525</styleUrl>
+                <Point id="geom_36525">
+                    <coordinates>-73.9527664185,40.7953948975,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1454">
-                <Point id="geom_1339">
-                    <coordinates>-73.9532241821,41.3910903931,0.0</coordinates>
+            <Placemark id="feat_38090">
+                <styleUrl>#stylesel_36526</styleUrl>
+                <Point id="geom_36526">
+                    <coordinates>-73.9598617554,40.7961120605,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1455">
-                <Point id="geom_1340">
-                    <coordinates>-73.9523849487,41.3916358948,0.0</coordinates>
+            <Placemark id="feat_38091">
+                <styleUrl>#stylesel_36527</styleUrl>
+                <Point id="geom_36527">
+                    <coordinates>-73.9600143433,40.7960357666,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1456">
-                <Point id="geom_1341">
-                    <coordinates>-73.9531097412,41.3909339905,0.0</coordinates>
+            <Placemark id="feat_38092">
+                <styleUrl>#stylesel_36528</styleUrl>
+                <Point id="geom_36528">
+                    <coordinates>-73.9591369629,40.7961196899,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1457">
-                <Point id="geom_1342">
-                    <coordinates>-73.9530563354,41.3909263611,0.0</coordinates>
+            <Placemark id="feat_38093">
+                <styleUrl>#stylesel_36529</styleUrl>
+                <Point id="geom_36529">
+                    <coordinates>-73.9599761963,40.7961654663,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1458">
-                <Point id="geom_1343">
-                    <coordinates>-73.9530715942,41.3909111023,0.0</coordinates>
+            <Placemark id="feat_38094">
+                <styleUrl>#stylesel_36530</styleUrl>
+                <Point id="geom_36530">
+                    <coordinates>-73.9526596069,40.7955055237,0.0</coordinates>
                 </Point>
             </Placemark>
-            <Placemark id="feat_1459">
-                <LineString id="geom_1344">
-                    <coordinates>-73.9531620629,41.3909775457,0.0 -73.9532699585,41.3911056519,0.0</coordinates>
+            <Placemark id="feat_38095">
+                <styleUrl>#stylesel_36531</styleUrl>
+                <Point id="geom_36531">
+                    <coordinates>-73.9599380493,40.7961845398,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38096">
+                <styleUrl>#stylesel_36532</styleUrl>
+                <Point id="geom_36532">
+                    <coordinates>-73.9526519775,40.7953567505,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38097">
+                <styleUrl>#stylesel_36533</styleUrl>
+                <Point id="geom_36533">
+                    <coordinates>-73.9586334229,40.796207428,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38098">
+                <styleUrl>#stylesel_36534</styleUrl>
+                <Point id="geom_36534">
+                    <coordinates>-73.9597473145,40.7961349487,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38099">
+                <styleUrl>#stylesel_36535</styleUrl>
+                <Point id="geom_36535">
+                    <coordinates>-73.9597549438,40.7961273193,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38100">
+                <styleUrl>#stylesel_36536</styleUrl>
+                <Point id="geom_36536">
+                    <coordinates>-73.9599304199,40.7961425781,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38101">
+                <styleUrl>#stylesel_36537</styleUrl>
+                <Point id="geom_36537">
+                    <coordinates>-73.9599227905,40.7961387634,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38102">
+                <styleUrl>#stylesel_36538</styleUrl>
+                <Point id="geom_36538">
+                    <coordinates>-73.9524612427,40.7949905396,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38103">
+                <name/>
+                <styleUrl>#stylesel_36539</styleUrl>
+                <LineString id="geom_36539">
+                    <coordinates>-73.9613571167,40.7956695557,0.0 -73.9599227905,40.7961387634,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1460">
-                <LineString id="geom_1345">
-                    <coordinates>-73.9530792236,41.3912162781,0.0 -73.9530105591,41.3910484314,0.0</coordinates>
+            <Placemark id="feat_38104">
+                <name/>
+                <styleUrl>#stylesel_36540</styleUrl>
+                <LineString id="geom_36540">
+                    <coordinates>-73.959815979,40.7959861755,0.0 -73.9600143433,40.7960357666,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1461">
-                <LineString id="geom_1346">
-                    <coordinates>-73.9528198242,41.3914871216,0.0 -73.9527893066,41.3915100098,0.0</coordinates>
+            <Placemark id="feat_38105">
+                <name/>
+                <styleUrl>#stylesel_36541</styleUrl>
+                <LineString id="geom_36541">
+                    <coordinates>-73.9599761963,40.7961654663,0.0 -73.9599380493,40.7961845398,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1462">
-                <LineString id="geom_1347">
-                    <coordinates>-73.9530105591,41.3910484314,0.0 -73.9530563354,41.3909263611,0.0</coordinates>
+            <Placemark id="feat_38106">
+                <name/>
+                <styleUrl>#stylesel_36542</styleUrl>
+                <LineString id="geom_36542">
+                    <coordinates>-73.9527664185,40.7953948975,0.0 -73.9524612427,40.7949905396,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1463">
-                <LineString id="geom_1348">
-                    <coordinates>-73.9530563354,41.3909263611,0.0 -73.9530715942,41.3909111023,0.0</coordinates>
+            <Placemark id="feat_38107">
+                <name/>
+                <styleUrl>#stylesel_36543</styleUrl>
+                <LineString id="geom_36543">
+                    <coordinates>-73.9598617554,40.7961120605,0.0 -73.9599380493,40.7961845398,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1464">
-                <LineString id="geom_1349">
-                    <coordinates>-73.9524078369,41.3915328979,0.0 -73.9523849487,41.3916358948,0.0</coordinates>
+            <Placemark id="feat_38108">
+                <name/>
+                <styleUrl>#stylesel_36544</styleUrl>
+                <LineString id="geom_36544">
+                    <coordinates>-73.9591369629,40.7961196899,0.0 -73.9597473145,40.7961349487,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1465">
-                <LineString id="geom_1350">
-                    <coordinates>-73.9523511743,41.3917961729,0.0 -73.9523849487,41.3916358948,0.0</coordinates>
+            <Placemark id="feat_38109">
+                <name/>
+                <styleUrl>#stylesel_36545</styleUrl>
+                <LineString id="geom_36545">
+                    <coordinates>-73.9527664185,40.7953948975,0.0 -73.9526519775,40.7953567505,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1466">
-                <LineString id="geom_1351">
-                    <coordinates>-73.9532241821,41.3910903931,0.0 -73.9531097412,41.3909339905,0.0</coordinates>
+            <Placemark id="feat_38110">
+                <name/>
+                <styleUrl>#stylesel_36546</styleUrl>
+                <LineString id="geom_36546">
+                    <coordinates>-73.9599761963,40.7961654663,0.0 -73.9599304199,40.7961425781,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1467">
-                <LineString id="geom_1352">
-                    <coordinates>-73.95258772,41.39155737,0.0 -73.9524078369,41.3915328979,0.0</coordinates>
+            <Placemark id="feat_38111">
+                <name/>
+                <styleUrl>#stylesel_36547</styleUrl>
+                <LineString id="geom_36547">
+                    <coordinates>-73.9597473145,40.7961349487,0.0 -73.9597549438,40.7961273193,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1468">
-                <LineString id="geom_1353">
-                    <coordinates>-73.95287588,41.39126646,0.0 -73.9530792236,41.3912162781,0.0</coordinates>
+            <Placemark id="feat_38112">
+                <name/>
+                <styleUrl>#stylesel_36548</styleUrl>
+                <LineString id="geom_36548">
+                    <coordinates>-73.9534454346,40.7963180542,0.0 -73.9559326172,40.796245575,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1469">
-                <LineString id="geom_1354">
-                    <coordinates>-73.9532699585,41.3911056519,0.0 -73.9532241821,41.3910903931,0.0</coordinates>
+            <Placemark id="feat_38113">
+                <name/>
+                <styleUrl>#stylesel_36549</styleUrl>
+                <LineString id="geom_36549">
+                    <coordinates>-73.9519157692,40.7936180247,0.0 -73.9519805908,40.7936210632,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1470">
-                <LineString id="geom_1355">
-                    <coordinates>-73.95287588,41.39126646,0.0 -73.9528198242,41.3914871216,0.0</coordinates>
+            <Placemark id="feat_38114">
+                <name/>
+                <styleUrl>#stylesel_36550</styleUrl>
+                <LineString id="geom_36550">
+                    <coordinates>-73.9576873779,40.7961044312,0.0 -73.9586334229,40.796207428,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1471">
-                <LineString id="geom_1356">
-                    <coordinates>-73.95258772,41.39155737,0.0 -73.9527893066,41.3915100098,0.0</coordinates>
+            <Placemark id="feat_38115">
+                <name/>
+                <styleUrl>#stylesel_36551</styleUrl>
+                <LineString id="geom_36551">
+                    <coordinates>-73.9534454346,40.7963180542,0.0 -73.9526596069,40.7955055237,0.0</coordinates>
                 </LineString>
             </Placemark>
-            <Placemark id="feat_1472">
-                <LineString id="geom_1357">
-                    <coordinates>-73.9531097412,41.3909339905,0.0 -73.9530715942,41.3909111023,0.0</coordinates>
+            <Placemark id="feat_38116">
+                <name/>
+                <styleUrl>#stylesel_36552</styleUrl>
+                <LineString id="geom_36552">
+                    <coordinates>-73.9624786377,40.7941131592,0.0 -73.9613571167,40.7956695557,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38117">
+                <name/>
+                <styleUrl>#stylesel_36553</styleUrl>
+                <LineString id="geom_36553">
+                    <coordinates>-73.9576873779,40.7961044312,0.0 -73.9559326172,40.796245575,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38118">
+                <name/>
+                <styleUrl>#stylesel_36554</styleUrl>
+                <LineString id="geom_36554">
+                    <coordinates>-73.9526596069,40.7955055237,0.0 -73.9526519775,40.7953567505,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38119">
+                <name/>
+                <styleUrl>#stylesel_36555</styleUrl>
+                <LineString id="geom_36555">
+                    <coordinates>-73.9599304199,40.7961425781,0.0 -73.9599227905,40.7961387634,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38120">
+                <name/>
+                <styleUrl>#stylesel_36556</styleUrl>
+                <LineString id="geom_36556">
+                    <coordinates>-73.959815979,40.7959861755,0.0 -73.9597549438,40.7961273193,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38121">
+                <name/>
+                <styleUrl>#stylesel_36557</styleUrl>
+                <LineString id="geom_36557">
+                    <coordinates>-73.9519805908,40.7936210632,0.0 -73.9524612427,40.7949905396,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38122">
+                <name/>
+                <styleUrl>#stylesel_36558</styleUrl>
+                <LineString id="geom_36558">
+                    <coordinates>-73.9591369629,40.7961196899,0.0 -73.9586334229,40.796207428,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38123">
+                <name/>
+                <styleUrl>#stylesel_36559</styleUrl>
+                <LineString id="geom_36559">
+                    <coordinates>-73.9624838651,40.7941134042,0.0 -73.9624786377,40.7941131592,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38124">
+                <name/>
+                <styleUrl>#stylesel_36560</styleUrl>
+                <LineString id="geom_36560">
+                    <coordinates>-73.9598617554,40.7961120605,0.0 -73.9600143433,40.7960357666,0.0</coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+        <Folder id="feat_38125">
+            <Style id="stylesel_36561">
+                <IconStyle id="substyle_36561">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20339">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36562">
+                <IconStyle id="substyle_36562">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20340">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36563">
+                <IconStyle id="substyle_36563">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20341">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36564">
+                <IconStyle id="substyle_36564">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20342">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36565">
+                <IconStyle id="substyle_36565">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20343">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36566">
+                <IconStyle id="substyle_36566">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20344">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36567">
+                <IconStyle id="substyle_36567">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20345">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36568">
+                <IconStyle id="substyle_36568">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20346">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36569">
+                <IconStyle id="substyle_36569">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20347">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36570">
+                <IconStyle id="substyle_36570">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20348">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36571">
+                <IconStyle id="substyle_36571">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20349">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36572">
+                <IconStyle id="substyle_36572">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20350">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36573">
+                <IconStyle id="substyle_36573">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20351">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36574">
+                <IconStyle id="substyle_36574">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20352">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36575">
+                <IconStyle id="substyle_36575">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20353">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36576">
+                <IconStyle id="substyle_36576">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20354">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36577">
+                <IconStyle id="substyle_36577">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20355">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36578">
+                <IconStyle id="substyle_36578">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20356">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36579">
+                <IconStyle id="substyle_36579">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20357">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36580">
+                <IconStyle id="substyle_36580">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20358">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36581">
+                <LineStyle id="substyle_36581">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36582">
+                <LineStyle id="substyle_36582">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36583">
+                <LineStyle id="substyle_36583">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36584">
+                <LineStyle id="substyle_36584">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36585">
+                <LineStyle id="substyle_36585">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36586">
+                <LineStyle id="substyle_36586">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36587">
+                <LineStyle id="substyle_36587">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36588">
+                <LineStyle id="substyle_36588">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36589">
+                <LineStyle id="substyle_36589">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36590">
+                <LineStyle id="substyle_36590">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36591">
+                <LineStyle id="substyle_36591">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36592">
+                <LineStyle id="substyle_36592">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36593">
+                <LineStyle id="substyle_36593">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36594">
+                <LineStyle id="substyle_36594">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36595">
+                <LineStyle id="substyle_36595">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36596">
+                <LineStyle id="substyle_36596">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36597">
+                <LineStyle id="substyle_36597">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36598">
+                <LineStyle id="substyle_36598">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36599">
+                <LineStyle id="substyle_36599">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <name/>
+            <Placemark id="feat_38126">
+                <styleUrl>#stylesel_36561</styleUrl>
+                <Point id="geom_36561">
+                    <coordinates>-73.9624786377,40.7941131592,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38127">
+                <styleUrl>#stylesel_36562</styleUrl>
+                <Point id="geom_36562">
+                    <coordinates>-73.9613571167,40.7956695557,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38128">
+                <styleUrl>#stylesel_36563</styleUrl>
+                <Point id="geom_36563">
+                    <coordinates>-73.9519805908,40.7936172485,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38129">
+                <styleUrl>#stylesel_36564</styleUrl>
+                <Point id="geom_36564">
+                    <coordinates>-73.9534378052,40.7963142395,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38130">
+                <styleUrl>#stylesel_36565</styleUrl>
+                <Point id="geom_36565">
+                    <coordinates>-73.9624838638,40.7941134061,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38131">
+                <styleUrl>#stylesel_36566</styleUrl>
+                <Point id="geom_36566">
+                    <coordinates>-73.9519184083,40.7936143111,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38132">
+                <styleUrl>#stylesel_36567</styleUrl>
+                <Point id="geom_36567">
+                    <coordinates>-73.9558792114,40.7962379456,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38133">
+                <styleUrl>#stylesel_36568</styleUrl>
+                <Point id="geom_36568">
+                    <coordinates>-73.9576568604,40.7960739136,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38134">
+                <styleUrl>#stylesel_36569</styleUrl>
+                <Point id="geom_36569">
+                    <coordinates>-73.952796936,40.7953720093,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38135">
+                <styleUrl>#stylesel_36570</styleUrl>
+                <Point id="geom_36570">
+                    <coordinates>-73.959815979,40.7959671021,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38136">
+                <styleUrl>#stylesel_36571</styleUrl>
+                <Point id="geom_36571">
+                    <coordinates>-73.9591217041,40.7960929871,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38137">
+                <styleUrl>#stylesel_36572</styleUrl>
+                <Point id="geom_36572">
+                    <coordinates>-73.959854126,40.7960929871,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38138">
+                <styleUrl>#stylesel_36573</styleUrl>
+                <Point id="geom_36573">
+                    <coordinates>-73.959854126,40.7960968018,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38139">
+                <styleUrl>#stylesel_36574</styleUrl>
+                <Point id="geom_36574">
+                    <coordinates>-73.9600067139,40.7960243225,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38140">
+                <styleUrl>#stylesel_36575</styleUrl>
+                <Point id="geom_36575">
+                    <coordinates>-73.9600067139,40.7960243225,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38141">
+                <styleUrl>#stylesel_36576</styleUrl>
+                <Point id="geom_36576">
+                    <coordinates>-73.9597625732,40.7961120605,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38142">
+                <styleUrl>#stylesel_36577</styleUrl>
+                <Point id="geom_36577">
+                    <coordinates>-73.9599456787,40.7960929871,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38143">
+                <styleUrl>#stylesel_36578</styleUrl>
+                <Point id="geom_36578">
+                    <coordinates>-73.9599456787,40.7960929871,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38144">
+                <styleUrl>#stylesel_36579</styleUrl>
+                <Point id="geom_36579">
+                    <coordinates>-73.9553909302,40.7963447571,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38145">
+                <styleUrl>#stylesel_36580</styleUrl>
+                <Point id="geom_36580">
+                    <coordinates>-73.9554824829,40.7964630127,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38146">
+                <name/>
+                <styleUrl>#stylesel_36581</styleUrl>
+                <LineString id="geom_36581">
+                    <coordinates>-73.959854126,40.7960929871,0.0 -73.9599456787,40.7960929871,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38147">
+                <name/>
+                <styleUrl>#stylesel_36582</styleUrl>
+                <LineString id="geom_36582">
+                    <coordinates>-73.9519805908,40.7936172485,0.0 -73.952796936,40.7953720093,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38148">
+                <name/>
+                <styleUrl>#stylesel_36583</styleUrl>
+                <LineString id="geom_36583">
+                    <coordinates>-73.9591217041,40.7960929871,0.0 -73.9597625732,40.7961120605,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38149">
+                <name/>
+                <styleUrl>#stylesel_36584</styleUrl>
+                <LineString id="geom_36584">
+                    <coordinates>-73.9600067139,40.7960243225,0.0 -73.9599456787,40.7960929871,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38150">
+                <name/>
+                <styleUrl>#stylesel_36585</styleUrl>
+                <LineString id="geom_36585">
+                    <coordinates>-73.9553909302,40.7963447571,0.0 -73.9554824829,40.7964630127,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38151">
+                <name/>
+                <styleUrl>#stylesel_36586</styleUrl>
+                <LineString id="geom_36586">
+                    <coordinates>-73.9624786377,40.7941131592,0.0 -73.9600067139,40.7960243225,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38152">
+                <name/>
+                <styleUrl>#stylesel_36587</styleUrl>
+                <LineString id="geom_36587">
+                    <coordinates>-73.9519184083,40.7936143111,0.0 -73.9519805908,40.7936172485,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38153">
+                <name/>
+                <styleUrl>#stylesel_36588</styleUrl>
+                <LineString id="geom_36588">
+                    <coordinates>-73.959854126,40.7960929871,0.0 -73.959854126,40.7960968018,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38154">
+                <name/>
+                <styleUrl>#stylesel_36589</styleUrl>
+                <LineString id="geom_36589">
+                    <coordinates>-73.9558792114,40.7962379456,0.0 -73.9554824829,40.7964630127,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38155">
+                <name/>
+                <styleUrl>#stylesel_36590</styleUrl>
+                <LineString id="geom_36590">
+                    <coordinates>-73.959815979,40.7959671021,0.0 -73.9600067139,40.7960243225,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38156">
+                <name/>
+                <styleUrl>#stylesel_36591</styleUrl>
+                <LineString id="geom_36591">
+                    <coordinates>-73.9558792114,40.7962379456,0.0 -73.9576568604,40.7960739136,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38157">
+                <name/>
+                <styleUrl>#stylesel_36592</styleUrl>
+                <LineString id="geom_36592">
+                    <coordinates>-73.959815979,40.7959671021,0.0 -73.9597625732,40.7961120605,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38158">
+                <name/>
+                <styleUrl>#stylesel_36593</styleUrl>
+                <LineString id="geom_36593">
+                    <coordinates>-73.9613571167,40.7956695557,0.0 -73.9599456787,40.7960929871,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38159">
+                <name/>
+                <styleUrl>#stylesel_36594</styleUrl>
+                <LineString id="geom_36594">
+                    <coordinates>-73.9613571167,40.7956695557,0.0 -73.9600067139,40.7960243225,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38160">
+                <name/>
+                <styleUrl>#stylesel_36595</styleUrl>
+                <LineString id="geom_36595">
+                    <coordinates>-73.9534378052,40.7963142395,0.0 -73.952796936,40.7953720093,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38161">
+                <name/>
+                <styleUrl>#stylesel_36596</styleUrl>
+                <LineString id="geom_36596">
+                    <coordinates>-73.9534378052,40.7963142395,0.0 -73.9553909302,40.7963447571,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38162">
+                <name/>
+                <styleUrl>#stylesel_36597</styleUrl>
+                <LineString id="geom_36597">
+                    <coordinates>-73.959854126,40.7960968018,0.0 -73.9599456787,40.7960929871,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38163">
+                <name/>
+                <styleUrl>#stylesel_36598</styleUrl>
+                <LineString id="geom_36598">
+                    <coordinates>-73.9576568604,40.7960739136,0.0 -73.9591217041,40.7960929871,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38164">
+                <name/>
+                <styleUrl>#stylesel_36599</styleUrl>
+                <LineString id="geom_36599">
+                    <coordinates>-73.9624838638,40.7941134061,0.0 -73.9624786377,40.7941131592,0.0</coordinates>
+                </LineString>
+            </Placemark>
+        </Folder>
+        <Folder id="feat_38165">
+            <Style id="stylesel_36600">
+                <IconStyle id="substyle_36600">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20359">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36601">
+                <IconStyle id="substyle_36601">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20360">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36602">
+                <IconStyle id="substyle_36602">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20361">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36603">
+                <IconStyle id="substyle_36603">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20362">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36604">
+                <IconStyle id="substyle_36604">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20363">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36605">
+                <IconStyle id="substyle_36605">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20364">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36606">
+                <IconStyle id="substyle_36606">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20365">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36607">
+                <IconStyle id="substyle_36607">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20366">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36608">
+                <IconStyle id="substyle_36608">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20367">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36609">
+                <IconStyle id="substyle_36609">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20368">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36610">
+                <IconStyle id="substyle_36610">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20369">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36611">
+                <IconStyle id="substyle_36611">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20370">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36612">
+                <IconStyle id="substyle_36612">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20371">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36613">
+                <IconStyle id="substyle_36613">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20372">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36614">
+                <IconStyle id="substyle_36614">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20373">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36615">
+                <IconStyle id="substyle_36615">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20374">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36616">
+                <IconStyle id="substyle_36616">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20375">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36617">
+                <IconStyle id="substyle_36617">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20376">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36618">
+                <IconStyle id="substyle_36618">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20377">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36619">
+                <IconStyle id="substyle_36619">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20378">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36620">
+                <IconStyle id="substyle_36620">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20379">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36621">
+                <IconStyle id="substyle_36621">
+                    <colorMode>normal</colorMode>
+                    <scale>1</scale>
+                    <heading>0</heading>
+                    <Icon id="link_20380">
+                        <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+                    </Icon>
+                </IconStyle>
+            </Style>
+            <Style id="stylesel_36622">
+                <LineStyle id="substyle_36622">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36623">
+                <LineStyle id="substyle_36623">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36624">
+                <LineStyle id="substyle_36624">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36625">
+                <LineStyle id="substyle_36625">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36626">
+                <LineStyle id="substyle_36626">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36627">
+                <LineStyle id="substyle_36627">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36628">
+                <LineStyle id="substyle_36628">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36629">
+                <LineStyle id="substyle_36629">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36630">
+                <LineStyle id="substyle_36630">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36631">
+                <LineStyle id="substyle_36631">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36632">
+                <LineStyle id="substyle_36632">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36633">
+                <LineStyle id="substyle_36633">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36634">
+                <LineStyle id="substyle_36634">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36635">
+                <LineStyle id="substyle_36635">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36636">
+                <LineStyle id="substyle_36636">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36637">
+                <LineStyle id="substyle_36637">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36638">
+                <LineStyle id="substyle_36638">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36639">
+                <LineStyle id="substyle_36639">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36640">
+                <LineStyle id="substyle_36640">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36641">
+                <LineStyle id="substyle_36641">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <Style id="stylesel_36642">
+                <LineStyle id="substyle_36642">
+                    <color>ffffffff</color>
+                    <colorMode>normal</colorMode>
+                </LineStyle>
+            </Style>
+            <name/>
+            <Placemark id="feat_38166">
+                <styleUrl>#stylesel_36600</styleUrl>
+                <Point id="geom_36600">
+                    <coordinates>-73.9624786377,40.7941131592,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38167">
+                <styleUrl>#stylesel_36601</styleUrl>
+                <Point id="geom_36601">
+                    <coordinates>-73.9613571167,40.7956695557,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38168">
+                <styleUrl>#stylesel_36602</styleUrl>
+                <Point id="geom_36602">
+                    <coordinates>-73.9519805908,40.7936172485,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38169">
+                <styleUrl>#stylesel_36603</styleUrl>
+                <Point id="geom_36603">
+                    <coordinates>-73.9534378052,40.7963142395,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38170">
+                <styleUrl>#stylesel_36604</styleUrl>
+                <Point id="geom_36604">
+                    <coordinates>-73.9624838638,40.7941134061,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38171">
+                <styleUrl>#stylesel_36605</styleUrl>
+                <Point id="geom_36605">
+                    <coordinates>-73.9519184083,40.7936143111,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38172">
+                <styleUrl>#stylesel_36606</styleUrl>
+                <Point id="geom_36606">
+                    <coordinates>-73.9576873779,40.7961006165,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38173">
+                <styleUrl>#stylesel_36607</styleUrl>
+                <Point id="geom_36607">
+                    <coordinates>-73.9559249878,40.7962417603,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38174">
+                <styleUrl>#stylesel_36608</styleUrl>
+                <Point id="geom_36608">
+                    <coordinates>-73.959815979,40.7959861755,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38175">
+                <styleUrl>#stylesel_36609</styleUrl>
+                <Point id="geom_36609">
+                    <coordinates>-73.952796936,40.795375824,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38176">
+                <styleUrl>#stylesel_36610</styleUrl>
+                <Point id="geom_36610">
+                    <coordinates>-73.9591293335,40.7961235046,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38177">
+                <styleUrl>#stylesel_36611</styleUrl>
+                <Point id="geom_36611">
+                    <coordinates>-73.9591674805,40.7962493896,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38178">
+                <styleUrl>#stylesel_36612</styleUrl>
+                <Point id="geom_36612">
+                    <coordinates>-73.9598770142,40.7961540222,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38179">
+                <styleUrl>#stylesel_36613</styleUrl>
+                <Point id="geom_36613">
+                    <coordinates>-73.9593200684,40.7961807251,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38180">
+                <styleUrl>#stylesel_36614</styleUrl>
+                <Point id="geom_36614">
+                    <coordinates>-73.9599914551,40.7959976196,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38181">
+                <styleUrl>#stylesel_36615</styleUrl>
+                <Point id="geom_36615">
+                    <coordinates>-73.9600143433,40.796043396,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38182">
+                <styleUrl>#stylesel_36616</styleUrl>
+                <Point id="geom_36616">
+                    <coordinates>-73.9588241577,40.7962150574,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38183">
+                <styleUrl>#stylesel_36617</styleUrl>
+                <Point id="geom_36617">
+                    <coordinates>-73.9600067139,40.7960357666,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38184">
+                <styleUrl>#stylesel_36618</styleUrl>
+                <Point id="geom_36618">
+                    <coordinates>-73.9589080811,40.7963294983,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38185">
+                <styleUrl>#stylesel_36619</styleUrl>
+                <Point id="geom_36619">
+                    <coordinates>-73.9599990845,40.7960090637,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38186">
+                <styleUrl>#stylesel_36620</styleUrl>
+                <Point id="geom_36620">
+                    <coordinates>-73.9599990845,40.7960014343,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38187">
+                <styleUrl>#stylesel_36621</styleUrl>
+                <Point id="geom_36621">
+                    <coordinates>-73.9590148926,40.7964324951,0.0</coordinates>
+                </Point>
+            </Placemark>
+            <Placemark id="feat_38188">
+                <name/>
+                <styleUrl>#stylesel_36622</styleUrl>
+                <LineString id="geom_36622">
+                    <coordinates>-73.9600067139,40.7960357666,0.0 -73.9599990845,40.7960090637,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38189">
+                <name/>
+                <styleUrl>#stylesel_36623</styleUrl>
+                <LineString id="geom_36623">
+                    <coordinates>-73.9589080811,40.7963294983,0.0 -73.9590148926,40.7964324951,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38190">
+                <name/>
+                <styleUrl>#stylesel_36624</styleUrl>
+                <LineString id="geom_36624">
+                    <coordinates>-73.9591293335,40.7961235046,0.0 -73.9593200684,40.7961807251,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38191">
+                <name/>
+                <styleUrl>#stylesel_36625</styleUrl>
+                <LineString id="geom_36625">
+                    <coordinates>-73.9613571167,40.7956695557,0.0 -73.9600143433,40.796043396,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38192">
+                <name/>
+                <styleUrl>#stylesel_36626</styleUrl>
+                <LineString id="geom_36626">
+                    <coordinates>-73.9534378052,40.7963142395,0.0 -73.952796936,40.795375824,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38193">
+                <name/>
+                <styleUrl>#stylesel_36627</styleUrl>
+                <LineString id="geom_36627">
+                    <coordinates>-73.9588241577,40.7962150574,0.0 -73.9590148926,40.7964324951,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38194">
+                <name/>
+                <styleUrl>#stylesel_36628</styleUrl>
+                <LineString id="geom_36628">
+                    <coordinates>-73.9599914551,40.7959976196,0.0 -73.9599990845,40.7960014343,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38195">
+                <name/>
+                <styleUrl>#stylesel_36629</styleUrl>
+                <LineString id="geom_36629">
+                    <coordinates>-73.9534378052,40.7963142395,0.0 -73.9559249878,40.7962417603,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38196">
+                <name/>
+                <styleUrl>#stylesel_36630</styleUrl>
+                <LineString id="geom_36630">
+                    <coordinates>-73.9519184083,40.7936143111,0.0 -73.9519805908,40.7936172485,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38197">
+                <name/>
+                <styleUrl>#stylesel_36631</styleUrl>
+                <LineString id="geom_36631">
+                    <coordinates>-73.9591674805,40.7962493896,0.0 -73.9598770142,40.7961540222,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38198">
+                <name/>
+                <styleUrl>#stylesel_36632</styleUrl>
+                <LineString id="geom_36632">
+                    <coordinates>-73.9599990845,40.7960090637,0.0 -73.9599990845,40.7960014343,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38199">
+                <name/>
+                <styleUrl>#stylesel_36633</styleUrl>
+                <LineString id="geom_36633">
+                    <coordinates>-73.9600143433,40.796043396,0.0 -73.9600067139,40.7960357666,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38200">
+                <name/>
+                <styleUrl>#stylesel_36634</styleUrl>
+                <LineString id="geom_36634">
+                    <coordinates>-73.9624786377,40.7941131592,0.0 -73.9613571167,40.7956695557,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38201">
+                <name/>
+                <styleUrl>#stylesel_36635</styleUrl>
+                <LineString id="geom_36635">
+                    <coordinates>-73.959815979,40.7959861755,0.0 -73.9599914551,40.7959976196,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38202">
+                <name/>
+                <styleUrl>#stylesel_36636</styleUrl>
+                <LineString id="geom_36636">
+                    <coordinates>-73.9576873779,40.7961006165,0.0 -73.9559249878,40.7962417603,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38203">
+                <name/>
+                <styleUrl>#stylesel_36637</styleUrl>
+                <LineString id="geom_36637">
+                    <coordinates>-73.9519805908,40.7936172485,0.0 -73.952796936,40.795375824,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38204">
+                <name/>
+                <styleUrl>#stylesel_36638</styleUrl>
+                <LineString id="geom_36638">
+                    <coordinates>-73.959815979,40.7959861755,0.0 -73.9598770142,40.7961540222,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38205">
+                <name/>
+                <styleUrl>#stylesel_36639</styleUrl>
+                <LineString id="geom_36639">
+                    <coordinates>-73.9591293335,40.7961235046,0.0 -73.9589080811,40.7963294983,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38206">
+                <name/>
+                <styleUrl>#stylesel_36640</styleUrl>
+                <LineString id="geom_36640">
+                    <coordinates>-73.9624838638,40.7941134061,0.0 -73.9624786377,40.7941131592,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38207">
+                <name/>
+                <styleUrl>#stylesel_36641</styleUrl>
+                <LineString id="geom_36641">
+                    <coordinates>-73.9576873779,40.7961006165,0.0 -73.9588241577,40.7962150574,0.0</coordinates>
+                </LineString>
+            </Placemark>
+            <Placemark id="feat_38208">
+                <name/>
+                <styleUrl>#stylesel_36642</styleUrl>
+                <LineString id="geom_36642">
+                    <coordinates>-73.9591674805,40.7962493896,0.0 -73.9593200684,40.7961807251,0.0</coordinates>
                 </LineString>
             </Placemark>
         </Folder>

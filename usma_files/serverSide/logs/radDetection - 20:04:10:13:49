@@ -1,0 +1,27 @@
+INFO:Rad Detection Starting
+INFO:[(41.39126646, -73.95287588), (41.39155737, -73.95258772), (41.390977545721704, -73.95316206290609), (41.39179617285514, -73.95235117433312)]
+INFO:Graph({0: set([1, 2]), 1: set([0, 3]), 2: set([0]), 3: set([1])})
+INFO:SERVER: Starting server on 127.0.0.1:10000
+INFO:Rad Detection Starting
+INFO:[(41.39126646, -73.95287588), (41.39155737, -73.95258772), (41.390977545721704, -73.95316206290609), (41.39179617285514, -73.95235117433312)]
+INFO:Graph({0: set([1, 2]), 1: set([0, 3]), 2: set([0]), 3: set([1])})
+INFO:SERVER: Starting server on 127.0.0.1:10000
+INFO:SERVER: Waiting for a connection...
+INFO:SERVER: Num Connections: 1
+INFO:Drone 1: SWARM::Id in Swarm: 1
+INFO:Drone 1: SWARM::Num subswarm drones: 2
+INFO:SERVER: Num Connections: 2
+INFO:Drone 0: SWARM::Id in Swarm: 0
+INFO:Drone 0: SWARM::Num subswarm drones: 2
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 0: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:Drone 1: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:MODEL: State Change: Lane Generation!
+INFO:MODEL: Sending points: [(41.39126646, -73.95287588), (41.39155737, -73.95258772)]
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 1: Got to our waypoint
+INFO:SERVER: Closing Connection
+INFO:SERVER: Closing Connection

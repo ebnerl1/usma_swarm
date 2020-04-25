@@ -1,0 +1,319 @@
+INFO:Rad Detection Starting
+INFO:SERVER: Starting server on 127.0.0.1:10000
+INFO:SERVER: Waiting for a connection...
+INFO:SERVER: Num Connections: 1
+INFO:Drone 1: SWARM::Id in Swarm: 1
+INFO:Drone 1: SWARM::Num subswarm drones: 4
+INFO:SERVER: Num Connections: 2
+INFO:Drone 3: SWARM::Id in Swarm: 3
+INFO:Drone 3: SWARM::Num subswarm drones: 4
+INFO:SERVER: Num Connections: 3
+INFO:Drone 2: SWARM::Id in Swarm: 2
+INFO:Drone 2: SWARM::Num subswarm drones: 4
+INFO:SERVER: Num Connections: 4
+INFO:Drone 0: SWARM::Id in Swarm: 0
+INFO:Drone 0: SWARM::Num subswarm drones: 4
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 0: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:Drone 1: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:Drone 2: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:Drone 3: Got to our waypoint
+INFO:MODEL: Drone Finished Init Pass
+INFO:MODEL: State Change: Lane Generation!
+INFO:Drone 0: DRONE_MSG::Sending Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 0: PHASE_3::Generated Lane: ((40.79610588025608, -73.9576898252873), (40.795971390332454, -73.95767881214327), (40.79583690040883, -73.95766779899924))
+
+INFO:Drone 0: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.796104431152344, -73.95768737792969) (40.79597091674805, -73.95767974853516) (40.79583740234375, -73.9576644897461)
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Sending Lock
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Sending Unlock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 1: PHASE_3::Generated Lane: ((40.794051994956604, -73.95506539020549), (40.79391760840635, -73.95507842008014), (40.7937832218561, -73.95509144995479))
+
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79405212402344, -73.95506286621094) (40.79391860961914, -73.955078125) (40.793785095214844, -73.95509338378906)
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 2: PHASE_3::Generated Lane: ((40.796250600955354, -73.9559225301735), (40.79611611103061, -73.95591151702936), (40.79598162110586, -73.95590050388523))
+
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79624938964844, -73.95592498779297) (40.79611587524414, -73.9559097290039) (40.795982360839844, -73.95590209960938)
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: PHASE_3::Generated Lane: ((40.79605481916104, -73.9598367698455), (40.79592135830964, -73.9598122253211), (40.79578789745824, -73.95978768079671))
+
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79605484008789, -73.9598388671875) (40.795921325683594, -73.9598159790039) (40.7957878112793, -73.95978546142578)
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 1: RAD::Rad Location: (40.7938244, -73.9550884)
+INFO:Drone 1: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:MODEL: Update Contour Line: (40.7938232421875, -73.95508575439453)
+INFO:MODEL: Error Calculated: 10.4138736725
+INFO:Drone 1: PHASE_3::Generated Lane: ((40.79523795977377, -73.95304687323014), (40.79531643544112, -73.95290218371846), (40.795394911108474, -73.9527574942068))
+
+INFO:Drone 1: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79523849487305, -73.95304870605469) (40.79531478881836, -73.9529037475586) (40.79539489746094, -73.9527587890625)
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 2: RAD::Rad Location: (40.7962249, -73.9558831)
+INFO:Drone 2: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:MODEL: Update Contour Line: (40.796226501464844, -73.95588684082031)
+INFO:MODEL: Error Calculated: 11.7948789597
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 2: PHASE_3::Generated Lane: ((40.79596215211863, -73.95981638654642), (40.79582779858286, -73.95980277521986), (40.79569344504709, -73.95978916389329))
+
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Sending Unlock
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:MODEL: New Lane: (40.795963287353516, -73.9598159790039) (40.79582595825195, -73.95980072021484) (40.795692443847656, -73.95978546142578)
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 0: RAD::Rad Location: (40.7961021, -73.9576863)
+INFO:Drone 0: DRONE_MSG::Sending Lock
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:MODEL: Update Contour Line: (40.79610061645508, -73.95768737792969)
+INFO:MODEL: Error Calculated: 6.47032499313
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 0: PHASE_3::Generated Lane: ((40.796945817522555, -73.95818580821309), (40.796945817522555, -73.9580078125), (40.796945817522555, -73.95782981678691))
+
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79694747924805, -73.95818328857422) (40.79694747924805, -73.9580078125) (40.79694747924805, -73.95783233642578)
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 1: RAD::Rad Location: (40.7953726, -73.9528013)
+INFO:Drone 1: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:MODEL: Update Contour Line: (40.795372009277344, -73.95280456542969)
+INFO:MODEL: Error Calculated: 10.5214710236
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 3: RAD::Rad Location: (40.7958291, -73.9597959)
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:MODEL: Update Contour Line: (40.79582977294922, -73.95979309082031)
+INFO:MODEL: Error Calculated: 10.3563175201
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:Drone 1: PHASE_3::Generated Lane: ((40.793620559726826, -73.95405823894882), (40.79375513655549, -73.95404926871107), (40.793889713384154, -73.95404029847333))
+
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79362106323242, -73.95405578613281) (40.79375457763672, -73.95404815673828) (40.793888092041016, -73.95404052734375)
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: PHASE_3::Generated Lane: ((40.795824619171285, -73.95922415975333), (40.79595724614418, -73.95925561664544), (40.79608987311707, -73.95928707353754))
+
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79582595825195, -73.95922088623047) (40.795955657958984, -73.95925903320312) (40.79608917236328, -73.95928955078125)
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 2: RAD::Rad Location: (40.7959626, -73.9598138)
+INFO:Drone 2: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:MODEL: Update Contour Line: (40.795963287353516, -73.9598159790039)
+INFO:MODEL: Error Calculated: 12.2635498047
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 0: Got to our waypoint
+INFO:Drone 0: RAD::Rad Location: (40.796947, -73.958008)
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:MODEL: Update Contour Line: (40.79694747924805, -73.9580078125)
+INFO:MODEL: Error Calculated: 0.0158009566367
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 3: RAD::Rad Location: (40.7958238, -73.9592295)
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 1: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:MODEL: Update Contour Line: (40.79582214355469, -73.959228515625)
+INFO:MODEL: Error Calculated: 14.952091217
+INFO:Drone 2: PHASE_3::Generated Lane: ((40.79586629428797, -73.9606106293946), (40.795732116249106, -73.96059427436), (40.79559793821024, -73.96057791932542))
+
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.795867919921875, -73.96060943603516) (40.79573059082031, -73.9605941772461) (40.795597076416016, -73.96057891845703)
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Sending Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 0: PHASE_3::Generated Lane: ((40.79418157161821, -73.95679876045467), (40.79404746726887, -73.95681613785072), (40.793913362919525, -73.95683351524677))
+
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79418182373047, -73.95680236816406) (40.79404830932617, -73.95681762695312) (40.793914794921875, -73.95683288574219)
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Received Unlock
+INFO:Drone 3: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 1: DRONE_MSG::Received Lock
+INFO:Drone 3: PHASE_3::Generated Lane: ((40.795873554497405, -73.95911204682623), (40.79600814213444, -73.9591207298996), (40.796142729771475, -73.95912941297296))
+
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 3: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.79587173461914, -73.95911407470703) (40.7960090637207, -73.95912170410156) (40.796142578125, -73.9591293334961)
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRONE_MSG::Received Unlock
+INFO:Drone 1: DRONE_MSG::Received Unlock
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 3: Got to our waypoint
+INFO:Drone 2: Got to our waypoint
+INFO:Drone 1: Got to our waypoint
+INFO:Drone 1: RAD::Rad Location: (40.7936247, -73.9540565)
+INFO:Drone 1: DRONE_MSG::Sending Lock
+INFO:Drone 2: DRONE_MSG::Received Rad Location
+INFO:Drone 0: DRONE_MSG::Received Rad Location
+INFO:Drone 0: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Rad Location
+INFO:Drone 2: DRONE_MSG::Received Lock
+INFO:Drone 3: DRONE_MSG::Received Lock
+INFO:MODEL: Update Contour Line: (40.79362487792969, -73.95405578613281)
+INFO:MODEL: Error Calculated: 14.5277070999
+INFO:Drone 1: PHASE_3::Generated Lane: ((40.79348746709918, -73.95336459537722), (40.79362221467593, -73.95336411170152), (40.79375696225267, -73.95336362802581))
+
+INFO:Drone 3: DRONE_MSG::Received Sparsity
+INFO:Drone 0: DRONE_MSG::Received Sparsity
+INFO:Drone 2: DRONE_MSG::Received Sparsity
+INFO:Drone 1: DRONE_MSG::Sending Unlock
+INFO:MODEL: New Lane: (40.793487548828125, -73.95336151123047) (40.79362106323242, -73.95336151123047) (40.793758392333984, -73.95336151123047)
+INFO:Drone 2: DRONE_MSG::Received Unlock
+INFO:Drone 0: DRO
+INFO:SERVER: Closing Connection
+INFO:SERVER: Closing Connection
+INFO:SERVER: Closing Connection
+INFO:SERVER: Closing Connection
