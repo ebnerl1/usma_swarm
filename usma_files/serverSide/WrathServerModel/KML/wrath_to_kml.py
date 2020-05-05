@@ -3,8 +3,6 @@
 import simplekml
 import math
 import time
-# import gmaps
-#import gmplot 
 #create kml
 # add point, line segment
 # save 
