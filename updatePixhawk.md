@@ -57,6 +57,7 @@ Note: this is not needed if you have the Pixhawk Firmwares already built as we d
   * In MP, select Initial Setup > Install Firmware 
   * Load custom firmware
   * Select: `usma_swarm\usma_files\PX4_Params\Pixhawk_Firmwares\arducopter_px4_v2_livefly.px4`
+  * Also available at: `ACS\ardupilot\build\px4-v2\bin\arducopter.px4`
   * Follow MP Prompts - should result in Pixhawks making "happy sounds"
   
 ### Configure Pixhawk for Quad Operations after new Flash
