@@ -44,7 +44,7 @@ This page explains how to pull and push information from Github to keep common s
   * Save and close the file  
   * Copy the locations.txt file, and paste/replace in /home/user1/ACS/ardupilot/Tools/autotest
 
-### Update Mission Parameters onto the Vehicles
+### Update Mission Parameters and Behaviors onto the Vehicles
 1. Make sure behaviors in scrimmage/usma up to date
   * `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E and not NPS Gitlab)
   * `cd ~/scrimmage/usma`
