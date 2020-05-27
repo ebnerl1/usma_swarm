@@ -61,7 +61,7 @@ This page explains how to pull and push information from Github to keep common s
 4. Run the `inl_push.sh` script to send the BLESSED folder, PYTHON folder, and AP_ENUMERATIONS file to the UAS(s)
   * Open `inl_push.sh` from usma_swarm/usma_files/ in gedit
   * Enter the IP addresses for the all the UAS you want to update (Ex: "192.168.11.141" "192.168.11.145")
-  * Run `~./usma_swarm/usma_files/inl_push.sh' and wait for update to be completed
+  * Run `~./usma_swarm/usma_files/inl_push.sh` and wait for update to be completed
   * `inl_push.sh` effectively does the following SCP (secure copy) functions
      - Copy BLESSED folder to ODROID ROOT: `scp -r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
      - Copy PYTHON behaviors to ODROID behavior directory: `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
