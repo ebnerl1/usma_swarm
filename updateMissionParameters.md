@@ -45,7 +45,11 @@ This page explains how to pull and push information from Github to keep common s
   * Copy the locations.txt file, and paste/replace in /home/user1/ACS/ardupilot/Tools/autotest
 
 ### Update Mission Parameters onto the Vehicles
-1. Configure Alfa Wi-Fi dongle on SASC Linux Laptop  
+1. Make sure behaviors in scrimmage/usma up to date
+  * `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E and not NPS Gitlab)
+  * `cd ~/scrimmage/usma`
+  * `git pull`
+2. Configure Alfa Wi-Fi dongle on SASC Linux Laptop  
   * Attach an Alfa USB Wi-Fi adapter to the computer  
   * `ifconfig` - Identify the Alfa Wi-Fi adapter (usually the last one) (ex: wlx00c0ca904414, or wlan2)  
   * `wifi_config.sh -T 11 wlx00c0ca904414 201` 
@@ -53,14 +57,12 @@ This page explains how to pull and push information from Github to keep common s
     - "11" is the team # (11 = Army)    
     - "201" is the # w/i the team (201-209 recommended for dongles, must be unique from other active SASC computers)    
     - This will set this computers the Alfa Wifi IP address to 192.168.11.201
-2. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
-3. Copy BLESSED folder to ODROID ROOT
-  * `scp -r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
-4. Copy PYTHON behaviors to ODROID behavior directory
-  * Make sure scrimmage/usma up to date
-     - `ssh-add ~/.ssh/swarms_id_rsa` (if DI2E and not NPS Gitlab)
-     - `cd ~/scrimmage/usma`
-     - `git pull`
-  * `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
-5. Copy AP_ENUMERATIONS to proper ODROID directory
-  * `scp /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@192.168.11.X:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
+3. Ping the powered up UAS to ensure you can talk to it: `ping 192.168.11.X` (X = tail number, ex: 112)
+4. Run the `inl_push.sh` script to send the BLESSED folder, PYTHON folder, and AP_ENUMERATIONS file to the UAS(s)
+  * Open `inl_push.sh` from usma_swarm/usma_files/ in gedit
+  * Enter the IP addresses for the all the UAS you want to update (Ex: "192.168.11.141" "192.168.11.145")
+  * Run `~./usma_swarm/usma_files/inl_push.sh' and wait for update to be completed
+  * `inl_push.sh` effectively does the following SCP (secure copy) functions
+     - Copy BLESSED folder to ODROID ROOT: `scp -r /home/user1/blessed odroid@192.168.11.X:/home/odroid/`(X = tail number, ex: 112)
+     - Copy PYTHON behaviors to ODROID behavior directory: `scp -r /home/user1/scrimmage/usma/plugins/autonomy/python/ odroid@192.168.11.X:/home/odroid/scrimmage/usma/plugins/autonomy/`
+     - Copy AP_ENUMERATIONS to proper ODROID directory: `scp /home/user1/ACS/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib/ap_enumerations.py odroid@192.168.11.X:/home/odroid/acs_ros_ws/src/autonomy-payload/ap_lib/src/ap_lib`
