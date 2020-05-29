@@ -73,7 +73,7 @@ Note: this is not needed if you have the Pixhawk Firmwares already built as we d
 
   * Flight Mode 1: Stabilize
   * Flight Mode 4: Loiter  
-  * Flight Mode 5: Auto
+  * Flight Mode 6: Auto
 
 4. Update the Power Monitor (to read voltage) at Vehicle Setup > Power to:
 
