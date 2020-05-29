@@ -17,7 +17,7 @@
 
 # Quick Start to SITL
 
-### See `usma_files/WRATH/Documentation/UsageGuide.md` for more details on this.
+See `usma_files/WRATH/Documentation/UsageGuide.md` for more details on this.
 
 1. `cd ~/usma_swarm/usma_files`
 2. `./run_sim.sh`
